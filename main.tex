@@ -1,0 +1,35 @@
+% =========================================================
+% CONFIGURACION DEL DOCUMENTO
+% =========================================================
+\documentclass[	
+		12pt, 
+		spanish, 	
+		oneside		
+		]{book}	
+
+\providecommand{\main}{.}
+\input{\main/preambulo}	
+
+% =========================================================
+% ARCHIVOS UTILIZADOS
+% =========================================================
+\begin{document}
+	\frontmatter\pagestyle{empty}
+	\subfile{pretextual/portada}
+	\subfile{pretextual/cap0}
+	\tableofcontents
+	\listoffigures
+	\listoftables
+	\mainmatter\pagestyle{fancy}	
+	\subfile{capitulos/cap01}	
+	\subfile{capitulos/cap02}
+	\subfile{capitulos/cap03}
+	\subfile{capitulos/cap04}
+	\subfile{capitulos/cap05}
+    \subfile{capitulos/cap06}
+    \subfile{capitulos/cap08}
+    \backmatter\pagestyle{empty}
+	\subfile{postextual/ref}
+	\appendix
+	\subfile{postextual/anexos}
+\end{document}

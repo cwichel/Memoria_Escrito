@@ -1,0 +1,559 @@
+% =========================================================
+% CONFIGURACION DEL DOCUMENTO
+% =========================================================
+\providecommand{\main}{..}
+\documentclass[../main.tex]{subfiles}
+
+% =========================================================
+% CONTENIDO
+% =========================================================
+\begin{document}
+\chapter{Modelado de la Planta}\label{Modelado de la Planta}
+
+En el desarrollo de este capítulo, se explican los conceptos utilizados
+para realizar el modelo de la planta en vuelo libre. Un Quadrotor es controlado mediante
+la actuación de cuatro motores eléctricos como se muestra en la figura
+\ref{fig:Diagrama-de-Cuerpo }. Cada motor con su respectiva hélice
+acoplada produce empuje y torque, los cuales al combinarse generan
+el empuje principal y los momentos yaw, pitch y roll. Cabe destacar
+desde ya que el sistema es subactuado en vuelo libre. Dado el vector de entradas
+a la planta (el torque y empuje generado por los cuatro motores),
+éste no puede producir un movimiento del vehículo en una trayectoria
+arbitraria, sus entradas son menos que sus salidas, en otras palabras,
+el vehículo no puede moverse horizontalmente sin tener que cambiar
+su inclinación y altura. 
+
+De la figura \ref{fig:Diagrama-de-Cuerpo } se puede observar que
+los motores $M_{i}$ para ($i=1,...,4$) producen las fuerzas $f_{i}$
+y los torques $\tau_{M_{i}}$ y el empuje principal $u$, los que serán
+descritos posteriormente. Los motores del frente $M_{1}$ y de la
+parte posterior $M_{3}$ giran en contra del sentido de las manecillas
+del reloj, mientras que los motores de izquierda y derecha, $M_{2}$ y
+$M_{4}$ respectivamente, giran en el sentido de las manecillas del
+reloj. Con ésto, los efectos giroscópicos y torques aerodinámicos
+se tienden a cancelar.
+
+\begin{figure}[H]
+\noindent \begin{centering}
+\includegraphics[scale=0.6]{\string"Quadrotor Modelado 01\string".jpg}
+\par\end{centering}
+\caption{\label{fig:Diagrama-de-Cuerpo }Diagrama de Cuerpo Libre de Quadrotor.}
+\end{figure}
+
+\textcompwordmark{}
+
+Para un mejor entendimiento, se separa el capítulo de modelado en
+cuatro secciones que cubren el comportamiento aerodinámico del vehículo,
+la relación entre los marcos de referencia, el enfoque lagrangeano y el enfoque de Newton-Euler estudiados para el modelado.
+
+
+\subsection{Aerodinámica de Motores: Momentos y Hélices}
+
+Para desarrollar un modelo del comportamiento de la aerodinámica de
+las hélices y motores, se considera que el empuje esta dado por el
+cambio en el momentum del aire que es desplazado hacia abajo por el
+giro de la hélice. Bajo esta lógica, la relación entre la magnitud
+del empuje y la magnitud de la velocidad inducida en el aire [9] es: 
+
+\begin{equation}
+f_{i}=2\rho Av_{i}^{2}
+\end{equation}
+
+Donde $f_{i}$ es el empuje iésimo, $\rho$ es la densidad del aire,
+$A$ es el área del disco que cubre la hélice al girar y $v_{i}$
+es la velocidad inducida al aire por el motor iésimo. 
+El empuje total también puede ser expresado en función de la velocidad
+angular del rotor [10]  mediante la siguiente ecuación:
+
+\begin{equation}
+f_{i}=C_{T}\rho A(\omega R)^{2}
+\end{equation}
+
+donde $f_{i}$ es el empuje total producido por el rotor iésimo, $R$
+es el radio del rotor y $C_{T}$ es un coeficiente adimensional de
+empuje. Por lo tanto, se tienen dos formas de levantar un cuerpo por
+la acción de una hélice giratoria. Se puede tener una hélice de diametro
+pequeño girando a gran velocidad, o se puede tener una hélice de diámetro
+mayor girando a menor velocidad.
+
+Para la implementación del proyecto se cuenta con hélices que poseen
+las mismas características, el área cubierta por cada una es igual.
+Por otro lado la densidad del aire es contante y el radio del rotor
+también, lo que permite concentrar todas estas constantes en una sola
+y reescribir la ecuación simplificada.
+
+\begin{equation}
+f(\omega_{i})=b\cdot\omega_{i}^{2}
+\end{equation}
+
+En general la constate $b$ es dificil de estimar, dado que no se
+conocen los parámetros aerodinámicos de las hélices con exactitud,
+puesto que las especificaciones del fabricante no están disponibles.
+Por lo tanto, deberá ser determinada empíricamente por medio de un
+banco de pruebas que será descrito posteriormente.
+
+De manera similar, el torque de cada motor para maniobras casi estacionarias
+se puede representar mediante una relación cuadratica de la velocidad
+angular [11].
+
+\begin{equation}
+\tau_{M_{i}}(\omega_{i})=K_{M}\omega_{i}^{2}
+\end{equation}
+
+Para determinar la constante $K_{M}$ también es necesario realizar
+pruebas para determinarla.
+Entonces como se muestra en la figura \ref{fig:Diagrama-de-Cuerpo },
+la suma de cada una de las fuerzas de empuje desplazadas hacia el
+centro de masa del vehículo corresponde al empuje principal $u.$
+Describiendolo matemáticamente se tiene:
+
+\begin{equation}
+u=\sum_{i=1}^{4}f_{i}\label{eq:Empuje Total}
+\end{equation}
+
+El movimiento de giro pitch hacia adelante se obtiene disminuyendo
+la velocidad de giro del motor $M_{1}$ y aumentando la velocidad
+del motor $M_{3}$. Así también para el moviento roll hacia la derecha,
+basta con disminuir la velocidad del motor $M_{4}$ y aumentar la
+velocidad del motor $M_{2}$. Por último el movimiento en yaw se logra
+incrementando el torque (por lo tanto también velocidad angular) de
+los motores delantero $M_{1}$ y trasero $M_{3}$, mientras se disminuye
+el torque de los motores laterales $M_{2}$ y $M_{4}$. Los tipos
+de movimientos descritos se visualizan de mejor forma en la siguiente
+figura.
+
+\begin{figure}[H]
+\noindent \begin{centering}
+\includegraphics[scale=0.6]{\string"Quadrotor Modelado 02\string".jpg}
+\par\end{centering}
+\caption{Torques yaw, pitch y roll de vehículo Quadrotor.}
+\end{figure}
+
+\textcompwordmark{}
+
+Escribiendo matemáticamente los momentos resultantes de la interacción
+de los torques y fuerzas producidos por los motores descritos en el
+párrafo anterior, se tiene la siguiente equivalencia:
+
+\begin{equation}
+\mathbf{\tau}=\left[\begin{array}{c}
+\tau_{\phi}\\
+\tau_{\theta}\\
+\tau_{\psi}
+\end{array}\right]\triangleq\begin{bmatrix}(f_{2}-f_{4})\cdot\ell\\
+(f_{3}-f_{1})\cdot\ell\\
+\tau_{M_{1}}+\tau_{M_{3}}-\tau_{M_{2}}-\tau_{M_{4}}
+\end{bmatrix}\label{eq:Momentos Rotacionales}
+\end{equation}
+
+Donde $\phi$ representa al ángulo en el eje de alabeo Roll, $\theta$ en el eje de elevación Pitch y $\psi$ el giro en el ángulo de dirección Yaw. Además, $\ell$ representa la distancia desde el rotor hasta el centro
+de masa del vehículo y $\tau_{M_{i}}$ para $i=1,...,4$ son los torques
+producidos por lo motores.
+
+\subsection{Marcos de Referencia y Matriz de Rotación}
+
+Para el análisis de la dinámica del quadrotor existen dos marcos de
+coordenadas, el primero es el marco de referencia cuyo origen está
+en el centro de masa del vehículo, lo denominaremos $\mathcal{A}$,
+mientras que el segundo corresponde al sistema de referencia inercial
+en tierra que lo denominaremos $\mathcal{I}$. La siguiente figura
+muestra dichos sistemas de referencia. 
+
+\noindent \begin{center}
+\begin{figure}[H]
+\noindent \begin{centering}
+\includegraphics[scale=0.6]{\string"Quadrotor Modelado 03\string".jpg}
+\par\end{centering}
+\caption{Sistemas de coordenadas para análisis dinámico del quadrotor.}
+\end{figure}
+\par\end{center}
+
+Dado que los sensores estarán fijos en la estructura del vehículo,
+las mediciones se corresponden con el sistema de referencia $\mathcal{A}$
+que rota en conjunto con éste. Por lo tanto, si el objetivo fuese
+hacer un control de trayectoria, se necesita adecuar estas mediciones
+al sistema de referencia inercial en tierra. Si bien el objetivo final
+no es el mencionado anteriormente, se modelarán y simularán todos
+los aspectos del vuelo del vehículo, tanto los rotacionales como los
+traslacionales. Por lo tanto para obtener las respectivas aceleraciones
+y velocidades en sistema inercial $I$, es necesaria la inclusión
+de una matriz de rotación $R$, que se deduce a continuación con la
+ayuda de la figura \ref{fig:Giro-de-sistema}, donde se muestra la
+rotación del sistema de referencia en los ángulos pitch, roll y
+yaw.
+
+\begin{figure}[H]
+\noindent \begin{centering}
+\includegraphics[scale=0.6]{\string"Quadrotor Modelado 05\string".png}
+\par\end{centering}
+\caption{\label{fig:Giro-de-sistema}Giro de sistema de referencia $\mathcal{A}$
+respecto a sistema inercial $\mathcal{I}$ compartiendo el origen.}
+\end{figure}
+
+
+Supongamos que se hace una rotación en el plano $x-y$, dejando el
+eje $z$ fijo y utilizándolo como eje de rotación. De acuerdo al supuesto,
+el sistema de referencia $\mathcal{A}$ está girando respecto al sistema
+inercial $\mathcal{I}$ una cantidad definida por el ángulo de rotación
+yaw $\psi$. Dicha rotación tiene asociada una matriz de transformación, por lo tanto se descomponen los nuevos
+ejes en los vectores que los conforman. Utilizando la notación que
+describe la figura \ref{fig:Giro-de-sistema} se tiene la siguiente
+equivalencia:
+
+\begin{equation}
+\begin{pmatrix}x\\
+y\\
+z
+\end{pmatrix}=[T_{z}]\cdot\begin{pmatrix}x'\\
+y'\\
+z'
+\end{pmatrix}
+\end{equation}
+
+Donde $T_{z}$ representa la matriz de rotación en torno al eje $z$. 
+
+\begin{equation}
+[T_{z}]=\begin{pmatrix}cos\psi & sin\psi & 0\\
+-sin\psi & cos\psi & 0\\
+0 & 0 & 1
+\end{pmatrix}
+\end{equation}
+
+Siguiendo la misma lógica, los giros en dirección del ángulo pitch
+$\theta$ y roll $\phi$ quedan descritos por las matrices $T_{y}$
+y $T_{x}$ respectivamente.
+
+\begin{equation}
+[T_{x}]=\begin{pmatrix}1 & 0 & 0\\
+0 & cos\phi & sin\phi\\
+0 & -sin\phi & cos\phi
+\end{pmatrix}\qquad\qquad[T_{y}]=\begin{pmatrix}cos\theta & 0 & -sin\theta\\
+0 & 1 & 0\\
+sin\theta & 0 & cos\theta
+\end{pmatrix}
+\end{equation}
+
+Así se obtiene la matrizde rotación $R$ del sistema en los tres ejes,
+donde $c\theta$ representa $cos\theta$y $s\theta$ representa $sin\theta$.
+
+\begin{equation}
+\begin{pmatrix}x\\
+y\\
+z
+\end{pmatrix}=[T_{x}][T_{y}][T_{z}]\begin{pmatrix}x'\\
+y'\\
+z'
+\end{pmatrix}=\begin{pmatrix}c\theta c\psi & c\theta s\psi & -s\theta\\
+s\phi s\theta c\psi-c\phi s\psi & s\phi s\theta s\psi+c\phi c\psi & s\phi c\theta\\
+c\phi s\theta c\psi+s\phi s\psi & c\phi s\theta s\psi-s\phi c\psi & c\phi c\theta
+\end{pmatrix}\begin{pmatrix}x'\\
+y'\\
+z'
+\end{pmatrix}
+\end{equation}
+
+Por otro lado para saber como influye la razón de cambio de los ángulos
+de Euler en el vector velocidad angular en el marco $\mathcal{A}$,
+que apunta en dirección al eje de rotación, se tiene la siguiente
+definición [12]:
+
+\begin{equation}
+\omega=\begin{pmatrix}\omega_{x}\\
+\omega_{y}\\
+\omega_{z}
+\end{pmatrix}=Id\cdot\begin{pmatrix}\dot{\phi}\\
+0\\
+0
+\end{pmatrix}+[T_{x}]\cdot\begin{pmatrix}0\\
+\dot{\theta}\\
+0
+\end{pmatrix}+[T_{x}][T_{y}]\cdot\begin{pmatrix}0\\
+0\\
+\dot{\psi}
+\end{pmatrix}
+\end{equation}
+
+\begin{equation}
+\omega=\begin{bmatrix}1 & 0 & -sin\theta\\
+0 & cos\phi & cos\theta sin\phi\\
+0 & -sin\phi & cos\theta cos\phi
+\end{bmatrix}\begin{bmatrix}\dot{\phi}\\
+\dot{\theta}\\
+\dot{\psi}
+\end{bmatrix}=W_{n}\dot{\eta}
+\end{equation}
+
+\textcompwordmark{}
+
+\subsection{Modelo dinámico del quadrotor: Enfoque de Euler Lagrange}
+
+En el libro Quad Rotorcraft Control Vision-Based Hovering and Navigation,
+se utiliza este método para modelar la dinámica del quadrotor. El
+modelo se sustenta en el supuesto de que las dinámicas de los motores
+son mucho más rápidas que las del sistema, por lo tanto pueden ser
+despreciadas. Por otro lado, las hélices de los motores se asumen
+simétricas, iguales y rígidas. Además se asume un modelo donde se
+desprecian los efectos de perturbaciones causadas por el viento en
+ambientes exteriores.
+
+Las ecuaciones de movimiento del vehículo se desarrollan a partir
+de las expresiones de energía cinética traslacional y rotacional del
+sistema. Sea el vector $q$ de coordenadas
+generalizadas referidas al sistema inercial en tierra $\mathcal{I}$:
+
+\begin{equation}
+q=[x\ y\ z\ \phi\ \theta\ \psi]^{T}
+\end{equation}
+ 
+Esta coordenadas generales pueden ser separadas en componentes traslacionales
+y rotacionales
+
+\begin{equation}
+\xi=[x\ y\ z]^{T}\quad y\quad\eta=[\phi\ \theta\ \psi]^{T}
+\end{equation}
+
+Por lo tanto se tiene 
+
+\begin{equation}
+q=[\xi\quad\eta]^{T}
+\end{equation}
+
+El Lagrangeano se obtiene mediante la diferencia entre la energía
+cinética y energía potencial del sistema. La energía cinética tiene
+componentes rotacionales y traslacionales, mientras que la energía
+potencial está relacionada con la altura del centro de masa del vehículo.
+Por lo tanto el Lagrangeano del vehículo se puede expresar como:
+
+\begin{equation}
+L=E_{c}-E_{p}
+\end{equation}
+
+Donde $E_{c}$ es la energía cinética del sistema y $E_{p}$ corresponde
+a la energía potencial. La energía cinética total del sistema es la
+suma de la energía del movimiento traslacional y del rotacional, mientras
+que la potencial depende de la altura y la masa constante del vehículo. 
+
+Antes de enunciar las expresiones para dichas energías, se define
+la matriz $\mathbb{J}=\mathbb{J}(\eta)=W_{\eta}^{T}IW_{\eta}$, que
+representa la matriz de inercia para la cinética rotacional expresada
+en términos de las coordenadas generalizadas $\eta$.
+
+Por lo tanto la expresión para el Lagrangeano es finalmente:
+
+\begin{equation}
+L(q,\dot{q})=\frac{1}{2}\dot{\xi}^{T}m\dot{\xi}+\frac{1}{2}\dot{\eta}^{T}\mathbb{J}\dot{\eta}-mgz
+\end{equation}
+
+Dado que el Lagrangeano no contiene términos cruzados entre la energía
+cinética traslacional y la energía cinética rotacional, la ecuación
+de Euler-Lagrange puede ser dividida en dinámicas diferentes para
+cada tipo de movimiento, para las coordenadas $\xi$ y $\eta$.
+
+La ecuación de Euler-Lagrange para el movimiento traslacional es:
+
+\begin{equation}
+\frac{d}{dt}\left[\frac{\partial L_{Tras}}{\partial\dot{\xi}}\right]-\frac{\partial L_{Tras}}{\partial\xi}=F_{\xi}
+\end{equation}
+
+
+Por lo tanto la dinámica traslacional es finalmente:
+
+\begin{equation}
+m\ddot{\xi}+mg\hat{z}=F_{\xi}
+\end{equation}
+
+Las fuerzas traslacionales son las de empuje resultantes de cada motor,
+y las fuerzas rotacionales son las resultantes de los momentos causados
+por las fuerzas de los motores opuestos sobre el centro de gravedad.
+Dado que para el desarrollo del modelo no se están considerando los
+efectos giroscópicos y se mantiene lo más simple posible, la fuerza
+traslacional está dada por:
+
+\begin{equation}
+F_{rotor}=[0\ 0\ u]^{T}
+\end{equation}
+
+Donde $u$ es el empuje total como se describe en la ecuación \ref{eq:Empuje Total}.
+Es claro que dicha fuerza de empuje apunta en la dirección del eje
+z, pero dado que los sensores adquieren los datos para el sistema
+de referencia que se mueve junto al vehículo, se debe relacionar esta
+cantidad respecto al sistema inercial descrito en la sección anterior.
+Por lo tanto, 
+
+\begin{equation}
+F_{\xi}=R\cdot F_{rotor}=\begin{bmatrix}-u\cdot(s\phi s\psi+c\phi c\psi s\theta)\\
+u\cdot(c\phi s\theta s\psi-c\psi s\phi)\\
+u\cdot c\phi c\theta
+\end{bmatrix}
+\end{equation}
+
+Escribiendo la dinámica traslacional de forma matricial se tiene:
+
+\begin{equation}
+\begin{bmatrix}\ddot{x}\\
+\ddot{y}\\
+\ddot{z}
+\end{bmatrix}=-g\cdot\begin{bmatrix}0\\
+0\\
+1
+\end{bmatrix}+\frac{u}{m}\cdot\begin{bmatrix}-(s\phi s\psi+c\phi c\psi s\theta)\\
+c\phi s\theta s\psi-c\psi s\phi\\
+c\phi c\theta
+\end{bmatrix}
+\end{equation}
+
+Luego la ecuación de Euler-Lagrange para el movimiento rotacional
+es:
+
+\begin{equation}
+\frac{d}{dt}\left[\frac{\partial L_{Rot}}{\partial\dot{\eta}}\right]-\frac{\partial L_{Rot}}{\partial\eta}=\tau
+\end{equation}
+
+\begin{equation}
+\frac{d}{dt}\left[\frac{1}{2}\frac{\partial(\dot{\eta}^{T}\mathbb{J}\dot{\eta})}{\partial\dot{\eta}}\right]-\frac{1}{2}\frac{\partial(\dot{\eta}^{T}\mathbb{J}\dot{\eta})}{\partial\eta}=\tau
+\end{equation}
+
+\begin{equation}
+\mathbb{J}\ddot{\eta}+\dot{\mathbb{J}}\dot{\eta}-\frac{1}{2}\frac{\partial}{\partial\eta}(\dot{\eta}^{T}\mathbb{J}\dot{\eta})=\tau
+\end{equation}
+
+\begin{equation}
+\mathbb{J}\ddot{\eta}+C(\eta,\dot{\eta})\dot{\eta}=\tau\label{eq:rotacional lagrangeano}
+\end{equation}
+
+El término $C(\eta,\dot{\eta})$ de la ecuación (\ref{eq:rotacional lagrangeano})
+es conocido como matriz de Coriolis, que contiene las componentes
+giroscópicas y centrípetas. El modelo anterior es de segundo orden
+y no lineal, dadas las matrices $\mathbb{J}\ y\ C(\eta,\dot{\eta})$.
+
+\begin{equation}
+\mathbb{J}=\begin{bmatrix}I_{x} & 0 & -S_{\theta}I_{x}\\
+0 & I_{y}C_{\phi}^{2}-I_{z}S_{\phi}^{2} & (I_{y}-I_{z})C_{\phi}C_{\theta}S_{\phi}\\
+-S_{\theta}I_{x} & (I_{y}-I_{z})C_{\phi}C_{\theta}S_{\phi} & S_{\theta}^{2}I_{x}+I_{y}C_{\theta}^{2}S_{\phi}^{2}+I_{z}C_{\theta}^{2}C_{\phi}^{2}
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+C(\eta,\dot{\eta})=(\dot{\mathbb{J}}-\frac{1}{2}\frac{\partial}{\partial\eta}(\dot{\eta}^{T}\mathbb{J}))=\begin{bmatrix}C_{11} & C_{12} & C_{13}\\
+C_{21} & C_{22} & C_{23}\\
+C_{31} & C_{32} & C_{33}
+\end{bmatrix}
+\end{equation}
+
+Donde:
+\begin{equation}
+C_{11}=0;\quad C_{12}=(I_{y}-I_{z})(\dot{\theta}C_{\phi}S_{\phi}+\dot{\psi}S_{\phi}^{2}C_{\theta})+(I_{z}-I_{y})\dot{\psi}C_{\phi}^{2}C_{\theta}-I_{x}\dot{\psi}C_{\theta}
+\end{equation}
+
+\begin{equation}
+C_{13}=(I_{z}-I_{y})\dot{\psi}C_{\phi}S_{\phi}C_{\theta}^{2}
+\end{equation}
+
+\begin{equation}
+C_{21}=(I_{z}-I_{y})\cdot(\dot{\theta}C_{\phi}S_{\phi}+\dot{\psi}S_{\phi}C_{\theta})+(I_{y}-I_{z})\dot{\psi}C_{\phi}^{2}C_{\theta}+I_{x}\dot{\psi}C_{\theta}
+\end{equation}
+
+\begin{equation}
+C_{22}=(I_{z}-I_{y})\dot{\phi}C_{\phi}S_{\phi}
+\end{equation}
+
+\begin{equation}
+C_{23}=-I_{x}\dot{\psi}S_{\theta}C_{\theta}+I_{y}\dot{\psi}S_{\phi}^{2}S_{\theta}C_{\theta}+I_{z}\dot{\psi}C_{\phi}^{2}S_{\theta}C_{\theta}
+\end{equation}
+
+\begin{equation}
+C_{31}=(I_{y}-I_{z})\dot{\psi}C_{\theta}^{2}S_{\phi}C_{\theta}-I_{x}\dot{\theta}C_{\theta}
+\end{equation}
+
+\begin{equation}
+C_{32}=(I_{z}-I_{y})\cdot(\dot{\theta}C_{\phi}S_{\phi}S_{\theta}+\dot{\phi}S_{\phi}^{2}C_{\theta})+(I_{y}-I_{z})\dot{\phi}C_{\phi}^{2}C_{\theta}+I_{x}\dot{\psi}S_{\theta}C_{\theta}-I_{y}\dot{\psi}S_{\phi}^{2}S_{\theta}C_{\theta}-I_{z}\dot{\psi}C_{\phi}^{2}S_{\theta}C_{\theta}
+\end{equation}
+
+\begin{equation}
+C_{33}=(I_{y}-I_{z})\dot{\phi}C_{\phi}S_{\theta}C_{\theta}^{2}-I_{y}\dot{\theta}S_{\phi}^{2}C_{\theta}S_{\theta}-I_{z}\dot{\theta}C_{\phi}^{2}C_{\theta}S_{\theta}+I_{x}\dot{\theta}C_{\theta}S_{\theta}
+\end{equation}
+
+La ecuación (\ref{eq:rotacional lagrangeano}), conduce a las ecuaciones
+diferenciales para el modelo de la aceleración angular.
+
+\begin{equation}
+\ddot{\eta}=\mathbb{J}^{-1}(\tau-C(\eta,\dot{\eta})\dot{\eta})
+\end{equation}
+
+\subsection{Modelo dinámico del quadrotor: Enfoque de Newton Euler}
+
+Dada la extensión y complejidad de la parte rotacional del modelo
+previamente deducido mediante el enfoque de Euler-Lagrange, es que
+se considera desarrollar un segundo enfoque para el modelado de dicha
+dinámica. Ésto surge como estrategia para la etapa de simulación,
+donde se utiliza el modelo equivalente de Newton-Euler, el cual es
+más simple de implementar. 
+
+En primer lugar se supondrá que el vehículo es rígido, por lo cual
+se puede utilizar la ecuación de dinámica de cuerpos rígidos en el
+sistema de referencia $\mathcal{A}$ (cuerpo del vehículo). También
+se asume que el vehículo posee una estructura simétrica con los cuatro
+brazo alineados con los ejes $x$ e $y$, por lo tanto su matriz de
+inercia es constante, diagonal y simétrica con $I_{x}=I_{y}$.
+
+Antes del desarrollo de la ecuación, se define el vector de velocidad
+angular en el sistema de referencia del vehículo.
+
+\begin{equation}
+\nu=W_{\eta}\dot{\eta}\ \implies\ \nu=\begin{bmatrix}p\\
+q\\
+r
+\end{bmatrix}=\begin{bmatrix}1 & 0 & -S_{\theta}\\
+0 & C_{\phi} & C_{\theta}S_{\phi}\\
+0 & -S_{\phi} & C_{\theta}C_{\phi}
+\end{bmatrix}\begin{bmatrix}\dot{\phi}\\
+\dot{\theta}\\
+\dot{\psi}
+\end{bmatrix}\label{eq:138}
+\end{equation}
+
+Donde la matriz $W_{\eta}$ será invertible si $\theta\neq(2k-1)\phi/2,\ k\in\mathbb{Z}.$ 
+
+Por lo tanto la ecuación de Euler para la dinámica de cuerpos rígidos
+es:
+
+\begin{equation}
+I\dot{v}+\nu\times(I\nu)=\tau
+\end{equation}
+
+\begin{equation}
+\dot{\nu}=I^{-1}\left(-\begin{bmatrix}p\\
+q\\
+r
+\end{bmatrix}\times\begin{bmatrix}I_{x}p\\
+I_{y}q\\
+I_{z}r
+\end{bmatrix}+\tau\right)
+\end{equation}
+
+\begin{equation}
+\begin{bmatrix}\dot{p}\\
+\dot{q}\\
+\dot{r}
+\end{bmatrix}=\begin{bmatrix}(I_{y}-I_{z})qr/I_{x}\\
+(I_{z}-I_{x})pr/I_{y}\\
+(I_{x}-I_{y})pq/I_{z}
+\end{bmatrix}+\begin{bmatrix}\tau_{\phi}/I_{x}\\
+\tau_{\theta}/I_{y}\\
+\tau_{\psi}/I_{z}
+\end{bmatrix}\label{eq:141}
+\end{equation}
+
+Por lo tanto este modelo describe el vector aceleración en el marco
+inercial del vehículo, la que es más simple de implementar en la simulación.
+Para obtener el modelo equivalente deducido por el método de Euler-Lagrange,
+se puede obtener la aceleración angular en el marco inercial mediante
+la matriz $W_{\eta}^{-1}$ y su derivada en el tiempo 
+
+\begin{equation}
+\ddot{\eta}=\frac{d}{dt}(W_{\eta}^{-1}\nu)=\frac{d}{dt}(W_{\eta}^{-1})\nu+W_{\eta}\dot{\nu}
+\end{equation}
+
+\textcompwordmark{}
+
+\end{document}

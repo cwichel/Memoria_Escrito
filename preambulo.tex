@@ -1,0 +1,89 @@
+% Soporte de separacion en archivos
+\usepackage{subfiles}
+% =========================== LAYOUT
+% Geometría del documento (tamaños)
+\usepackage[
+		letterpaper,
+		top=2.5cm,
+		bottom=2.5cm,
+		left=3.5cm,
+		right=2.3cm,
+		bindingoffset=6mm
+		]{geometry}
+% Cabeceras/Footers
+\usepackage{fancyhdr}
+\renewcommand\headrulewidth{0pt}
+\renewcommand\footrulewidth{0pt}
+\fancyhead[L]{}
+\fancyhead[C]{}
+\fancyhead[R]{}
+\fancyfoot[L]{}
+\fancyfoot[C]{}
+\fancyfoot[LE,RO]{\thepage}
+% =========================== TEXTO
+% Soporte de idioma y fuentes
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{
+		amsmath, 
+		amssymb,
+		amstext, 
+		gensymb
+		}
+\usepackage{lipsum}
+\usepackage{times}				% Selecciona Times New Roman como fuente
+% Interlineado
+\usepackage{setspace}
+\setstretch{1.5}
+% Soporte para listas
+\usepackage{enumerate}
+% Soporte para hipervinculos
+\usepackage[bookmarks=true]{hyperref}
+% =========================== FIGURAS/TABLAS/CODIGO
+% Permite agregar marcos 
+\usepackage{framed}
+% Soporte de imagenes
+\usepackage{eso-pic}
+\usepackage{graphicx}
+\graphicspath{{\main/imagenes/}}
+% Soporte para flotantes
+\usepackage{float}				% Permite usar H como especificador de posición de figuras
+% Soporte de codigo
+\usepackage{listings}
+\lstset{inputpath=\main/codigo/}
+% Soporte para figuras
+\usepackage{caption}
+\usepackage[
+		font=footnotesize,
+		caption=false,
+		farskip=0mm,
+		captionskip=0mm,
+		nearskip=0mm
+		]{subfig}
+% Soporte para tablas
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\usepackage{
+		multirow, 
+		multicol
+		}
+% =========================== BIBLIOGRAFIA/GLOSARIO
+% Soporte para bibliografia
+\usepackage{biblatex}
+% Soporte para glosarios
+\usepackage{glossaries}
+% Permite mantener las marcas al crear el PDF
+\usepackage{bookmark}
+% =========================== SIN REVISAR
+\usepackage{blindtext}
+\usepackage{verbatim}
+\usepackage{lscape}
+\usepackage{alltt}
+\usepackage{color} 
+\usepackage{soul}
+\usepackage{url}
+\usepackage{xr}
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}

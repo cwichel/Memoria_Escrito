@@ -1,16 +1,14 @@
 % =========================================================
 % CONFIGURACION DEL DOCUMENTO
 % =========================================================
-\providecommand{\main}{..}
-\documentclass[../main.tex]{subfiles}
+\providecommand{\main}{../..}
+\documentclass[\main/main.tex]{subfiles}
 
 % =========================================================
 % CONTENIDO
 % =========================================================
 \begin{document}
-
-
-\chapter{Instrumentación y Control}
+\section{Instrumentación y Control}
 
 En el presente capítulo se presentan los procedimientos realizados
 para la implementación del control embebido en la planta real. Se
@@ -20,9 +18,9 @@ la configuración de los controladores electrónicos, los toolkits de
 LabVIEW escogidos y las diferentes etapas de experimentación con el
 vehículo.
 
-\section{Medición de Ángulos}
+\subsection{Medición de Ángulos}
 
-\subsection{Acelerómetro}
+\subsubsection{Acelerómetro}
 
 Para la medición de los ángulos se utilizan los sensores MEMS descritos
 en el capítulo de Componentes del Sistema \ref{Componentes del Sistema}. La mayoría de los acelerómetros
@@ -143,7 +141,7 @@ Por lo tanto los ángulos pitch y roll son:
 \phi=arctan(\frac{G_{y}}{G_{z}})\quad\quad,\quad\quad\hfill \theta=arctan\left(\frac{-G_{x}}{\sqrt{G_{y}^{2}+G_{z}^{2}}}\right)
 \end{equation}
 
-\subsection{Gyróscopo}
+\subsubsection{Gyróscopo}
 
 Para entender como funciona el gyroscopo, es útil imaginar un cuerpo
 de masa $m$ moviendose con velocidad $v$. Si se aplica una rotación
@@ -195,7 +193,7 @@ Yz_{k}=Yz_{k-1} + \dot{Yz_{k}}\cdot\Delta t
 Con la medición del gyroscopo $Yz$ en grados
 por segundo.
 
-\subsection{Consideraciones en Programación}
+\subsubsection{Consideraciones en Programación}
 
 Para comprobar la estimación de los ángulos obtenida mediante este
 proceso, se programa una aplicación en LabVIEW de adquisición de mediciones
@@ -226,7 +224,7 @@ considerando sólo la presencia del campo gravitacional de 1{[}g{]}
 en el eje $z$. El código de estas subrutinas se incluye en el Anexo B.
 
 
-\section{Estrategia de Control PID descentralizado}
+\subsection{Estrategia de Control PID descentralizado}
 
 Para la implementación del control en la planta real se utilizaron
 dos estrategias de control lineal, ambas basadas en controladores
@@ -266,10 +264,10 @@ en ambos soportes, robusto a pequeñas perturbaciones y, en algunos
 casos, con un buen seguimiento de referencias constantes.
 
 
-\section{Actuación}
+\subsection{Actuación}
 
 
-\subsection{Configuración del ESC}
+\subsubsection{Configuración del ESC}
 
 En primera instancia se debe aegurar de que los cuatro motores estén
 funcionando de la misma forma, vale decir con la misma configuración
@@ -298,7 +296,7 @@ a variar uniformemente la señal de control PWM de 50{[}Hz{]} entre
 para dar mínima y máxima velocidad de giro a los motores dentro de
 ese rango. En el Anexo B se adjunta el código LabVIEW de calibración de motores, mientras que en Anexo D se describe la secuencia de calibración de los cuatro ESC simultáneamente. 
 
-\section{Resultados Experimentales}
+\subsection{Resultados Experimentales}
 
 En esta sección se presentan los resultados experimentales del control
 embebido en la planta real. La sección se divide en subsecciones que
@@ -314,7 +312,7 @@ del control embebido con LabVIEW y myRIO se detalla en el Anexo B.
 
 La frecuencia de muestreo escogida para la implementación es de 150[Hz] para todas las pruebas realizadas en ambos soportes.
 
-\subsection{Estabilización de Eje Pitch y Roll en Soporte 1}
+\subsubsection{Estabilización de Eje Pitch y Roll en Soporte 1}
 
 Para la prueba de estabilización de elevación Pitch se fija el vehículo desde los
 dos extremos opuestos del soporte de madera, dejando sólo dos motores
@@ -354,96 +352,95 @@ PID=K_{p}(e(t)+K_{d}\frac{de(t)}{dt}+\frac{1}{K_{i}}\int e(t)dt)
 
 El tiempo de muestreo y ejecución del lazo de control programado es de 150[Hz], es decir 6 [ms] para la ejecución del programa principal. 
 
+\begin{enumerate}
+	\item \textbf{Resultados Pitch}
+	Los resultados obtenidos para la posición del vehículo y la respectiva
+	actuación en el tiempo se muestran en la tabla \ref{table: Parametros Pitch Ma} y en la figura \ref{fig: Resultado Pitch Grafico Ma}.
 
-\subsubsection{Resultados Pitch}
+	\begin{table}[H]
+	\noindent \begin{centering}
+	\begin{tabular}{|c|c|c|}
+	\hline 
+	Parámetros PID & PID Interno & PID Externo\tabularnewline
+	\hline 
+	\hline 
+	$Kp$ & 0.6 & 1.2\tabularnewline
+	\hline 
+	$K_{i}$ & 0.8 & 0.2\tabularnewline
+	\hline 
+	$K_{d}$ & 0.006 & 0.004\tabularnewline
+	\hline 
+	\end{tabular}
+	\par\end{centering}
+	\caption{Parámetros de los controladores PID Pitch.}\label{table: Parametros Pitch Ma}\noindent
+	\end{table}
 
-Los resultados obtenidos para la posición del vehículo y la respectiva
-actuación en el tiempo se muestran en la tabla \ref{table: Parametros Pitch Ma} y en la figura \ref{fig: Resultado Pitch Grafico Ma}.
+	\begin{figure}[H]
+	\noindent \begin{centering}
+	\includegraphics[scale=0.8]{PitchMadera}
+	\par\end{centering}
+	\caption{Estabilización eje Pitch en Soporte de Madera}\label{fig: Resultado Pitch Grafico Ma}\noindent
+	\end{figure}
 
-\begin{table}[H]
-\noindent \begin{centering}
-\begin{tabular}{|c|c|c|}
-\hline 
-Parámetros PID & PID Interno & PID Externo\tabularnewline
-\hline 
-\hline 
-$Kp$ & 0.6 & 1.2\tabularnewline
-\hline 
-$K_{i}$ & 0.8 & 0.2\tabularnewline
-\hline 
-$K_{d}$ & 0.006 & 0.004\tabularnewline
-\hline 
-\end{tabular}
-\par\end{centering}
-\caption{Parámetros de los controladores PID Pitch.}\label{table: Parametros Pitch Ma}\noindent
-\end{table}
+	En primer lugar se mantiene la posición deseada en cero mientras se
+	asignan los valores de integración a los controladores PID. Dichos
+	valores no se dejan activos desde un comienzo debido a que mientras
+	se elimina el offset de los sensores, la parte integrativa acumula
+	error, saturando el sistema al momento de encender los motores. El
+	experimento prosigue con el cambio de posiciones angulares a +10$\degree$,
+	+20$\degree$, +10$\degree$, -10$\degree$
+	y $-20$. Donde se puede observar que el vehículo tiende a seguir
+	las referencias constantes. Luego de que está en la posición de -20$\degree$,
+	se perturba el sistema, verificando que vuelve a la posición deseada.
+	Luego se fija un setpoint de cero grados para inducir nuevamente dos
+	perturbaciones al sistema, finalizando con un cambio de posición a
+	+10$\degree$ donde nuevamente se perturba el sistema verificando
+	que vuelve a estabilizarse cerca de los valores deseados.
 
-\begin{figure}[H]
-\noindent \begin{centering}
-\includegraphics[scale=0.8]{PitchMadera}
-\par\end{centering}
-\caption{Estabilización eje Pitch en Soporte de Madera}\label{fig: Resultado Pitch Grafico Ma}\noindent
-\end{figure}
+	\item \textbf{Resultados Roll}
 
-En primer lugar se mantiene la posición deseada en cero mientras se
-asignan los valores de integración a los controladores PID. Dichos
-valores no se dejan activos desde un comienzo debido a que mientras
-se elimina el offset de los sensores, la parte integrativa acumula
-error, saturando el sistema al momento de encender los motores. El
-experimento prosigue con el cambio de posiciones angulares a +10$\degree$,
-+20$\degree$, +10$\degree$, -10$\degree$
-y $-20$. Donde se puede observar que el vehículo tiende a seguir
-las referencias constantes. Luego de que está en la posición de -20$\degree$,
-se perturba el sistema, verificando que vuelve a la posición deseada.
-Luego se fija un setpoint de cero grados para inducir nuevamente dos
-perturbaciones al sistema, finalizando con un cambio de posición a
-+10$\degree$ donde nuevamente se perturba el sistema verificando
-que vuelve a estabilizarse cerca de los valores deseados.
+	Siguiendo el mismo método experimental de sintonización de los parámetros,
+	se somete a prueba el eje Roll, cuyos resultados se presentan en la tabla \ref{table: Parametros Roll Ma} y en la figura \ref{fig: Resultados Roll Grafico Ma}.
 
-\subsubsection{Resultados Roll}
+	\begin{table}[H]
+	\noindent \begin{centering}
+	\begin{tabular}{|c|c|c|}
+	\hline 
+	Parámetros PID & PID Interno & PID Externo\tabularnewline
+	\hline 
+	\hline 
+	$Kp$ & 0.6 & 1\tabularnewline
+	\hline 
+	$K_{i}$ & 0.8 & 0.1\tabularnewline
+	\hline 
+	$K_{d}$ & 0.004 & 0.004\tabularnewline
+	\hline 
+	\end{tabular}
+	\par\end{centering}
+	\caption{Parámetros de los controladores PID Roll.}\label{table: Parametros Roll Ma}\noindent
+	\end{table}
 
-Siguiendo el mismo método experimental de sintonización de los parámetros,
-se somete a prueba el eje Roll, cuyos resultados se presentan en la tabla \ref{table: Parametros Roll Ma} y en la figura \ref{fig: Resultados Roll Grafico Ma}.
+	\begin{figure}[H]
+	\noindent \begin{centering}
+	\includegraphics[scale=0.8]{RollMadera}
+	\par\end{centering}
+	\caption{Estabilización eje Roll en Soporte de Madera.}\label{fig: Resultados Roll Grafico Ma}\noindent
+	\end{figure}
 
-\begin{table}[H]
-\noindent \begin{centering}
-\begin{tabular}{|c|c|c|}
-\hline 
-Parámetros PID & PID Interno & PID Externo\tabularnewline
-\hline 
-\hline 
-$Kp$ & 0.6 & 1\tabularnewline
-\hline 
-$K_{i}$ & 0.8 & 0.1\tabularnewline
-\hline 
-$K_{d}$ & 0.004 & 0.004\tabularnewline
-\hline 
-\end{tabular}
-\par\end{centering}
-\caption{Parámetros de los controladores PID Roll.}\label{table: Parametros Roll Ma}\noindent
-\end{table}
+	El experimento también comienza calculando el offset asociado a los
+	sensores, por lo tanto también se fijan los valores de integración
+	después de esta etapa. En primer lugar se comienza con el vehículo
+	estable en la posición cero, para cambiar referencia a -10$\degree$, 
+	-20$\degree$, -10$\degree$ y 0$\degree$,
+	con el fin de verificar seguimiento. Posteriormente se realizan los
+	mismos cambios de referencia en sentido contrario, induciendo perturbación
+	en +10$\degree$ y en +20$\degree$ cuyo
+	resultado es que el vehículo vuelve a la posición deseada. Una vez
+	que se vuelve a la posición cero, también se inducen perturbaciones
+	verificando que el vehículo vuelve a la estabilización en dicha posición.
+\end{enumerate}
 
-\begin{figure}[H]
-\noindent \begin{centering}
-\includegraphics[scale=0.8]{RollMadera}
-\par\end{centering}
-\caption{Estabilización eje Roll en Soporte de Madera.}\label{fig: Resultados Roll Grafico Ma}\noindent
-\end{figure}
-
-El experimento también comienza calculando el offset asociado a los
-sensores, por lo tanto también se fijan los valores de integración
-después de esta etapa. En primer lugar se comienza con el vehículo
-estable en la posición cero, para cambiar referencia a -10$\degree$, 
--20$\degree$, -10$\degree$ y 0$\degree$,
-con el fin de verificar seguimiento. Posteriormente se realizan los
-mismos cambios de referencia en sentido contrario, induciendo perturbación
-en +10$\degree$ y en +20$\degree$ cuyo
-resultado es que el vehículo vuelve a la posición deseada. Una vez
-que se vuelve a la posición cero, también se inducen perturbaciones
-verificando que el vehículo vuelve a la estabilización en dicha posición.
-
-
-\subsection{Estabilización de Eje Pitch, Roll y Yaw en soporte 2}
+\subsubsection{Estabilización de Eje Pitch, Roll y Yaw en soporte 2}
 
 Antes de probar la estabilización del vehículo en vuelo hovering,
 se somete a pruebas experimentales sobre el soporte de metal con tres
@@ -473,175 +470,171 @@ en el control de cada eje por separado, pero no así en el control
 del vehículo completo, es decir, con todos sus ejes libres. Los resultados
 experimentales se describen a continuación.
 
-\subsubsection{Resultados Pitch}
+\begin{enumerate}
+	\item \textbf{Resultados Pitch}
+	Para la sintonización de los parámetros de los controladores PID se
+	siguen los mismos pasos descritos en la estabilización con el soporte
+	de madera. Dadas las limitaciones del diseño del soporte de metal, las pruebas
+	de estabilización son un tanto diferentes para los ejes de Pitch y
+	Roll. Éstas solo contemplan la estabilización sobre la referencia
+	en cero, dado que por el alto roce no es posible realizar seguimiento
+	sin saturar la actuación o sin que la planta oscile de manera violenta,
+	agregando peligro para las personas en las pruebas. Otra diferencia es la respuesta
+	del sistema a las perturbaciones en la posición angular, dado que
+	el vehículo solo vuelve a la posición deseada ante pequeñas perturbaciones,
+	si estas aumentan en intensidad, el vehículo no contraresta el movimiento
+	aplicado de manera correcta en gran parte por las condiciones del
+	soporte.
 
-Para la sintonización de los parámetros de los controladores PID se
-siguen los mismos pasos descritos en la estabilización con el soporte
-de madera. Dadas las limitaciones del diseño del soporte de metal, las pruebas
-de estabilización son un tanto diferentes para los ejes de Pitch y
-Roll. Éstas solo contemplan la estabilización sobre la referencia
-en cero, dado que por el alto roce no es posible realizar seguimiento
-sin saturar la actuación o sin que la planta oscile de manera violenta,
-agregando peligro para las personas en las pruebas. Otra diferencia es la respuesta
-del sistema a las perturbaciones en la posición angular, dado que
-el vehículo solo vuelve a la posición deseada ante pequeñas perturbaciones,
-si estas aumentan en intensidad, el vehículo no contraresta el movimiento
-aplicado de manera correcta en gran parte por las condiciones del
-soporte.
+	Los resultados de las pruebas de estabilización sobre el eje Pitch
+	se presentan en la tabla \ref{table: Parametros Pitch Me} y en la figura \ref{fig: Resultados Pitch Me} :
 
-Los resultados de las pruebas de estabilización sobre el eje Pitch
-se presentan en la tabla \ref{table: Parametros Pitch Me} y en la figura \ref{fig: Resultados Pitch Me} :
+	\begin{table}[H]
+	\noindent \begin{centering}
+	\begin{tabular}{|c|c|c|}
+	\hline 
+	Parámetros PID & PID Interno & PID Externo\tabularnewline
+	\hline 
+	\hline 
+	$Kp$ & 2.2 & 1.8\tabularnewline
+	\hline 
+	$K_{i}$ & 0.8 & 0.6\tabularnewline
+	\hline 
+	$K_{d}$ & 0.006 & 0.005\tabularnewline
+	\hline 
+	\end{tabular}
+	\par\end{centering}
+	\caption{Parámetros de los controladores PID Pitch.}\label{table: Parametros Pitch Me}\noindent
+	\end{table}
 
-\begin{table}[H]
-\noindent \begin{centering}
-\begin{tabular}{|c|c|c|}
-\hline 
-Parámetros PID & PID Interno & PID Externo\tabularnewline
-\hline 
-\hline 
-$Kp$ & 2.2 & 1.8\tabularnewline
-\hline 
-$K_{i}$ & 0.8 & 0.6\tabularnewline
-\hline 
-$K_{d}$ & 0.006 & 0.005\tabularnewline
-\hline 
-\end{tabular}
-\par\end{centering}
-\caption{Parámetros de los controladores PID Pitch.}\label{table: Parametros Pitch Me}\noindent
-\end{table}
+	\begin{figure}[H]
+	\noindent \begin{centering}
+	\includegraphics[scale=0.8]{PitchMetal}
+	\par\end{centering}
+	\caption{Estabilización eje Pitch en Soporte de Metal 3DOF.}\label{fig: Resultados Pitch Me}\noindent
+	\end{figure}
 
-\begin{figure}[H]
-\noindent \begin{centering}
-\includegraphics[scale=0.8]{PitchMetal}
-\par\end{centering}
-\caption{Estabilización eje Pitch en Soporte de Metal 3DOF.}\label{fig: Resultados Pitch Me}\noindent
-\end{figure}
+	El experimento comienza con el quadcopter en la posición de equilibrio
+	para eliminar el offset de los sensores. Como las pruebas contemplan
+	la estabilización en la posición cero, se procede a perturbar el sistema
+	manualmente con diferentes intensidades, baja, media y alta. A los 17{[}s{]} se aplica la primera
+	perturbación de pequeña magnitud, al igual que a los 24{[}s{]} en
+	sentido contrario, posteriormente a los 33{[}s{]} y 43{[}s{]} empujando
+	el vehículo con fuerza moderada. Ante todas las perturbaciones anteriores
+	el vehículo vuelve cerca de la posición deseada de estabilidad. 
 
-El experimento comienza con el quadcopter en la posición de equilibrio
-para eliminar el offset de los sensores. Como las pruebas contemplan
-la estabilización en la posición cero, se procede a perturbar el sistema
-manualmente con diferentes intensidades, baja, media y alta. A los 17{[}s{]} se aplica la primera
-perturbación de pequeña magnitud, al igual que a los 24{[}s{]} en
-sentido contrario, posteriormente a los 33{[}s{]} y 43{[}s{]} empujando
-el vehículo con fuerza moderada. Ante todas las perturbaciones anteriores
-el vehículo vuelve cerca de la posición deseada de estabilidad. 
+	Luego se aumenta la fuerza externa aplicada a los 46{[}s{]}, 63{[}s{]}
+	y 72{[}s{]} de comenzado el experimento, cuyo efecto es la inestabilidad
+	y saturación de la actuación, donde el vehículo alcanza los límites
+	máximos de desplazamiento angular permitidos por el soporte y el tren
+	de aterrizaje. Después de la inestabilidad provocada por la perturbación,
+	el vehículo es capaz de retomar su posición estable, pero sin duda
+	no es el resultado esperado dado el tiempo que transcurre entre ambas
+	y los desplazamientos angulares alcanzados, que de no estar limitados,
+	serían aún mayores.
 
-Luego se aumenta la fuerza externa aplicada a los 46{[}s{]}, 63{[}s{]}
-y 72{[}s{]} de comenzado el experimento, cuyo efecto es la inestabilidad
-y saturación de la actuación, donde el vehículo alcanza los límites
-máximos de desplazamiento angular permitidos por el soporte y el tren
-de aterrizaje. Después de la inestabilidad provocada por la perturbación,
-el vehículo es capaz de retomar su posición estable, pero sin duda
-no es el resultado esperado dado el tiempo que transcurre entre ambas
-y los desplazamientos angulares alcanzados, que de no estar limitados,
-serían aún mayores.
+	\item \textbf{Resultados Roll}
+	Tomando las mismas consideraciones que para las pruebas experimentales
+	con el eje Pitch, se presentan los resultados obtenidos para la estabilización
+	sobre el soporte de metal para el eje Roll, que se muestra en la tabla \ref{table: Parametros Roll Me} y en la figura \ref{fig:Estabilizacion-eje-Roll}.
 
-\subsubsection{Resultados Roll}
+	\begin{table}[H]
+	\noindent \begin{centering}
+	\begin{tabular}{|c|c|c|}
+	\hline 
+	Parámetros PID & PID Interno & PID Externo\tabularnewline
+	\hline 
+	\hline 
+	$Kp$ & 1.8 & 2.2\tabularnewline
+	\hline 
+	$K_{i}$ & 0.8 & 0.8\tabularnewline
+	\hline 
+	$K_{d}$ & 0.004 & 0.004\tabularnewline
+	\hline 
+	\end{tabular}
+	\par\end{centering}
+	\caption{Parámetros de los controladores PID.}\label{table: Parametros Roll Me}
+	\end{table}
 
-Tomando las mismas consideraciones que para las pruebas experimentales
-con el eje Pitch, se presentan los resultados obtenidos para la estabilización
-sobre el soporte de metal para el eje Roll, que se muestra en la tabla \ref{table: Parametros Roll Me} y en la figura \ref{fig:Estabilizacion-eje-Roll}.
+	\begin{figure}[H]
+	\noindent \begin{centering}
+	\includegraphics[scale=0.8]{RollMetal}
+	\par\end{centering}
+	\caption{Estabilización eje Roll en Soporte de Metal 3DOF.\label{fig:Estabilizacion-eje-Roll}}
+	\end{figure}
 
-\begin{table}[H]
-\noindent \begin{centering}
-\begin{tabular}{|c|c|c|}
-\hline 
-Parámetros PID & PID Interno & PID Externo\tabularnewline
-\hline 
-\hline 
-$Kp$ & 1.8 & 2.2\tabularnewline
-\hline 
-$K_{i}$ & 0.8 & 0.8\tabularnewline
-\hline 
-$K_{d}$ & 0.004 & 0.004\tabularnewline
-\hline 
-\end{tabular}
-\par\end{centering}
-\caption{Parámetros de los controladores PID.}\label{table: Parametros Roll Me}
-\end{table}
+	En esta oportunidad el experimento se hace en el eje del soporte que
+	presenta mayor roce. Ésto se hace evidente al observar el comportamiento
+	del vehículo luego de ser perturbado. De la figura \ref{fig:Estabilizacion-eje-Roll}
+	se puede observar que cada vez que se perturba el sistema, el vehículo
+	demora más de 10 segundos en retomar posiciones angulares cercanas
+	al punto deseado. Un ejemplo claro es la perturbación inducida transcurridos
+	13{[}s{]}, donde el vehículo logra retomar su posición de estabilidad
+	cerca de los 30{[}s{]}, donde se perturba otra vez en dirección contraria
+	para observar el mismo comportamiento. Es importante mencionar que
+	la causa principal de este comportamiento se debe al roce del soporte,
+	dado que las acciones de control se pueden apreciar claramente en
+	el gráfico de actuación, cuyas diferencias en ciclo de trabajo generan
+	el torque suficiente para estabilizar rápidamente con un coeficiente
+	de roce menor.
 
-\begin{figure}[H]
-\noindent \begin{centering}
-\includegraphics[scale=0.8]{RollMetal}
-\par\end{centering}
-\caption{Estabilización eje Roll en Soporte de Metal 3DOF.\label{fig:Estabilizacion-eje-Roll}}
-\end{figure}
+	\item \textbf{Resultados Yaw}
 
-En esta oportunidad el experimento se hace en el eje del soporte que
-presenta mayor roce. Ésto se hace evidente al observar el comportamiento
-del vehículo luego de ser perturbado. De la figura \ref{fig:Estabilizacion-eje-Roll}
-se puede observar que cada vez que se perturba el sistema, el vehículo
-demora más de 10 segundos en retomar posiciones angulares cercanas
-al punto deseado. Un ejemplo claro es la perturbación inducida transcurridos
-13{[}s{]}, donde el vehículo logra retomar su posición de estabilidad
-cerca de los 30{[}s{]}, donde se perturba otra vez en dirección contraria
-para observar el mismo comportamiento. Es importante mencionar que
-la causa principal de este comportamiento se debe al roce del soporte,
-dado que las acciones de control se pueden apreciar claramente en
-el gráfico de actuación, cuyas diferencias en ciclo de trabajo generan
-el torque suficiente para estabilizar rápidamente con un coeficiente
-de roce menor.
+	Para poner a prueba el control estabilizador en el eje Yaw, se bloquea
+	el movimiento de los dos ejes anteriormente descritos. El soporte
+	inspirado en una junta cardánica tiene un rodamiento en su base, el
+	cual le permite girar en torno al eje $z$ del sistema cartesiano. 
 
-\subsubsection{Resultados Yaw}
+	En este experimento el vehículo montado sobre el soporte concuerda
+	con el modelo descrito en el Capítulo \ref{Modelado de la Planta} Modelado de la Planta, dado que en este caso el giro
+	se produce en torno al eje que pasa por el centro de masa del vehículo,
+	obteniendose resultados razonables para el seguimiento de referencias. 
 
-Para poner a prueba el control estabilizador en el eje Yaw, se bloquea
-el movimiento de los dos ejes anteriormente descritos. El soporte
-inspirado en una junta cardánica tiene un rodamiento en su base, el
-cual le permite girar en torno al eje $z$ del sistema cartesiano. 
+	La principal desviación durante el desarrollo del experimento, es
+	la obtención de la posición angular por medio de la integración de
+	las mediciones del gyroscopo, dado que el error del mismo sensor sumado
+	al ruido de los motores, distorciona el punto de partida del vehículo,
+	lo que se puede apreciar en los videos demostrativos, no así en los
+	gráficos que registran la posición angular.
 
-En este experimento el vehículo montado sobre el soporte concuerda
-con el modelo descrito en el Capítulo \ref{Modelado de la Planta} Modelado de la Planta, dado que en este caso el giro
-se produce en torno al eje que pasa por el centro de masa del vehículo,
-obteniendose resultados razonables para el seguimiento de referencias. 
+	Los resultados obtenidos se muestran en la tabla \ref{table: Parametros Yaw Me} y en la figura \ref{fig: Resultados Yaw Me} :
 
-La principal desviación durante el desarrollo del experimento, es
-la obtención de la posición angular por medio de la integración de
-las mediciones del gyroscopo, dado que el error del mismo sensor sumado
-al ruido de los motores, distorciona el punto de partida del vehículo,
-lo que se puede apreciar en los videos demostrativos, no así en los
-gráficos que registran la posición angular.
+	\begin{table}[H]
+	\noindent \begin{centering}
+	\begin{tabular}{|c|c|c|}
+	\hline 
+	Parámetros PID & PID Interno & PID Externo\tabularnewline
+	\hline 
+	\hline 
+	$Kp$ & 2.6 & 6\tabularnewline
+	\hline 
+	$K_{i}$ & 0 & 0.01\tabularnewline
+	\hline 
+	$K_{d}$ & 0.002 & 0.004\tabularnewline
+	\hline 
+	\end{tabular}
+	\par\end{centering}
+	\caption{Parámetros de los controladores PID Yaw.}\label{table: Parametros Yaw Me}\noindent
+	\end{table}
 
-Los resultados obtenidos se muestran en la tabla \ref{table: Parametros Yaw Me} y en la figura \ref{fig: Resultados Yaw Me} :
+	\begin{figure}[H]
+	\noindent \begin{centering}
+	\includegraphics[scale=0.8]{YawMetal}
+	\par\end{centering}
+	\caption{Estabilización eje Yaw en Soporte de Metal 3DOF.}\label{fig: Resultados Yaw Me}\noindent
+	\end{figure}
 
-\begin{table}[H]
-\noindent \begin{centering}
-\begin{tabular}{|c|c|c|}
-\hline 
-Parámetros PID & PID Interno & PID Externo\tabularnewline
-\hline 
-\hline 
-$Kp$ & 2.6 & 6\tabularnewline
-\hline 
-$K_{i}$ & 0 & 0.01\tabularnewline
-\hline 
-$K_{d}$ & 0.002 & 0.004\tabularnewline
-\hline 
-\end{tabular}
-\par\end{centering}
-\caption{Parámetros de los controladores PID Yaw.}\label{table: Parametros Yaw Me}\noindent
-\end{table}
-
-\begin{figure}[H]
-\noindent \begin{centering}
-\includegraphics[scale=0.8]{YawMetal}
-\par\end{centering}
-\caption{Estabilización eje Yaw en Soporte de Metal 3DOF.}\label{fig: Resultados Yaw Me}\noindent
-\end{figure}
-
-Del experimento es claro observar que el ángulo Yaw se mantiene estable
-en el punto de operación. Después de aplicar perturbaciones al sistema
-en 27{[}s{]}, 34{[}s{]} y 42{[}s{]} el sistema se estabiliza otra
-vez cerca de los puntos de referencia. Es claro que mientras mayor
-sea la perturbación, mayor es el tiempo que toma estabilizar el vehículo.
-Del gráfico anterior también se puede observar el seguimiento de referencias
-constantes, donde también se puede perturbar el sistema y volver a
-la posición deseada sin problemas. El detalle en este experimento
-es la desviación en la posición original cero grados al inicio de
-las pruebas, con la posición cero al final de estas, ambas son diferentes
-dado el error acumulativo de integrar las mediciones del gyroscopo
-para obtener dicha posición. Ésta desviación no es apreciable por medio de gráficos, pero sí se puede observar en las grabaciones de video realizadas para la presentación del proyecto de titulación.
-
-
-
-
+	Del experimento es claro observar que el ángulo Yaw se mantiene estable
+	en el punto de operación. Después de aplicar perturbaciones al sistema
+	en 27{[}s{]}, 34{[}s{]} y 42{[}s{]} el sistema se estabiliza otra
+	vez cerca de los puntos de referencia. Es claro que mientras mayor
+	sea la perturbación, mayor es el tiempo que toma estabilizar el vehículo.
+	Del gráfico anterior también se puede observar el seguimiento de referencias
+	constantes, donde también se puede perturbar el sistema y volver a
+	la posición deseada sin problemas. El detalle en este experimento
+	es la desviación en la posición original cero grados al inicio de
+	las pruebas, con la posición cero al final de estas, ambas son diferentes
+	dado el error acumulativo de integrar las mediciones del gyroscopo
+	para obtener dicha posición. Ésta desviación no es apreciable por medio de gráficos, pero sí se puede 		observar en las grabaciones de video realizadas para la presentación del proyecto de titulación.
+\end{enumerate}
 \end{document}

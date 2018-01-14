@@ -1,0 +1,18 @@
+% =========================================================
+% CONFIGURACION DEL DOCUMENTO
+% =========================================================
+\providecommand{\main}{..}
+\documentclass[\main/main.tex]{subfiles}
+
+% =========================================================
+% CONTENIDO
+% =========================================================
+\begin{document}
+	\chapter{Modelado y simulación}\label{Modelado y simulacion}
+		\subfile{\main/03_Desarrollo/Secciones/Sec00_Modelado}
+		\newpage\subfile{\main/03_Desarrollo/Secciones/Sec01_Diseno}
+		\newpage\subfile{\main/03_Desarrollo/Secciones/Sec02_Simulacion}
+	\chapter{Implementación y resultados}\label{Implementacion y resultados}
+		\subfile{\main/03_Desarrollo/Secciones/Sec03_Componentes}
+		\newpage\subfile{\main/03_Desarrollo/Secciones/Sec04_Control}
+\end{document}

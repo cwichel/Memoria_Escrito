@@ -1,20 +1,20 @@
 % =========================================================
 % CONFIGURACION DEL DOCUMENTO
 % =========================================================
-\providecommand{\main}{..}
-\documentclass[../main.tex]{subfiles}
+\providecommand{\main}{../..}
+\documentclass[\main/main.tex]{subfiles}
 
 % =========================================================
 % CONTENIDO
 % =========================================================
 \begin{document}
 
-\chapter{Componentes del Sistema}\label{Componentes del Sistema}
+\section{Componentes del Sistema}\label{Componentes del Sistema}
 
 En el presente capítulo se presentan los componentes que constituyen el quadrotor y su sistema de control e instrumentación, como así también los soportes para realizar las pruebas experimentales de estabilización por eje.
 
 
-\section{Componentes para la implementación del controlador}
+\subsection{Componentes para la implementación del controlador}
 
 Para implementar la estrategia de control desarrollada en los capítulos
 anteriores, se comienza por describir el hardware y los soportes utilizados
@@ -23,7 +23,7 @@ y posteriormente, de acuerdo con el desempeño logrado, asegurar la
 estabilidad de la planta completa.
 
 
-\subsection{Controlador }
+\subsubsection{Controlador }
 
 Ni myRIO-1900 es un dispositivo portable y reconfigurable diseñado
 especialmente para proyectos con fines académicos de control, robótica
@@ -99,7 +99,7 @@ Acelerómetro & 3 ejes, $\pm$8 {[}g{]}, 12 bits, 800 {[}S/s{]}, 3.9 mg rms 25 [$
 \end{figure}
 
 
-\subsection{Marco del Vehículo}
+\subsubsection{Marco del Vehículo}
 
 Para el desarrollo experimental existen varios tipos de marcos para
 el armado de un quadcopter, diferentes tamaños y materiales. Para
@@ -129,7 +129,7 @@ Las principales desventajas son el tamaño del recuadro central, dado
 que el controlador a utilizar excede en tamaño a dicho recuadro, dificultando
 la fijación al vehículo.
 
-\subsection{Motores, Controladores de Velocidad y Hélices.}
+\subsubsection{Motores, Controladores de Velocidad y Hélices.}
 
 Los motores a utilizar son motores brushless sensorless, que como
 su nombre lo dice, no cuentan con escobillas. En este tipo de motor
@@ -238,7 +238,7 @@ escoger hélices de paso fijo. Su dimensión es 10'' de diámetro y 4.5'' de pas
 El empuje y torque producido por el conjunto motor-hélice se describe en el Capítulo de Modelado de la Planta y se caracteriza en el Capítulo de Simulación.
 
 
-\subsection{Sensores}
+\subsubsection{Sensores}
 
 Para la implementación del sistema se deben medir los ángulos $ \phi, \theta, \psi $ de inclinación
 y orientación del vehículo. Para ésto se combinan las mediciones de
@@ -317,7 +317,7 @@ Para verificar el correcto funcionamiento de la adquisición de datos y estimaci
 
 \textcompwordmark{}
 
-\subsection{Batería}
+\subsubsection{Batería}
 
 Existen varios tipos de baterías que se utilizan en los vehículos
 aéreos no tripulados de vuelo interior. En primer lugar se tienen
@@ -378,7 +378,7 @@ Alto & 49{[}mm{]}\tabularnewline
 
 \textcompwordmark{}
 
-\subsection{Soportes}
+\subsubsection{Soportes}
 
 Para poder realizar las pruebas experimentales de la estabilización
 de los ejes del quadcopter uno a la vez, se diseñan dos soportes.

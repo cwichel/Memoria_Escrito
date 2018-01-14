@@ -1,17 +1,16 @@
 % =========================================================
 % CONFIGURACION DEL DOCUMENTO
 % =========================================================
-\providecommand{\main}{..}
-\documentclass[../main.tex]{subfiles}
+\providecommand{\main}{../..}
+\documentclass[\main/main.tex]{subfiles}
 
 % =========================================================
 % CONTENIDO
 % =========================================================
 \begin{document}
+\section{Simulación}\label{Simulacion}
 
-\chapter{Simulación}\label{Simulacion}
-
-\section{\noindent Estimación de los parámetros de la planta}
+\subsection{\noindent Estimación de los parámetros de la planta}
 
 Para realizar una simulación lo más parecida a implementar un control
 sobre la planta real, se deben calcular los parámetros físicos de
@@ -19,7 +18,7 @@ sobre la planta real, se deben calcular los parámetros físicos de
 y torque de actuadores, largo de los ejes y el peso de cada componente. 
 
 
-\subsection{Peso de componentes}
+\subsubsection{Peso de componentes}
 
 Utilizando una balanza se registra el peso de todos los componentes
 del vehículo, los cuales serán utilizados para realizar el cálculo
@@ -28,7 +27,7 @@ registran los pesos de cada una de las partes.
 
 
 
-\begin{table}
+\begin{table}[H]
 \begin{centering}
 \begin{tabular}{|c|c|c|c|}
 \hline 
@@ -67,7 +66,7 @@ Total de Estructura & 1 & 1 & 2062.4\tabularnewline
 \caption{Peso de las componentes del sistema.}
 \end{table}
 
-\subsection{Inercias para cada eje del vehículo}
+\subsubsection{Inercias para cada eje del vehículo}
 
 Para calcular la matriz de inercias del sistema, se considera que
 la estructura del vehículo es simétrica, se toma en cuenta la posición
@@ -87,7 +86,7 @@ de la posición y orientación del vehículo.
 \caption{Diagrama del vehículo con simplificaciones para el cálculo de Inercias.}
 \end{figure}
 
-\subsubsection{Eje X angulo Roll, eje Y angulo Pitch y eje Z angulo Yaw}
+\textbf{Eje X angulo Roll, eje Y angulo Pitch y eje Z angulo Yaw}
 
 Para el calculo del momento de inercia sobre los ejes X (Roll) e Y
 (Pitch) se toman en cuenta los siguientes supuestos:
@@ -192,7 +191,7 @@ Centro del Marco & $I_{zz}=\frac{mR^{2}}{4}$ & $2.6875\cdot10^{-5}$\tabularnewli
 \caption{Momento de Inercia Eje Z Yaw.}
 \end{table}
 
-\subsection{Caracterización de Actuadores}
+\subsubsection{Caracterización de Actuadores}
 
 Para caracterizar los actuadores se utilizó el banco de prueba Turnigy
 Test Stand [15], donde se mide el empuje producido por el motor más las
@@ -264,7 +263,7 @@ por el fabricante en el último.
 
 \textcompwordmark{}
 
-\section{Resultados de la simulación}
+\subsection{Resultados de la simulación}
 
 En esta sección se presentan los resultados al simular el modelo no lineal del vehículo, controlado con la estrategia desarrollada
 en el capítulo anterior. Dicho de otro modo, se toma el modelo multivariable,
@@ -283,7 +282,7 @@ para lograr un mejor desempeño y robustez a pequeñas perturbaciones.
 el control lineal de la planta. De todas formas los valores obtenidos
 en la etapa de diseño entregan un buen punto de partida para la re-sintonización.
 
-\subsection{Estabilización con orientación de partida inestable}
+\subsubsection{Estabilización con orientación de partida inestable}
 
 En esta prueba se libera el vehículo en una posición inicial aleatoria
 e inestable dentro de los rangos permitidos. Posteriormente se logra
@@ -330,7 +329,7 @@ altura 4{[}m{]}.}
 \caption{Seguimiento de altura y actuación en el tiempo.}
 \end{figure}
 
-\subsection{Estabilización partida inestable con perturbación en Pitch}
+\subsubsection{Estabilización partida inestable con perturbación en Pitch}
 
 En esta prueba se libera el vehículo en una posición aleatoria e inestable
 dentro de los rangos permitidos. Posteriormente se logra la estabilización
@@ -362,7 +361,7 @@ el controlador de la tabla \ref{tab:kp kd ki alpha} es el siguiente:
 \caption{Acercamiento actuación al introducir perturbación.}
 \end{figure}
 
-\subsection{Estabilización partida inestable con perturbación en Roll}
+\subsubsection{Estabilización partida inestable con perturbación en Roll}
 
 Luego de liberar el vehículo con la misma lógica que en los puntos
 anteriores, se introduce una perturbación en el eje Roll, con la misma
@@ -390,7 +389,7 @@ de los motores 2 y 4, manteniendo el mismo controlador.
 \caption{Acercamiento actuación al introducir perturbación.}
 \end{figure}
 
-\subsection{Estabilización partida inestable con perturbación en Yaw}
+\subsubsection{Estabilización partida inestable con perturbación en Yaw}
 
 Siguiendo los mismos pasos anteriores para la partida, esta vez se
 introduce una perturbación en el eje de giro yaw. La perturbación
@@ -422,7 +421,7 @@ del experimento es el siguiente:
 \caption{Acercamiento actuación al introducir perturbación.}
 \end{figure}
 
-\subsection{Estabilización partida inestable con perturbación en Pitch y Roll
+\subsubsection{Estabilización partida inestable con perturbación en Pitch y Roll
 simultáneamente}
 
 En esta prueba se perturba el sistema en dos ejes simultáneamente
@@ -453,7 +452,7 @@ Pitch y Roll simultáneamente.}
 \caption{Acercamiento actuación al introducir perturbación.}
 \end{figure}
 
-\subsection{Seguimiento ángulo Pitch y Altura}
+\subsubsection{Seguimiento ángulo Pitch y Altura}
 
 En esta sección se pone a prueba el seguimiento de referencias constantes
 para cada uno de los ejes, partiendo por el eje de elevación Pitch,
@@ -474,7 +473,7 @@ de giro al igual que en los casos anteriores.
 \caption{Seguimiento de altura y actuación en el tiempo.}
 \end{figure}
 
-\subsection{Seguimiento angulo Roll y Altura}
+\subsubsection{Seguimiento angulo Roll y Altura}
 
 En este caso se somete a prueba el seguimiento para el eje de rotación
 Roll. A diferencia del caso anterior, al introducir la perturbación
@@ -497,7 +496,7 @@ están estabilizados con el mismo controlador.
 \caption{Seguimiento de altura y actuación en el tiempo.}
 \end{figure}
 
-\subsection{Seguimiento Yaw y corrección de altura}
+\subsubsection{Seguimiento Yaw y corrección de altura}
 
 En este experimento se introduce un cambio de referencia en el eje
 de rotación Yaw. A diferencia de los dos casos anteriores, se produce
@@ -520,7 +519,7 @@ después de cada cambio de referencia.
 \caption{Seguimiento de altura y actuación en el tiempo.}
 \end{figure}
 
-\section{Conclusiones}
+\subsection{Conclusiones}
 
 Después de simular el sistema con el modelo no lineal de la planta y la
 estrategia de control PID descentralizado, se puede concluir que

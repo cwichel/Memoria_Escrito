@@ -1,16 +1,15 @@
 % =========================================================
 % CONFIGURACION DEL DOCUMENTO
 % =========================================================
-\providecommand{\main}{..}
-\documentclass[../main.tex]{subfiles}
+\providecommand{\main}{../..}
+\documentclass[\main/main.tex]{subfiles}
 
 % =========================================================
 % CONTENIDO
 % =========================================================
 \begin{document}
-
-\chapter{Diseño de Control Estabilizador}\label{Diseo de Control Estabilizador}
-\section{Sistema lineal}
+\section{Diseño de Control Estabilizador}\label{Diseo de Control Estabilizador}
+\subsection{Sistema lineal}
 
 El objetivo principal de este trabajo es la estabilización en vuelo
 hovering del vehículo. Para ésto, se tienen en consideración los angulos
@@ -174,9 +173,9 @@ geométrico de raíces para cada una, se muestran a continuación.
 \caption{Lugar Geométrico de Raíces en Lazo Abierto de $H_{\phi,\theta,\psi}(s)$.}
 \end{figure}
 
-\section{Diseño de Controlador}
+\subsection{Diseño de Controlador}
 
-\subsection{Control Estabilizador}
+\subsubsection{Control Estabilizador}
 
 Para el diseño de la ley de control se deben considerar en primera
 instancia las especificaciones de desempeño. Por lo general las especificaciones
@@ -428,7 +427,7 @@ Después de analizar cada controlador por seaparado, se decide implementar
 un controlador PD para la simulación, dado que estabiliza el sistema
 en vuelo hovering de mejor manera. 
 
-\subsection{Control de Altura}
+\subsubsection{Control de Altura}
 
 Para controlar la altura del vehículo se toma en cuenta la ecuación
 que describe la aceleración en el eje Z descrita anteriormente en

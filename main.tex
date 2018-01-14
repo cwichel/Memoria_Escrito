@@ -2,9 +2,11 @@
 % CONFIGURACION DEL DOCUMENTO
 % =========================================================
 \documentclass[	
-		12pt, 
-		spanish, 	
-		oneside		
+		12pt, 		% Tamaño de fuente principal
+		spanish,	% Idioma del documento
+		reqno, 		% Numeración de ecuaciones por el lado derecho
+		oneside,	% Especifica si la impresión es duplex o no (para empaste)
+		openright	% Capitulos comienzan del lado derecho (util para twoside)		
 		]{book}	
 
 \providecommand{\main}{.}
@@ -14,22 +16,45 @@
 % ARCHIVOS UTILIZADOS
 % =========================================================
 \begin{document}
-	\frontmatter\pagestyle{empty}
-	\subfile{pretextual/portada}
-	\subfile{pretextual/cap0}
-	\tableofcontents
-	\listoffigures
-	\listoftables
-	\mainmatter\pagestyle{fancy}	
-	\subfile{capitulos/cap01}	
-	\subfile{capitulos/cap02}
-	\subfile{capitulos/cap03}
-	\subfile{capitulos/cap04}
-	\subfile{capitulos/cap05}
-    \subfile{capitulos/cap06}
-    \subfile{capitulos/cap08}
-    \backmatter\pagestyle{empty}
-	\subfile{postextual/ref}
-	\appendix
-	\subfile{postextual/anexos}
+	% ========================== 
+	\subfile{00_Portada/Portada}
+	% ========================== 
+	\pagestyle{fancy}
+	\frontmatter{	
+	% Números de página: Romanos (inicia con I)
+	% Capítulos: Sin identificación
+	% =========================
+		\subfile{01_Pretextual/Agradecimientos}
+		\subfile{01_Pretextual/Dedicatoria}
+		\subfile{01_Pretextual/Resumen}
+		\subfile{01_Pretextual/Glosario}
+		\singlespacing{
+			\tableofcontents
+			\listoffigures
+			\listoftables
+		}
+	}
+	% ========================== 
+	\mainmatter{		
+	% ============= Números de página: Arábicos (inicia desde 1)	
+		\subfile{02_Introduccion/Introduccion}	
+		\subfile{03_Desarrollo/Desarrollo}
+		\subfile{04_Conclusiones/Conclusiones}
+    }
+    % ========================== 
+    {\backmatter{	
+    % Números de página: No utiliza
+    % Capítulos: Sin identificación
+    % ==========================
+		\subfile{05_Postextual/Referencias}
+	}}
+	% ========================== 
+	\appendix{	
+	% Números de página: Arábicos (inicia con 1)
+	% Capítulos: Identificados por letras (inicia con A)
+	% =========================
+		\subfile{05_Postextual/Anexos01_CodigoSimulacion}
+		\subfile{05_Postextual/Anexos02_CodigoLabView}
+	}  
+    
 \end{document}

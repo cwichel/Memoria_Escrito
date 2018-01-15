@@ -1,0 +1,29 @@
+\select@language {spanish}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {2.1}{\ignorespaces Peso de las componentes del sistema.\relax }}{30}{table.caption.27}
+\contentsline {table}{\numberline {2.2}{\ignorespaces Momento de Inercia Eje X Roll.\relax }}{32}{table.caption.30}
+\contentsline {table}{\numberline {2.3}{\ignorespaces Momento de Inercia Eje Y Pitch.\relax }}{32}{table.caption.31}
+\contentsline {table}{\numberline {2.4}{\ignorespaces Momento de Inercia Eje Z Yaw.\relax }}{33}{table.caption.32}
+\contentsline {table}{\numberline {2.5}{\ignorespaces Par\IeC {\'a}metros de empuje y torque en actuadores.\relax }}{35}{table.caption.35}
+\contentsline {table}{\numberline {2.6}{\ignorespaces Par\IeC {\'a}metros para los controladores.\relax }}{36}{table.caption.37}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces Especificaciones NI myRIO 1900.\relax }}{49}{table.caption.67}
+\contentsline {table}{\numberline {3.2}{\ignorespaces Especificaciones Motores Brushless NTM Prop Drive Series 35-30A.\relax }}{51}{table.caption.72}
+\contentsline {table}{\numberline {3.3}{\ignorespaces Especificaciones del controlador de velocidad.\relax }}{52}{table.caption.74}
+\contentsline {table}{\numberline {3.4}{\ignorespaces Caracter\IeC {\'\i }sticas de sensores para la implementaci\IeC {\'o}n.\relax }}{53}{table.caption.77}
+\contentsline {subtable}{\numberline {(a)}{\ignorespaces {Gyroscopo ITG-3200}}}{53}{subtable.4.1}
+\contentsline {subtable}{\numberline {(b)}{\ignorespaces {Aceler\IeC {\'o}metro integrado en controlador myRIO-1900}}}{53}{subtable.4.2}
+\contentsline {table}{\numberline {3.5}{\ignorespaces Especificaciones bateria Turnigy 3000mAh 3S 30C Lipo.\relax }}{55}{table.caption.80}
+\contentsline {table}{\numberline {3.6}{\ignorespaces Par\IeC {\'a}metros de los controladores PID Pitch.\relax }}{65}{table.caption.95}
+\contentsline {table}{\numberline {3.7}{\ignorespaces Par\IeC {\'a}metros de los controladores PID Roll.\relax }}{67}{table.caption.97}
+\contentsline {table}{\numberline {3.8}{\ignorespaces Par\IeC {\'a}metros de los controladores PID Pitch.\relax }}{69}{table.caption.101}
+\contentsline {table}{\numberline {3.9}{\ignorespaces Par\IeC {\'a}metros de los controladores PID.\relax }}{70}{table.caption.103}
+\contentsline {table}{\numberline {3.10}{\ignorespaces Par\IeC {\'a}metros de los controladores PID Yaw.\relax }}{72}{table.caption.105}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }

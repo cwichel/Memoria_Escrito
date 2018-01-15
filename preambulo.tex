@@ -252,8 +252,28 @@
 \usepackage{bookmark}
 
 % Soporte para glosarios
+\usepackage{xparse}
 \usepackage[acronym]{glossaries}
+\makeglossaries
 
+\renewcommand{\glossaryname}{Glosario}
+\renewcommand{\acronymname}{Acrónimos}
+
+% Para agregar un elemento al glosario y siglas
+%\newdualentry[⟨options⟩]{⟨label⟩}{⟨abbrv⟩}{⟨long⟩}{⟨description⟩}
+\newcommand*{\newdualentry}[5][]{%
+  \newglossaryentry{main-#2}{name={#4},%
+  text={#3\glsadd{#2}},%
+  description={{#5}},%
+  #1
+  }%
+  \newglossaryentry{#2}{
+  type=\acronymtype,
+  first={#4 (#3)},
+  name={#3\glsadd{main-#2}},
+  description={\glslink{main-#2}{#4}}
+  }%
+}
 
 % =========================== SIN REVISAR
 \usepackage{blindtext}

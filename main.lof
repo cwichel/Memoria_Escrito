@@ -1,0 +1,100 @@
+\select@language {spanish}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Diagrama de Cuerpo Libre de Quadrotor.\relax }}{7}{figure.caption.12}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Torques yaw, pitch y roll de veh\IeC {\'\i }culo Quadrotor.\relax }}{9}{figure.caption.13}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Sistemas de coordenadas para an\IeC {\'a}lisis din\IeC {\'a}mico del quadrotor.\relax }}{10}{figure.caption.14}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Giro de sistema de referencia $\mathcal {A}$ respecto a sistema inercial $\mathcal {I}$ compartiendo el origen.\relax }}{11}{figure.caption.15}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Diagrama de transferencias de lazo abierto.\relax }}{20}{figure.caption.16}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Lugar Geom\IeC {\'e}trico de Ra\IeC {\'\i }ces en Lazo Abierto de $H_{\phi ,\theta ,\psi }(s)$.\relax }}{21}{figure.caption.17}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Esquema de Control Seleccionado.\relax }}{21}{figure.caption.19}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces LGR en Lazo Cerrado de Planta Lineal con Control PI para diferentes par\IeC {\'a}metros.\relax }}{25}{figure.caption.20}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {LGR Lazo Cerrado, Control PI, Par\IeC {\'a}metros 1.}}}{25}{subfigure.8.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {LGR Lazo Cerrado, Control PI, Par\IeC {\'a}metros 2.}}}{25}{subfigure.8.2}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces LGR Control PD sin filtro de primer orden. $C(s)=3\cdot (1+s)$.\relax }}{26}{figure.caption.21}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces LGR Control PD con filtro derivativo de primer orden, sistema inestable.\relax }}{27}{figure.caption.22}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces LGR con filtro derivativo de primer orden, sistema estable. $C(s)=\frac {(42.87+8.574s)}{(100+s)}$ \relax }}{27}{figure.caption.23}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces LGR Control PID, sistema estable.\relax }}{28}{figure.caption.24}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Diagrama del veh\IeC {\'\i }culo con simplificaciones para el c\IeC {\'a}lculo de Inercias.\relax }}{31}{figure.caption.29}
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Mediciones de Velocidad Angular v/s Empuje.\relax }}{34}{figure.caption.34}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Velocidad Angular {[}RPM{]} v/s empuje {[}N{]}.}}}{34}{subfigure.14.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Velocidad Angular {[}RPM$^{2}${]} v/s Empuje {[}N{]}.}}}{34}{subfigure.14.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Velocidad Angular {[}Rad/s{]} v/s Empuje {[}N{]}.}}}{34}{subfigure.14.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Velocidad Angular {[}Rad/s$^{2}${]} v/s Empuje {[}N{]}}}}{34}{subfigure.14.4}
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Control PD descentralizado para estabilizaci\IeC {\'o}n en hovering sin perturbaci\IeC {\'o}n, altura 4{[}m{]}.\relax }}{36}{figure.caption.38}
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Seguimiento de altura y actuaci\IeC {\'o}n en el tiempo.\relax }}{37}{figure.caption.39}
+\contentsline {figure}{\numberline {2.17}{\ignorespaces Control PD descentralizado para estabilizaci\IeC {\'o}n con perturbaci\IeC {\'o}n en Pitch.\relax }}{37}{figure.caption.41}
+\contentsline {figure}{\numberline {2.18}{\ignorespaces Seguimiento de altura y Actuaci\IeC {\'o}n en el tiempo.\relax }}{38}{figure.caption.42}
+\contentsline {figure}{\numberline {2.19}{\ignorespaces Acercamiento actuaci\IeC {\'o}n al introducir perturbaci\IeC {\'o}n.\relax }}{38}{figure.caption.43}
+\contentsline {figure}{\numberline {2.20}{\ignorespaces Control PD descentralizado para estabilizaci\IeC {\'o}n con perturbaci\IeC {\'o}n en Roll.\relax }}{39}{figure.caption.45}
+\contentsline {figure}{\numberline {2.21}{\ignorespaces Seguimiento de altura y actuaci\IeC {\'o}n en el tiempo.\relax }}{39}{figure.caption.46}
+\contentsline {figure}{\numberline {2.22}{\ignorespaces Acercamiento actuaci\IeC {\'o}n al introducir perturbaci\IeC {\'o}n.\relax }}{40}{figure.caption.47}
+\contentsline {figure}{\numberline {2.23}{\ignorespaces Control PD descentralizado para estabilizaci\IeC {\'o}n con perturbaci\IeC {\'o}n enYaw.\relax }}{40}{figure.caption.49}
+\contentsline {figure}{\numberline {2.24}{\ignorespaces Seguimiento de altura y actuaci\IeC {\'o}n en el tiempo.\relax }}{41}{figure.caption.50}
+\contentsline {figure}{\numberline {2.25}{\ignorespaces Acercamiento actuaci\IeC {\'o}n al introducir perturbaci\IeC {\'o}n.\relax }}{41}{figure.caption.51}
+\contentsline {figure}{\numberline {2.26}{\ignorespaces Control PD descentralizado para estabilizaci\IeC {\'o}n con perturbaci\IeC {\'o}n en Pitch y Roll simult\IeC {\'a}neamente.\relax }}{42}{figure.caption.53}
+\contentsline {figure}{\numberline {2.27}{\ignorespaces Seguimiento de altura y actuaci\IeC {\'o}n en el tiempo.\relax }}{42}{figure.caption.54}
+\contentsline {figure}{\numberline {2.28}{\ignorespaces Acercamiento actuaci\IeC {\'o}n al introducir perturbaci\IeC {\'o}n.\relax }}{43}{figure.caption.55}
+\contentsline {figure}{\numberline {2.29}{\ignorespaces Estabilizaci\IeC {\'o}n y seguimiento de angulo Pitch. $Referencia=\pm 22.5\ensuremath {^\circ }$.\relax }}{43}{figure.caption.57}
+\contentsline {figure}{\numberline {2.30}{\ignorespaces Seguimiento de altura y actuaci\IeC {\'o}n en el tiempo.\relax }}{44}{figure.caption.58}
+\contentsline {figure}{\numberline {2.31}{\ignorespaces Estabilizaci\IeC {\'o}n y seguimiento de angulo Roll. $Referencia=\pm 22.5\ensuremath {^\circ }.$ \relax }}{44}{figure.caption.60}
+\contentsline {figure}{\numberline {2.32}{\ignorespaces Seguimiento de altura y actuaci\IeC {\'o}n en el tiempo.\relax }}{45}{figure.caption.61}
+\contentsline {figure}{\numberline {2.33}{\ignorespaces Estabilizaci\IeC {\'o}n y seguimiento de angulo Yaw. $Referencia=\pm 45\ensuremath {^\circ }.$\relax }}{45}{figure.caption.63}
+\contentsline {figure}{\numberline {2.34}{\ignorespaces Seguimiento de altura y actuaci\IeC {\'o}n en el tiempo.\relax }}{46}{figure.caption.64}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagrama de Hardware NI myRIO 1900.\relax }}{48}{figure.caption.66}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces E/S NI myRIO 1900.\relax }}{49}{figure.caption.68}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {E/S digitales y an\IeC {\'a}logas 0-5 {[}V{]}.}}}{49}{subfigure.2.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {E/S digitales y an\IeC {\'a}logas $\pm $10 {[}V{]}.}}}{49}{subfigure.2.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Recuadro central y posici\IeC {\'o}n de motores en estructura Turnigy Talon V2.\relax }}{50}{figure.caption.70}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Actuadores.\relax }}{51}{figure.caption.73}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Motor Brushless NTM Propdrive 35-30 1100 {[}kv{]}}}}{51}{subfigure.4.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Programmable Brushless ESC Hobbyking 30 {[}A{]}. }}}{51}{subfigure.4.2}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Paso y Di\IeC {\'a}metro de H\IeC {\'e}lices.\relax }}{52}{figure.caption.75}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Sparkfun 9dof IMU, gyr\IeC {\'o}scopo ITG-3200.\relax }}{54}{figure.caption.78}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Bater\IeC {\'\i }a LiPo Turnigy 5000{[}mah{]} 30C.\relax }}{55}{figure.caption.81}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Soportes para pruebas de estabilizaci\IeC {\'o}n.\relax }}{56}{figure.caption.83}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Soporte de Metal 3DOF.}}}{56}{subfigure.8.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Soporte de Madera 1DOF}}}{56}{subfigure.8.2}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Principio f\IeC {\'\i }sico de funcionamiento de un aceler\IeC {\'o}metro.\relax }}{57}{figure.caption.85}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Ilustraci\IeC {\'o}n del funcionamiento de un aceler\IeC {\'o}metro.\relax }}{58}{figure.caption.86}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Principio f\IeC {\'\i }sico de funcionamiento del gyroscopo.\relax }}{60}{figure.caption.88}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Fuerza de coriolis sobre un cuerpo de masa $m$ a moviendose a velocidad $v.$}}}{60}{subfigure.11.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Configuraci\IeC {\'o}n oscilatoria del gyroscopo.}}}{60}{subfigure.11.2}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Aplicaci\IeC {\'o}n de visualizaci\IeC {\'o}n de \IeC {\'a}ngulos en 3D con LabVIEW.\relax }}{61}{figure.caption.90}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Estrategia de control PID en cascada.\relax }}{62}{figure.caption.91}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Diagrama de conexiones del Quadcopter.\relax }}{63}{figure.caption.93}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Estabilizaci\IeC {\'o}n eje Pitch en Soporte de Madera\relax }}{66}{figure.caption.96}
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Estabilizaci\IeC {\'o}n eje Roll en Soporte de Madera.\relax }}{67}{figure.caption.98}
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Caracter\IeC {\'\i }sticas del soporte de metal.\relax }}{68}{figure.caption.100}
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Estabilizaci\IeC {\'o}n eje Pitch en Soporte de Metal 3DOF.\relax }}{69}{figure.caption.102}
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Estabilizaci\IeC {\'o}n eje Roll en Soporte de Metal 3DOF.\relax }}{70}{figure.caption.104}
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Estabilizaci\IeC {\'o}n eje Yaw en Soporte de Metal 3DOF.\relax }}{72}{figure.caption.106}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Visualizaci\IeC {\'o}n de medici\IeC {\'o}n de \IeC {\'a}ngulos en 3D. Roll, Pitch y Yaw seteados como variables compartidas.\relax }}{88}{figure.caption.109}
+\contentsline {figure}{\numberline {B.2}{\ignorespaces Panel frontal simulaci\IeC {\'o}n 3D para la medici\IeC {\'o}n de \IeC {\'a}ngulos.\relax }}{89}{figure.caption.110}
+\contentsline {figure}{\numberline {B.3}{\ignorespaces Calculo de \IeC {\'a}ngulos Pitch y Roll con filtro complementario.\relax }}{90}{figure.caption.111}
+\contentsline {figure}{\numberline {B.4}{\ignorespaces Panel frontal para visualizaci\IeC {\'o}n de \IeC {\'a}ngulos Pitch y Roll con filtro complementario.\relax }}{91}{figure.caption.112}
+\contentsline {figure}{\numberline {B.5}{\ignorespaces Filtro complementario para Pitch y Roll. Une medida de aceler\IeC {\'o}metro y gyr\IeC {\'o}scopo a trav\IeC {\'e}s de ponderaci\IeC {\'o}n.\relax }}{92}{figure.caption.113}
+\contentsline {figure}{\numberline {B.6}{\ignorespaces Calculo de offset para aceler\IeC {\'o}metro.\relax }}{93}{figure.caption.114}
+\contentsline {figure}{\numberline {B.7}{\ignorespaces Configuraci\IeC {\'o}n de Gyr\IeC {\'o}scopo y c\IeC {\'a}lculo de offset.\relax }}{94}{figure.caption.115}
+\contentsline {figure}{\numberline {B.8}{\ignorespaces \relax }}{95}{figure.caption.116}
+\contentsline {figure}{\numberline {B.9}{\ignorespaces Conversi\IeC {\'o}n de medida de gyr\IeC {\'o}scopo a grados por segundo.\relax }}{95}{figure.caption.117}
+\contentsline {figure}{\numberline {B.10}{\ignorespaces C\IeC {\'a}lculo de integral de velocidad en eje Z para \IeC {\'a}ngulo Yaw.\relax }}{96}{figure.caption.118}
+\contentsline {figure}{\numberline {B.11}{\ignorespaces transformaci\IeC {\'o}n de acelerador a ciclo de trabajo para calibraci\IeC {\'o}n de motores.\relax }}{96}{figure.caption.119}
+\contentsline {figure}{\numberline {B.12}{\ignorespaces Calibre autom\IeC {\'a}tico de motores.\relax }}{97}{figure.caption.120}
+\contentsline {figure}{\numberline {B.13}{\ignorespaces Loop principal parte 1.\relax }}{98}{figure.caption.121}
+\contentsline {figure}{\numberline {B.14}{\ignorespaces Loop principal parte 2. \relax }}{99}{figure.caption.122}
+\contentsline {figure}{\numberline {B.15}{\ignorespaces Panel frontal principal parte 1.\relax }}{100}{figure.caption.123}
+\contentsline {figure}{\numberline {B.16}{\ignorespaces Panel frontal principal parte 2.\relax }}{101}{figure.caption.124}
+\contentsline {figure}{\numberline {B.17}{\ignorespaces Mediciones de empuje y velocidad angular para motor 1.\relax }}{103}{figure.caption.126}
+\contentsline {figure}{\numberline {B.18}{\ignorespaces Mediciones de empuje y velocidad angular para motor 2.\relax }}{104}{figure.caption.127}
+\contentsline {figure}{\numberline {B.19}{\ignorespaces Mediciones de empuje y velocidad angular para motor 3.\relax }}{105}{figure.caption.128}
+\contentsline {figure}{\numberline {B.20}{\ignorespaces Mediciones de empuje y velocidad angular para motor 4.\relax }}{106}{figure.caption.129}
+\contentsline {figure}{\numberline {B.21}{\ignorespaces Torque v/s velocidad angular.\relax }}{106}{figure.caption.130}

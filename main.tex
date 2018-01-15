@@ -10,7 +10,11 @@
 		]{book}	
 
 \providecommand{\main}{.}
+% Definisiones, paquetes y estilos
 \input{\main/preambulo}	
+
+% Agregar glosario desde archivo
+\input{\main/Glosario}
 
 % =========================================================
 % ARCHIVOS UTILIZADOS
@@ -27,8 +31,14 @@
 		\subfile{01_Pretextual/Agradecimientos}
 		\subfile{01_Pretextual/Dedicatoria}
 		\subfile{01_Pretextual/Resumen}
-		\subfile{01_Pretextual/Glosario}
+		% =====================
 		\singlespacing{
+			% Glosario ========
+			\phantomsection{
+				\addcontentsline{toc}{chapter}{Glosario}
+				\printglossaries
+			}
+			% Indices =========
 			\tableofcontents
 			\listoffigures
 			\listoftables
@@ -46,7 +56,15 @@
     % Números de página: No utiliza
     % Capítulos: Sin identificación
     % ==========================
-		\subfile{05_Postextual/Referencias}
+    	\phantomsection{
+    		\addcontentsline{toc}{chapter}{Referencias}
+    		\bibliographystyle{IEEEtran}
+			\renewcommand\bibname{Referencias}
+			\singlespacing{
+				\bibliography{\main/Referencias}
+			}
+			\nocite{*}
+    	}
 	}}
 	% ========================== 
 	\appendix{	

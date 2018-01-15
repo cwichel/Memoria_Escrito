@@ -28,8 +28,8 @@
 	% Números de página: Romanos (inicia con I)
 	% Capítulos: Sin identificación
 	% =========================
-		\subfile{01_Pretextual/Agradecimientos}
 		\subfile{01_Pretextual/Dedicatoria}
+		\subfile{01_Pretextual/Agradecimientos}
 		\subfile{01_Pretextual/Resumen}
 		% =====================
 		\singlespacing{
@@ -46,10 +46,14 @@
 	}
 	% ========================== 
 	\mainmatter{		
-	% ============= Números de página: Arábicos (inicia desde 1)	
-		\subfile{02_Introduccion/Introduccion}	
-		\subfile{03_Desarrollo/Desarrollo}
-		\subfile{04_Conclusiones/Conclusiones}
+	% Números de página: Arábicos (inicia desde 1)
+	% Capítulos: Identificados por números (inicia con 1)
+	% ========================== 
+		\subfile{02_Contenido/01_Introduccion}	
+		\subfile{02_Contenido/02_EstadoArte}	
+		\subfile{02_Contenido/03_Desarrollo}
+		\subfile{02_Contenido/04_Resultados}
+		\subfile{02_Contenido/05_Conclusiones}
     }
     % ========================== 
     {\backmatter{	
@@ -71,8 +75,8 @@
 	% Números de página: Arábicos (inicia con 1)
 	% Capítulos: Identificados por letras (inicia con A)
 	% =========================
-		\subfile{05_Postextual/Anexos01_CodigoSimulacion}
-		\subfile{05_Postextual/Anexos02_CodigoLabView}
+		\subfile{03_Postextual/Anexos01_Codigo}
+		\subfile{03_Postextual/Anexos02_Vistas}
 	}  
     
 \end{document}

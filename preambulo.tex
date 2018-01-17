@@ -24,7 +24,6 @@
 \fancyfoot[C]{}
 \fancyfoot[LE,RO]{\thepage}
 
-
 % =========================== TEXTO
 % Soporte de idioma y fuentes
 \usepackage[utf8]{inputenc}	% Permite acentos
@@ -245,8 +244,8 @@
 \usepackage{appendix}
 
 % Soporte para bibliografia
-%\usepackage{biblatex}
-\usepackage{cite}
+\usepackage[fixlanguage]{babelbib}
+\selectbiblanguage{spanish}
 
 % Permite mantener las marcas al crear el PDF
 \usepackage{bookmark}
@@ -261,7 +260,7 @@
 
 % Para agregar un elemento al glosario y siglas
 %\newdualentry[⟨options⟩]{⟨label⟩}{⟨abbrv⟩}{⟨long⟩}{⟨description⟩}
-\newcommand*{\newdualentry}[5][]{%
+\newcommand\newdualentry[5][]{%
   \newglossaryentry{main-#2}{name={#4},%
   text={#3\glsadd{#2}},%
   description={{#5}},%
@@ -274,6 +273,8 @@
   description={\glslink{main-#2}{#4}}
   }%
 }
+
+\input{\main/Glosario}
 
 % =========================== SIN REVISAR
 \usepackage{blindtext}

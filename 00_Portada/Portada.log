@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.12.31)  16 JAN 2018 12:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.12.31)  16 JAN 2018 13:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**01_Introduccion.tex
-(./01_Introduccion.tex
+**Portada.tex
+(./Portada.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/subfiles/subfiles.cls
@@ -1133,15 +1133,13 @@ Package: glossary-tree 2016/01/24 v4.21 (NLCT)
 ))
 \glswrite=\write3
 \glo@main@file=\write4
-\openout4 = `01_Introduccion.glo'.
+\openout4 = `Portada.glo'.
 
-Package glossaries Info: Writing glossary file 01_Introduccion.glo on input lin
-e 257.
+Package glossaries Info: Writing glossary file Portada.glo on input line 257.
 \glo@acronym@file=\write5
-\openout5 = `01_Introduccion.acn'.
+\openout5 = `Portada.acn'.
 
-Package glossaries Info: Writing glossary file 01_Introduccion.acn on input lin
-e 257.
+Package glossaries Info: Writing glossary file Portada.acn on input line 257.
 
 (/usr/share/texlive/texmf-dist/tex/latex/blindtext/blindtext.sty
 Package: blindtext 2012/01/06 V2.0 blindtext-Package
@@ -1193,11 +1191,11 @@ Package: xr 1994/05/28 v5.02 eXternal References (DPC)
 LaTeX Warning: Unused global option(s):
     [reqno].
 
-(./01_Introduccion.aux
-LaTeX Info: Redefining \. on input line 33.
-LaTeX Info: Redefining \% on input line 33.
+(./Portada.aux
+LaTeX Info: Redefining \. on input line 31.
+LaTeX Info: Redefining \% on input line 31.
 )
-\openout1 = `01_Introduccion.aux'.
+\openout1 = `Portada.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
@@ -1214,8 +1212,7 @@ LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Try loading font information for T1+ptm on input line 10.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 *geometry* driver: auto-detecting
@@ -1318,145 +1315,90 @@ Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
 )
 Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <18> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 14.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <16> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 15.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 16.
 
-Cap\'{\i }tulo 1.
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 11.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 11.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 11.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 11.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 11.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 11.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 11.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 13.
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 13.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 13.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 13.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 13.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 13.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 13.
-LaTeX Font Info:    Try loading font information for U+msa on input line 22.
+<../Imagenes/usmLogo.png, id=4, 834.11626pt x 602.25pt>
+File: ../Imagenes/usmLogo.png Graphic file (type png)
+
+<use ../Imagenes/usmLogo.png>
+Package pdftex.def Info: ../Imagenes/usmLogo.png used on input line 22.
+(pdftex.def)             Requested size: 130.03761pt x 93.89409pt.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 27.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 36.
+LaTeX Font Info:    Try loading font information for U+msa on input line 40.
+
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 22.
+LaTeX Font Info:    Try loading font information for U+msb on input line 40.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 28.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 28.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 28.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 28.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 28.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 28.
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 28.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 28.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 28.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 28.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 28.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 28.
- [1
-
-\openout3 = `01_Introduccion.ist'.
-
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 36.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 36.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 36.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 36.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 36.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 36.
-
 
 Package glossaries Warning: No \printglossary or \printglossaries found.
 (Remove \makeglossaries if you don't want any glossaries.)
 This document will not have a glossary.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 55.
-LaTeX Info: Redefining \. on input line 55.
-LaTeX Info: Redefining \% on input line 55.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 50.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 55.
+(babel)             in language  on input line 50.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 55.
+(babel)             in language  on input line 50.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 55.
+(babel)             in language  on input line 50.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 55.
+(babel)             in language  on input line 50.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 55.
+(babel)             in language  on input line 50.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 55.
+(babel)             in language  on input line 50.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 55.
+(babel)             in language  on input line 50.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 55.
+(babel)             in language  on input line 50.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 55.
+(babel)             in language  on input line 50.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 55.
+(babel)             in language  on input line 50.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 55.
+(babel)             in language  on input line 50.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 55.
-[2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 55.
- (./01_Introduccion.aux
-LaTeX Info: Redefining \. on input line 33.
-LaTeX Info: Redefining \% on input line 33.
+(babel)             in language  on input line 50.
+[1
+
+\openout3 = `Portada.ist'.
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <../Imagenes/usmLogo.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 50.
+ (./Portada.aux
+LaTeX Info: Redefining \. on input line 31.
+LaTeX Info: Redefining \% on input line 31.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 55.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 55.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 50.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 50.
  ) 
 Here is how much of TeX's memory you used:
- 23328 strings out of 493029
- 383741 string characters out of 6136233
- 530443 words of memory out of 5000000
- 26474 multiletter control sequences out of 15000+600000
- 38846 words of font info for 60 fonts, out of 8000000 for 9000
+ 23309 strings out of 493029
+ 383567 string characters out of 6136233
+ 529301 words of memory out of 5000000
+ 26468 multiletter control sequences out of 15000+600000
+ 25021 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,8n,45p,10446b,384s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 57i,9n,45p,10438b,390s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/t
-imes/utmr8a.pfb>
-Output written on 01_Introduccion.pdf (2 pages, 38740 bytes).
+e/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
+Output written on Portada.pdf (1 page, 89950 bytes).
 PDF statistics:
- 54 PDF objects out of 1000 (max. 8388607)
- 46 compressed objects within 1 object stream
- 13 named destinations out of 1000 (max. 500000)
- 25 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 23 PDF objects out of 1000 (max. 8388607)
+ 16 compressed objects within 1 object stream
+ 4 named destinations out of 1000 (max. 500000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

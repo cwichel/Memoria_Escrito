@@ -21,56 +21,99 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{art01}
-I.~Steinecke and H.~Herzel, ``Bifurcations in an asymmetric vocal - fold
-  model,'' \emph{The Journal of the Acoustical Society of America}, vol.~97,
-  pp. 1874 -- 1884, 1995.
+\bibitem{website:baseInfo}
+\BIBentryALTinterwordspacing
+S.~MacKenzie, ``Evaluating eye tracking systems for computer input,''
+  [consulta: 10 diciembre 2017]. [Online]. Available:
+  \url{http://www.yorku.ca/mack/cogain.html}
+\BIBentrySTDinterwordspacing
 
-\bibitem{art02}
-K.~Honda, ``Physiological processes of speech production,'' \emph{Handbook of
-  Speech Processing, Springer}, pp. 7--26, 2008.
+\bibitem{article:movOcular}
+K.~R. Gegenfurtner, ``The interaction between vision and eye movements,''
+  \emph{Perception}, vol. 45(12), pp. 1333--1357, 2016.
 
-\bibitem{art03}
-E.~Simoncelli and B.~Olshausen, ``Natural image statistics and neural
-  representation,'' \emph{Annual Review in Neuroscience}, vol.~24, pp.
-  1193--1216, 2001.
+\bibitem{website:movOcular}
+\BIBentryALTinterwordspacing
+J.~Findlay and R.~Walker, ``Human saccadic eye movements,'' [consulta: 10
+  diciembre 2017]. [Online]. Available:
+  \url{http://www.scholarpedia.org/article/Human_saccadic_eye_movements}
+\BIBentrySTDinterwordspacing
 
-\bibitem{art04}
-N.~Lesica, T.~Ishii, G.~Stanley, and T.~Hosoya, ``Estimating receptive fields
-  from responses to natural stimuli with asymmetric intensity distributions,''
-  \emph{PLoS ONE}, vol. 3(8): e3060, 2008.
+\bibitem{article:eyetracker_eggert}
+T.~Eggert, ``Eye movement recordings: methods,'' \emph{Neuro-Ophthalmology},
+  vol.~40, pp. 15--34, 2007.
 
-\bibitem{art05}
-J.~Touryan, G.~Felsen, and Y.~Dan, ``Spatial structure of complex cell
-  receptive fields measured with natural images,'' \emph{Neuron 45}, vol.
-  45(5), pp. 781--791, 2005.
+\bibitem{article:eyetracker_richardson}
+D.~C. Richardson and M.~J. Spivet, ``Eye tracking: Characteristics and
+  methods,'' \emph{Encyclopedia of biomaterials and biomedical engineering},
+  vol.~3, p. 1028–1042, 2004.
 
-\bibitem{art06}
-T.~Sharpee, N.~Rust, and W.~Bialek, ``Analyzing neural responses to natural
-  signals: Maximally informative dimensions,'' \emph{Neural Computation}, vol.
-  16(2), pp. 223--250, 2004.
+\bibitem{article:eyetracker_eyetribe1}
+E.~Dalmaijer, ``Is the low-cost eyetribe eye tracker any good for research?''
+  \emph{PeerJ PrePrints}, vol. 2:e585v1, 2014.
 
-\bibitem{art07}
-G.~Rousselet, S.~Thorpe, and M.~Fabre-Thorpe, ``How parallel is visual
-  processing in the ventral pathway?'' \emph{Trends in Cognitive Sciences},
-  vol. 8(8), pp. 363--370, 2004.
+\bibitem{article:eyetracker_eyetribe2}
+S.~Popelka~[et al]., ``Eyetribe tracker data accuracy evaluation and its
+  interconnection with hypothesis software for cartographic purposes,''
+  \emph{Computational Intelligence and Neuroscience}, vol. 2016, pp. 1--14,
+  2016.
 
-\bibitem{art08}
-R.~Guyonneau, R.~VanRullen, and S.~Thorpe, ``Temporal codes and sparse
-  representations: A key to understanding rapid processing in the visual
-  system,'' \emph{Journal of Physiology-Paris}, vol. 98(4-6), pp. 487 -- 497,
-  2004.
+\bibitem{article:monitor_beuer}
+B.~Bauer, ``A timely reminder about stimulus display times and other
+  presentation parameters on crts and newer technologies,'' \emph{Canadian
+  Journal of Experimental Psychology}, vol.~69, pp. 264--273, 2015.
 
-\bibitem{art09}
-E.~D. Young, ``Physiological acoustics,'' \emph{Handbook of Acoustics,
-  Springer}, pp. 429 -- 457, 2007.
+\bibitem{article:monitor_wang}
+P.~Wang, ``An lcd monitor with sufficiently precise timing for research in
+  vision,'' \emph{Encyclopedia of biomaterials and biomedical engineering},
+  vol.~5, 2011.
 
-\bibitem{art10}
-F.~Jaramillo, V.~Markin, and A.~Hudspeth, ``Auditory illusions and the single
-  hair cell,'' \emph{Nature}, vol. 364, pp. 527 -- 529, 1993.
+\bibitem{article:monitor_elze}
+T.~Elze, T.~G. Tanner, and B.~Krekelberg, ``Temporal properties of liquid
+  crystal displays: Implications for vision science experiments,'' \emph{PLoS
+  ONE}, vol. 7(9), 2012.
 
-\bibitem{art11}
-T.~Gollisch, ``Rapid neural coding in the retina with relative spike
-  latencies,'' \emph{Science}, vol. 319, pp. 1108 -- 2008, 2008.
+\bibitem{website:software_presentation}
+\BIBentryALTinterwordspacing
+N.~B. Systems, ``Presentation software,'' [consulta: 13 junio 2017]. [Online].
+  Available: \url{http://www.neurobs.com/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{website:software_psychopy}
+\BIBentryALTinterwordspacing
+J.~Peirce, ``Psychopy,'' [consulta: 13 junio 2017]. [Online]. Available:
+  \url{http://www.psychopy.org/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{website:software_psychotoolbox}
+\BIBentryALTinterwordspacing
+M.~Kleiner, ``Psychtoolbox,'' [consulta: 13 junio 2017]. [Online]. Available:
+  \url{http://psychtoolbox.org/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{website:software_vissionegg}
+\BIBentryALTinterwordspacing
+A.~D. Straw, ``Vission egg,'' [consulta: 13 junio 2017]. [Online]. Available:
+  \url{https://visionegg.readthedocs.io/en/latest/index.html}
+\BIBentrySTDinterwordspacing
+
+\bibitem{psychopy}
+J.~Pierce, ``Generating stimuli for neuroscience using psychopy,''
+  \emph{Frontiers in Neuroinformatics}, vol.~2, p.~10, 2009.
+
+\bibitem{website:iohub}
+\BIBentryALTinterwordspacing
+S.~Simpson, ``iohub,'' [consulta: 23 agosto 2017]. [Online]. Available:
+  \url{http://www.isolver-solutions.com/iohubdocs/index.html}
+\BIBentrySTDinterwordspacing
+
+\bibitem{article:tests_1}
+S.~Amador~[et al]., ``Dissociating cognitive deficits involved in voluntary eye
+  movement dysfunctions in parkinson's disease patients,''
+  \emph{Neuropsychologia}, vol. 44(8), pp. 1475--1482, 2006.
+
+\bibitem{article:tests_2}
+V.~Goyal~[et al]., ``Saccadic eye movements in parkinson′s disease,''
+  \emph{Indian Journal of Ophthalmology}, vol. 62(5), 2014.
 
 \end{thebibliography}

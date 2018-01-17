@@ -3,43 +3,43 @@
 \contentsline {chapter}{Resumen}{\es@scroman {ii}}{chapter*.4}
 \contentsline {chapter}{Abstract}{\es@scroman {iii}}{chapter*.5}
 \contentsline {chapter}{Glosario}{\es@scroman {iii}}{section*.6}
-\contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n}{1}{chapter.1}
-\contentsline {section}{\numberline {1.1}Motivaci\IeC {\'o}n}{1}{section.1.1}
-\contentsline {section}{\numberline {1.2}Objetivos}{1}{section.1.2}
-\contentsline {chapter}{\numberline {2}Estado del arte}{2}{chapter.2}
-\contentsline {section}{\numberline {2.1}Sistemas de seguimiento ocular}{2}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Movimiento ocular}{2}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}M\IeC {\'e}todos de captura}{2}{subsection.2.1.2}
-\contentsline {subsubsection}{Un poco de historia}{2}{section*.10}
-\contentsline {subsubsection}{Tecnolog\IeC {\'\i }as actuales}{2}{section*.11}
-\contentsline {subsubsection}{Comparativa}{2}{section*.12}
-\contentsline {subsection}{\numberline {2.1.3}Sistemas comerciales m\IeC {\'a}s relevantes}{2}{subsection.2.1.3}
-\contentsline {section}{\numberline {2.2}Sistemas de estimulaci\IeC {\'o}n visual}{3}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Hardware de estimulaci\IeC {\'o}n}{3}{subsection.2.2.1}
-\contentsline {subsubsection}{Un poco de historia}{3}{section*.13}
-\contentsline {subsubsection}{Tecnolog\IeC {\'\i }as actuales}{3}{section*.14}
-\contentsline {subsubsection}{Comparativa}{3}{section*.15}
-\contentsline {subsection}{\numberline {2.2.2}Software de estimulaci\IeC {\'o}n}{3}{subsection.2.2.2}
-\contentsline {subsubsection}{Software m\IeC {\'a}s relevante}{3}{section*.16}
-\contentsline {subsubsection}{Comparativa}{3}{section*.17}
-\contentsline {subsection}{\numberline {2.2.3}Experimentos de estimulaci\IeC {\'o}n}{3}{subsection.2.2.3}
-\contentsline {chapter}{\numberline {3}Sistema propuesto}{4}{chapter.3}
-\contentsline {section}{\numberline {3.1}Alcances}{4}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Utilidad de la GUI}{4}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Experimentos a implementar}{4}{subsection.3.1.2}
-\contentsline {section}{\numberline {3.2}Tecnolog\IeC {\'\i }as utilizadas}{4}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Hardware}{4}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Software}{4}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}Dise\IeC {\~n}o e implementaci\IeC {\'o}n de la GUI}{4}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Arquitectura}{4}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Archivos de configuraci\IeC {\'o}n}{4}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Script de ejecuci\IeC {\'o}n}{4}{subsection.3.3.3}
-\contentsline {chapter}{\numberline {4}Resultados}{5}{chapter.4}
-\contentsline {section}{\numberline {4.1}Configuraci\IeC {\'o}n de test de prueba}{5}{section.4.1}
-\contentsline {section}{\numberline {4.2}Mediciones obtenidas}{5}{section.4.2}
-\contentsline {chapter}{\numberline {5}Conclusiones y trabajo futuro}{6}{chapter.5}
-\contentsline {section}{\numberline {5.1}Conclusiones}{6}{section.5.1}
-\contentsline {section}{\numberline {5.2}Trabajo futuro}{6}{section.5.2}
-\contentsline {chapter}{Referencias}{7}{section*.18}
-\contentsline {chapter}{\numberline {A}C\IeC {\'o}digo fuente}{8}{appendix.Alph1}
-\contentsline {chapter}{\numberline {B}Vistas de la GUI}{14}{appendix.Alph2}
+\contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Motivación}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Motivación y objetivos}{2}{section.1.2}
+\contentsline {chapter}{\numberline {2}Estado del arte}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Sistemas de seguimiento ocular}{4}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Movimiento ocular}{4}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Métodos de captura}{4}{subsection.2.1.2}
+\contentsline {subsubsection}{Un poco de historia}{4}{section*.14}
+\contentsline {subsubsection}{Tecnologías actuales}{4}{section*.15}
+\contentsline {subsubsection}{Comparativa}{4}{section*.16}
+\contentsline {subsection}{\numberline {2.1.3}Sistemas comerciales más relevantes}{4}{subsection.2.1.3}
+\contentsline {section}{\numberline {2.2}Sistemas de estimulación visual}{4}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Hardware de estimulación}{4}{subsection.2.2.1}
+\contentsline {subsubsection}{Un poco de historia}{4}{section*.17}
+\contentsline {subsubsection}{Tecnologías actuales}{5}{section*.18}
+\contentsline {subsubsection}{Comparativa}{5}{section*.19}
+\contentsline {subsection}{\numberline {2.2.2}Software de estimulación}{5}{subsection.2.2.2}
+\contentsline {subsubsection}{Software más relevante}{5}{section*.20}
+\contentsline {subsubsection}{Comparativa}{5}{section*.21}
+\contentsline {subsection}{\numberline {2.2.3}Experimentos de estimulación}{5}{subsection.2.2.3}
+\contentsline {chapter}{\numberline {3}Sistema propuesto}{6}{chapter.3}
+\contentsline {section}{\numberline {3.1}Alcances}{6}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Utilidad de la GUI}{6}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Experimentos a implementar}{6}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}Tecnologías utilizadas}{6}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Hardware}{6}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Software}{6}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}Diseño e implementación de la GUI}{6}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Arquitectura}{6}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Archivos de configuración}{6}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Script de ejecución}{6}{subsection.3.3.3}
+\contentsline {chapter}{\numberline {4}Resultados}{7}{chapter.4}
+\contentsline {section}{\numberline {4.1}Configuración de test de prueba}{7}{section.4.1}
+\contentsline {section}{\numberline {4.2}Mediciones obtenidas}{7}{section.4.2}
+\contentsline {chapter}{\numberline {5}Conclusiones y trabajo futuro}{8}{chapter.5}
+\contentsline {section}{\numberline {5.1}Conclusiones}{8}{section.5.1}
+\contentsline {section}{\numberline {5.2}Trabajo futuro}{8}{section.5.2}
+\contentsline {chapter}{Referencias}{9}{section*.22}
+\contentsline {chapter}{\numberline {A}Código fuente}{11}{appendix.Alph1}
+\contentsline {chapter}{\numberline {B}Vistas de la GUI}{17}{appendix.Alph2}

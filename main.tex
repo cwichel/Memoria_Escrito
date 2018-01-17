@@ -31,10 +31,10 @@
 		% =====================
 		\singlespacing{
 			% Glosario ========
-			\phantomsection{
-				\addcontentsline{toc}{chapter}{Glosario}
-				\printglossaries
-			}
+			%\phantomsection{
+			%	\addcontentsline{toc}{chapter}{Glosario}
+			%	\printglossaries
+			%}
 			% Indices =========
 			\tableofcontents
 			\listoffigures
@@ -51,21 +51,21 @@
 		\subfile{02_Contenido/03_Desarrollo}
 		\subfile{02_Contenido/04_Resultados}
 		\subfile{02_Contenido/05_Conclusiones}
-    }
-    % ========================== 
-    {\backmatter{	
-    % Números de página: No utiliza
-    % Capítulos: Sin identificación
-    % ==========================
-    	\phantomsection{
-    		\addcontentsline{toc}{chapter}{Referencias}
-    		\bibliographystyle{IEEEtran}
+	}
+	% ========================== 
+	{\backmatter{	
+	% Números de página: No utiliza
+	% Capítulos: Sin identificación
+	% ==========================
+		\phantomsection{
+			\addcontentsline{toc}{chapter}{Referencias}
+			\bibliographystyle{IEEEtran}
 			\renewcommand\bibname{Referencias}
 			\singlespacing{
 				\bibliography{\main/Referencias}
 			}
 			\nocite{*}
-    	}
+		}
 	}}
 	% ========================== 
 	\appendix{	

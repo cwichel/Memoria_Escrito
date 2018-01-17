@@ -40,7 +40,7 @@
 
 % Interlineado
 \usepackage{setspace}
-\setstretch{1.5}
+\setstretch{1.3}
 
 % Soporte para listas
 \usepackage{enumerate}
@@ -259,7 +259,7 @@
 \renewcommand{\acronymname}{Acrónimos}
 
 % Para agregar un elemento al glosario y siglas
-%\newdualentry[⟨options⟩]{⟨label⟩}{⟨abbrv⟩}{⟨long⟩}{⟨description⟩}
+%\newdualentry[options]{label}{abbrv}{long}{description}
 \newcommand\newdualentry[5][]{%
   \newglossaryentry{main-#2}{name={#4},%
   text={#3\glsadd{#2}},%
@@ -273,7 +273,7 @@
   description={\glslink{main-#2}{#4}}
   }%
 }
-
+% Se carga el glosario
 \input{\main/Glosario}
 
 % =========================== SIN REVISAR

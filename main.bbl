@@ -79,6 +79,21 @@ MicroWay, ``Microway,'' [consulta: 9 diciembre 2017]. [Online]. Available:
   \url{https://www.microway.com.au/}
 \BIBentrySTDinterwordspacing
 
+\bibitem{article:monitor_beuer}
+B.~Bauer, ``A timely reminder about stimulus display times and other
+  presentation parameters on crts and newer technologies,'' \emph{Canadian
+  Journal of Experimental Psychology}, vol.~69, pp. 264--273, 2015.
+
+\bibitem{article:monitor_wang}
+P.~Wang, ``An lcd monitor with sufficiently precise timing for research in
+  vision,'' \emph{Encyclopedia of biomaterials and biomedical engineering},
+  vol.~5, 2011.
+
+\bibitem{article:monitor_elze}
+T.~Elze, T.~G. Tanner, and B.~Krekelberg, ``Temporal properties of liquid
+  crystal displays: Implications for vision science experiments,'' \emph{PLoS
+  ONE}, vol. 7(9), 2012.
+
 \bibitem{article:tests_1}
 S.~Amador~[et al]., ``Dissociating cognitive deficits involved in voluntary eye
   movement dysfunctions in parkinson's disease patients,''
@@ -97,21 +112,6 @@ S.~Popelka~[et al]., ``Eyetribe tracker data accuracy evaluation and its
   interconnection with hypothesis software for cartographic purposes,''
   \emph{Computational Intelligence and Neuroscience}, vol. 2016, pp. 1--14,
   2016.
-
-\bibitem{article:monitor_beuer}
-B.~Bauer, ``A timely reminder about stimulus display times and other
-  presentation parameters on crts and newer technologies,'' \emph{Canadian
-  Journal of Experimental Psychology}, vol.~69, pp. 264--273, 2015.
-
-\bibitem{article:monitor_wang}
-P.~Wang, ``An lcd monitor with sufficiently precise timing for research in
-  vision,'' \emph{Encyclopedia of biomaterials and biomedical engineering},
-  vol.~5, 2011.
-
-\bibitem{article:monitor_elze}
-T.~Elze, T.~G. Tanner, and B.~Krekelberg, ``Temporal properties of liquid
-  crystal displays: Implications for vision science experiments,'' \emph{PLoS
-  ONE}, vol. 7(9), 2012.
 
 \bibitem{website:software_presentation}
 \BIBentryALTinterwordspacing

@@ -1,10 +1,16 @@
 \select@language {spanish}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Diagrama general de la interfaz hombre-máquina.\relax }}{3}{figure.caption.6}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Ejemplo de setup experimental .\relax }}{3}{figure.caption.7}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Diagrama general de la interfaz hombre-máquina \cite {website:baseInfo}.\relax }}{3}{figure.caption.11}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Setup experimental típico \cite {website:baseInfo}.\relax }}{4}{figure.caption.12}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Ejemplo de uso de SSG \cite {website:etSSG}.\relax }}{7}{figure.caption.15}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Ejemplo de posicionamiento de electrodos para EOG \cite {website:etEOG}.\relax }}{8}{figure.caption.16}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Principio de detección VOG en base a reflexión de luz\cite {dissertation:eyetrackers}.\relax }}{9}{figure.caption.17}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Reflexiones de Purkije-Sanson}}}{9}{subfigure.5.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Posición de las reflexiones de la córnea (P1) relativas al centro de la pupila.}}}{9}{subfigure.5.2}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Muestra de eye trackers disponibles en el mercado.\relax }}{9}{figure.caption.18}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Tobii Pro Glasses 2 \cite {website:tobii}}}}{9}{subfigure.6.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {MiraMetrix S2 \cite {website:microway}}}}{9}{subfigure.6.2}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

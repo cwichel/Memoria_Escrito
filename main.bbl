@@ -48,6 +48,46 @@ D.~C. Richardson and M.~J. Spivet, ``Eye tracking: Characteristics and
   methods,'' \emph{Encyclopedia of biomaterials and biomedical engineering},
   vol.~3, p. 1028–1042, 2004.
 
+\bibitem{dissertation:eyetrackers}
+G.~Rakoczi, ``Analysis of eye movements in the context of e-learning,
+  recommendations for eye-efficient user interfaces,'' Ph.D. dissertation,
+  Fakultät für Informatik der Technischen Universität Wien, 2014.
+
+\bibitem{website:etSSG}
+\BIBentryALTinterwordspacing
+T.~C. Hain, ``Information about dizziness, balance and hearing,'' [consulta: 15
+  diciembre 2017]. [Online]. Available:
+  \url{http://www.dizziness-and-balance.com/practice/default.htm}
+\BIBentrySTDinterwordspacing
+
+\bibitem{website:etEOG}
+\BIBentryALTinterwordspacing
+SBI, ``Sbi technical help,'' [consulta: 15 diciembre 2017]. [Online].
+  Available:
+  \url{http://sbiwiki.cns.ki.se/mediawiki/index.php/Natmeg/checklist_MEG_preparation}
+\BIBentrySTDinterwordspacing
+
+\bibitem{website:tobii}
+\BIBentryALTinterwordspacing
+Tobii, ``Tobii,'' [consulta: 9 diciembre 2017]. [Online]. Available:
+  \url{https://www.tobii.com/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{website:microway}
+\BIBentryALTinterwordspacing
+MicroWay, ``Microway,'' [consulta: 9 diciembre 2017]. [Online]. Available:
+  \url{https://www.microway.com.au/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{article:tests_1}
+S.~Amador~[et al]., ``Dissociating cognitive deficits involved in voluntary eye
+  movement dysfunctions in parkinson's disease patients,''
+  \emph{Neuropsychologia}, vol. 44(8), pp. 1475--1482, 2006.
+
+\bibitem{article:tests_2}
+V.~Goyal~[et al]., ``Saccadic eye movements in parkinson's disease,''
+  \emph{Indian Journal of Ophthalmology}, vol. 62(5), 2014.
+
 \bibitem{article:eyetracker_eyetribe1}
 E.~Dalmaijer, ``Is the low-cost eyetribe eye tracker any good for research?''
   \emph{PeerJ PrePrints}, vol. 2:e585v1, 2014.
@@ -106,14 +146,5 @@ J.~Pierce, ``Generating stimuli for neuroscience using psychopy,''
 S.~Simpson, ``iohub,'' [consulta: 23 agosto 2017]. [Online]. Available:
   \url{http://www.isolver-solutions.com/iohubdocs/index.html}
 \BIBentrySTDinterwordspacing
-
-\bibitem{article:tests_1}
-S.~Amador~[et al]., ``Dissociating cognitive deficits involved in voluntary eye
-  movement dysfunctions in parkinson's disease patients,''
-  \emph{Neuropsychologia}, vol. 44(8), pp. 1475--1482, 2006.
-
-\bibitem{article:tests_2}
-V.~Goyal~[et al]., ``Saccadic eye movements in parkinson's disease,''
-  \emph{Indian Journal of Ophthalmology}, vol. 62(5), 2014.
 
 \end{thebibliography}

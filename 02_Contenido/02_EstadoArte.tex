@@ -11,7 +11,7 @@
 \chapter{Estado del arte}
 \label{cha:02_estado_del_arte}
 
-	En base a la investigación previa fue posible definir de forma genérica los elementos principales requeridos para la configuración y puesta en marcha de un sistema de estimulación visual y registro de movimiento ocular. De esta forma se presenta a continuación un diagrama general de funcionamiento del sistema final y una imagen de ejemplo de un \gls{setup} típico implementado:   
+	En base a la investigación previa fue posible definir de forma genérica los elementos principales requeridos para la configuración y puesta en marcha de un sistema de estimulación visual y registro de movimiento ocular. En la figuras \ref{fig:02_diagrama_interfaz} y \ref{fig:02_ejemplo_setup} se presenta un diagrama general de funcionamiento del sistema propuesto y una imagen de ejemplo de un \gls{setup} típico implementado.   
 
 	\begin{figure}[H]
 		\centering
@@ -20,11 +20,9 @@
 		\label{fig:02_diagrama_interfaz}
 	\end{figure}
 
-	En esta figura se pretende explicitar la función del sistema de estimulación - adquisición - registro y los requerimientos del mismo. Así, el software asociado debe ser capaz de manejar la interfaz con el usuario para poder entregar estímulos (visuales principalmente) y recibir las respuestas asociadas (en forma de datos de posicionamiento ocular o respuestas solicitadas por pantalla) de forma tal de agrupar las acciones temporalmente permitiendo de esta forma dar sentido a los datos obtenidos en el experimento. 
+	En \ref{fig:02_diagrama_interfaz} se pretende explicitar la función del sistema de estimulación - adquisición - registro y los requerimientos del mismo. Así, el software asociado debe ser capaz de manejar la interfaz con el usuario para poder entregar estímulos (visuales principalmente) y recibir las respuestas asociadas (en forma de datos de posicionamiento ocular o respuestas solicitadas por pantalla) de forma tal de agrupar las acciones temporalmente permitiendo de esta forma dar sentido a los datos obtenidos en el experimento. 
 
 	\newpage
-	De esta forma, una implementación típica sería como se muestra a continuación:  
-
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.5\textwidth]{cap_02_setup}
@@ -43,15 +41,16 @@
 
 		Los movimientos sacádicos corresponden a las rotaciones que realiza el globo ocular entre dos momentos de posicionamiento estacionario y que se traducen en el desplazamiento de la pupila. Estos desplazamientos pueden ocurrir tanto en el eje horizontal como vertical y cabe destacar que durante los periodos de tiempo en que se realiza el movimiento los ojos no entregan información visual relevante. Para individuos en condiciones normales este tipo de movimiento se realiza constantemente y se repite varias veces por segundo, el direccionamiento de los ojos en estos casos suele ser controlado por procesos cognitivos realizados de forma inconsciente.
 
+		\newpage
 		Las características principales de dichos movimientos son:
 		\begin{enumerate}
-			\item Cada sacada tiene un patrón de movimiento similar, por lo tanto son altamente caracterizables.
+			\item Existen dos tipos de movimientos sacádicos: Los voluntarios, también conocidos como provocados, que implican control consciente sobre los procesos cognitivos y los reflexivos o automáticos, que corresponden a la respuesta natural a la aparición de un nuevo estímulo visual.
 
-			\item Por su naturaleza los movimientos sacádicos son denominados balísticos, esto quiere decir que la posición de destino se encuentra predeterminada en el momento de partida. 
+			\item Por su naturaleza los movimientos sacádicos se consideran balísticos, lo que quiere decir que la posición de destino no cambia durante el desarrollo del movimiento. Esto puede entenderse también como que el objetivo se encuentra predeterminado en el momento de partida.
 
-			\item La velocidad de las sacadas aumenta de forma no lineal en la medida que aumenta la amplitud de movimento (cosa que se cumple bajo toda circunstancia). De esta forma la duración del movimiento puede fluctuar entre $20 - 100[ms]$ y sus velocidades entre $10 - 300 [\frac{deg}{s}]$.
+			\item La velocidad de las sacadas aumenta de forma no lineal en la medida que aumenta la amplitud de movimento y puede alcanzar magnitudes de hasta $600 - 700[\frac{deg}{s}]$. Además, la duración del movimiento puede fluctuar entre $20 - 120[ms]$, aún que en promedio solo dura de $20-40[ms]$. 
 
-			\item La precisión de la sacada fluctúa entre un $5-10\%$ de la amplitud total del movimiento y las correcciones son realizadas por desplazamientos de calibración denominados micro-sacadas. Estos métodos correctivos permiten suponer que existe algún tipo de procesamiento paralelo encargado de la calibración ocular de largo plazo \cite{website:movOcular}.  
+			\item La precisión del movimiento sacádico presenta un error que varía entre el $5-10\%$ de la amplitud total del movimiento. Las correcciones son realizadas por desplazamientos de calibración denominados micro-sacadas. Estos métodos correctivos permiten suponer que existe algún tipo de procesamiento paralelo encargado de la calibración ocular de largo plazo \cite{website:movOcular}.  
 
 		\end{enumerate}
 
@@ -76,17 +75,17 @@
 			\subsubsection{Tecnologías actuales}
 			\label{ssub:02_tecnologias_actuales}
 
-				En la actualidad existen una gran gama de tecnologías para registrar movimiento ocular \cite{article:eyetracker_eggert, article:eyetracker_richardson, dissertation:eyetrackers}, no obstante, a continuación se muestran mas relevantes y utilizadas: 
+				En la actualidad existen una gran gama de tecnologías para registrar movimiento ocular \cite{article:eyetracker_eggert, article:eyetracker_richardson, dissertation:eyetrackers}, no obstante, a continuación se indican las más relevantes: 
 				\begin{enumerate}
-					\item \textbf{Bobina escleral magnética (\acrshort{ssc}):} Esta técnica requiere del uso de lentes de contacto de gran tamaño directamente sobre el globo ocular. Dicho lente posee dos pequeñas bobinas de alambre que, al ser alineadas con el eje de visión, permiten obtener información sobre la dirección en la que se encuentra el ojo en forma de voltaje al ser inducidas por campos electromagnéticos externos de alta frecuencia. A pesar de la gran incomodidad que producen, esta técnica es una de las más precisas y exactas.
+					\item \textbf{Bobina escleral magnética (\acrshort{ssc}):} Esta técnica requiere del uso de lentes de contacto de gran tamaño directamente sobre el globo ocular. Dicho lente posee dos pequeñas bobinas de alambre que, al ser alineadas con el eje de visión, permiten obtener información sobre la dirección en la que se encuentra el ojo en forma de voltaje al ser inducidas por campos electromagnéticos externos de alta frecuencia. A pesar de la gran incomodidad que producen (ver figura \ref{fig:02_et_ssc}), esta técnica es una de las más precisas y exactas. 
 					\begin{figure}[H]
 						\centering
 						\includegraphics[width=0.35\textwidth]{cap_02_et_ssg}
 						\caption{Ejemplo de uso de SSG \cite{website:etSSG}.}
-						\label{fig:02_et_ssg}
+						\label{fig:02_et_ssc}
 					\end{figure}
 
-					\item \textbf{Electro-OculoGrafía (\acrshort{eog}):} Esta técnica de seguimiento ocular se basa en la medición de diferencias de potencial eléctrico en la piel que se encuentra al rededor del ojo. En la medida que el ojo rota, el dipolo producido por la córnea y la retina cambia, lo que se ve reflejado en las mediciones. Sus ventajas principales, además del bajo costo, son la capacidad de medir movimiento ocular a pesar de que los ojos se encuentren cerrados, lo que hace de este método una herramienta interesante en caso de estudio de sueño y que las mediciones son relativas a la posición de la cabeza. No obstante lo anterior, la precisión y exactitud de las mediciones obtenidas es baja ya que se encuentran sujetas a artefactos como el movimiento de los párpados.
+					\item \textbf{Electro-OculoGrafía (\acrshort{eog}):} Esta técnica de seguimiento ocular se basa en la medición de diferencias de potencial eléctrico en la piel que se encuentra al rededor del ojo. En la medida que el ojo rota, el dipolo producido por la córnea y la retina cambia, lo que se ve reflejado en las mediciones. Sus ventajas principales, además del bajo costo, son la capacidad de medir movimiento ocular a pesar de que los ojos se encuentren cerrados, lo que hace de este método una herramienta interesante en caso de estudio de sueño y que las mediciones son relativas a la posición de la cabeza. No obstante lo anterior, la precisión y exactitud de las mediciones obtenidas es baja ya que se encuentran sujetas a artefactos como el movimiento de los párpados. La figura \ref{fig:02_et_eog} muestra el posicionamiento típico de los electrodos en este tipo de setup. 
 					\begin{figure}[H]
 						\centering
 						\includegraphics[width=0.9\textwidth]{cap_02_et_eog}
@@ -98,16 +97,16 @@
 
 					Dentro de las técnicas VOG existentes la más popular corresponde a la detección de reflexiones de luz en la pupila y córnea. Este método suele emplear una o más cámaras y focos de luz, típicamente de tecnología infrarroja, ubicados cerca de la fuente de estimulación visual y orientados hacia el globo ocular. La tecnología infrarroja permite producir reflexiones de luz sin provocar molestia en el usuario, además de lograr evitar la mayor parte de contaminación lumínica externa. 
 
-					El principio de funcionamiento de los métodos de reflexión se basa en las imagenes de Purkinje-Sanson que describen la existencia de al menos 4 reflexiones de luz que pueden ser utilizadas como referencia para estimar el direccionamiento de la pupila. Además, los precios de los dispositivos que utilizan esta técnica suelen encontrarse relacionados a la cantidad o tipo de reflexiones utilizadas.
+					El principio de funcionamiento de los métodos de reflexión se basa en las imagenes de Purkinje-Sanson que describen la existencia de al menos 4 reflexiones de luz (figura \ref{fig:02_et_vog1} (a)) que pueden ser utilizadas como referencia para estimar el direccionamiento de la pupila, como se muestra en la figura \ref{fig:02_et_vog1} (b) respecto de la primera reflexión. Además, los precios de los dispositivos que utilizan esta técnica suelen estar directamente relacionados a la cantidad o tipo de reflexiones utilizadas.
 					\begin{figure}[H]
 						\centering
-						\subfloat[Reflexiones de Purkije-Sanson]{\includegraphics[width=0.25\textwidth]{cap_02_et_vog1}}\hspace{5mm}
+						\subfloat[Reflexiones de Purkije-Sanson]{\includegraphics[width=0.3\textwidth]{cap_02_et_vog1}}\hspace{5mm}
 						\subfloat[Posición de las reflexiones de la córnea (P1) relativas al centro de la pupila.]{\includegraphics[width=0.55\textwidth]{cap_02_et_vog2}}
 						\caption{Principio de detección VOG en base a reflexión de luz\cite{dissertation:eyetrackers}.}
 						\label{fig:02_et_vog1}
 					\end{figure}
 
-					La presentación de estos dispositivos es variada y van desde cascos y lentes hasta trípodes y columnas donde se integran un elemento apoya-baribilla y el eye tracker. A continuación se muestran algunos a modo de referencia:
+					La presentación de estos dispositivos es variada y van desde cascos y lentes hasta trípodes y columnas donde se integran un elemento apoya-baribilla y el eye tracker. En la figura \ref{fig:02_et_vog2} se muestra un par a modo de referencia. 
 					\begin{figure}[H]
 						\centering
 						\subfloat[Tobii Pro Glasses 2 \cite{website:tobii}]{\includegraphics[width=0.4\textwidth]{cap_02_et_vog_1}}\hspace{5mm}
@@ -121,11 +120,11 @@
 			\subsubsection{Comparativa}
 			\label{ssub:02_comparativa_eyetracker}
 
-			a pesar de las claras e importantes diferencias entre las tecnologías presentadas es posible realizar una comparación entre las mismas. En \cite{article:eyetracker_eggert, article:eyetracker_richardson, dissertation:eyetrackers} se entregan nociones sobre las capacidades operativas en cuanto a presición espacial, temporal, capacidad de registrar movimientos de torsión, desplazamiento horizontal y vertical, tiempo requerido para preparar su uso (setup), comodidad para el usuario tipo de calibración requerida y complejidad de la misma. 
+			A pesar de las claras e importantes diferencias entre las tecnologías presentadas es posible realizar una comparación entre las mismas. En \cite{article:eyetracker_eggert, article:eyetracker_richardson, dissertation:eyetrackers} se entregan nociones sobre las capacidades operativas en cuanto a presición espacial, temporal, capacidad de registrar movimientos de torsión, desplazamiento horizontal y vertical, tiempo requerido para preparar su uso (setup), comodidad para el usuario tipo de calibración requerida y complejidad de la misma. 
 
-			A continuación se presenta una tabla resumen con las características ya descritas para EOG, SSG, VOG (común) y DPI (VOG de gama alta utilizando distintas reflexiones de Purkinje): 
+			En el cuadro \ref{tbl:eyetracker_compare} se presenta un resumen con las características ya descritas para EOG, SSG, VOG (común) y DPI (VOG de gama alta utilizando distintas reflexiones de Purkinje). 
 			
-			\begin{table}[H]\begin{center}\fontsize{8pt}{1em}{
+			\begin{table}[H]\begin{center}\fontsize{10pt}{1em}{
 				\singlespacing{\begin{tabular}{| C{0.18\textwidth} | C{0.18\textwidth} | C{0.18\textwidth} | C{0.18\textwidth} | C{0.18\textwidth}|}
 					\hline
 					 & EOG & SSG & VOG & DPI \\ \hline
@@ -139,7 +138,7 @@
 					Invasividad 				& Electrodos cercanos al ojo (sin contacto), no afecta el campo visual & Lentes de contacto, posibles efectos negativos en precisión visual, incomodidad & Aparato montado en la cabeza (sin contacto con los ojos), limitación moderada del campo visual & Cabeza inmovilizada en un soporte de barbilla, limitación moderada del campo visual \\ \hline
 				\end{tabular}}
 				\caption{Comparativa de los sistemas de adquisición encontrados en \cite{article:eyetracker_eggert, article:eyetracker_richardson, dissertation:eyetrackers}}
-				\label{tbl:Comp_SA}
+				\label{tbl:eyetracker_compare}
 			}\end{center}\end{table}
 
 	\section{Sistemas de estimulación visual}
@@ -147,11 +146,11 @@
 		\subsection{Hardware de estimulación}
 		\label{sub:02_hardware_de_estimulacion}
 
-		Como es sabido, en el mundo de la investigación la reproducibilidad y repetibilidad de un experimento es tan importante como los resultados obtenidos. En este contexto, es posible aseverar que las características de los estímulos presentados son tan valiosas como el conjunto de reportes precisos sobre los parámetros utilizados para generarlos. Este motivo, en comunión con las necesidades técnicas de los experimentos, muchas veces hacen de la elección del artefacto de estimulación una tarea particularmente compleja \cite{article:monitor_beuer}.
+		Para cualquier experimento científico o proyecto de investigación la reproducibilidad y repetibilidad de es tan importante como los resultados obtenidos. En este contexto, es posible aseverar que las características de los estímulos presentados son tan valiosas como el conjunto de reportes precisos sobre los parámetros utilizados para generarlos. Este motivo, en comunión con las necesidades técnicas de los experimentos, muchas veces hacen de la elección del artefacto de estimulación una tarea particularmente compleja \cite{article:monitor_beuer}.
 
-		A lo largo de la historia, los investigadores dedicados al estudio del movimiento ocular han usado diversas tecnologías con el propósito de estimular a sus pacientes, no obstante, no fue hasta la década de los 70' y de la mano de los computadores que los monitores \acrshort{crt} revolucionaron este campo de investigación convirtiéndose en el estándar durante décadas. El motivo principal de su popularidad dice relación con la capacidad que brindan de diseñar con relativa facilidad una gran gama de pruebas y experimentos distintos, lo que permitió explorar de forma rápida nuevos métodos e hipótesis. Esto, complementado a la integración del control de los parámetros de estimulación y almacenamiento de resultados e historiales en el mismo dispositivo permitió robustecer los procesos de investigación debido a la capacidad de repetir los experimentos sin afectar mayormente características de los estímulos. 
+		A lo largo de la historia, los investigadores dedicados al estudio del movimiento ocular han usado diversas tecnologías con el propósito de estimular visualmente a sus pacientes, no obstante, no fue hasta la década de los 70' y de la mano de los computadores que los monitores \acrshort{crt} revolucionaron este campo de investigación convirtiéndose en el estándar durante décadas. El motivo principal de su popularidad dice relación con la capacidad que brindan de diseñar con relativa facilidad una gran gama de pruebas y experimentos distintos, lo que permitió explorar de forma rápida nuevos métodos e hipótesis. Esto, complementado a la integración del control de los parámetros de estimulación y almacenamiento de resultados e historiales en el mismo dispositivo permitió robustecer los procesos de investigación debido a la capacidad de repetir los experimentos sin afectar mayormente características de los estímulos. 
 
-		Las limitantes de los primeros dispositivos se fueron subsanando con el avance de la tecnología, de esta forma, los monitores análogos avanzaron hasta alcanzar tasas de refresco elevadas ($\geq 200[Hz]$), una gran gama de colores, buena resolución espacial (alcanzando hasta $1600[px]$ de ancho), un rápido decaimiento del fósforo de la pantalla que se traduce en tiempos de repuesta reducidos ($< 1[ms]$) y un buen tamaño (típicamente $20[in]$ en la diagonal). En base a esta información pueden definirse dos conceptos relevantes: 
+		Las limitantes de los primeros dispositivos se fueron subsanando con el avance de la tecnología, de esta forma, los monitores análogos avanzaron hasta alcanzar tasas de refresco elevadas ($\geq 200[Hz]$), una gran gama de colores, buena resolución espacial (alcanzando hasta $1600[px]$ de ancho), un rápido decaimiento del fósforo de la pantalla que se traduce en tiempos de repuesta reducidos ($< 1[ms]$) y un buen tamaño (típicamente $20[in]$ en la diagonal). En base a esta información pueden definirse dos conceptos relevantes para el hardware de estimulación: 
 		\begin{enumerate}
 			\item \textbf{Tasa de refresco (\acrshort{fps}):} dice relación con la cantidad de veces que se actualiza la imagen de la pantalla por cada segundo e influye en el timing de los estímulos.
 			\item \textbf{Tiempo de respuesta (\acrshort{rt}):} es cuanto demora un pixel de la pantalla en cambiar su color e influye en la calidad y nitidez de las imágenes. 
@@ -159,70 +158,79 @@
 
 		A pesar de la mejoras considerables en sus características, las nuevas tecnologías han hecho desaparecer a los monitores CRT del mercado. Así en la actualidad es común ver monitores LCD, LED y oLED que tienen pantallas de mayor tamaño, menor consumo de energía, menor radiación electromagnética y una menor huella de carbono. Es importante destacar que, a pesar de que el aspecto de las nuevas tecnologías es similar, sus principios de funcionamiento, capacidades y características difieren.
 
-		Existen varias consideraciones que hacer al utilizar estas tecnologías \cite{article:monitor_wang, article:monitor_elze}. Transversalmente se tiene un problema de timing debido a las bajas tasas de refresco de la mayor parte de los monitores modernos, por tanto en primer lugar es necesario definir los tiempos que se requiere en la muestra de frames para cumplir con los requerimientos de los estímulos. En este sentido, por ejemplo, aun que muchos monitores modernos indican que su tasa de refresco se encuentra entre $60-75[Hz]$ no se aclara en sus hojas de datos cual es el límite efectivo del refresco vertical. Este punto se vuelve crítico si se considera que una buena parte de los equipos modernos incorporan sistemas de procesamiento de imagenes para mejorar la calidad, lo que retrasa aún mas estos tiempos. Otro elemento de cuidado es el tiempo de respuesta. Es ideal asergurar que este sea reducido para lograr que el cambio entre imágenes no sea notorio y afecte el experimento (esto se hace más presente en casos en los que se muestra secuencias de video). Finalmente, es importante compaginar las características del experimento con las características lumínicas del equipo ya que es sabido que en tecnologías como LCD tanto el ángulo del observador respecto de la pantalla como las distintas zonas de la misma afectan el color/contraste observado (efecto de retroiluminación). 
+		Existen varias consideraciones que hacer al utilizar estas tecnologías \cite{article:monitor_wang, article:monitor_elze}. Transversalmente se tiene un problema de timing debido a las bajas tasas de refresco de la mayor parte de los monitores modernos, por tanto en primer lugar es necesario definir los tiempos que se requiere en la muestra de frames para cumplir con los requerimientos de los estímulos. En este sentido, por ejemplo, aun que muchos monitores modernos indican que su tasa de refresco se encuentra entre $60-75[Hz]$ no se aclara en sus hojas de datos cual es el límite efectivo del refresco vertical. Este punto se vuelve crítico si se considera que una buena parte de los equipos modernos incorporan sistemas de procesamiento de imagenes para mejorar la calidad, lo que retrasa aún mas estos tiempos. Otro elemento de cuidado es el tiempo de respuesta. Es ideal asergurar que este sea reducido para lograr que el cambio entre imágenes no sea notorio y afecte el experimento (esto se hace más presente en casos en los que se muestra secuencias de video). Finalmente, es importante compaginar las características del experimento con las propiedades lumínicas del equipo ya que es sabido que en tecnologías como el caso de los LCD tanto el ángulo del observador respecto de la pantalla como las distintas zonas de la misma afectan el color/contraste observado (efecto de retro-iluminación). 
 			
 		\subsection{Software de estimulación}
 		\label{sub:02_software_de_estimulacion}
 
-			Tal como se indicó en el apartado anterior la generación de estímulos es una pieza clave en la realización de experimentos ya que permiten preparar un escenario adhoc para la obtención de datos clave. A continuación se muestran algunas de las herramientas de software más utilizadas en el área de investigación psicofísica \cite{website:software}.
+			Tal como se indicó en el apartado anterior la generación de estímulos es una pieza clave en la realización de experimentos ya que permiten preparar un escenario adhoc para la obtención de datos específicos. En \cite{website:software} es posible encontrar una larga lista de software especializado para el desarrollo de experimentos en el área de la psicofísica además de referencias e información sobre sus características. A modo de resumen se presenta en el cuadro \ref{tbl:systems_compare} una comparación de características entre las aplicaciones más citadas de la página según google scholar.  
 
-			\begin{enumerate}
-				\item \textbf{Presentation \cite{website:software_presentation}:}
-
-				\item \textbf{PsychoPy \cite{website:software_psychopy}:}
-
-				\item \textbf{PsychoToolbox \cite{website:software_psychotoolbox}:}
-
-				\item \textbf{VissionEgg \cite{website:software_vissionegg}:}
-
-			\end{enumerate}
-
-			\subsubsection{Comparativa}
-			\label{ssub:02_comparativa_software}
+			\begin{table}[H]\begin{center}\fontsize{10pt}{1em}{
+					\singlespacing{\begin{tabular}{| C{0.14\textwidth} | C{0.19\textwidth} | C{0.19\textwidth} | C{0.19\textwidth} | C{0.19\textwidth} |}
+					\hline
+					 								& PsychoPy 	& VissionEgg & PsychoToolbox & Stimulus Presentation \\\hline
+					Tipo de software 				& \multicolumn{3}{c|}{Open source} & Privativo, de pago \\\hline
+					Plataforma 						& \multicolumn{2}{c|}{python + OpenGL} & Matlab/Octave & Software independiente (IDE con editor de python) \\\hline
+					Sistema operativo 				& \multicolumn{3}{c|}{Linux, MacOS, Windows} & Windows \\\hline
+					Fecha de última actualización 	& $Dec/2017$ & $Sep/2014$ & $Oct/2017$ &  $Abr/2017$ \\\hline
+					Citaciones en Google Scholar 	& $2220$ 	& $427$ 	& $6310$ 	& $3520$\\\hline
+					Programable 					& \multicolumn{4}{c|}{Si}\\\hline
+					Imágenes y Video 				& \multicolumn{4}{c|}{Si}\\\hline
+					Sonido 							& \multicolumn{4}{c|}{Si}\\\hline
+					Soporte para Eye trackers incluido 	& Si 		& No 		& Si 		& Si\\\hline
+					Capacidad para registro de data 	& Si 		& No 		& Si 		& Si\\\hline
+					Documentación/Foro disponible 			& Si 		& No (Link caído) & Si 	& Si\\\hline
+				\end{tabular}}
+				\caption{Comparativa de software de estimulación \cite{website:software_presentation, website:software_psychopy, website:software_psychotoolbox, website:software_vissionegg}}
+				\label{tbl:systems_compare}
+			}\end{center}\end{table}
 
 		\subsection{Experimentos de estimulación}
 		\label{sub:02_experimentos_de_estimulacion}
 
-		Los experimentos de estimulación consisten en grupos de tareas sicomotoras que involucran uno o más de los siguientes tipos de movimiento ocular \cite{website:movOcular}: 
+		Debido a la versatilidad de los movimientos sacádicos, se ha desarrollado con el tiempo un número importante de tareas sicomotoras para probar destintos mecanísmos cognitivos. Por este motivo y a modo de acotar las actividades asociadas a este trabajo de título, se desarrollará el sistema propuesto de forma tal que permitita solo la implementación de experimentos con características similares a los presentados en \cite{article:tests_1, article:tests_2, article:tests_3, article:tests_4}, que corresponden a métodos utilizados en la evaluación y caracterización de desempeño sicomotor en pacientes que padecen la enfermedad de Parkinson. 
+
+		Las métricas principales para este tipo de experimento son:
 		\begin{enumerate}
-		 	\item \textbf{Movimiento reflexivo:}
+		 	\item \textbf{Latencia sacádica (\acrshort{sl}):} Lapso de tiempo que transcurre entre la aparición de un nuevo estímulo y el comienzo de un movimiento de orientación en $[ms]$. 
 
-		 	\item \textbf{Movimiento voluntario:}
+		 	\item \textbf{Intervalo inter-sacádico (\acrshort{isi}):} Tiempo entre el término de un movimiento sacádico y el comienzo de otro en $[ms]$.
 		 	
-		 	\item \textbf{Movimiento pro-sacádico:}
+		 	\item \textbf{Ganancia inicial de movimiento:} Cociente entre la amplitud de la sacada y la distancia desde el punto de partida al objetivo. 
 		 	
-		 	\item \textbf{Movimiento anti-sacádico:}
-
-		 	\item \textbf{Movimiento retardado:}
-
-		 	\item \textbf{Movimiento guiado por memoria:}
-
-		 	\item \textbf{Movimiento microsacádico:}
+		 	\item \textbf{Tasa de error:} Relación entre el número de veces que el movimiento ejecutado fue errado y el total de movimientos realizados. 
 
 		 \end{enumerate} 
 
-		 Que pueden presentar modificaciones para ajustarse a alguno de los siguientes paradigmas:
-		 \begin{enumerate}
-		 	\item \textbf{Efecto de gap:}
+		Donde las tareas sicomotoras corresponden a:
+		\begin{enumerate}
+			\item \textbf{Movimiento pro-sacádico:} Consiste en medir la capacidad del individuo para realizar movimientos reflexivos rápidamente hacia un objetivo. La estructura básica de este tipo de experimentos se muestra en la figura \ref{fig:02_prosaccade_base}.
+				\begin{figure}[H]
+					\centering
+					\subfloat[Tobii Pro Glasses 2 \cite{website:tobii}]{\includegraphics[width=0.4\textwidth]{cap_02_et_vog_1}}\hspace{5mm}
+					\subfloat[MiraMetrix S2 \cite{website:microway}]{\includegraphics[width=0.4\textwidth]{cap_02_et_vog_2}}
+					\caption{Muestra de eye trackers disponibles en el mercado.}
+					\label{fig:02_prosaccade_base}
+				\end{figure}  
 
-		 	\item \textbf{Efecto de distractor:}
+			\item \textbf{Movimiento anti-sacádico:} Consiste en medir la capacidad del individuo para inhibir movimientos reflexivos y además realizar movimientos voluntarios el la dirección contraria a la aparición del objetivo. Este tipo de tarea permite estudiar daños en el cortex frontal. La estructura básica de este tipo de experimentos se muestra en la figura \ref{fig:02_antisaccade_base}.
+				\begin{figure}[H]
+					\centering
+					\subfloat[Tobii Pro Glasses 2 \cite{website:tobii}]{\includegraphics[width=0.4\textwidth]{cap_02_et_vog_1}}\hspace{5mm}
+					\subfloat[MiraMetrix S2 \cite{website:microway}]{\includegraphics[width=0.4\textwidth]{cap_02_et_vog_2}}
+					\caption{Muestra de eye trackers disponibles en el mercado.}
+					\label{fig:02_antisaccade_base}
+				\end{figure}    
 
-		 	\item \textbf{Efecto de inhibición sacádica:}
-
-		 \end{enumerate}
-
-		 Y que se se traducen en información asociable a alguna métrica determinada. A continuación se describen algunas de ellas \cite{article:tests_1, article:tests_2}:
-		 \begin{enumerate}
-		 	\item \textbf{Latencia sacádica (SL):}
-
-		 	\item \textbf{Intervalo inter-sacádico (ISI):}
-		 	
-		 	\item \textbf{Ganancia inicial de movimiento:}
-		 	
-		 	\item \textbf{Tasa de error:}
+		 	\item \textbf{Movimiento guiado por memoria:} Consiste en mostrar una secuencia de objetivos y comprobar la capacidad del individuo para repetir dicha secuencia mediante movimiento ocular. Este tipo de tarea se realiza en pacientes con daño en el ganglio base o regiones del lóbulo frontal con el fin de comprobar su capacidad de retener información en el corto plazo. La estructura básica de este tipo de experimentos se muestra en la figura \ref{fig:02_memmory_base}.
+		 		\begin{figure}[H]
+					\centering
+					\subfloat[Tobii Pro Glasses 2 \cite{website:tobii}]{\includegraphics[width=0.4\textwidth]{cap_02_et_vog_1}}\hspace{5mm}
+					\subfloat[MiraMetrix S2 \cite{website:microway}]{\includegraphics[width=0.4\textwidth]{cap_02_et_vog_2}}
+					\caption{Muestra de eye trackers disponibles en el mercado.}
+					\label{fig:02_memmory_base}
+				\end{figure}  
 
 		 \end{enumerate} 
-
-		 A modo de ejemplo se describen a continuación dos tipos de tareas sicomotoras \cite{article:tests_1, article:tests_2}:
 
 \end{document}

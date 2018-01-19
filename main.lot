@@ -1,7 +1,8 @@
 \select@language {spanish}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Comparativa de los sistemas de adquisición encontrados en \cite {article:eyetracker_eggert, article:eyetracker_richardson, dissertation:eyetrackers}\relax }}{10}{table.caption.20}
+\contentsline {table}{\numberline {2.1}{\ignorespaces Comparativa de los sistemas de adquisici\IeC {\'o}n encontrados en \cite {article:eyetracker_eggert, article:eyetracker_richardson, dissertation:eyetrackers}\relax }}{10}{table.caption.20}
+\contentsline {table}{\numberline {2.2}{\ignorespaces Comparativa de software de estimulaci\IeC {\'o}n \cite {website:software_presentation, website:software_psychopy, website:software_psychotoolbox, website:software_vissionegg}\relax }}{13}{table.caption.21}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

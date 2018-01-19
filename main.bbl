@@ -28,31 +28,6 @@ S.~MacKenzie, ``Evaluating eye tracking systems for computer input,''
   \url{http://www.yorku.ca/mack/cogain.html}
 \BIBentrySTDinterwordspacing
 
-\bibitem{article:movOcular}
-K.~R. Gegenfurtner, ``The interaction between vision and eye movements,''
-  \emph{Perception}, vol. 45(12), pp. 1333--1357, 2016.
-
-\bibitem{website:movOcular}
-\BIBentryALTinterwordspacing
-J.~Findlay and R.~Walker, ``Human saccadic eye movements,'' [consulta: 10
-  diciembre 2017]. [Online]. Available:
-  \url{http://www.scholarpedia.org/article/Human_saccadic_eye_movements}
-\BIBentrySTDinterwordspacing
-
-\bibitem{article:eyetracker_eggert}
-T.~Eggert, ``Eye movement recordings: methods,'' \emph{Neuro-Ophthalmology},
-  vol.~40, pp. 15--34, 2007.
-
-\bibitem{article:eyetracker_richardson}
-D.~C. Richardson and M.~J. Spivet, ``Eye tracking: Characteristics and
-  methods,'' \emph{Encyclopedia of biomaterials and biomedical engineering},
-  vol.~3, p. 1028–1042, 2004.
-
-\bibitem{dissertation:eyetrackers}
-G.~Rakoczi, ``Analysis of eye movements in the context of e-learning,
-  recommendations for eye-efficient user interfaces,'' Ph.D. dissertation,
-  Fakultät für Informatik der Technischen Universität Wien, 2014.
-
 \bibitem{website:etSSG}
 \BIBentryALTinterwordspacing
 T.~C. Hain, ``Information about dizziness, balance and hearing,'' [consulta: 15
@@ -65,6 +40,55 @@ T.~C. Hain, ``Information about dizziness, balance and hearing,'' [consulta: 15
 SBI, ``Sbi technical help,'' [consulta: 15 diciembre 2017]. [Online].
   Available:
   \url{http://sbiwiki.cns.ki.se/mediawiki/index.php/Natmeg/checklist_MEG_preparation}
+\BIBentrySTDinterwordspacing
+
+\bibitem{dissertation:eyetrackers}
+G.~Rakoczi, ``Analysis of eye movements in the context of e-learning,
+  recommendations for eye-efficient user interfaces,'' Ph.D. dissertation,
+  Fakultät für Informatik der Technischen Universität Wien, 2014.
+
+\bibitem{article:eyetracker_eggert}
+T.~Eggert, ``Eye movement recordings: methods,'' \emph{Neuro-Ophthalmology},
+  vol.~40, pp. 15--34, 2007.
+
+\bibitem{article:eyetracker_richardson}
+D.~C. Richardson and M.~J. Spivet, ``Eye tracking: Characteristics and
+  methods,'' \emph{Encyclopedia of biomaterials and biomedical engineering},
+  vol.~3, p. 1028–1042, 2004.
+
+\bibitem{website:software_presentation}
+\BIBentryALTinterwordspacing
+N.~B. Systems, ``Presentation software,'' [consulta: 13 junio 2017]. [Online].
+  Available: \url{http://www.neurobs.com/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{website:software_psychopy}
+\BIBentryALTinterwordspacing
+J.~Peirce, ``Psychopy,'' [consulta: 13 junio 2017]. [Online]. Available:
+  \url{http://www.psychopy.org/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{website:software_psychotoolbox}
+\BIBentryALTinterwordspacing
+M.~Kleiner, ``Psychtoolbox,'' [consulta: 13 junio 2017]. [Online]. Available:
+  \url{http://psychtoolbox.org/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{website:software_vissionegg}
+\BIBentryALTinterwordspacing
+A.~D. Straw, ``Vission egg,'' [consulta: 13 junio 2017]. [Online]. Available:
+  \url{https://visionegg.readthedocs.io/en/latest/index.html}
+\BIBentrySTDinterwordspacing
+
+\bibitem{article:movOcular}
+K.~R. Gegenfurtner, ``The interaction between vision and eye movements,''
+  \emph{Perception}, vol. 45(12), pp. 1333--1357, 2016.
+
+\bibitem{website:movOcular}
+\BIBentryALTinterwordspacing
+J.~Findlay and R.~Walker, ``Human saccadic eye movements,'' [consulta: 10
+  diciembre 2017]. [Online]. Available:
+  \url{http://www.scholarpedia.org/article/Human_saccadic_eye_movements}
 \BIBentrySTDinterwordspacing
 
 \bibitem{website:tobii}
@@ -94,57 +118,29 @@ T.~Elze, T.~G. Tanner, and B.~Krekelberg, ``Temporal properties of liquid
   crystal displays: Implications for vision science experiments,'' \emph{PLoS
   ONE}, vol. 7(9), 2012.
 
+\bibitem{website:software}
+\BIBentryALTinterwordspacing
+H.~Strasburger, ``Software for visual psychophysics: an overview,'' [consulta:
+  10 junio 2017]. [Online]. Available:
+  \url{http://www.visionscience.com/documents/strasburger/strasburger.html}
+\BIBentrySTDinterwordspacing
+
 \bibitem{article:tests_1}
-S.~Amador~[et al]., ``Dissociating cognitive deficits involved in voluntary eye
+C.~J. Luek~[et al], ``Antisaccades and remembered saccades in parkinson's
+  disease,'' \emph{Journal of Neurology, Neurosurgery, and Psychiatry}, vol.
+  53(4), pp. 284--288, 1990.
+
+\bibitem{article:tests_2}
+F.~Chan~[et al], ``Deficits in saccadic eye-movement control in parkinson's
+  disease,'' \emph{Neuropsychologia}, vol. 43(5), pp. 784--796, 2005.
+
+\bibitem{article:tests_3}
+S.~Amador~[et al], ``Dissociating cognitive deficits involved in voluntary eye
   movement dysfunctions in parkinson's disease patients,''
   \emph{Neuropsychologia}, vol. 44(8), pp. 1475--1482, 2006.
 
-\bibitem{article:tests_2}
-V.~Goyal~[et al]., ``Saccadic eye movements in parkinson's disease,''
-  \emph{Indian Journal of Ophthalmology}, vol. 62(5), 2014.
-
-\bibitem{article:eyetracker_eyetribe1}
-E.~Dalmaijer, ``Is the low-cost eyetribe eye tracker any good for research?''
-  \emph{PeerJ PrePrints}, vol. 2:e585v1, 2014.
-
-\bibitem{article:eyetracker_eyetribe2}
-S.~Popelka~[et al]., ``Eyetribe tracker data accuracy evaluation and its
-  interconnection with hypothesis software for cartographic purposes,''
-  \emph{Computational Intelligence and Neuroscience}, vol. 2016, pp. 1--14,
-  2016.
-
-\bibitem{website:software_presentation}
-\BIBentryALTinterwordspacing
-N.~B. Systems, ``Presentation software,'' [consulta: 13 junio 2017]. [Online].
-  Available: \url{http://www.neurobs.com/}
-\BIBentrySTDinterwordspacing
-
-\bibitem{website:software_psychopy}
-\BIBentryALTinterwordspacing
-J.~Peirce, ``Psychopy,'' [consulta: 13 junio 2017]. [Online]. Available:
-  \url{http://www.psychopy.org/}
-\BIBentrySTDinterwordspacing
-
-\bibitem{website:software_psychotoolbox}
-\BIBentryALTinterwordspacing
-M.~Kleiner, ``Psychtoolbox,'' [consulta: 13 junio 2017]. [Online]. Available:
-  \url{http://psychtoolbox.org/}
-\BIBentrySTDinterwordspacing
-
-\bibitem{website:software_vissionegg}
-\BIBentryALTinterwordspacing
-A.~D. Straw, ``Vission egg,'' [consulta: 13 junio 2017]. [Online]. Available:
-  \url{https://visionegg.readthedocs.io/en/latest/index.html}
-\BIBentrySTDinterwordspacing
-
-\bibitem{psychopy}
-J.~Pierce, ``Generating stimuli for neuroscience using psychopy,''
-  \emph{Frontiers in Neuroinformatics}, vol.~2, p.~10, 2009.
-
-\bibitem{website:iohub}
-\BIBentryALTinterwordspacing
-S.~Simpson, ``iohub,'' [consulta: 23 agosto 2017]. [Online]. Available:
-  \url{http://www.isolver-solutions.com/iohubdocs/index.html}
-\BIBentrySTDinterwordspacing
+\bibitem{article:tests_4}
+A.~Srivastava~[et al], ``Saccadic eye movements in parkinson's disease,''
+  \emph{Indian Journal of Ophthalmology}, vol. 62(5), pp. 538--544, 2014.
 
 \end{thebibliography}

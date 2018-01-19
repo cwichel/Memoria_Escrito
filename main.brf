@@ -4,6 +4,7 @@
 \backcite {website:etEOG}{{\es@scroman {iv}}{(document)}{Doc-Start}}
 \backcite {dissertation:eyetrackers}{{\es@scroman {iv}}{(document)}{Doc-Start}}
 \backcite {article:eyetracker_eggert, article:eyetracker_richardson, dissertation:eyetrackers}{{\es@scroman {v}}{(document)}{Doc-Start}}
+\backcite {website:software_presentation, website:software_psychopy, website:software_psychotoolbox, website:software_vissionegg}{{\es@scroman {v}}{(document)}{Doc-Start}}
 \backcite {website:baseInfo}{{3}{2.1}{figure.caption.11}}
 \backcite {website:baseInfo}{{4}{2.2}{figure.caption.12}}
 \backcite {article:movOcular, website:movOcular}{{4}{2.1.1}{subsection.2.1.1}}
@@ -20,10 +21,5 @@
 \backcite {article:monitor_beuer}{{11}{2.2.1}{subsection.2.2.1}}
 \backcite {article:monitor_wang, article:monitor_elze}{{12}{2.2.1}{Item.15}}
 \backcite {website:software}{{12}{2.2.2}{subsection.2.2.2}}
-\backcite {website:software_presentation}{{12}{1}{Item.16}}
-\backcite {website:software_psychopy}{{12}{2}{Item.17}}
-\backcite {website:software_psychotoolbox}{{13}{3}{Item.18}}
-\backcite {website:software_vissionegg}{{13}{4}{Item.19}}
-\backcite {website:movOcular}{{13}{2.2.3}{subsection.2.2.3}}
-\backcite {article:tests_1, article:tests_2}{{13}{2.2.3}{Item.29}}
-\backcite {article:tests_1, article:tests_2}{{14}{2.2.3}{Item.33}}
+\backcite {website:software_presentation, website:software_psychopy, website:software_psychotoolbox, website:software_vissionegg}{{13}{2.2}{table.caption.21}}
+\backcite {article:tests_1, article:tests_2, article:tests_3, article:tests_4}{{14}{2.2.3}{subsection.2.2.3}}

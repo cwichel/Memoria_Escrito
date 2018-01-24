@@ -91,6 +91,24 @@ J.~Findlay and R.~Walker, ``Human saccadic eye movements,'' [consulta: 10
   \url{http://www.scholarpedia.org/article/Human_saccadic_eye_movements}
 \BIBentrySTDinterwordspacing
 
+\bibitem{article:tests_1}
+C.~J. Luek~[et al], ``Antisaccades and remembered saccades in parkinson's
+  disease,'' \emph{Journal of Neurology, Neurosurgery, and Psychiatry}, vol.
+  53(4), pp. 284--288, 1990.
+
+\bibitem{article:tests_2}
+F.~Chan~[et al], ``Deficits in saccadic eye-movement control in parkinson's
+  disease,'' \emph{Neuropsychologia}, vol. 43(5), pp. 784--796, 2005.
+
+\bibitem{article:tests_3}
+S.~Amador~[et al], ``Dissociating cognitive deficits involved in voluntary eye
+  movement dysfunctions in parkinson's disease patients,''
+  \emph{Neuropsychologia}, vol. 44(8), pp. 1475--1482, 2006.
+
+\bibitem{article:tests_4}
+A.~Srivastava~[et al], ``Saccadic eye movements in parkinson's disease,''
+  \emph{Indian Journal of Ophthalmology}, vol. 62(5), pp. 538--544, 2014.
+
 \bibitem{website:tobii}
 \BIBentryALTinterwordspacing
 Tobii, ``Tobii,'' [consulta: 9 diciembre 2017]. [Online]. Available:
@@ -124,23 +142,5 @@ H.~Strasburger, ``Software for visual psychophysics: an overview,'' [consulta:
   10 junio 2017]. [Online]. Available:
   \url{http://www.visionscience.com/documents/strasburger/strasburger.html}
 \BIBentrySTDinterwordspacing
-
-\bibitem{article:tests_1}
-C.~J. Luek~[et al], ``Antisaccades and remembered saccades in parkinson's
-  disease,'' \emph{Journal of Neurology, Neurosurgery, and Psychiatry}, vol.
-  53(4), pp. 284--288, 1990.
-
-\bibitem{article:tests_2}
-F.~Chan~[et al], ``Deficits in saccadic eye-movement control in parkinson's
-  disease,'' \emph{Neuropsychologia}, vol. 43(5), pp. 784--796, 2005.
-
-\bibitem{article:tests_3}
-S.~Amador~[et al], ``Dissociating cognitive deficits involved in voluntary eye
-  movement dysfunctions in parkinson's disease patients,''
-  \emph{Neuropsychologia}, vol. 44(8), pp. 1475--1482, 2006.
-
-\bibitem{article:tests_4}
-A.~Srivastava~[et al], ``Saccadic eye movements in parkinson's disease,''
-  \emph{Indian Journal of Ophthalmology}, vol. 62(5), pp. 538--544, 2014.
 
 \end{thebibliography}

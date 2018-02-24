@@ -4,7 +4,6 @@
 \catcode `>\active 
 \@nameuse{es@quoting}
 \providecommand\hyper@newdestlabel[2]{}
-\providecommand\BKM@entry[2]{}
 \providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
 \HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
 \global\let\oldcontentsline\contentsline
@@ -19,11 +18,10 @@
 \fi}
 \global\let\hyper@last\relax 
 \gdef\HyperFirstAtBeginDocument#1{#1}
-\providecommand\HyField@AuxAddToFields[1]{}
-\providecommand\HyField@AuxAddToCoFields[2]{}
-\BKM@entry{id=1,dest={636861707465722E31},srcline={11}}{45737461646F2064656C2061727465}
+\providecommand*\HyPL@Entry[1]{}
 \citation{website:baseInfo}
 \citation{website:baseInfo}
+\HyPL@Entry{0<</S/D>>}
 \providecommand\@newglossary[4]{}
 \@newglossary{main}{glg}{gls}{glo}
 \@newglossary{acronym}{alg}{acr}{acn}
@@ -39,17 +37,15 @@
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \newlabel{cha:02_estado_del_arte}{{1}{1}{Estado del arte}{chapter.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces Diagrama general de la interfaz hombre-m\IeC {\'a}quina \cite  {website:baseInfo}.\relax }}{1}{figure.caption.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces Diagrama general de la interfaz hombre-máquina \cite  {website:baseInfo}.\relax }}{1}{figure.caption.1}}
 \@writefile{brf}{\backcite{website:baseInfo}{{1}{1.1}{figure.caption.1}}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:02_diagrama_interfaz}{{1.1}{1}{Diagrama general de la interfaz hombre-máquina \cite {website:baseInfo}.\relax }{figure.caption.1}{}}
 \citation{website:baseInfo}
 \citation{website:baseInfo}
-\BKM@entry{id=2,dest={73656374696F6E2E312E31},srcline={35}}{53697374656D61732064652073656775696D69656E746F206F63756C6172}
-\BKM@entry{id=3,dest={73756273656374696F6E2E312E312E31},srcline={37}}{4D6F76696D69656E746F206F63756C6172}
 \citation{article:movOcular}
 \citation{website:movOcular}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces Setup experimental t\IeC {\'\i }pico \cite  {website:baseInfo}.\relax }}{2}{figure.caption.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces Setup experimental típico \cite  {website:baseInfo}.\relax }}{2}{figure.caption.2}}
 \@writefile{brf}{\backcite{website:baseInfo}{{2}{1.2}{figure.caption.2}}}
 \newlabel{fig:02_ejemplo_setup}{{1.2}{2}{Setup experimental típico \cite {website:baseInfo}.\relax }{figure.caption.2}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {1.1}Sistemas de seguimiento ocular}{2}{section.1.1}}
@@ -58,14 +54,18 @@
 \newlabel{sub:02_movimiento_ocular}{{1.1.1}{2}{Movimiento ocular}{subsection.1.1.1}{}}
 \@writefile{brf}{\backcite{article:movOcular, website:movOcular}{{2}{1.1.1}{subsection.1.1.1}}}
 \citation{website:movOcular}
+\citation{article:tests_1}
+\citation{article:tests_2}
+\citation{article:tests_3}
+\citation{article:tests_4}
 \@writefile{brf}{\backcite{website:movOcular}{{3}{4}{Item.4}}}
-\BKM@entry{id=4,dest={73756273656374696F6E2E312E312E32},srcline={60}}{4D5C333531746F646F732064652063617074757261}
+\@writefile{brf}{\backcite{article:tests_1, article:tests_2, article:tests_3, article:tests_4}{{3}{1.1.1}{Item.4}}}
 \citation{article:eyetracker_eggert}
 \citation{article:eyetracker_richardson}
 \citation{article:eyetracker_eggert}
 \citation{article:eyetracker_richardson}
 \citation{dissertation:eyetrackers}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.2}M\IeC {\'e}todos de captura}{4}{subsection.1.1.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.2}Métodos de captura}{4}{subsection.1.1.2}}
 \newlabel{sub:02_metodos_de_captura}{{1.1.2}{4}{Métodos de captura}{subsection.1.1.2}{}}
 \@writefile{toc}{\contentsline {subsubsection}{Un poco de historia}{4}{section*.3}}
 \newlabel{ssub:02_un_poco_de_historia_monitores}{{1.1.2}{4}{Un poco de historia}{section*.3}{}}
@@ -74,7 +74,7 @@
 \citation{website:etSSG}
 \citation{website:etEOG}
 \citation{website:etEOG}
-\@writefile{toc}{\contentsline {subsubsection}{Tecnolog\IeC {\'\i }as actuales}{5}{section*.4}}
+\@writefile{toc}{\contentsline {subsubsection}{Tecnologías actuales}{5}{section*.4}}
 \newlabel{ssub:02_tecnologias_actuales}{{1.1.2}{5}{Tecnologías actuales}{section*.4}{}}
 \@writefile{brf}{\backcite{article:eyetracker_eggert, article:eyetracker_richardson, dissertation:eyetrackers}{{5}{1.1.2}{section*.4}}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1.3}{\ignorespaces Ejemplo de uso de SSG \cite  {website:etSSG}.\relax }}{5}{figure.caption.5}}
@@ -98,37 +98,34 @@
 \citation{article:eyetracker_eggert}
 \citation{article:eyetracker_richardson}
 \citation{dissertation:eyetrackers}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.5}{\ignorespaces Principio de detecci\IeC {\'o}n VOG en base a reflexi\IeC {\'o}n de luz\cite  {dissertation:eyetrackers}.\relax }}{7}{figure.caption.7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.5}{\ignorespaces Principio de detección VOG en base a reflexión de luz\cite  {dissertation:eyetrackers}.\relax }}{7}{figure.caption.7}}
 \@writefile{brf}{\backcite{dissertation:eyetrackers}{{7}{1.5}{figure.caption.7}}}
 \newlabel{fig:02_et_vog1}{{1.5}{7}{Principio de detección VOG en base a reflexión de luz\cite {dissertation:eyetrackers}.\relax }{figure.caption.7}{}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Reflexiones de Purkije-Sanson}}}{7}{subfigure.5.1}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Posici\IeC {\'o}n de las reflexiones de la c\IeC {\'o}rnea (P1) relativas al centro de la pupila.}}}{7}{subfigure.5.2}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Posición de la reflexión P1 relativa al centro de la pupila.}}}{7}{subfigure.5.2}}
 \@writefile{brf}{\backcite{website:tobii}{{7}{1.6a}{subfigure.1.6.1}}}
 \@writefile{brf}{\backcite{website:microway}{{7}{1.6b}{subfigure.1.6.2}}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.6}{\ignorespaces Muestra de eye trackers disponibles en el mercado.\relax }}{7}{figure.caption.8}}
-\newlabel{fig:02_et_vog2}{{1.6}{7}{Muestra de eye trackers disponibles en el mercado.\relax }{figure.caption.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.6}{\ignorespaces Muestra de eye trackers disponibles en el mercado con tecnología VOG basados en reflexión de luz \acrshort {ir}.\relax }}{7}{figure.caption.8}}
+\newlabel{fig:02_et_vog2}{{1.6}{7}{Muestra de eye trackers disponibles en el mercado con tecnología VOG basados en reflexión de luz \acrshort {ir}.\relax }{figure.caption.8}{}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Tobii Pro Glasses 2 \cite {website:tobii}}}}{7}{subfigure.6.1}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {MiraMetrix S2 \cite {website:microway}}}}{7}{subfigure.6.2}}
 \@writefile{toc}{\contentsline {subsubsection}{Comparativa}{7}{section*.9}}
 \newlabel{ssub:02_comparativa_eyetracker}{{1.1.2}{7}{Comparativa}{section*.9}{}}
 \@writefile{brf}{\backcite{article:eyetracker_eggert, article:eyetracker_richardson, dissertation:eyetrackers}{{7}{1.1.2}{section*.9}}}
-\BKM@entry{id=5,dest={73656374696F6E2E312E32},srcline={144}}{53697374656D617320646520657374696D756C6163695C3336336E2076697375616C}
-\BKM@entry{id=6,dest={73756273656374696F6E2E312E322E31},srcline={146}}{486172647761726520646520657374696D756C6163695C3336336E}
 \citation{article:monitor_beuer}
-\@writefile{lot}{\contentsline {table}{\numberline {1.1}{\ignorespaces Comparativa de los sistemas de adquisici\IeC {\'o}n encontrados en \cite  {article:eyetracker_eggert, article:eyetracker_richardson, dissertation:eyetrackers}\relax }}{8}{table.caption.10}}
+\@writefile{lot}{\contentsline {table}{\numberline {1.1}{\ignorespaces Comparativa de los sistemas de adquisición encontrados en \cite  {article:eyetracker_eggert, article:eyetracker_richardson, dissertation:eyetrackers}\relax }}{8}{table.caption.10}}
 \@writefile{brf}{\backcite{article:eyetracker_eggert, article:eyetracker_richardson, dissertation:eyetrackers}{{8}{1.1}{table.caption.10}}}
 \newlabel{tbl:eyetracker_compare}{{1.1}{8}{Comparativa de los sistemas de adquisición encontrados en \cite {article:eyetracker_eggert, article:eyetracker_richardson, dissertation:eyetrackers}\relax }{table.caption.10}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {1.2}Sistemas de estimulaci\IeC {\'o}n visual}{9}{section.1.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.2}Sistemas de estimulación visual}{9}{section.1.2}}
 \newlabel{sec:02_sistemas_de_estimulacion_visual}{{1.2}{9}{Sistemas de estimulación visual}{section.1.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.1}Hardware de estimulaci\IeC {\'o}n}{9}{subsection.1.2.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.1}Hardware de estimulación}{9}{subsection.1.2.1}}
 \newlabel{sub:02_hardware_de_estimulacion}{{1.2.1}{9}{Hardware de estimulación}{subsection.1.2.1}{}}
 \@writefile{brf}{\backcite{article:monitor_beuer}{{9}{1.2.1}{subsection.1.2.1}}}
 \citation{article:monitor_wang}
 \citation{article:monitor_elze}
-\BKM@entry{id=7,dest={73756273656374696F6E2E312E322E32},srcline={163}}{536F66747761726520646520657374696D756C6163695C3336336E}
 \citation{website:software}
 \@writefile{brf}{\backcite{article:monitor_wang, article:monitor_elze}{{10}{1.2.1}{Item.9}}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.2}Software de estimulaci\IeC {\'o}n}{10}{subsection.1.2.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.2}Software de estimulación}{10}{subsection.1.2.2}}
 \newlabel{sub:02_software_de_estimulacion}{{1.2.2}{10}{Software de estimulación}{subsection.1.2.2}{}}
 \@writefile{brf}{\backcite{website:software}{{10}{1.2.2}{subsection.1.2.2}}}
 \citation{website:software_presentation}
@@ -139,44 +136,25 @@
 \citation{website:software_psychopy}
 \citation{website:software_psychotoolbox}
 \citation{website:software_vissionegg}
-\BKM@entry{id=8,dest={73756273656374696F6E2E312E322E33},srcline={188}}{4578706572696D656E746F7320646520657374696D756C6163695C3336336E}
+\@writefile{lot}{\contentsline {table}{\numberline {1.2}{\ignorespaces Comparativa de software de estimulación \cite  {website:software_presentation, website:software_psychopy, website:software_psychotoolbox, website:software_vissionegg}\relax }}{11}{table.caption.11}}
+\@writefile{brf}{\backcite{website:software_presentation, website:software_psychopy, website:software_psychotoolbox, website:software_vissionegg}{{11}{1.2}{table.caption.11}}}
+\newlabel{tbl:systems_compare}{{1.2}{11}{Comparativa de software de estimulación \cite {website:software_presentation, website:software_psychopy, website:software_psychotoolbox, website:software_vissionegg}\relax }{table.caption.11}{}}
 \citation{article:tests_1}
 \citation{article:tests_2}
 \citation{article:tests_3}
 \citation{article:tests_4}
-\@writefile{lot}{\contentsline {table}{\numberline {1.2}{\ignorespaces Comparativa de software de estimulaci\IeC {\'o}n \cite  {website:software_presentation, website:software_psychopy, website:software_psychotoolbox, website:software_vissionegg}\relax }}{11}{table.caption.11}}
-\@writefile{brf}{\backcite{website:software_presentation, website:software_psychopy, website:software_psychotoolbox, website:software_vissionegg}{{11}{1.2}{table.caption.11}}}
-\newlabel{tbl:systems_compare}{{1.2}{11}{Comparativa de software de estimulación \cite {website:software_presentation, website:software_psychopy, website:software_psychotoolbox, website:software_vissionegg}\relax }{table.caption.11}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.3}Experimentos de estimulaci\IeC {\'o}n}{11}{subsection.1.2.3}}
-\newlabel{sub:02_experimentos_de_estimulacion}{{1.2.3}{11}{Experimentos de estimulación}{subsection.1.2.3}{}}
-\citation{website:tobii}
-\citation{website:tobii}
-\citation{website:microway}
-\citation{website:microway}
-\citation{website:tobii}
-\citation{website:tobii}
-\citation{website:microway}
-\citation{website:microway}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.3}Experimentos de estimulación}{12}{subsection.1.2.3}}
+\newlabel{sub:02_experimentos_de_estimulacion}{{1.2.3}{12}{Experimentos de estimulación}{subsection.1.2.3}{}}
 \@writefile{brf}{\backcite{article:tests_1, article:tests_2, article:tests_3, article:tests_4}{{12}{1.2.3}{subsection.1.2.3}}}
-\@writefile{brf}{\backcite{website:tobii}{{12}{1.7a}{subfigure.1.7.1}}}
-\@writefile{brf}{\backcite{website:microway}{{12}{1.7b}{subfigure.1.7.2}}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.7}{\ignorespaces Tarea simple .\relax }}{12}{figure.caption.12}}
-\newlabel{fig:02_prosaccade_base}{{1.7}{12}{Tarea simple .\relax }{figure.caption.12}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Tobii Pro Glasses 2 \cite {website:tobii}}}}{12}{subfigure.7.1}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {MiraMetrix S2 \cite {website:microway}}}}{12}{subfigure.7.2}}
-\citation{website:tobii}
-\citation{website:tobii}
-\citation{website:microway}
-\citation{website:microway}
-\@writefile{brf}{\backcite{website:tobii}{{13}{1.8a}{subfigure.1.8.1}}}
-\@writefile{brf}{\backcite{website:microway}{{13}{1.8b}{subfigure.1.8.2}}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.8}{\ignorespaces Muestra de eye trackers disponibles en el mercado.\relax }}{13}{figure.caption.13}}
-\newlabel{fig:02_antisaccade_base}{{1.8}{13}{Muestra de eye trackers disponibles en el mercado.\relax }{figure.caption.13}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Tobii Pro Glasses 2 \cite {website:tobii}}}}{13}{subfigure.8.1}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {MiraMetrix S2 \cite {website:microway}}}}{13}{subfigure.8.2}}
-\@writefile{brf}{\backcite{website:tobii}{{13}{1.9a}{subfigure.1.9.1}}}
-\@writefile{brf}{\backcite{website:microway}{{13}{1.9b}{subfigure.1.9.2}}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.9}{\ignorespaces Muestra de eye trackers disponibles en el mercado.\relax }}{13}{figure.caption.14}}
-\newlabel{fig:02_memmory_base}{{1.9}{13}{Muestra de eye trackers disponibles en el mercado.\relax }{figure.caption.14}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Tobii Pro Glasses 2 \cite {website:tobii}}}}{13}{subfigure.9.1}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {MiraMetrix S2 \cite {website:microway}}}}{13}{subfigure.9.2}}
+\@writefile{toc}{\contentsline {subsubsection}{Métricas de interés}{12}{section*.12}}
+\newlabel{ssub:metricas_de_interes}{{1.2.3}{12}{Métricas de interés}{section*.12}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Movimientos pro/anti sacádicos}{13}{section*.13}}
+\newlabel{ssub:movimientos_pro_anti_sacadicos}{{1.2.3}{13}{Movimientos pro/anti sacádicos}{section*.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.7}{\ignorespaces Tarea pro/anti sacádica.\relax }}{13}{figure.caption.14}}
+\newlabel{fig:02_pro_anti_saccade_base}{{1.7}{13}{Tarea pro/anti sacádica.\relax }{figure.caption.14}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.8}{\ignorespaces Paradigmas de experimentación.\relax }}{14}{figure.caption.15}}
+\newlabel{fig:02_paradigmas}{{1.8}{14}{Paradigmas de experimentación.\relax }{figure.caption.15}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Movimientos guiados por memoria}{14}{section*.16}}
+\newlabel{ssub:movimientos_pro_anti_sacadicos}{{1.2.3}{14}{Movimientos guiados por memoria}{section*.16}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.9}{\ignorespaces Tarea guiada por memoria.\relax }}{14}{figure.caption.17}}
+\newlabel{fig:02_memory}{{1.9}{14}{Tarea guiada por memoria.\relax }{figure.caption.17}{}}

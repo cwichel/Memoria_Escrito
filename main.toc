@@ -18,20 +18,17 @@
 \contentsline {subsubsection}{Movimientos pro/anti sacádicos}{15}{section*.23}
 \contentsline {subsubsection}{Movimientos guiados por memoria}{16}{section*.26}
 \contentsline {chapter}{\numberline {3}Sistema propuesto}{18}{chapter.3}
-\contentsline {section}{\numberline {3.1}Alcances}{18}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Utilidad de la GUI}{18}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Experimentos a implementar}{18}{subsection.3.1.2}
-\contentsline {section}{\numberline {3.2}Tecnologías utilizadas}{18}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Hardware}{18}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Software}{18}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}Diseño e implementación de la GUI}{18}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Arquitectura}{18}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Archivos de configuración}{18}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Script de ejecución}{18}{subsection.3.3.3}
-\contentsline {chapter}{\numberline {4}Resultados}{19}{chapter.4}
-\contentsline {section}{\numberline {4.1}Configuración de test de prueba}{19}{section.4.1}
-\contentsline {section}{\numberline {4.2}Mediciones obtenidas}{19}{section.4.2}
-\contentsline {chapter}{\numberline {5}Conclusiones y trabajo futuro}{20}{chapter.5}
-\contentsline {section}{\numberline {5.1}Conclusiones}{20}{section.5.1}
-\contentsline {section}{\numberline {5.2}Trabajo futuro}{20}{section.5.2}
-\contentsline {chapter}{Referencias}{21}{section*.28}
+\contentsline {section}{\numberline {3.1}Setup a utilizar}{18}{section.3.1}
+\contentsline {section}{\numberline {3.2}Diseño del sistema}{19}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Primera parte: Estructura de datos}{19}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Segunda parte: Implementación de las funciones principales}{22}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Tercera parte: Interfaz gráfica}{37}{subsection.3.2.3}
+\contentsline {chapter}{\numberline {4}Resultados}{38}{chapter.4}
+\contentsline {section}{\numberline {4.1}Configuración de test de prueba}{38}{section.4.1}
+\contentsline {section}{\numberline {4.2}Mediciones obtenidas}{38}{section.4.2}
+\contentsline {chapter}{\numberline {5}Conclusiones y trabajo futuro}{39}{chapter.5}
+\contentsline {section}{\numberline {5.1}Conclusiones}{39}{section.5.1}
+\contentsline {section}{\numberline {5.2}Trabajo futuro}{39}{section.5.2}
+\contentsline {chapter}{Referencias}{40}{section*.32}
+\contentsline {chapter}{\numberline {A}Configuración del entorno de programación}{42}{appendix.Alph1}
+\contentsline {chapter}{\numberline {B}Código fuente}{45}{appendix.Alph2}

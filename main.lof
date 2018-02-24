@@ -1,19 +1,24 @@
 \select@language {spanish}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Diagrama general de la interfaz hombre-máquina \cite {website:baseInfo}.\relax }}{3}{figure.caption.11}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Setup experimental típico \cite {website:baseInfo}.\relax }}{4}{figure.caption.12}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Ejemplo de uso de SSG \cite {website:etSSG}.\relax }}{7}{figure.caption.15}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Ejemplo de posicionamiento de electrodos para EOG \cite {website:etEOG}.\relax }}{8}{figure.caption.16}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Principio de detección VOG en base a reflexión de luz\cite {dissertation:eyetrackers}.\relax }}{9}{figure.caption.17}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Diagrama general de la interfaz hombre-máquina}}{3}{figure.caption.11}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Setup experimental típico}}{4}{figure.caption.12}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Ejemplo de uso de SSG}}{7}{figure.caption.15}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Ejemplo de posicionamiento de electrodos para EOG}}{8}{figure.caption.16}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Principio de detección VOG en base a reflexión de luz}}{9}{figure.caption.17}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Reflexiones de Purkije-Sanson}}}{9}{subfigure.5.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Posición de la reflexión P1 relativa al centro de la pupila.}}}{9}{subfigure.5.2}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Muestra de eye trackers disponibles en el mercado con tecnología VOG basados en reflexión de luz \acrshort {ir}.\relax }}{9}{figure.caption.18}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Tobii Pro Glasses 2 \cite {website:tobii}}}}{9}{subfigure.6.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {MiraMetrix S2 \cite {website:microway}}}}{9}{subfigure.6.2}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Muestra de eye trackers disponibles en el mercado con tecnología VOG basados en reflexión de luz \acrshort {ir}}}{9}{figure.caption.18}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Tobii Pro Glasses 2}}}{9}{subfigure.6.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {MiraMetrix S2}}}{9}{subfigure.6.2}
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Tarea pro/anti sacádica.\relax }}{15}{figure.caption.24}
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Paradigmas de experimentación.\relax }}{16}{figure.caption.25}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Tarea guiada por memoria.\relax }}{16}{figure.caption.27}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Tarea guiada por memoria.\relax }}{17}{figure.caption.27}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagrama de base de datos a implementar.\relax }}{20}{figure.caption.29}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagrama de funcionamiento general.\relax }}{23}{figure.caption.30}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagrama de clases del sistema (no considera GUI).\relax }}{24}{figure.caption.31}
+\addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

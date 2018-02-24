@@ -16,7 +16,7 @@
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.7\textwidth]{cap_02_diagram}
-		\caption{Diagrama general de la interfaz hombre-máquina \cite{website:baseInfo}.}
+		\caption[Diagrama general de la interfaz hombre-máquina]{Diagrama general de la interfaz hombre-máquina \cite{article:baseInfo}.}
 		\label{fig:02_diagrama_interfaz}
 	\end{figure}
 
@@ -26,7 +26,7 @@
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.5\textwidth]{cap_02_setup}
-		\caption{Setup experimental típico \cite{website:baseInfo}.}
+		\caption[Setup experimental típico]{Setup experimental típico \cite{article:baseInfo}.}
 		\label{fig:02_ejemplo_setup}
 	\end{figure}
 
@@ -37,11 +37,10 @@
 		\subsection{Movimiento ocular}
 		\label{sub:02_movimiento_ocular}
 
-		La acción de dirigir la mirada hacia un objeto es parte fundamental del proceso de visión. Este acto involucra el direccionamiento de los \gls{ejevisual}, hacia un objetivo determinado, permitiendo la realización de análisis visuales precisos. Dicha orientación muchas veces implica movimientos coordinados de los ojos, cuello y cabeza, no obstante, existen movimientos más pequeños que son realizados únicamente por los ojos, conocidos como movimientos sacádicos \cite{article:movOcular, website:movOcular}.
+		La acción de dirigir la mirada hacia un objeto es parte fundamental del proceso de visión. Este acto involucra el direccionamiento de los \gls{ejevisual} hacia un objetivo determinado, permitiendo la realización de análisis visuales precisos. Dicha orientación muchas veces implica movimientos coordinados de los ojos, cuello y cabeza, no obstante, existen movimientos más pequeños que son realizados únicamente por los ojos, conocidos como movimientos sacádicos \cite{article:movOcular1, article:movOcular2}.
 
-		Los movimientos sacádicos corresponden a las rotaciones que realiza el globo ocular entre dos momentos de posicionamiento estacionario y que se traducen en el desplazamiento de la pupila. Estos desplazamientos pueden ocurrir tanto en el eje horizontal como vertical y cabe destacar que durante los periodos de tiempo en que se realiza el movimiento los ojos no entregan información visual relevante. Para individuos en condiciones normales este tipo de movimiento se realiza constantemente y se repite varias veces por segundo, el direccionamiento de los ojos en estos casos suele ser controlado por procesos cognitivos realizados de forma inconsciente.
+		Los movimientos sacádicos corresponden a las rotaciones que realiza el globo ocular entre dos momentos de posicionamiento estacionario, por tanto se traducen en el consecuente desplazamiento de la pupila. Dichos movimientos pueden ocurrir tanto en el eje horizontal como vertical y se encuentra aún en discusión si se entrega información visual en todo momento o solo es relevante al mantener la mirada detenida en alguna posición. Los movimientos sacádicos ocurren en todo momento y pueden estar provocados por procesos cognitivos conscientes o inconscientes, e independientemente de la naturaleza de estos movimientos, ambos generan patrones que permiten la construcción de un mapa mental de la escena observada. La necesidad de redireccionar el eje visual constantantemente para analizar una imagen se corresponde con la idea de que, en el ojo humano, solo la parte central de la retina (fóvea) presenta una alta concentración de células fotorreceptoras sensibles al color y por tanto, se encuentra encargada de la visión en alta resolución. 
 
-		\newpage
 		Las características principales de dichos movimientos son:
 		\begin{enumerate}
 			\item Existen dos tipos de movimientos sacádicos: Los voluntarios, también conocidos como provocados, que implican control consciente sobre los procesos cognitivos y los reflexivos o automáticos, que corresponden a la respuesta natural a la aparición de un nuevo estímulo visual.
@@ -50,13 +49,12 @@
 
 			\item La velocidad de las sacadas aumenta de forma no lineal en la medida que aumenta la amplitud de movimento y puede alcanzar magnitudes de hasta $600 - 700[\frac{deg}{s}]$. Además, la duración del movimiento puede fluctuar entre $20 - 120[ms]$, aún que en promedio solo dura de $20-40[ms]$. 
 
-			\item La precisión del movimiento sacádico presenta un error que varía entre el $5-10\%$ de la amplitud total del movimiento. Las correcciones son realizadas por desplazamientos de calibración denominados micro-sacadas. Estos métodos correctivos permiten suponer que existe algún tipo de procesamiento paralelo encargado de la calibración ocular de largo plazo \cite{website:movOcular}.  
+			\item La precisión del movimiento sacádico presenta un error que varía entre el $5-10\%$ de la amplitud total del movimiento. Las correcciones son realizadas por desplazamientos de calibración denominados micro-sacadas. Estos métodos correctivos permiten suponer que existe algún tipo de procesamiento paralelo encargado de la calibración ocular de largo plazo \cite{article:movOcular2}.  
 
 		\end{enumerate}
 
 		Las características expuestas entregan, a grandes razgos, nociones que permiten comprender el por qué su estudio se ha vuelto común en campos científicos como la neurociencia: Dado que los movimientos del globo ocular son caracterizables, de patrones definidos y de alta presición es posible identificar mediante ellos enfermedades cuyos síntomas se traduzcan en alteraciones de las capacidades motrices. Un ejemplo de esto es la enfermedad de Parkinson, donde una afección crónica a los ganglios basales produce una reducción progresiva de la sustancia negra lo que se traduce en una producción insuficiente de dopamina, neurotransmisor relevante para la función motora. Esta insuficiencia se traduce en aumentos en los tiempos de respuesta y tasas de error en diversas tareas asociadas a movimiento ocular \cite{article:tests_1, article:tests_2, article:tests_3, article:tests_4} (ver \ref{sub:02_experimentos_de_estimulacion}).    
 
-		\newpage
 		\subsection{Métodos de captura}
 		\label{sub:02_metodos_de_captura}
 			\subsubsection{Un poco de historia} 
@@ -81,39 +79,42 @@
 					\begin{figure}[H]
 						\centering
 						\includegraphics[width=0.35\textwidth]{cap_02_et_ssg}
-						\caption{Ejemplo de uso de SSG \cite{website:etSSG}.}
+						\caption[Ejemplo de uso de SSG]{Ejemplo de uso de SSG\footnotemark.}
 						\label{fig:02_et_ssc}
 					\end{figure}
+					\footnotetext{Imagen obtenida desde \url{http://www.dizziness-and-balance.com/practice/default.htm}}
 
 					\item \textbf{Electro-OculoGrafía (\acrshort{eog}):} Este método de seguimiento ocular permite determinar la dirección en la que se encuentra direccionado el ojo en base a la medición de diferencias de potencial eléctrico en la piel. En la medida que el ojo rota, el dipolo producido por la córnea y la retina cambia su orientación, lo que se ve reflejado en los potenciales de las zonas aledañas. Sus ventajas principales, además del bajo costo, son la capacidad de medir el movimiento ocular incluso aunque los ojos se encuentren cerrados (lo que hace de este método una herramienta interesante en caso de estudio de sueño) y que las mediciones son relativas a la posición de la cabeza. No obstante lo anterior, la precisión y exactitud de las mediciones obtenidas es baja ya que se encuentran sujetas a artefactos como el movimiento de los párpados. La figura \ref{fig:02_et_eog} muestra el posicionamiento típico de los electrodos en este tipo de setup. 
 					\begin{figure}[H]
 						\centering
 						\includegraphics[width=0.9\textwidth]{cap_02_et_eog}
-						\caption{Ejemplo de posicionamiento de electrodos para EOG \cite{website:etEOG}.}
+						\caption[Ejemplo de posicionamiento de electrodos para EOG]{Ejemplo de posicionamiento de electrodos para EOG\footnotemark.}
 						\label{fig:02_et_eog}
 					\end{figure}
+					\footnotetext{Imagen obtenida desde \url{http://sbiwiki.cns.ki.se/mediawiki/index.php/Natmeg/checklist_MEG_preparation}}
 
 					\item \textbf{Seguimiento ocular basado en video (\acrshort{vog}):} Este método de seguimiento ocular es el más popular en la actualidad. Consiste en capturar, con una o más cámaras, la actividad ocular y mediante procesamiento de imágenes determinar en que dirección se encuentra orientada la mirada. El procesamiento puede ser dividido en dos etapas principales: en la primera se detecta y localiza el ojo en la imagen, para lo que típicamente se utiliza la pupila o el iris y la segunda etapa corresponde al proceso por el cual se estima hacia donde se encuentra dirigido. 
 
 					Dentro de las técnicas VOG existentes la más utilizada corresponde a la estimación mediante reflexión corneal (con una fuente de luz típicamente infrarroja (\acrshort{ir})) y detección de pupila. Los focos de luz se ubican de forma que siempre se encuentren en la misma posición respecto del ojo, con lo cual la reflexión se mantiene virtualmente siempre en el mismo lugar. De esta forma la estimación se genera en base a la diferencia entre la ubicación de centro de la pupila y la posición de la reflexión.  
 
-					El principio de funcionamiento asociado a este método se basa en las imagenes de Purkinje-Sanson que describen la existencia de al menos 4 reflexiones de luz producidas por la córnea y el cristalino (figura \ref{fig:02_et_vog1} (a)) que pueden ser utilizadas como referencia para estimar el direccionamiento del ojo. En la figura \ref{fig:02_et_vog1} (b) es posible observar la primera reflexión de purkinje en relación a distintas posiciones de la pupila. Cabe destacar que, en general, los precios de los dispositivos que utilizan esta técnica suelen estar directamente relacionados a la cantidad o tipo de reflexiones utilizadas.
+					El principio de funcionamiento asociado a este método se basa en las imagenes de Purkinje-Sanson que describen la existencia de al menos 4 reflexiones de luz producidas por la córnea y el cristalino (figura \ref{fig:02_et_vog1} (a)) que pueden ser utilizadas como referencia para estimar el direccionamiento del ojo. En la figura \ref{fig:02_et_vog1} (b) es posible observar la primera reflexión de purkinje en relación a distintas posiciones de la pupila. 
 					\begin{figure}[H]
 						\centering
 						\subfloat[Reflexiones de Purkije-Sanson]{\includegraphics[width=0.3\textwidth]{cap_02_et_vog1}}\hspace{5mm}
 						\subfloat[Posición de la reflexión P1 relativa al centro de la pupila.]{\includegraphics[width=0.55\textwidth]{cap_02_et_vog2}}
-						\caption{Principio de detección VOG en base a reflexión de luz\cite{dissertation:eyetrackers}.}
+						\caption[Principio de detección VOG en base a reflexión de luz]{Principio de detección VOG en base a reflexión de luz\cite{dissertation:eyetrackers}.}
 						\label{fig:02_et_vog1}
 					\end{figure}
 
 					La presentación de estos dispositivos es variada y van desde cascos y lentes hasta trípodes y columnas donde se integran un elemento apoya-baribilla y el eye tracker. En la figura \ref{fig:02_et_vog2} se muestra un par a modo de referencia. 
 					\begin{figure}[H]
 						\centering
-						\subfloat[Tobii Pro Glasses 2 \cite{website:tobii}]{\includegraphics[width=0.4\textwidth]{cap_02_et_vog_1}}\hspace{5mm}
-						\subfloat[MiraMetrix S2 \cite{website:microway}]{\includegraphics[width=0.4\textwidth]{cap_02_et_vog_2}}
-						\caption{Muestra de eye trackers disponibles en el mercado con tecnología VOG basados en reflexión de luz \acrshort{ir}.}
+						\subfloat[Tobii Pro Glasses 2]{\includegraphics[width=0.4\textwidth]{cap_02_et_vog_1}}\hspace{5mm}
+						\subfloat[MiraMetrix S2]{\includegraphics[width=0.4\textwidth]{cap_02_et_vog_2}}
+						\caption[Muestra de eye trackers disponibles en el mercado con tecnología VOG basados en reflexión de luz \acrshort{ir}]{Muestra de eye trackers disponibles en el mercado con tecnología VOG basados en reflexión de luz \acrshort{ir}\footnotemark.}
 						\label{fig:02_et_vog2}
-					\end{figure}  
+					\end{figure}
+					\footnotetext{Imágenes obtenidas desde \url{https://www.tobii.com/} y \url{https://www.microway.com.au/} respectivamente.}
 
 				\end{enumerate}
 
@@ -124,7 +125,7 @@
 
 				En el cuadro \ref{tbl:eyetracker_compare} se presenta un resumen con las características ya descritas para EOG, SSG, VOG (común) y DPI (VOG de gama alta utilizando distintas reflexiones de Purkinje). 
 				
-				\begin{table}[H]\begin{center}\fontsize{10pt}{1em}{
+				\begin{table}[H]\begin{center}\footnotesize{
 					\singlespacing{\begin{tabular}{| C{0.18\textwidth} | C{0.18\textwidth} | C{0.18\textwidth} | C{0.18\textwidth} | C{0.18\textwidth}|}
 						\hline
 						 & EOG & SSG & VOG & DPI \\ \hline
@@ -137,7 +138,7 @@
 						Complejidad de calibración	& Requiere configuración bitemporal & La no-linealidad puede ser compensada con un modelo basado en ajuste de parámetros & Buena linealidad & Buena linealidad \\ \hline
 						Invasividad 				& Electrodos cercanos al ojo (sin contacto), no afecta el campo visual & Lentes de contacto, posibles efectos negativos en precisión visual, incomodidad & Aparato montado en la cabeza (sin contacto con los ojos), limitación moderada del campo visual & Cabeza inmovilizada en un soporte de barbilla, limitación moderada del campo visual \\ \hline
 					\end{tabular}}
-					\caption{Comparativa de los sistemas de adquisición encontrados en \cite{article:eyetracker_eggert, article:eyetracker_richardson, dissertation:eyetrackers}}
+					\caption[Comparativa de los sistemas de adquisición encontrados]{Comparativa de los sistemas de adquisición encontrados en \cite{article:eyetracker_eggert, article:eyetracker_richardson, dissertation:eyetrackers}}
 					\label{tbl:eyetracker_compare}
 				}\end{center}\end{table}
 
@@ -165,8 +166,8 @@
 
 			Tal como se indicó en el apartado anterior la generación de estímulos es una pieza clave en la realización de experimentos ya que permiten preparar un escenario adhoc para la obtención de datos específicos. En \cite{website:software} es posible encontrar una larga lista de software especializado para el desarrollo de experimentos en el área de la psicofísica además de referencias e información sobre sus características. A modo de resumen se presenta en el cuadro \ref{tbl:systems_compare} una comparación entre las aplicaciones más citadas de la página (según número de citas encontradas en google scholar).  
 
-			\begin{table}[H]\begin{center}\fontsize{10pt}{1em}{
-					\singlespacing{\begin{tabular}{| C{0.14\textwidth} | C{0.19\textwidth} | C{0.19\textwidth} | C{0.19\textwidth} | C{0.19\textwidth} |}
+			\begin{table}[H]\begin{center}\footnotesize{
+					\singlespacing{\begin{tabular}{| C{0.2\textwidth} | C{0.16\textwidth} | C{0.16\textwidth} | C{0.16\textwidth} | C{0.16\textwidth} |}
 					\hline
 					 								& PsychoPy 	& VissionEgg & PsychoToolbox & Stimulus Presentation \\\hline
 					Tipo de software 				& \multicolumn{3}{c|}{Open source} & Privativo, de pago \\\hline
@@ -181,7 +182,7 @@
 					Capacidad para registro de data 	& Si 		& No 		& Si 		& Si\\\hline
 					Documentación/Foro disponible 			& Si 		& No (Link caído) & Si 	& Si\\\hline
 				\end{tabular}}
-				\caption{Comparativa de software de estimulación \cite{website:software_presentation, website:software_psychopy, website:software_psychotoolbox, website:software_vissionegg}}
+				\caption[Comparativa de software de estimulación]{Comparativa de software de estimulación \cite{website:software_presentation, website:software_psychopy, website:software_psychotoolbox, website:software_vissionegg}}
 				\label{tbl:systems_compare}
 			}\end{center}\end{table}
 
@@ -219,9 +220,9 @@
 					\label{fig:02_pro_anti_saccade_base}
 				\end{figure}  
 
-				Los tipos de movimientos descritos se estudian mediante estímulo similares al propuesto en la figura \ref{fig:02_pro_anti_saccade_base}. Usualmente se pide al sujeto que mantenga su vista en FP (blanco) durante algún tiempo t1 hasta que aparezca TP (amarillo) y luego realice la tarea solicitada, para lo cual se otorga un tiempo t2. En el caso de los movimientos prosacádicos, como ya fue explicado con anterioridad, se debe rotar los ojos hacia TP y luego volver a FP (flechas verdes). Para movimientos antisacádicos se realiza la acción contraria (flechas rojas). En algunos casos resulta conveniente añadir una imagen de feedback al final del experimento para indicar si la tarea fue realizada correctamente. 
+				Los tipos de movimientos descritos se estudian mediante estímulo similares al propuesto en la figura \ref{fig:02_pro_anti_saccade_base}. Usualmente se pide al sujeto que mantenga su vista en $FP$ (blanco) durante algún tiempo $t_1$ hasta que aparezca $TP$ (amarillo) y luego realice la tarea solicitada, para lo cual se otorga un tiempo $t_2$. En el caso de los movimientos prosacádicos, como ya fue explicado con anterioridad, se debe rotar los ojos hacia $TP$ y luego volver a $FP$ (flechas verdes). Para movimientos antisacádicos se realiza la acción contraria (flechas rojas). En algunos casos resulta conveniente añadir una imagen de feedback al final del experimento para indicar si la tarea fue realizada correctamente. 
 
-				Estos experimentos pueden ser modificados y complementados con el fin de estudiar actividades cognitivas más complejas. Típicamente estas variaciones aplican uno o más de los paradigmas indicados en la figura \ref{fig:02_paradigmas}.
+				Estos experimentos pueden ser modificados y complementados con el fin de estudiar actividades cognitivas más complejas. Típicamente estas variaciones aplican uno o más paradigmas como los que se muestran en la figura \ref{fig:02_paradigmas}, donde puede apreciarse un diagrama de temporización de un estímulo bajo el efecto de los paradigmas de gap, overlap y delay. 
 				\begin{figure}[H]
 					\centering
 					\includegraphics[width=0.5\textwidth]{cap_02_paradigmas}
@@ -229,17 +230,21 @@
 					\label{fig:02_paradigmas}
 				\end{figure} 
 
+				Donde $FP$ es el Fixation Point, $TP$ el Target Point, $Eye$ representa si existe o no movimiento ocular (o más bien, cuando se espera que ocurra) y $SL$ corresponde a la latencia sacádica.  
+
+
 			\subsubsection{Movimientos guiados por memoria}
 			\label{ssub:movimientos_pro_anti_sacadicos}
 
 				Los experimentos guiados por memoria corresponden a tareas en las cuales el usuario debe repetir con movimientos oculares algun patrón observado con anterioridad. 
+
+				En la figura \ref{fig:02_memory} es posible observar un diseño simple para este tipo de experimentos. Despues de mantener $FP$ por un lapso $t_1$ en pantalla se muestra una serie de objetivos $T_n$ en intervalos de tiempo idénticos, luego se muestra nuevamente $TP$ por un lapso $t_3$ para indicar que ha finalizado la serie y dar tiempo al usuario para prepararse. Finalmente se solicita que se muevan los ojos en secuencia por los puntos en que se vio aparecer los objetivos.
 				\begin{figure}[H]
 					\centering
-					\includegraphics[width=0.7\textwidth]{cap_02_memory}
+					\includegraphics[width=0.65\textwidth]{cap_02_memory}
 					\caption{Tarea guiada por memoria.}
 					\label{fig:02_memory}
 				\end{figure} 
-		
-				En la figura \ref{fig:02_memory} es posible observar un diseño simple para este tipo de experimentos. Despues de mantener FP por un lapso t1 en pantalla se muestra una serie de objetivos Tn en intervalos de tiempo idénticos, luego se muestra nuevamente TP por un lapso t3 para indicar que ha finalizado la serie y dar tiempo al usuario para prepararse. Finalmente se solicita que se muevan los ojos en secuencia por los puntos en que se vio aparecer los objetivos. 
+		 
 
 \end{document}

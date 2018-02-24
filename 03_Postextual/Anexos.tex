@@ -1,0 +1,30 @@
+% =========================================================
+% CONFIGURACION DEL DOCUMENTO
+% =========================================================
+\providecommand{\main}{..}
+\documentclass[\main/main.tex]{subfiles}
+
+% =========================================================
+% CONTENIDO
+% =========================================================
+\begin{document}
+\chapter{Configuración del entorno de programación}
+\label{cha:a01_instalacion}
+	Entorno de anaconda utilizado.
+	\pythonExternal{condaEnv_psychoPy_1.84.2_no-builds_win.yml}
+
+\chapter{Código fuente}
+\label{cha:a02_código_fuente}
+	Código para el manejo de datos.
+	\pythonExternal{core.py}
+
+	\newpage
+	Código para la ejecución del experimento. 
+	\pythonExternal{script.py}
+
+	\newpage
+	Script para crear la base de datos.
+	\pythonExternal{saccadedb_sqlite.sql} 
+
+
+\end{document}

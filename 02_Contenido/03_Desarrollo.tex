@@ -14,7 +14,7 @@
 \section{Setup a utilizar}
 \label{sec:03_setup}
 	Debido a que este trabajo de memoria corresponde fundamentalmente a una prueba de concepto se decidió junto al profesor guía evitar en lo posible la compra de nuevo equipamiento y por tanto no se entrega particular importancia a cumplir de forma estricta con las características de hardware utilizado en instancias formales de investigación. Con esto en consideración se presenta a continuación una descripción del entorno de hardware y software utilizado:
-	\begin{table}[H]\begin{center}\fontsize{10pt}{1em}{
+	\begin{table}[H]\begin{center}\footnotesize{
 		\singlespacing{
 		\begin{tabular}{| C{0.11\textwidth} | C{0.14\textwidth} | R{0.18\textwidth} L{0.5\textwidth} |} \hline
 			\multirow{7}{*}{Hardware} 	& \multirow{4}{*}{PC} 			& Procesador: 		& Intel Core i7-3770 \\
@@ -26,8 +26,8 @@
 									& Adquisición 				& Eyetracker: 		& EyeTribe \\ \hline
 			\multirow{4}{*}{Software} 	& \multirow{2}{*}{Entorno} 		& SO:				& Windows 10 Pro x64 \\ 
 									& 							& Base:				& Python 2.7 x86, Anaconda \\ \cline{2-4}
-									& \multirow{2}{*}{Módulos}		& Principal: 			& PsychoPy 1.84.2 \\
-									& 							& Requeridos:			& Ver anexo \ref{appendix_python_install} \\ \hline
+									& \multirow{2}{*}{Módulos}		& Principal: 			& PsychoPy 1.84.2\cite{psychopy} \\
+									& 							& Requeridos:			& Ver anexo \ref{cha:a01_instalacion} \\ \hline
 		\end{tabular}}
 		\caption{Hardware y software utilizado en el desarrollo.}
 		\label{tbl:03_hs_selection}
@@ -44,7 +44,6 @@
 
 	\end{enumerate}
 
-\newpage
 \section{Diseño del sistema}
 \label{sec:03_diseño_sistema}
 	El sistema a ser desarrollado en ente trabajo de título tiene como función principal facilitar el proceso de configuración y puesta en marcha de experimentos asociados a movimiento ocular. Para esto, se considera oportuno subdividir el desarrollo en tres partes: La primera consiste en determinar la estructura de datos requerida para almacenar tanto las configuraciones del sistema como de las tareas a implementar. La segunda implica la implementación de los métodos de configuración y ejecución del experimento, asegurando su correcto funcionamiento. La tercera etapa corresponde a montar estas funciones en una GUI para facilitar el proceso a personas que no tengan conocimiento del lenguaje. Así, se presenta a continuación el trabajo realizado.
@@ -87,10 +86,9 @@
 
 		Cabe destacar que, para asegurar la limpieza de la base de datos se tomo la decisión de generar tanto updates como deletes en cascada a todas las tablas asociadas a un experimento, de esta forma, al eliminar un experimento particular se eliminan también todas sus tareas y configuraciones, evitando data residual. Esto se repite en niveles más bajos también: eliminar una tarea elimina todos sus cuadros, eliminar un cuadro elimina también todos sus componentes.  
 
-	\newpage
 	\subsection{Segunda parte: Implementación de las funciones principales}
 	\label{sub:03_implementacion_backtend}
-		Para lograr sincronizar la ejecución del experimento con el uso de dispositivos tales como el monitor, el teclado y el eyetracker se hará uso de ioHub. IoHub es un módulo que forma actualmente parte de PsychoPy y que fue desarrollado originalmente por Sol Simpson. Su funcionalidad principal consiste en montar un servicio por el cual se hace una revisión constante de los dispositivos de entrada/salida seleccionados, almacenando la información recopilada de forma ordenada en un archivo con formato hdf5, que corresponde a una tipo de diccionario donde se ordenan los datos. Para construir la aplicación en base a esta utilidad se debe generar un conjunto de métodos que permita lograr las funcionalidades presentadas en la figura \ref{fig:03_application_concept}. 
+		Para lograr sincronizar la ejecución del experimento con el uso de dispositivos tales como el monitor, el teclado y el eyetracker se hará uso de ioHub \cite{website:iohub}. IoHub es un módulo que forma actualmente parte de PsychoPy y que fue desarrollado originalmente por Sol Simpson. Su funcionalidad principal consiste en montar un servicio por el cual se hace una revisión constante de los dispositivos de entrada/salida seleccionados, almacenando la información recopilada de forma ordenada en un archivo con formato hdf5, que corresponde a una tipo de diccionario donde se ordenan los datos. Para construir la aplicación en base a esta utilidad se debe generar un conjunto de métodos que permita lograr las funcionalidades presentadas en la figura \ref{fig:03_application_concept}. 
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=0.7\textwidth]{cap_03_application_concept}
@@ -98,7 +96,9 @@
 			\label{fig:03_application_concept}
 		\end{figure} 
 
-		Para esto, es necesario entregar tres insumos: la configuración de los dispositivos que serán monitorizados por ioHub, la configuración general del experimento (identificadores, descripción y los elementos que conforman las ventanas de diálogo) y la configuración de los elementos asociados a la presentación de estímulo (que se conforman por otras rutinas de PsychoPy). 
+		Para esto, es necesario entregar tres insumos: la configuración de los dispositivos que serán monitorizados por ioHub, la configuración general del experimento (identificadores, descripción y los elementos que conforman las ventanas de diálogo) y la configuración de los elementos asociados a la presentación de estímulo (que se conforman por otras rutinas de PsychoPy).
+
+		En la figura \ref{fig:03_base_class_tree} se presenta la estructura de clases implementada en este trabajo de título. Las clases Master, Experiment, Test, Frame y Component representan el conjunto de funciones que permiten manejar la configuración almacenada en las respectivas tablas de la base de datos además de otorgar otras funcionalidades que se enfocan en la ejecución del experimento propiamente tal. Debido a que Experiment, Test y Frame implican el manejo de una lista de componentes, estas son creadas como clases que heredan las funcionalidades básicas para el manejo de listas como el agregar, copiar o eliminar elementos, cambiar suu posición en la lista, etc. La clase utils implementa métodos de formateo de datos, tales como la conversión de strings a formato unicode o el formateo de fechas. SaccadeDB otorga funcionalidades que permiten comunicarse con el archivo de base de datos. Finalmente, la clase ExperimentHandler es la encargada de generar crear las carpetas de almacenamiento, los archivos de respaldo, los logs de configuración y la inicialización de la ejecución del experimento, que es implementado en la clase ExperimentRuntime (que hereda de ioHub e inicia el servicio asociado). La clase Switch implementa una estructura similar a un switch-case con el fin de utilizar una máquina de estados que regule la carga de frames durante la ejecución.  
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=0.6\textwidth]{cap_03_base_class_tree}
@@ -106,15 +106,14 @@
 			\label{fig:03_base_class_tree}
 		\end{figure} 
 
-		En la figura \ref{fig:03_base_class_tree} se presenta la estructura de clases implementada en este trabajo de título. Las clases Master, Experiment, Test, Frame y Component representan el conjunto de funciones que permiten manejar la configuración almacenada en las respectivas tablas de la base de datos además de otorgar otras funcionalidades que se enfocan en la ejecución del experimento propiamente tal. Debido a que Experiment, Test y Frame implican el manejo de una lista de componentes, estas son creadas como clases que heredan las funcionalidades básicas para el manejo de listas como el agregar, copiar o eliminar elementos, cambiar suu posición en la lista, etc. La clase utils implementa métodos de formateo de datos, tales como la conversión de strings a formato unicode o el formateo de fechas. SaccadeDB otorga funcionalidades que permiten comunicarse con el archivo de base de datos. Finalmente, la clase ExperimentHandler es la encargada de generar crear las carpetas de almacenamiento, los archivos de respaldo, los logs de configuración y la inicialización de la ejecución del experimento, que es implementado en la clase ExperimentRuntime (que hereda de ioHub e inicia el servicio asociado). La clase Switch implementa una estructura similar a un switch-case con el fin de utilizar una máquina de estados que regule la carga de frames durante la ejecución. 
-
+		\newpage
 		A continuación se describe con un mayor grado de detalle cada clase. Por simplicidad se obvian las funciones asociadas al get-set de los atributos (que corresponden a los datos almacenados en la base de datos):
 		\begin{enumerate}
 			\item \textbf{Utils:} Clase utilizada para implementar funcionalidades de formateo de datos.
 			
 			\vspace{-8mm}			
-			\begin{center}\fontsize{10pt}{1em}{\singlespacing{
-				\begin{longtable}[H]{| C{0.15\textwidth} | R{0.13\textwidth} L{0.67\textwidth} |} \hline
+			\begin{center}\footnotesize{\singlespacing{
+				\begin{longtable}[H]{| C{0.15\textwidth} | R{0.13\textwidth} L{0.6\textwidth} |} \hline
 					% ===============================================
 					\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{format\_text}}}\\\multicolumn{3}{|c|}{}\\\hline
 					Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
@@ -158,7 +157,6 @@
 					\\\hline
 					Return 					& bool. 	& 
 					\\ \hline
-					\newpage
 					% ===============================================
 					\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{format\_path}}}\\\multicolumn{3}{|c|}{}\\\hline
 					Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
@@ -167,7 +165,7 @@
 					Inputs 					& path: 	& Dirección a ser formateada. 
 					\\\hline
 					Return 					& unicode. 	& 
-					\\\hline
+					\\\hline \newpage
 					% ===============================================
 					\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{get\_time}}}\\\multicolumn{3}{|c|}{}\\\hline
 					Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
@@ -186,8 +184,8 @@
 			\item \textbf{SaccadeDB:} Clase utilizada para implementar la conexión con la base de datos SQLite.
 			
 			\vspace{-8mm}			 
-			\begin{center}\fontsize{10pt}{1em}{\singlespacing{
-				\begin{longtable}[H]{| C{0.15\textwidth} | R{0.13\textwidth} L{0.67\textwidth} |} \hline
+			\begin{center}\footnotesize{\singlespacing{
+				\begin{longtable}[H]{| C{0.15\textwidth} | R{0.13\textwidth} L{0.6\textwidth} |} \hline
 					% ===============================================
 					\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{SaccadeDB}}}\\\multicolumn{3}{|c|}{}\\\hline
 					Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
@@ -242,8 +240,8 @@
 			\item \textbf{Master:} Clase que permite manipular las configuraciones de hardware asociado a los experimentos y la ruta de los archivos de salida de los mismos. Para utilizar las funciones de carga/guardado es necesario configurar el objeto de base de datos mediante la función set\_database. 
 
 			\vspace{-8mm}
-			\begin{center}\fontsize{10pt}{1em}{\singlespacing{
-				\begin{longtable}[H]{| C{0.15\textwidth} | R{0.13\textwidth} L{0.67\textwidth} |} \hline
+			\begin{center}\footnotesize{\singlespacing{
+				\begin{longtable}[H]{| C{0.15\textwidth} | R{0.13\textwidth} L{0.6\textwidth} |} \hline
 					% ===============================================
 					\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{Master}}}\\\multicolumn{3}{|c|}{}\\\hline
 					Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
@@ -279,8 +277,7 @@
 					Inputs 					& void. 	& 
 					\\\hline
 					Return 					& list.		& 
-					\\\hline 
-					\newpage
+					\\\hline
 					% ===============================================
 					\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{get\_available\_monitors}}}\\\multicolumn{3}{|c|}{}\\\hline
 					Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
@@ -307,7 +304,7 @@
 					Inputs 					& void. 	& 
 					\\\hline
 					Return 					& bool.		& Verdadero si el proceso se completó satisfactoriamente, falso en caso contrario.
-					\\\hline 
+					\\\hline \newpage
 					% ===============================================
 					\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{copy}}}\\\multicolumn{3}{|c|}{}\\\hline
 					Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
@@ -352,8 +349,8 @@
 			\item \textbf{ItemList:} Clase utilizada para manejar listas de objetos. Su implementación no considera el uso directo por parte de los usuarios del programa.
 
 			\vspace{-8mm}
-			\begin{center}\fontsize{10pt}{1em}{\singlespacing{
-				\begin{longtable}[H]{| C{0.15\textwidth} | R{0.13\textwidth} L{0.67\textwidth} |} \hline
+			\begin{center}\footnotesize{\singlespacing{
+				\begin{longtable}[H]{| C{0.15\textwidth} | R{0.13\textwidth} L{0.6\textwidth} |} \hline
 					% ===============================================
 					\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{ItemList}}}\\\multicolumn{3}{|c|}{}\\\hline
 					Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
@@ -371,7 +368,7 @@
 					Inputs 					& item: 	& Objeto a añadir.
 					\\\hline
 					Return 					& bool.		& Verdadero si la acción se realizó correctamente, falso en caso contrario. 
-					\\\hline 
+					\\\hline \newpage
 					% ===============================================
 					\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{item\_copy}}}\\\multicolumn{3}{|c|}{}\\\hline
 					Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
@@ -390,7 +387,6 @@
 					\\\hline
 					Return 					& bool.		& Verdadero si el índice existe y es eliminado, falso en caso contrario.
 					\\\hline
-					\newpage
 					% ===============================================
 					\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{item\_move\_up}}}\\\multicolumn{3}{|c|}{}\\\hline
 					Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
@@ -445,8 +441,8 @@
 			\item \textbf{Component:} Clase utilizada para manejar la configuración de los elementos que conforman un cuadro. 
 			
 			\vspace{-8mm}
-			\begin{center}\fontsize{10pt}{1em}{\singlespacing{
-				\begin{longtable}[H]{| C{0.15\textwidth} | R{0.13\textwidth} L{0.67\textwidth} |} \hline
+			\begin{center}\footnotesize{\singlespacing{
+				\begin{longtable}[H]{| C{0.15\textwidth} | R{0.13\textwidth} L{0.6\textwidth} |} \hline
 					% ===============================================
 					\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{Component}}}\\\multicolumn{3}{|c|}{}\\\hline
 					Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
@@ -544,12 +540,12 @@
 				\end{longtable}}}
 			\end{center}
 
-			\newpage
+			\vspace{-15mm}
 			\item \textbf{Frame:} Clase utilizada para configurar el comportamiento de un cuadro específico de una tarea. Ya que los cuadros contienen y muestran componentes, esta clase se define como hija de ItemList inicializada para objetos de tipo Component.
 
 			\vspace{-8mm}
-			\begin{center}\fontsize{10pt}{1em}{\singlespacing{
-				\begin{longtable}[H]{| C{0.15\textwidth} | R{0.13\textwidth} L{0.67\textwidth} |} \hline
+			\begin{center}\footnotesize{\singlespacing{
+				\begin{longtable}[H]{| C{0.15\textwidth} | R{0.13\textwidth} L{0.6\textwidth} |} \hline
 					% ===============================================
 					\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{Frame}}}\\\multicolumn{3}{|c|}{}\\\hline
 					Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
@@ -614,7 +610,7 @@
 					\multirow{4}{*}{Inputs}	& db:		& Objeto de base de datos (SaccadeDB) mediante el cual se guardará la información. \\
 											& exp:		& Código del experimento al que pertenece el cuadro. \\
 											& tes:		& ID de la tarea a la cual pertenece el cuadro. \\
-											& fra: 		& ID del cuadro. \\
+											& fra: 		& ID del cuadro.
 					\\\hline
 					Return 					& void. 	& 
 					\\\hline 
@@ -655,8 +651,8 @@
 			\item \textbf{Test:} Clase utilizada para configurar una tarea específica en un experimento. Ya que las tareas se componen de cuadros, esta clase se define como hija de ItemList inicializada para objetos de tipo Frame.
 
 			\vspace{-8mm}
-			\begin{center}\fontsize{10pt}{1em}{\singlespacing{
-				\begin{longtable}[H]{| C{0.15\textwidth} | R{0.13\textwidth} L{0.67\textwidth} |} \hline
+			\begin{center}\footnotesize{\singlespacing{
+				\begin{longtable}[H]{| C{0.15\textwidth} | R{0.13\textwidth} L{0.6\textwidth} |} \hline
 					% ===============================================
 					\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{Test}}}\\\multicolumn{3}{|c|}{}\\\hline
 					Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
@@ -672,7 +668,7 @@
 					Método estático. Retorna una lista con todas las tareas que forman parte de un experimento específico.
 					}\\\hline
 					\multirow{2}{*}{Inputs}	& db:		& Objeto de base de datos (SaccadeDB) mediante el cual se extraerá la información. \\
-											& exp:		& Código del experimento al cual pertenecen las tareas de interés.  \\
+											& exp:		& Código del experimento al cual pertenecen las tareas de interés.  
 					\\\hline
 					Return 					& objeto. 	& list si existen elementos en la base de datos, None en caso contrario.
 					\\\hline 
@@ -683,7 +679,7 @@
 					}\\\hline
 					\multirow{3}{*}{Inputs}	& db:		& Objeto de base de datos (SaccadeDB) mediante el cual se extraerá la información. \\
 											& exp:		& Código del experimento al que pertenece la tarea de interés. \\
-											& tes:		& ID de la tarea. \\
+											& tes:		& ID de la tarea. 
 					\\\hline
 					Return 					& bool. 	& Verdadero si el proceso se completó satisfactoriamente, falso en caso contrario. 
 					\\\hline 
@@ -694,7 +690,7 @@
 					}\\\hline
 					\multirow{3}{*}{Inputs}	& db:		& Objeto de base de datos (SaccadeDB) mediante el cual se extraerá la información. \\
 											& exp:		& Código del experimento al que pertenece la tarea de interés. \\
-											& tes:		& ID de la tarea. \\
+											& tes:		& ID de la tarea. 
 					\\\hline
 					Return 					& void. 	& 
 					\\\hline 
@@ -705,7 +701,7 @@
 					}\\\hline
 					\multirow{4}{*}{Inputs}	& db:		& Objeto de base de datos (SaccadeDB) mediante el cual se guardará la información. \\
 											& exp:		& Código del experimento al que pertenecerá la tarea. \\
-											& tes:		& ID que se le otorgará a la tarea. \\
+											& tes:		& ID que se le otorgará a la tarea. 
 					\\\hline
 					Return 					& bool. 	& Verdadero si el proceso se completó satisfactoriamente, falso en caso contrario. 
 					\\\hline 
@@ -716,7 +712,7 @@
 					}\\\hline
 					\multirow{4}{*}{Inputs}	& db:		& Objeto de base de datos (SaccadeDB) mediante el cual se guardará la información. \\
 											& exp:		& Código del experimento al que pertenece la tarea. \\
-											& tes:		& ID de la tarea a la cual pertenecerá el cuadro. \\
+											& tes:		& ID de la tarea a la cual pertenecerá el cuadro. 
 					\\\hline
 					Return 					& void. 	& 
 					\\\hline 
@@ -729,7 +725,6 @@
 					\\\hline
 					Return 					& objeto. 	& Objeto de tipo Test con los mismos atributos.
 					\\\hline 
-					\newpage
 					% ===============================================
 					\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{get\_execution}}}\\\multicolumn{3}{|c|}{}\\\hline
 					Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
@@ -757,8 +752,8 @@
 			\item \textbf{Experiment:} Clase utilizada para configurar un experimento específico. Ya que los experimentos se componen de tareas, esta clase se define como hija de ItemList inicializada para objetos de tipo Test. Para utilizar las funciones de carga/guardado es necesario configurar el objeto de base de datos mediante la función set\_database.
 
 			\vspace{-8mm}
-			\begin{center}\fontsize{10pt}{1em}{\singlespacing{
-				\begin{longtable}[H]{| C{0.15\textwidth} | R{0.13\textwidth} L{0.67\textwidth} |} \hline
+			\begin{center}\footnotesize{\singlespacing{
+				\begin{longtable}[H]{| C{0.15\textwidth} | R{0.13\textwidth} L{0.6\textwidth} |} \hline
 					% ===============================================
 					\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{Experiment}}}\\\multicolumn{3}{|c|}{}\\\hline
 					Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
@@ -777,7 +772,6 @@
 					\\\hline
 					Return 					& objeto. 	& list si existen elementos en la base de datos, None en caso contrario.
 					\\\hline 
-					\newpage
 					% ===============================================
 					\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{load}}}\\\multicolumn{3}{|c|}{}\\\hline
 					Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
@@ -861,8 +855,8 @@
 			\item \textbf{ExperimentHandler:} Clase utilizada para efectuar las configuraciones previas que permiten ejecutar un experimento.
 
 			\vspace{-8mm}
-			\begin{center}\fontsize{10pt}{1em}{\singlespacing{
-				\begin{longtable}[H]{| C{0.15\textwidth} | R{0.13\textwidth} L{0.67\textwidth} |} \hline
+			\begin{center}\footnotesize{\singlespacing{
+				\begin{longtable}[H]{| C{0.15\textwidth} | R{0.13\textwidth} L{0.6\textwidth} |} \hline
 					% ===============================================
 					\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{ExperimentHandler}}}\\\multicolumn{3}{|c|}{}\\\hline
 					Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
@@ -872,7 +866,6 @@
 					\\\hline
 					Return 					& void. 	& 
 					\\\hline 
-					\newpage
 					% ===============================================
 					\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{load\_experiment}}}\\\multicolumn{3}{|c|}{}\\\hline
 					Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
@@ -911,8 +904,8 @@
 			\item \textbf{ExperimentRuntime:} Clase que ejecuta el experimento. Hereda de ioHubExperimentRuntime, clase de ioHub encargada de iniciar el servicio por el cual se manejan todos los dispositivos de hardware.
 
 			\vspace{-8mm}
-			\begin{center}\fontsize{10pt}{1em}{\singlespacing{
-				\begin{longtable}[H]{| C{0.15\textwidth} | R{0.13\textwidth} L{0.67\textwidth} |} \hline
+			\begin{center}\footnotesize{\singlespacing{
+				\begin{longtable}[H]{| C{0.15\textwidth} | R{0.13\textwidth} L{0.6\textwidth} |} \hline
 					% ===============================================
 					\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{ExperimentRuntime}}}\\\multicolumn{3}{|c|}{}\\\hline
 					Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
@@ -938,7 +931,6 @@
 
 		\end{enumerate}
 
-	\newpage
 	\subsection{Tercera parte: Interfaz gráfica}
 	\label{sub:03_gui}
 	Pendiente.

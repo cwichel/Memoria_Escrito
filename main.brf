@@ -1,22 +1,11 @@
-\backcite {website:baseInfo}{{\es@scroman {iv}}{(document)}{Doc-Start}}
-\backcite {website:baseInfo}{{\es@scroman {iv}}{(document)}{Doc-Start}}
-\backcite {website:etSSG}{{\es@scroman {iv}}{(document)}{Doc-Start}}
-\backcite {website:etEOG}{{\es@scroman {iv}}{(document)}{Doc-Start}}
-\backcite {dissertation:eyetrackers}{{\es@scroman {iv}}{(document)}{Doc-Start}}
-\backcite {article:eyetracker_eggert, article:eyetracker_richardson, dissertation:eyetrackers}{{\es@scroman {v}}{(document)}{Doc-Start}}
-\backcite {website:software_presentation, website:software_psychopy, website:software_psychotoolbox, website:software_vissionegg}{{\es@scroman {v}}{(document)}{Doc-Start}}
-\backcite {website:baseInfo}{{3}{2.1}{figure.caption.11}}
-\backcite {website:baseInfo}{{4}{2.2}{figure.caption.12}}
-\backcite {article:movOcular, website:movOcular}{{4}{2.1.1}{subsection.2.1.1}}
-\backcite {website:movOcular}{{5}{4}{Item.7}}
-\backcite {article:tests_1, article:tests_2, article:tests_3, article:tests_4}{{5}{2.1.1}{Item.7}}
+\backcite {article:baseInfo}{{3}{2.1}{figure.caption.11}}
+\backcite {article:baseInfo}{{4}{2.2}{figure.caption.12}}
+\backcite {article:movOcular1, article:movOcular2}{{4}{2.1.1}{subsection.2.1.1}}
+\backcite {article:movOcular2}{{5}{4}{Item.7}}
+\backcite {article:tests_1, article:tests_2, article:tests_3, article:tests_4}{{6}{2.1.1}{Item.7}}
 \backcite {article:eyetracker_eggert, article:eyetracker_richardson}{{6}{2.1.2}{section*.13}}
 \backcite {article:eyetracker_eggert, article:eyetracker_richardson, dissertation:eyetrackers}{{7}{2.1.2}{section*.14}}
-\backcite {website:etSSG}{{7}{2.3}{figure.caption.15}}
-\backcite {website:etEOG}{{8}{2.4}{figure.caption.16}}
 \backcite {dissertation:eyetrackers}{{9}{2.5}{figure.caption.17}}
-\backcite {website:tobii}{{9}{2.6a}{subfigure.2.6.1}}
-\backcite {website:microway}{{9}{2.6b}{subfigure.2.6.2}}
 \backcite {article:eyetracker_eggert, article:eyetracker_richardson, dissertation:eyetrackers}{{9}{2.1.2}{section*.19}}
 \backcite {article:eyetracker_eggert, article:eyetracker_richardson, dissertation:eyetrackers}{{10}{2.1}{table.caption.20}}
 \backcite {article:monitor_beuer}{{11}{2.2.1}{subsection.2.2.1}}
@@ -24,3 +13,5 @@
 \backcite {website:software}{{12}{2.2.2}{subsection.2.2.2}}
 \backcite {website:software_presentation, website:software_psychopy, website:software_psychotoolbox, website:software_vissionegg}{{13}{2.2}{table.caption.21}}
 \backcite {article:tests_1, article:tests_2, article:tests_3, article:tests_4}{{14}{2.2.3}{subsection.2.2.3}}
+\backcite {psychopy}{{18}{\caption@xref {??}{ on input line 29}}{table.caption.28}}
+\backcite {website:iohub}{{22}{3.2.2}{subsection.3.2.2}}

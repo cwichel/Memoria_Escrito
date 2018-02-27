@@ -1,4 +1,4 @@
-\glossaryentry{IR?\glossentry{ir}|setentrycounter[]{page}\glsnumberformat}{\es@scroman  {iv}}
+\glossaryentry{IR?\glossentry{ir}|setentrycounter[]{page}\glsnumberformat}{\es@scroman  {4}}
 \glossaryentry{GUI?\glossentry{gui}|setentrycounter[]{page}\glsnumberformat}{2}
 \glossaryentry{SSC?\glossentry{ssc}|setentrycounter[]{page}\glsnumberformat}{7}
 \glossaryentry{EOG?\glossentry{eog}|setentrycounter[]{page}\glsnumberformat}{7}
@@ -12,3 +12,4 @@
 \glossaryentry{TP?\glossentry{tp}|setentrycounter[]{page}\glsnumberformat}{14}
 \glossaryentry{SL?\glossentry{sl}|setentrycounter[]{page}\glsnumberformat}{14}
 \glossaryentry{ISI?\glossentry{isi}|setentrycounter[]{page}\glsnumberformat}{14}
+\glossaryentry{SO?\glossentry{so}|setentrycounter[]{page}\glsnumberformat}{19}

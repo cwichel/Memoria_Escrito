@@ -4,10 +4,10 @@
 \backcite {article:movOcular2}{{5}{4}{Item.7}}
 \backcite {article:tests_1, article:tests_2, article:tests_3, article:tests_4}{{6}{2.1.1}{Item.7}}
 \backcite {article:eyetracker_eggert, article:eyetracker_richardson}{{6}{2.1.2}{section*.13}}
-\backcite {article:eyetracker_eggert, article:eyetracker_richardson, dissertation:eyetrackers}{{7}{2.1.2}{section*.14}}
+\backcite {dissertation:eyetrackers, article:eyetracker_eggert, article:eyetracker_richardson}{{7}{2.1.2}{section*.14}}
 \backcite {dissertation:eyetrackers}{{9}{2.5}{figure.caption.17}}
-\backcite {article:eyetracker_eggert, article:eyetracker_richardson, dissertation:eyetrackers}{{9}{2.1.2}{section*.19}}
-\backcite {article:eyetracker_eggert, article:eyetracker_richardson, dissertation:eyetrackers}{{10}{2.1}{table.caption.20}}
+\backcite {dissertation:eyetrackers, article:eyetracker_eggert, article:eyetracker_richardson}{{9}{2.1.2}{section*.19}}
+\backcite {dissertation:eyetrackers, article:eyetracker_eggert, article:eyetracker_richardson}{{10}{2.1}{table.caption.20}}
 \backcite {article:monitor_beuer}{{11}{2.2.1}{subsection.2.2.1}}
 \backcite {article:monitor_wang, article:monitor_elze}{{12}{2.2.1}{Item.12}}
 \backcite {website:software}{{12}{2.2.2}{subsection.2.2.2}}

@@ -11,7 +11,7 @@
 \chapter{Sistema propuesto}
 \label{cha:03_sistema_propuesto}
 
-\section{Setup a utilizar}
+\section{\textit{Setup} a utilizar}
 \label{sec:03_setup}
 	Debido a que este trabajo de memoria corresponde fundamentalmente a una prueba de concepto se decidió junto al profesor guía evitar en lo posible la compra de nuevo equipamiento y por tanto no se entrega particular importancia a cumplir de forma estricta con las características de hardware utilizado en instancias formales de investigación. Con esto en consideración se presenta a continuación una descripción del entorno de hardware y software utilizado:
 	\begin{table}[H]\begin{center}\footnotesize{
@@ -23,7 +23,7 @@
 									& 							& Tarjeta gráfica: 	& NVIDIA GeForce GTX 660 Ti, 2GB \\ \cline{2-4}
 									& \multirow{2}{*}{Monitores} 	& Principal:			& Samsung SyncMaster, 1680x1050px, 60Hz \\ 
 									& 							& Secundario: 		& Samsung SyncMaster, 1680x1050px, 60Hz \\ \cline{2-4}
-									& Adquisición 				& Eyetracker: 		& EyeTribe \\ \hline
+									& Adquisición 				& \textit{Eye tracker}: 		& EyeTribe \\ \hline
 			\multirow{4}{*}{Software} 	& \multirow{2}{*}{Entorno} 		& SO:				& Windows 10 Pro x64 \\ 
 									& 							& Base:				& Python 2.7 x86, Anaconda \\ \cline{2-4}
 									& \multirow{2}{*}{Módulos}		& Principal: 			& PsychoPy 1.84.2\cite{psychopy} \\
@@ -34,23 +34,23 @@
 	}\end{center}\end{table}
 
 	\newpage
-	La elección de software se encuentra infuenciada fuertemente por los siguientes puntoss:
+	La elección de software se encuentra infuenciada fuertemente por los siguientes puntos:
 	\begin{enumerate}
-		\item El eyetracker a utilizar solo tiene disponible sus drivers para Mac y Windows. Debido a la facilidad de encontrar computadoras con %\acrshort{SO} Windows se decanta por este.
+		\item El \textit{eye tracker} a utilizar solo tiene disponible sus drivers para Mac y Windows. Debido a la facilidad de encontrar computadoras con Windows se decanta por este \acrshort{so}.
 
 		\item Los desafíos del sistema a implementar requieren del uso de un lenguaje orientado a objetos. A pesar de las bondades de Octave o Matlab en procesamiento y acceso a módulos complementarios estos entornos carecen de buen soporte para este tipo de programación, por este motivo se utiliza Python como lenguaje de desarrollo. 
 
-		\item Dentro de las opciones disponibles PsychoPy resulta sumamente interesante. Cumple con ser open-source, es ampliamente utilizado por investigadores, presenta documentación detallada y clara para todas sus funciones y los foros se encuentran activos. Otro punto interesante es que entrega soporte para varias marcas de eyetracker, entre los cuales se encentra el seleccionados.
+		\item Dentro de las opciones disponibles PsychoPy resulta sumamente interesante. Cumple con ser open-source, es ampliamente utilizado por investigadores, presenta documentación detallada y clara para todas sus funciones y los foros se encuentran activos. Otro punto interesante es que entrega soporte para varias marcas de \textit{eye tracker}, entre los cuales se encentra el seleccionados.
 
 	\end{enumerate}
 
 \section{Diseño del sistema}
 \label{sec:03_diseño_sistema}
-	El sistema a ser desarrollado en ente trabajo de título tiene como función principal facilitar el proceso de configuración y puesta en marcha de experimentos asociados a movimiento ocular. Para esto, se considera oportuno subdividir el desarrollo en tres partes: La primera consiste en determinar la estructura de datos requerida para almacenar tanto las configuraciones del sistema como de las tareas a implementar. La segunda implica la implementación de los métodos de configuración y ejecución del experimento, asegurando su correcto funcionamiento. La tercera etapa corresponde a montar estas funciones en una GUI para facilitar el proceso a personas que no tengan conocimiento del lenguaje. Así, se presenta a continuación el trabajo realizado.
+	El sistema a ser desarrollado en este trabajo de título tiene como función principal facilitar el proceso de configuración y puesta en marcha de experimentos asociados a movimiento ocular. Para esto, se considera oportuno subdividir el desarrollo en tres partes: La primera consiste en determinar la estructura de datos requerida para almacenar tanto las configuraciones del sistema como de las tareas a implementar. La segunda implica la implementación de los métodos de configuración y ejecución del experimento, asegurando su correcto funcionamiento. La tercera etapa corresponde a montar estas funciones en una GUI para facilitar el proceso a personas que no tengan conocimiento del lenguaje. Así, se presenta a continuación el trabajo realizado.
 
 	\subsection{Primera parte: Estructura de datos}
 	\label{sub:03_estructura_datos}
-		Al diseñar la estructura de datos se debió considerar el problema desde tres aristas. La primera correspondía a la necesidad de almacenar la información del conjunto compuesto por experimento-tareas-cuadros-componentes donde, complementando lo expuesto en el apartado \ref{sub:02_experimentos_de_estimulacion}, las tareas corresponden a las actividades específicas que el sujeto de prueba debe llevar a cabo. Los cuadros corresponden a los elementos que conforman dichas tareas y los componentes serán considerados como las figuras e imágenes contenidas en cada cuadro. La segunda dice relación con la información complementaria que se desea incluir para posterior análisis, tal como comentarios del investigador encargado del experimento para una sesión específica o algunas características de quien realizará el experimento, tales como su edad, sexo, color de ojos o si se utilizan lentes durante la ejecución. Finalmente, la tercera arista implica el conservar las configuraciones del equipo y hardware a utilizar para montar el servicio de ejecución asociado al módulo ioHub, que es el componente de PsychoPy que permite sincronizar todos los dispositivos asociados a la ejecución del experimento: teclado, pantalla, eyetracker, etc. y almacenar los datos en un archivo. 
+		Al diseñar la estructura de datos se debió considerar el problema desde tres aristas. La primera correspondía a la necesidad de almacenar la información del conjunto compuesto por experimento-tareas-cuadros-componentes donde, complementando lo expuesto en el apartado \ref{sub:02_experimentos_de_estimulacion}, las tareas corresponden a las actividades específicas que el sujeto de prueba debe llevar a cabo. Los cuadros corresponden a los elementos que conforman dichas tareas y los componentes serán considerados como las figuras e imágenes contenidas en cada cuadro. La segunda dice relación con la información complementaria que se desea incluir para posterior análisis, tal como comentarios del investigador encargado del experimento para una sesión específica o algunas características de quien realizará el experimento, tales como su edad, sexo, color de ojos o si se utilizan lentes durante la ejecución. Finalmente, la tercera arista implica el conservar las configuraciones del equipo y hardware a utilizar para montar el servicio de ejecución asociado al módulo ioHub, que es el componente de PsychoPy que permite sincronizar todos los dispositivos asociados a la ejecución del experimento: teclado, pantalla, \textit{eye tracker}, etc. y almacenar los datos en un archivo. 
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=\textwidth]{cap_03_database}
@@ -60,13 +60,13 @@
 
 		En base a lo anterior, se propone como solución el uso de una base de datos local de tipo SQLite con la estructura presentada en la figura \ref{fig:03_database}. A continuación se comenta el contenido de cada tabla y su función:
 		\begin{enumerate}
-			\item \textbf{master:} Almacena la información asociada a un perfil de configuración del hardware a utilizar. Cada perfil es identificado con un nombre e indica que pantalla será utilizada (screen), cual es la configuración de dicha pantalla (monitor, se define en un aplicativo de PsychoPy), que eyetracker se utilizará (tracker) y en que directorio se almacenará el archivo resultante.
+			\item \textbf{master:} Almacena la información asociada a un perfil de configuración del hardware a utilizar. Cada perfil es identificado con un nombre e indica qué pantalla será utilizada (screen), cual es la configuración de dicha pantalla (monitor, se define en un aplicativo de PsychoPy), que \textit{eye tracker} se utilizará (tracker) y en que directorio se almacenará el archivo resultante.
 
 			\item \textbf{experiment:} Almacena la información de identificación de un experimento. Cada experimento se identifica por un código único (code) y un par nombre/versión (name/version), que tiene como objetivo identificar a una aplicación específica de una familia de el mismo tipo, por ejemplo: ''antisaccade''/''v1.0\_gap''. Además, se incluye un campo para la descripción, instrucciones para el usuario (instructions) y comentarios para quien tome el experimento (comments). Se incluyen la fecha de creación y la última modificación para dejar de forma explícita una señal de cuidado: Las condiciones del experimento pueden no ser las mismas de la última ejecución.
 			
-			\item \textbf{exp\_configuration:} Esta tabla es complementaria al experimento y almacena la configuración general de ejecución. ¿Es necesario que el paciente presione la tecla espacio antes de cada tarea? (need\_space), ¿el orden de las tareas es aleatorio o secuencial? (is\_random), ¿Se incluyen en el experimento tiempos de descanso? (is\_rest), ¿Cada cuántas tareas? (rest\_period), ¿Con qué duración? (rest\_time).
+			\item \textbf{exp\_configuration:} Esta tabla es complementaria al experimento y almacena la configuración general de ejecución. \textquestiondown Es necesario que el paciente presione la tecla espacio antes de cada tarea? (need\_space), \textquestiondown El orden de las tareas es aleatorio o secuencial? (is\_random), \textquestiondown Se incluyen en el experimento tiempos de descanso? (is\_rest), \textquestiondown Cada cuántas tareas? (rest\_period), \textquestiondown Con qué duración? (rest\_time).
 
-			\item \textbf{exp\_dialog:} Esta tabla es complementaria al experimento y almacena la configuración del diálogo inicial. ¿Se incluirá información complementaria? (is\_active), ¿Qué edad tiene el paciente? (ask\_age), ¿Cuál es su sexo? (ask\_gender), ¿Utiliza gafas o lentes de contacto? (ask\_glasses), ¿Cuál es su color de ojos? (ask\_eye\_color).
+			\item \textbf{exp\_dialog:} Esta tabla es complementaria al experimento y almacena la configuración del diálogo inicial, que permite obtener información adicional sobre el paciente. \textquestiondown Se incluirá información complementaria? (is\_active), \textquestiondown Qué edad tiene el paciente? (ask\_age), \textquestiondown Cuál es su sexo? (ask\_gender), \textquestiondown Utiliza gafas o lentes de contacto? (ask\_glasses), \textquestiondown Cuál es su color de ojos? (ask\_eye\_color).
 
 			\item \textbf{test:} Esta tabla contiene, para cada experimento, la identificación de las tareas a utilizar. Cada tarea se identifica por su nombre (name) y debe especificar el número de repeticiones a ser ejecutadas (quantity). Incluye un campo para añadir una descripción de la tarea (description).
 
@@ -88,7 +88,7 @@
 
 	\subsection{Segunda parte: Implementación de las funciones principales}
 	\label{sub:03_implementacion_backtend}
-		Para lograr sincronizar la ejecución del experimento con el uso de dispositivos tales como el monitor, el teclado y el eyetracker se hará uso de ioHub \cite{website:iohub}. IoHub es un módulo que forma actualmente parte de PsychoPy y que fue desarrollado originalmente por Sol Simpson. Su funcionalidad principal consiste en montar un servicio por el cual se hace una revisión constante de los dispositivos de entrada/salida seleccionados, almacenando la información recopilada de forma ordenada en un archivo con formato hdf5, que corresponde a una tipo de diccionario donde se ordenan los datos. Para construir la aplicación en base a esta utilidad se debe generar un conjunto de métodos que permita lograr las funcionalidades presentadas en la figura \ref{fig:03_application_concept}. 
+		Para lograr sincronizar la ejecución del experimento con el uso de dispositivos tales como el monitor, el teclado y el \textit{eye tracker} se hará uso de ioHub \cite{website:iohub}. IoHub es un módulo que forma actualmente parte de PsychoPy y que fue desarrollado originalmente por Sol Simpson. Su funcionalidad principal consiste en montar un servicio por el cual se hace una revisión constante de los dispositivos de entrada/salida seleccionados, almacenando la información recopilada de forma ordenada en un archivo con formato hdf5, que corresponde a un tipo de diccionario donde se ordenan los datos. Para construir la aplicación en base a esta utilidad se debe generar un conjunto de métodos que permita lograr las funcionalidades presentadas en la figura \ref{fig:03_application_concept}. 
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=0.7\textwidth]{cap_03_application_concept}
@@ -263,7 +263,7 @@
 					% ===============================================
 					\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{get\_available\_trackers}}}\\\multicolumn{3}{|c|}{}\\\hline
 					Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-					Método estático. Entrega una lista de las configuraciones disponibles para los eyetrackers. Dichas configuraciones pueden ser encontradas en la carpeta 'saccadeApp/resources/eyetrackers' del proyecto. 
+					Método estático. Entrega una lista de las configuraciones disponibles para los \textit{eye trackers}. Dichas configuraciones pueden ser encontradas en la carpeta 'saccadeApp/resources/eyetrackers' del proyecto. 
 					}\\\hline
 					Inputs 					& void. 	& 
 					\\\hline

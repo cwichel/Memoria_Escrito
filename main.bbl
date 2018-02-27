@@ -27,44 +27,6 @@ I.~S. MacKenzie, ``Evaluating eye tracking systems for computer input,'' in
   Assistive Technologies}, P.~Majaranta~[et al]., Ed.\hskip 1em plus 0.5em
   minus 0.4em\relax Hershey, PA: IGI Global, 2011, ch.~15, pp. 205--225.
 
-\bibitem{dissertation:eyetrackers}
-G.~Rakoczi, ``Analysis of eye movements in the context of e-learning,
-  recommendations for eye-efficient user interfaces,'' Ph.D. dissertation,
-  Fakultät für Informatik der Technischen Universität Wien, 2014.
-
-\bibitem{article:eyetracker_eggert}
-T.~Eggert, ``Eye movement recordings: methods,'' \emph{Neuro-Ophthalmology},
-  vol.~40, pp. 15--34, 2007.
-
-\bibitem{article:eyetracker_richardson}
-D.~C. Richardson and M.~J. Spivet, ``Eye tracking: Characteristics and
-  methods,'' \emph{Encyclopedia of biomaterials and biomedical engineering},
-  vol.~3, p. 1028–1042, 2004.
-
-\bibitem{website:software_presentation}
-\BIBentryALTinterwordspacing
-N.~B. Systems, ``Presentation software,'' [consulta: 13 junio 2017]. [Online].
-  Available: \url{http://www.neurobs.com/}
-\BIBentrySTDinterwordspacing
-
-\bibitem{website:software_psychopy}
-\BIBentryALTinterwordspacing
-J.~Peirce, ``Psychopy,'' [consulta: 13 junio 2017]. [Online]. Available:
-  \url{http://www.psychopy.org/}
-\BIBentrySTDinterwordspacing
-
-\bibitem{website:software_psychotoolbox}
-\BIBentryALTinterwordspacing
-M.~Kleiner, ``Psychtoolbox,'' [consulta: 13 junio 2017]. [Online]. Available:
-  \url{http://psychtoolbox.org/}
-\BIBentrySTDinterwordspacing
-
-\bibitem{website:software_vissionegg}
-\BIBentryALTinterwordspacing
-A.~D. Straw, ``Vission egg,'' [consulta: 13 junio 2017]. [Online]. Available:
-  \url{https://visionegg.readthedocs.io/en/latest/index.html}
-\BIBentrySTDinterwordspacing
-
 \bibitem{article:movOcular1}
 K.~R. Gegenfurtner, ``The interaction between vision and eye movements,''
   \emph{Perception}, vol. 45(12), pp. 1333--1357, 2016.
@@ -91,6 +53,20 @@ S.~Amador~[et al], ``Dissociating cognitive deficits involved in voluntary eye
 A.~Srivastava~[et al], ``Saccadic eye movements in parkinson's disease,''
   \emph{Indian Journal of Ophthalmology}, vol. 62(5), pp. 538--544, 2014.
 
+\bibitem{article:eyetracker_eggert}
+T.~Eggert, ``Eye movement recordings: methods,'' \emph{Neuro-Ophthalmology},
+  vol.~40, pp. 15--34, 2007.
+
+\bibitem{article:eyetracker_richardson}
+D.~C. Richardson and M.~J. Spivet, ``Eye tracking: Characteristics and
+  methods,'' \emph{Encyclopedia of biomaterials and biomedical engineering},
+  vol.~3, p. 1028–1042, 2004.
+
+\bibitem{dissertation:eyetrackers}
+G.~Rakoczi, ``Analysis of eye movements in the context of e-learning,
+  recommendations for eye-efficient user interfaces,'' Ph.D. dissertation,
+  Fakultät für Informatik der Technischen Universität Wien, 2014.
+
 \bibitem{article:monitor_beuer}
 B.~Bauer, ``A timely reminder about stimulus display times and other
   presentation parameters on crts and newer technologies,'' \emph{Canadian
@@ -111,6 +87,30 @@ T.~Elze, T.~G. Tanner, and B.~Krekelberg, ``Temporal properties of liquid
 H.~Strasburger, ``Software for visual psychophysics: an overview,'' [consulta:
   10 junio 2017]. [Online]. Available:
   \url{http://www.visionscience.com/documents/strasburger/strasburger.html}
+\BIBentrySTDinterwordspacing
+
+\bibitem{website:software_presentation}
+\BIBentryALTinterwordspacing
+N.~B. Systems, ``Presentation software,'' [consulta: 13 junio 2017]. [Online].
+  Available: \url{http://www.neurobs.com/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{website:software_psychopy}
+\BIBentryALTinterwordspacing
+J.~Peirce, ``Psychopy,'' [consulta: 13 junio 2017]. [Online]. Available:
+  \url{http://www.psychopy.org/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{website:software_psychotoolbox}
+\BIBentryALTinterwordspacing
+M.~Kleiner, ``Psychtoolbox,'' [consulta: 13 junio 2017]. [Online]. Available:
+  \url{http://psychtoolbox.org/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{website:software_vissionegg}
+\BIBentryALTinterwordspacing
+A.~D. Straw, ``Vission egg,'' [consulta: 13 junio 2017]. [Online]. Available:
+  \url{https://visionegg.readthedocs.io/en/latest/index.html}
 \BIBentrySTDinterwordspacing
 
 \bibitem{psychopy}

@@ -1,14 +1,14 @@
-\select@language {spanish}
+\babel@toc {spanish}{}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Diagrama general de la interfaz hombre-máquina}}{3}{figure.caption.11}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Setup experimental típico}}{4}{figure.caption.12}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces \textit {Setup} experimental típico}}{4}{figure.caption.12}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Ejemplo de uso de SSG}}{7}{figure.caption.15}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Ejemplo de posicionamiento de electrodos para EOG}}{8}{figure.caption.16}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Principio de detección VOG en base a reflexión de luz}}{9}{figure.caption.17}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Reflexiones de Purkije-Sanson}}}{9}{subfigure.5.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Posición de la reflexión P1 relativa al centro de la pupila.}}}{9}{subfigure.5.2}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Muestra de eye trackers disponibles en el mercado con tecnología VOG basados en reflexión de luz \acrshort {ir}}}{9}{figure.caption.18}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Muestra de \textit {eye trackers} disponibles en el mercado con tecnología VOG basados en reflexión de luz \acrshort {ir}}}{9}{figure.caption.18}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Tobii Pro Glasses 2}}}{9}{subfigure.6.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {MiraMetrix S2}}}{9}{subfigure.6.2}
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Tarea pro/anti sacádica.\relax }}{15}{figure.caption.24}

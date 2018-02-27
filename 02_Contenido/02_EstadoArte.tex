@@ -11,138 +11,129 @@
 \chapter{Estado del arte}
 \label{cha:02_estado_del_arte}
 
-	En base a la investigación previa fue posible definir de forma genérica los elementos principales requeridos para la configuración y puesta en marcha de un sistema de estimulación visual y registro de movimiento ocular. En la figuras \ref{fig:02_diagrama_interfaz} y \ref{fig:02_ejemplo_setup} se presenta un diagrama general de funcionamiento del sistema propuesto y una imagen de ejemplo de un \gls{setup} típico implementado.   
+	% ===============================================================
+	% ===============================================================
+	\section{Movimiento ocular}
+	\label{sec:02_movimiento_ocular}
+		La acción de dirigir la mirada hacia un objeto es parte fundamental del proceso de visión. Este acto involucra el direccionamiento de los \gls{ejevisual} (ver figura \ref{fig:02_eye_axis}) hacia un objetivo determinado, permitiendo la realización de análisis visuales precisos. Dicha orientación muchas veces implica movimientos coordinados de los ojos, cuello y cabeza, no obstante, existen movimientos más pequeños que son realizados únicamente por los ojos, conocidos como movimientos sacádicos \cite{article:movOcular1, article:movOcular2}.
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.45\textwidth]{cap_02_eye_axis}
+			\caption[Estructura del ojo]{Estructura del ojo\footnotemark.}
+			\label{fig:02_eye_axis}
+		\end{figure}
+		\footnotetext{Fuente imagen: J. T. Schwiegerling, ''Eye Axes and Their Relevance to Alignment of Corneal Refractive Procedures'', Journal of Refractive Surgery, vol 29(8), pp. 515-516, fig. 1-D.}
 
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.7\textwidth]{cap_02_diagram}
-		\caption[Diagrama general de la interfaz hombre-máquina]{Diagrama general de la interfaz hombre-máquina \cite{article:baseInfo}.}
-		\label{fig:02_diagrama_interfaz}
-	\end{figure}
+		En la figura \ref{fig:02_eye_axis} se observa un esquema simplificado del ojo observado desde la parte superior de la cabeza. En ella pueden apreciarse las proyecciones del eje óptico y visual del ojo, que corresponden a líneas imaginarias que van desde el centro de la retina y fóvea respectivemente, pasando por la parte posterior del cristalino y extendiéndose luego a través de la pupila y córnea.  
 
-	En \ref{fig:02_diagrama_interfaz} se pretende explicitar la función del sistema de estimulación - adquisición - registro y los requerimientos del mismo. Así, el software asociado debe ser capaz de manejar la interfaz con el usuario para poder entregar estímulos (visuales principalmente) y recibir las respuestas asociadas (en forma de datos de posicionamiento ocular o respuestas solicitadas por pantalla) de forma tal de agrupar las acciones temporalmente permitiendo de esta forma dar sentido a los datos obtenidos en el experimento. 
+		Los movimientos sacádicos corresponden a las rotaciones que realiza el globo ocular entre dos momentos de posicionamiento estacionario, por tanto se traducen en el consecuente desplazamiento de la pupila. Dichos movimientos pueden ocurrir tanto en el eje horizontal como vertical y se encuentra aún en discusión \cite{article:movOcular2, article:movOcular3} si se entrega información visual en todo momento o solo es relevante al mantener la mirada detenida en alguna posición. Los movimientos sacádicos ocurren en todo momento y pueden estar provocados por procesos cognitivos conscientes o inconscientes. Independientemente de la naturaleza de estos movimientos, ambos generan patrones que permiten la construcción de un mapa mental de la escena observada. La necesidad de redireccionar el eje visual constantantemente para analizar una imagen se relaciona con la idea de que, en el ojo humano, solo la parte central de la retina (\gls{fovea}) se encuentra encargada de la visión en alta resolución, pues presenta una alta concentración de células fotorreceptoras sensibles al color. 
 
-	\newpage
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.5\textwidth]{cap_02_setup}
-		\caption[Setup experimental típico]{Setup experimental típico \cite{article:baseInfo}.}
-		\label{fig:02_ejemplo_setup}
-	\end{figure}
-
-	Para comprender de mejor manera el sistema y sus componentes, se presentará a modo de introducción en este capítulo una descripción de los elementos principales que forman parte del mismo. 
-
-	\section{Sistemas de seguimiento ocular}
-	\label{sec:02_sistemas_de_seguimiento_ocular}
-		\subsection{Movimiento ocular}
-		\label{sub:02_movimiento_ocular}
-
-		La acción de dirigir la mirada hacia un objeto es parte fundamental del proceso de visión. Este acto involucra el direccionamiento de los \gls{ejevisual} hacia un objetivo determinado, permitiendo la realización de análisis visuales precisos. Dicha orientación muchas veces implica movimientos coordinados de los ojos, cuello y cabeza, no obstante, existen movimientos más pequeños que son realizados únicamente por los ojos, conocidos como movimientos sacádicos \cite{article:movOcular1, article:movOcular2}.
-
-		Los movimientos sacádicos corresponden a las rotaciones que realiza el globo ocular entre dos momentos de posicionamiento estacionario, por tanto se traducen en el consecuente desplazamiento de la pupila. Dichos movimientos pueden ocurrir tanto en el eje horizontal como vertical y se encuentra aún en discusión si se entrega información visual en todo momento o solo es relevante al mantener la mirada detenida en alguna posición. Los movimientos sacádicos ocurren en todo momento y pueden estar provocados por procesos cognitivos conscientes o inconscientes, e independientemente de la naturaleza de estos movimientos, ambos generan patrones que permiten la construcción de un mapa mental de la escena observada. La necesidad de redireccionar el eje visual constantantemente para analizar una imagen se corresponde con la idea de que, en el ojo humano, solo la parte central de la retina (fóvea) presenta una alta concentración de células fotorreceptoras sensibles al color y por tanto, se encuentra encargada de la visión en alta resolución. 
+		Existen dos tipos de movimientos sacádicos: Los voluntarios, también conocidos como provocados, que implican control consciente sobre los procesos cognitivos y los reflexivos o automáticos, que corresponden a la respuesta natural a la aparición de un nuevo estímulo visual.
 
 		Las características principales de dichos movimientos son:
 		\begin{enumerate}
-			\item Existen dos tipos de movimientos sacádicos: Los voluntarios, también conocidos como provocados, que implican control consciente sobre los procesos cognitivos y los reflexivos o automáticos, que corresponden a la respuesta natural a la aparición de un nuevo estímulo visual.
-
 			\item Por su naturaleza los movimientos sacádicos se consideran balísticos, lo que quiere decir que la posición de destino no cambia durante el desarrollo del movimiento. Esto puede entenderse también como que el objetivo se encuentra predeterminado en el momento de partida.
 
-			\item La velocidad de las sacadas aumenta de forma no lineal en la medida que aumenta la amplitud de movimento y puede alcanzar magnitudes de hasta $600 - 700[\frac{deg}{s}]$. Además, la duración del movimiento puede fluctuar entre $20 - 120[ms]$, aún que en promedio solo dura de $20-40[ms]$. 
+			\item La velocidad de las sacadas\footnote{Forma de referirse a un movimiento sacádico.} aumenta de forma no lineal en la medida que aumenta la amplitud de movimento y puede alcanzar magnitudes de hasta $600 - 700[\frac{grados}{s}]$. Además, la duración del movimiento puede fluctuar entre $20 - 120[ms]$, aunque en promedio solo dura de $20-40[ms]$. 
 
-			\item La precisión del movimiento sacádico presenta un error que varía entre el $5-10\%$ de la amplitud total del movimiento. Las correcciones son realizadas por desplazamientos de calibración denominados micro-sacadas. Estos métodos correctivos permiten suponer que existe algún tipo de procesamiento paralelo encargado de la calibración ocular de largo plazo \cite{article:movOcular2}.  
+			\item La precisión del movimiento sacádico presenta un error que varía entre el $5-10\%$ de la amplitud total del movimiento. Las correcciones son realizadas por desplazamientos de calibración denominados micro-sacadas, que permiten además realizar tareas que requieren de gran presición visual \cite{article:movOcular4}. Estos métodos correctivos permiten suponer que existe algún tipo de procesamiento paralelo encargado de la calibración ocular de largo plazo \cite{article:movOcular2}.  
 
 		\end{enumerate}
 
-		Las características expuestas entregan, a grandes razgos, nociones que permiten comprender el por qué su estudio se ha vuelto común en campos científicos como la neurociencia: Dado que los movimientos del globo ocular son caracterizables, de patrones definidos y de alta presición es posible identificar mediante ellos enfermedades cuyos síntomas se traduzcan en alteraciones de las capacidades motrices. Un ejemplo de esto es la enfermedad de Parkinson, donde una afección crónica a los ganglios basales produce una reducción progresiva de la sustancia negra lo que se traduce en una producción insuficiente de dopamina, neurotransmisor relevante para la función motora. Esta insuficiencia se traduce en aumentos en los tiempos de respuesta y tasas de error en diversas tareas asociadas a movimiento ocular \cite{article:tests_1, article:tests_2, article:tests_3, article:tests_4} (ver \ref{sub:02_experimentos_de_estimulacion}).    
+		Las características expuestas entregan, a grandes rasgos, nociones que permiten comprender el por qué su estudio se ha vuelto común en campos científicos como la neurociencia: Dado que los movimientos del globo ocular son caracterizables, de patrones definidos y de alta presición es posible identificar mediante ellos enfermedades cuyos síntomas se traduzcan en alteraciones de las capacidades motrices. Un ejemplo de esto es la enfermedad de Parkinson, donde una afección crónica a los ganglios basales produce una reducción progresiva de la sustancia negra lo que se traduce en una producción insuficiente de dopamina, neurotransmisor relevante para la función motora. Esta insuficiencia se traduce en aumentos en los tiempos de respuesta y tasas de error en diversas tareas asociadas a movimiento ocular \cite{article:tests_1, article:tests_2, article:tests_3, article:tests_4} (ver \ref{sub:02_experimentos_de_estimulacion}).    
 
-		\subsection{Métodos de captura}
-		\label{sub:02_metodos_de_captura}
-			\subsubsection{Un poco de historia} 
-			\label{ssub:02_un_poco_de_historia_monitores}
+	% ===============================================================
+	% ===============================================================
+	\subsection{Métodos de captura de movimiento ocular}
+	\label{sub:02_metodos_de_captura}
+		\subsection{Un poco de historia} 
+		\label{sub:02_un_poco_de_historia_monitores}
+		
+		Para poder registrar los movimientos oculares es necesario el uso de equipamiento especializado y que, por su función y sin importar la tecnología utilizada, se denomina por su nombre en inglés: \textit{\gls{eyetracker}}. A modo introductorio se presenta a continuación una pincelada de su desarrollo en la historia \cite{article:eyetracker_eggert, article:eyetracker_richardson}
+
+		La primera aparición de dispositivos de este tipo data de finales del siglo XIX (Delabarre y Hale). Sus primeras versiones consistian en sistemas sumamente invasivos donde alambres finos conectados a una especie de lente de contacto movían una serie de palancas que amplificaban el movimiento y lo registraban en papel. Este método permitió objetivizar las investigaciones de comportamiento existentes. Por su contrucción, dichos dispositivos permitían observar el comportamiento espacial, mas no el temporal. 
+
+		A principios del siglo XX y de la mano de técnicas no invasivas basadas en óptica y reflexión de luz comenzaron a desarrollarse sistemas más parecidos a las tecnologías actuales: La proyección de luz sobre la córnea genera reflejos que se mueven de forma similar a la pupila y por tanto si se hace posible su registro, es posible conocer el movimiento ocular tanto horizontal como vertical, más no rotatorio (Dodge y Cline). Este método revolucionario marcaría los desarrollos futuros en esta área.
+
+		En la década de los 70' y gracias con los avances en sistemas de grabación de video y procesamiento digital se hizo posible detectar electrónicamente características del movimiento en base al contraste existente entre la \gls{esclerotida} y los bordes del iris. Debido a los efectos de sombra producidos por los párpados este método presentaba problemas para detectar movimientos verticales, no obstante, permitía registrar movimiento horizontal con buena calidad. 
+
+		De forma posterior y en base a estos avances iniciales fueron desarrolladas las tecnologías que, cada vez más, permiten obtener información relevante sin producir daño sobre quienes forman parte de los experimentos, reduciendo así las limitantes en este campo de investigación.    
+
+		\subsection{Tecnologías actuales}
+		\label{sub:02_tecnologias_actuales}
+
+			En la actualidad existen una gran gama de tecnologías para registrar movimiento ocular \cite{dissertation:eyetrackers, article:eyetracker_eggert, article:eyetracker_richardson}, no obstante, a continuación se indican las más relevantes: 
+			\begin{enumerate}
+				\item \textbf{Bobina escleral magnética (\acrshort{ssc}):} Esta técnica requiere del uso de lentes de contacto de gran tamaño directamente sobre el globo ocular. Dicho lente posee dos pequeñas bobinas de alambre que, al ser alineadas con el eje de visión e inducidas por campos electromagnéticos externos de alta frecuencia, permiten obtener información sobre la dirección en la que se encuentra el ojo en forma de voltaje. A pesar de la gran incomodidad que producen (ver figura \ref{fig:02_et_ssc}), esta técnica es una de las más precisas y exactas. 
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.35\textwidth]{cap_02_et_ssg}
+					\caption[Ejemplo de uso de SSG]{Ejemplo de uso de SSG\footnotemark.}
+					\label{fig:02_et_ssc}
+				\end{figure}
+				\footnotetext{Fuente imagen: \url{http://www.dizziness-and-balance.com/practice/default.htm}}
+
+				\item \textbf{Electro-OculoGrafía (\acrshort{eog}):} Este método de seguimiento ocular permite determinar la dirección en la que se encuentra direccionado el ojo en base a la medición de diferencias de potencial eléctrico en la piel. En la medida que el ojo rota, el dipolo producido por la córnea y la retina cambia su orientación, lo que se ve reflejado en los potenciales de las zonas aledañas. Sus ventajas principales, además del bajo costo, son la capacidad de medir el movimiento ocular incluso aunque los ojos se encuentren cerrados (lo que hace de este método una herramienta interesante en caso de estudio de sueño) y que las mediciones son relativas a la posición de la cabeza. No obstante lo anterior, la precisión y exactitud de las mediciones obtenidas es baja ya que se encuentran sujetas a artefactos como el movimiento de los párpados. La figura \ref{fig:02_et_eog} muestra el posicionamiento típico de los electrodos en este tipo de \textit{setup}. 
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.9\textwidth]{cap_02_et_eog}
+					\caption[Ejemplo de posicionamiento de electrodos para EOG]{Ejemplo de posicionamiento de electrodos para EOG\footnotemark.}
+					\label{fig:02_et_eog}
+				\end{figure}
+				\footnotetext{Fuente imagen: \url{http://sbiwiki.cns.ki.se/mediawiki/index.php/Natmeg/checklist_MEG_preparation}}
+
+				\item \textbf{Seguimiento ocular basado en video (\acrshort{vog}):} Este método de seguimiento ocular es el más popular en la actualidad. Consiste en capturar, con una o más cámaras, la actividad ocular y mediante procesamiento de imágenes determinar en que dirección se encuentra orientada la mirada. El procesamiento puede ser dividido en dos etapas principales: en la primera se detecta y localiza el ojo en la imagen, para lo que típicamente se utiliza la pupila o el iris y la segunda etapa corresponde al proceso por el cual se estima hacia donde se encuentra dirigido. 
+
+				Dentro de las técnicas VOG existentes la más utilizada corresponde a la estimación mediante reflexión corneal (con una fuente de luz típicamente infrarroja (\acrshort{ir})) y detección de pupila. Los focos de luz se ubican de forma que siempre se encuentren en la misma posición respecto del ojo, con lo cual la reflexión se mantiene virtualmente siempre en el mismo lugar. De esta forma la estimación se genera en base a la diferencia entre la ubicación de centro de la pupila y la posición de la reflexión.  
+
+				El principio de funcionamiento asociado a este método se basa en las imagenes de Purkinje-Sanson que describen la existencia de al menos 4 reflexiones de luz producidas por la córnea y el cristalino (figura \ref{fig:02_et_vog1} (a)) que pueden ser utilizadas como referencia para estimar el direccionamiento del ojo. En la figura \ref{fig:02_et_vog1} (b) es posible observar la primera reflexión de purkinje en relación a distintas posiciones de la pupila. 
+				\begin{figure}[H]
+					\centering
+					\subfloat[Reflexiones de Purkije-Sanson]{\includegraphics[width=0.3\textwidth]{cap_02_et_vog1}}\hspace{5mm}
+					\subfloat[Posición de la reflexión P1 relativa al centro de la pupila.]{\includegraphics[width=0.55\textwidth]{cap_02_et_vog2}}
+					\caption[Principio de detección VOG en base a reflexión de luz]{Principio de detección VOG en base a reflexión de luz\cite{dissertation:eyetrackers}.}
+					\label{fig:02_et_vog1}
+				\end{figure}
+
+				La presentación de estos dispositivos es variada y van desde cascos y lentes hasta trípodes y columnas donde se integran un elemento apoya-baribilla y el \textit{eye tracker}. En la figura \ref{fig:02_et_vog2} se muestra un par a modo de referencia. 
+				\begin{figure}[H]
+					\centering
+					\subfloat[Tobii Pro Glasses 2]{\includegraphics[width=0.4\textwidth]{cap_02_et_vog_1}}\hspace{5mm}
+					\subfloat[MiraMetrix S2]{\includegraphics[width=0.4\textwidth]{cap_02_et_vog_2}}
+					\caption[Muestra de \textit{eye trackers} disponibles en el mercado con tecnología VOG basados en reflexión de luz \acrshort{ir}]{Muestra de \textit{eye trackers} disponibles en el mercado con tecnología VOG basados en reflexión de luz \acrshort{ir}\footnotemark.}
+					\label{fig:02_et_vog2}
+				\end{figure}
+				\footnotetext{Fuente imagen: \url{https://www.tobii.com/} y \url{https://www.microway.com.au/} respectivamente.}
+
+			\end{enumerate}
+
+		\subsection{Comparativa}
+		\label{sub:02_comparativa_eyetracker}
+
+			A pesar de las claras e importantes diferencias entre las tecnologías presentadas es posible realizar una comparación entre las mismas. En la literatura consultada \cite{dissertation:eyetrackers, article:eyetracker_eggert, article:eyetracker_richardson} se entregan nociones sobre las capacidades operativas en cuanto a presición espacial, temporal, capacidad de registrar movimientos de torsión, desplazamiento horizontal y vertical, tiempo requerido para preparar su uso (\textit{setup}), comodidad para el usuario tipo de calibración requerida y complejidad de la misma. 
+
+			En el cuadro \ref{tbl:eyetracker_compare} se presenta un resumen con las características ya descritas para EOG, SSG, VOG (común) y DPI (VOG de gama alta utilizando distintas reflexiones de Purkinje). 
 			
-			Para poder registrar los movimientos oculares es necesario el uso de equipamiento especializado y que, por su función y sin importar la tecnología utilizada, se denomina por su nombre en inglés: \gls{eyetracker}. A modo introductorio se presenta a continuación una pincelada de su desarrollo en la historia \cite{article:eyetracker_eggert, article:eyetracker_richardson}
+			\begin{table}[H]\begin{center}\footnotesize{
+				\singlespacing{\begin{tabular}{| C{0.18\textwidth} | C{0.18\textwidth} | C{0.18\textwidth} | C{0.18\textwidth} | C{0.18\textwidth}|}
+					\hline
+					 & EOG & SSG & VOG & DPI \\ \hline
+					Precisión espacial (grados)	& $\approx 0.5$ & $\approx 0.01$ & $\approx 0.05$ & $\approx 0.017$\\ \hline
+					Precisión temporal (Hz) 	& $40$ & $500$ & $50-400$ & $500-1000$\\ \hline
+					Registro de mov. verticales	& Es posible pero se encuentran sujetos a error por efecto de artefactos producidos por el párpado & Si & Si & Si \\ \hline
+					Registro de torsión			& No & Si & Si & Si \\ \hline
+					Tiempo de \textit{setup}		& Lento debido a que requiere la utilización de electrodos & Lento & Rápido & Rápido \\ \hline
+					Requiere calibración por enfoque & Si & No & Si & Si \\ \hline
+					Complejidad de calibración	& Requiere configuración bitemporal & La no-linealidad puede ser compensada con un modelo basado en ajuste de parámetros & Buena linealidad & Buena linealidad \\ \hline
+					Invasividad 				& Electrodos cercanos al ojo (sin contacto), no afecta el campo visual & Lentes de contacto, posibles efectos negativos en precisión visual, incomodidad & Aparato montado en la cabeza (sin contacto con los ojos), limitación moderada del campo visual & Cabeza inmovilizada en un soporte de barbilla, limitación moderada del campo visual \\ \hline
+				\end{tabular}}
+				\caption[Comparativa de los sistemas de adquisición encontrados]{Comparativa de los sistemas de adquisición encontrados en \cite{dissertation:eyetrackers, article:eyetracker_eggert, article:eyetracker_richardson}}
+				\label{tbl:eyetracker_compare}
+			}\end{center}\end{table}	
 
-			La primera aparición de dispositivos de este tipo data de finales del siglo XIX (Delabarre y Hale). Sus primeras versiones consistian en sistemas sumamente invasivos donde alambres finos conectados a una especie de lente de contacto movían una serie de palancas que amplificaban el movimiento y lo registraban en papel. Este método permitió objetivizar las investigaciones de comportamiento existentes. Por su contrucción, dichos dispositivos permitían observar el comportamiento espacial, más no el temporal. 
-
-			A principios del siglo XX y de la mano de técnicas no invasivas basadas en óptica y reflexión de luz comenzaron a desarrollarse sistemas más parecidos a las tecnologías actuales: La proyección de luz sobre la córnea genera reflejos que se mueven de forma similar a la pupila y por tanto si se hace posible su registro, es posible conocer el movimiento ocular tanto horizontal como vertical, más no rotatorio (Dodge y Cline). Este método revolucionario marcaría los desarrollos futuros en esta área.
-
-			En la década de los 70' y gracias con los avances en sistemas de grabación de video y procesamiento digital se hizo posible detectar electrónicamente características del movimiento en base al contraste existente entre la \gls{esclerotida} y los bordes del iris. Debido a los efectos de sombra producidos por los párpados este método presentaba problemas para detectar movimientos verticales, no obstante, permitía registrar movimiento horizontal con buena calidad. 
-
-			De forma posterior y en base a estos avances iniciales fueron desarrolladas las tecnologías que, cada vez más, permiten obtener información relevante sin producir daño sobre quienes forman parte de los experimentos, reduciendo así las limitantes en este campo de investigación.    
-
-			\subsubsection{Tecnologías actuales}
-			\label{ssub:02_tecnologias_actuales}
-
-				En la actualidad existen una gran gama de tecnologías para registrar movimiento ocular \cite{article:eyetracker_eggert, article:eyetracker_richardson, dissertation:eyetrackers}, no obstante, a continuación se indican las más relevantes: 
-				\begin{enumerate}
-					\item \textbf{Bobina escleral magnética (\acrshort{ssc}):} Esta técnica requiere del uso de lentes de contacto de gran tamaño directamente sobre el globo ocular. Dicho lente posee dos pequeñas bobinas de alambre que, al ser alineadas con el eje de visión e inducidas por campos electromagnéticos externos de alta frecuencia, permiten obtener información sobre la dirección en la que se encuentra el ojo en forma de voltaje. A pesar de la gran incomodidad que producen (ver figura \ref{fig:02_et_ssc}), esta técnica es una de las más precisas y exactas. 
-					\begin{figure}[H]
-						\centering
-						\includegraphics[width=0.35\textwidth]{cap_02_et_ssg}
-						\caption[Ejemplo de uso de SSG]{Ejemplo de uso de SSG\footnotemark.}
-						\label{fig:02_et_ssc}
-					\end{figure}
-					\footnotetext{Imagen obtenida desde \url{http://www.dizziness-and-balance.com/practice/default.htm}}
-
-					\item \textbf{Electro-OculoGrafía (\acrshort{eog}):} Este método de seguimiento ocular permite determinar la dirección en la que se encuentra direccionado el ojo en base a la medición de diferencias de potencial eléctrico en la piel. En la medida que el ojo rota, el dipolo producido por la córnea y la retina cambia su orientación, lo que se ve reflejado en los potenciales de las zonas aledañas. Sus ventajas principales, además del bajo costo, son la capacidad de medir el movimiento ocular incluso aunque los ojos se encuentren cerrados (lo que hace de este método una herramienta interesante en caso de estudio de sueño) y que las mediciones son relativas a la posición de la cabeza. No obstante lo anterior, la precisión y exactitud de las mediciones obtenidas es baja ya que se encuentran sujetas a artefactos como el movimiento de los párpados. La figura \ref{fig:02_et_eog} muestra el posicionamiento típico de los electrodos en este tipo de setup. 
-					\begin{figure}[H]
-						\centering
-						\includegraphics[width=0.9\textwidth]{cap_02_et_eog}
-						\caption[Ejemplo de posicionamiento de electrodos para EOG]{Ejemplo de posicionamiento de electrodos para EOG\footnotemark.}
-						\label{fig:02_et_eog}
-					\end{figure}
-					\footnotetext{Imagen obtenida desde \url{http://sbiwiki.cns.ki.se/mediawiki/index.php/Natmeg/checklist_MEG_preparation}}
-
-					\item \textbf{Seguimiento ocular basado en video (\acrshort{vog}):} Este método de seguimiento ocular es el más popular en la actualidad. Consiste en capturar, con una o más cámaras, la actividad ocular y mediante procesamiento de imágenes determinar en que dirección se encuentra orientada la mirada. El procesamiento puede ser dividido en dos etapas principales: en la primera se detecta y localiza el ojo en la imagen, para lo que típicamente se utiliza la pupila o el iris y la segunda etapa corresponde al proceso por el cual se estima hacia donde se encuentra dirigido. 
-
-					Dentro de las técnicas VOG existentes la más utilizada corresponde a la estimación mediante reflexión corneal (con una fuente de luz típicamente infrarroja (\acrshort{ir})) y detección de pupila. Los focos de luz se ubican de forma que siempre se encuentren en la misma posición respecto del ojo, con lo cual la reflexión se mantiene virtualmente siempre en el mismo lugar. De esta forma la estimación se genera en base a la diferencia entre la ubicación de centro de la pupila y la posición de la reflexión.  
-
-					El principio de funcionamiento asociado a este método se basa en las imagenes de Purkinje-Sanson que describen la existencia de al menos 4 reflexiones de luz producidas por la córnea y el cristalino (figura \ref{fig:02_et_vog1} (a)) que pueden ser utilizadas como referencia para estimar el direccionamiento del ojo. En la figura \ref{fig:02_et_vog1} (b) es posible observar la primera reflexión de purkinje en relación a distintas posiciones de la pupila. 
-					\begin{figure}[H]
-						\centering
-						\subfloat[Reflexiones de Purkije-Sanson]{\includegraphics[width=0.3\textwidth]{cap_02_et_vog1}}\hspace{5mm}
-						\subfloat[Posición de la reflexión P1 relativa al centro de la pupila.]{\includegraphics[width=0.55\textwidth]{cap_02_et_vog2}}
-						\caption[Principio de detección VOG en base a reflexión de luz]{Principio de detección VOG en base a reflexión de luz\cite{dissertation:eyetrackers}.}
-						\label{fig:02_et_vog1}
-					\end{figure}
-
-					La presentación de estos dispositivos es variada y van desde cascos y lentes hasta trípodes y columnas donde se integran un elemento apoya-baribilla y el eye tracker. En la figura \ref{fig:02_et_vog2} se muestra un par a modo de referencia. 
-					\begin{figure}[H]
-						\centering
-						\subfloat[Tobii Pro Glasses 2]{\includegraphics[width=0.4\textwidth]{cap_02_et_vog_1}}\hspace{5mm}
-						\subfloat[MiraMetrix S2]{\includegraphics[width=0.4\textwidth]{cap_02_et_vog_2}}
-						\caption[Muestra de eye trackers disponibles en el mercado con tecnología VOG basados en reflexión de luz \acrshort{ir}]{Muestra de eye trackers disponibles en el mercado con tecnología VOG basados en reflexión de luz \acrshort{ir}\footnotemark.}
-						\label{fig:02_et_vog2}
-					\end{figure}
-					\footnotetext{Imágenes obtenidas desde \url{https://www.tobii.com/} y \url{https://www.microway.com.au/} respectivamente.}
-
-				\end{enumerate}
-
-			\subsubsection{Comparativa}
-			\label{ssub:02_comparativa_eyetracker}
-
-				A pesar de las claras e importantes diferencias entre las tecnologías presentadas es posible realizar una comparación entre las mismas. En \cite{article:eyetracker_eggert, article:eyetracker_richardson, dissertation:eyetrackers} se entregan nociones sobre las capacidades operativas en cuanto a presición espacial, temporal, capacidad de registrar movimientos de torsión, desplazamiento horizontal y vertical, tiempo requerido para preparar su uso (setup), comodidad para el usuario tipo de calibración requerida y complejidad de la misma. 
-
-				En el cuadro \ref{tbl:eyetracker_compare} se presenta un resumen con las características ya descritas para EOG, SSG, VOG (común) y DPI (VOG de gama alta utilizando distintas reflexiones de Purkinje). 
-				
-				\begin{table}[H]\begin{center}\footnotesize{
-					\singlespacing{\begin{tabular}{| C{0.18\textwidth} | C{0.18\textwidth} | C{0.18\textwidth} | C{0.18\textwidth} | C{0.18\textwidth}|}
-						\hline
-						 & EOG & SSG & VOG & DPI \\ \hline
-						Precisión espacial (grados)	& $\approx 0.5$ & $\approx 0.01$ & $\approx 0.05$ & $\approx 0.017$\\ \hline
-						Precisión temporal (Hz) 	& $40$ & $500$ & $50-400$ & $500-1000$\\ \hline
-						Registro de mov. verticales	& Es posible pero se encuentran sujetos a error por efecto de artefactos producidos por el párpado & Si & Si & Si \\ \hline
-						Registro de torsión			& No & Si & Si & Si \\ \hline
-						Tiempo de setup				& Lento debido a que requiere la utilización de electrodos & Lento & Rápido & Rápido \\ \hline
-						Requiere calibración por enfoque & Si & No & Si & Si \\ \hline
-						Complejidad de calibración	& Requiere configuración bitemporal & La no-linealidad puede ser compensada con un modelo basado en ajuste de parámetros & Buena linealidad & Buena linealidad \\ \hline
-						Invasividad 				& Electrodos cercanos al ojo (sin contacto), no afecta el campo visual & Lentes de contacto, posibles efectos negativos en precisión visual, incomodidad & Aparato montado en la cabeza (sin contacto con los ojos), limitación moderada del campo visual & Cabeza inmovilizada en un soporte de barbilla, limitación moderada del campo visual \\ \hline
-					\end{tabular}}
-					\caption[Comparativa de los sistemas de adquisición encontrados]{Comparativa de los sistemas de adquisición encontrados en \cite{article:eyetracker_eggert, article:eyetracker_richardson, dissertation:eyetrackers}}
-					\label{tbl:eyetracker_compare}
-				}\end{center}\end{table}
-
-	\section{Sistemas de estimulación visual}
+	% ===============================================================
+	% ===============================================================
+	\section{Métodos de estimulación visual}
 	\label{sec:02_sistemas_de_estimulacion_visual}
 		\subsection{Hardware de estimulación}
 		\label{sub:02_hardware_de_estimulacion}
@@ -164,7 +155,7 @@
 		\subsection{Software de estimulación}
 		\label{sub:02_software_de_estimulacion}
 
-			Tal como se indicó en el apartado anterior la generación de estímulos es una pieza clave en la realización de experimentos ya que permiten preparar un escenario adhoc para la obtención de datos específicos. En \cite{website:software} es posible encontrar una larga lista de software especializado para el desarrollo de experimentos en el área de la psicofísica además de referencias e información sobre sus características. A modo de resumen se presenta en el cuadro \ref{tbl:systems_compare} una comparación entre las aplicaciones más citadas de la página (según número de citas encontradas en google scholar).  
+			Tal como se indicó en el apartado anterior la generación de estímulos es una pieza clave en la realización de experimentos ya que permiten preparar un escenario adhoc para la obtención de datos específicos. En el sitio web de Hans Strasburger \cite{website:software} es posible encontrar una larga lista de software especializado para el desarrollo de experimentos en el área de la psicofísica además de referencias e información sobre sus características. A modo de resumen se presenta en el cuadro \ref{tbl:systems_compare} una comparación entre algunas de las aplicaciones indicadas en la página\footnote{Esta selección fue realizada en base al número de citas para cada aplicación en Google Scholar.}.  
 
 			\begin{table}[H]\begin{center}\footnotesize{
 					\singlespacing{\begin{tabular}{| C{0.2\textwidth} | C{0.16\textwidth} | C{0.16\textwidth} | C{0.16\textwidth} | C{0.16\textwidth} |}
@@ -178,7 +169,7 @@
 					Programable 					& \multicolumn{4}{c|}{Si}\\\hline
 					Imágenes y Video 				& \multicolumn{4}{c|}{Si}\\\hline
 					Sonido 							& \multicolumn{4}{c|}{Si}\\\hline
-					Soporte para Eye trackers incluido 	& Si 		& No 		& Si 		& Si\\\hline
+					Soporte para \textit{Eye trackers} incluido 	& Si 		& No 		& Si 		& Si\\\hline
 					Capacidad para registro de data 	& Si 		& No 		& Si 		& Si\\\hline
 					Documentación/Foro disponible 			& Si 		& No (Link caído) & Si 	& Si\\\hline
 				\end{tabular}}
@@ -245,6 +236,32 @@
 					\caption{Tarea guiada por memoria.}
 					\label{fig:02_memory}
 				\end{figure} 
-		 
+	
+	% ===============================================================
+	% ===============================================================
+	\section{Sistemas de estimulación y registro visual}
+	\label{sec:02_sistemas_de_estimulacion_registro_visual}
 
+		A continuación se muestran los elementos principales requeridos para la configuración y puesta en marcha de un sistema de estimulación visual y registro de movimiento ocular según lo propuesto por Scott MacKenzie en \cite{article:baseInfo}. 
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.5\textwidth]{cap_02_setup}
+			\caption[\textit{Setup} experimental típico]{\textit{Setup} experimental típico \cite{article:baseInfo}.}
+			\label{fig:02_ejemplo_setup}
+		\end{figure}
+
+		En la figura \ref{fig:02_ejemplo_setup} se presenta a modo de ejemplo un \textit{setup} típico en estudios de movimiento ocular. RELLENAR!
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\textwidth]{cap_02_diagram}
+			\caption[Diagrama general de la interfaz hombre-máquina]{Diagrama general de la interfaz hombre-máquina \cite{article:baseInfo}.}
+			\label{fig:02_diagrama_interfaz}
+		\end{figure}
+
+		En la figura \ref{fig:02_diagrama_interfaz} se pretende explicitar la función del sistema de estimulación - adquisición - registro y los requerimientos del mismo. El software asociado al sistema debe ser capaz de manejar la interfaz con el usuario para poder entregar estímulos (visuales principalmente) y recibir las respuestas asociadas (en forma de datos de posicionamiento ocular o respuestas solicitadas por pantalla) de forma de agrupar las acciones temporalmente, permitiendo de esta forma dar sentido a los datos obtenidos en el experimento. 
+
+	% ===============================================================
+	% ===============================================================
 \end{document}

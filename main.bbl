@@ -21,12 +21,6 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{article:baseInfo}
-I.~S. MacKenzie, ``Evaluating eye tracking systems for computer input,'' in
-  \emph{Gaze Interaction and Applications of Eye Tracking: Advances in
-  Assistive Technologies}, P.~Majaranta~[et al]., Ed.\hskip 1em plus 0.5em
-  minus 0.4em\relax Hershey, PA: IGI Global, 2011, ch.~15, pp. 205--225.
-
 \bibitem{article:movOcular1}
 K.~R. Gegenfurtner, ``The interaction between vision and eye movements,''
   \emph{Perception}, vol. 45(12), pp. 1333--1357, 2016.
@@ -34,6 +28,15 @@ K.~R. Gegenfurtner, ``The interaction between vision and eye movements,''
 \bibitem{article:movOcular2}
 J.~Findlay and R.~Walker, ``Human saccadic eye movements,''
   \emph{Scholarpedia}, vol. 7(7):5095, 2012.
+
+\bibitem{article:movOcular3}
+M.~Rucci and M.~Poletti, ``Control and functions of fixational eye movements,''
+  \emph{Annual Review of Vision Science}, vol.~1, pp. 499--518, 2015.
+
+\bibitem{article:movOcular4}
+H.-k. Ko, M.~Poletti, and M.~Rucci, ``Microsaccades precisely relocate gaze in
+  a high visual acuity task,'' \emph{Nature Neuroscience}, vol.~13, pp.
+  1549--1553, 2010.
 
 \bibitem{article:tests_1}
 C.~J. Luek~[et al], ``Antisaccades and remembered saccades in parkinson's
@@ -61,6 +64,19 @@ T.~Eggert, ``Eye movement recordings: methods,'' \emph{Neuro-Ophthalmology},
 D.~C. Richardson and M.~J. Spivet, ``Eye tracking: Characteristics and
   methods,'' \emph{Encyclopedia of biomaterials and biomedical engineering},
   vol.~3, p. 1028–1042, 2004.
+
+\bibitem{article:eyetracker_hist1}
+E.~B. Delabarre, ``A method of recording eye movements,'' \emph{American
+  Journal of Psychology}, vol. 9(4), pp. 572--574, 1898.
+
+\bibitem{article:eyetracker_hist2}
+E.~B. Huey, ``Preliminary experiments in the physiology and psychology of
+  reading,'' \emph{American Journal of Psychology}, vol. 9(4), pp. 575--586,
+  1898.
+
+\bibitem{article:eyetracker_hist3}
+R.~Dodge and T.~S. Cline, ``The angle velocity of eye movements,''
+  \emph{Psychological Review}, vol.~8, pp. 145--157, 1901.
 
 \bibitem{dissertation:eyetrackers}
 G.~Rakoczi, ``Analysis of eye movements in the context of e-learning,
@@ -112,6 +128,12 @@ M.~Kleiner, ``Psychtoolbox,'' [consulta: 13 junio 2017]. [Online]. Available:
 A.~D. Straw, ``Vission egg,'' [consulta: 13 junio 2017]. [Online]. Available:
   \url{https://visionegg.readthedocs.io/en/latest/index.html}
 \BIBentrySTDinterwordspacing
+
+\bibitem{article:baseInfo}
+I.~S. MacKenzie, ``Evaluating eye tracking systems for computer input,'' in
+  \emph{Gaze Interaction and Applications of Eye Tracking: Advances in
+  Assistive Technologies}, P.~Majaranta~[et al]., Ed.\hskip 1em plus 0.5em
+  minus 0.4em\relax Hershey, PA: IGI Global, 2011, ch.~15, pp. 205--225.
 
 \bibitem{psychopy}
 J.~Pierce, ``Generating stimuli for neuroscience using psychopy,''

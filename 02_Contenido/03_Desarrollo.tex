@@ -18,11 +18,11 @@
 		\singlespacing{
 		\begin{tabular}{| C{0.11\textwidth} | C{0.14\textwidth} | R{0.18\textwidth} L{0.5\textwidth} |} \hline
 			\multirow{7}{*}{Hardware} 	& \multirow{4}{*}{PC} 			& Procesador: 		& Intel Core i7-3770 \\
-									& 							& Memoria RAM:		& 16.0GB, DDR3, 650MHz \\
-									& 							& Disco duro: 		& Samsung SSD, 840 Series, 120GB \\
-									& 							& Tarjeta gráfica: 	& NVIDIA GeForce GTX 660 Ti, 2GB \\ \cline{2-4}
-									& \multirow{2}{*}{Monitores} 	& Principal:			& Samsung SyncMaster, 1680x1050px, 60Hz \\ 
-									& 							& Secundario: 		& Samsung SyncMaster, 1680x1050px, 60Hz \\ \cline{2-4}
+									& 							& Memoria RAM:		& $16.0[GB]$, DDR3, $650[MHz]$ \\
+									& 							& Disco duro: 		& Samsung SSD, 840 Series, $120[GB]$ \\
+									& 							& Tarjeta gráfica: 	& NVIDIA GeForce GTX 660 Ti, $2[GB]$ \\ \cline{2-4}
+									& \multirow{2}{*}{Monitores}& Principal:		& Samsung SyncMaster, $1680\times1050[px]$, $60[Hz]$ \\ 
+									& 							& Secundario: 		& Samsung SyncMaster, $1680\times1050[px]$, $60[Hz]$ \\ \cline{2-4}
 									& Adquisición 				& \textit{Eye tracker}: 		& EyeTribe \\ \hline
 			\multirow{4}{*}{Software} 	& \multirow{2}{*}{Entorno} 		& SO:				& Windows 10 Pro x64 \\ 
 									& 							& Base:				& Python 2.7 x86, Anaconda \\ \cline{2-4}
@@ -40,7 +40,7 @@
 
 		\item Los desafíos del sistema a implementar requieren del uso de un lenguaje orientado a objetos. A pesar de las bondades de Octave o Matlab en procesamiento y acceso a módulos complementarios estos entornos carecen de buen soporte para este tipo de programación, por este motivo se utiliza Python como lenguaje de desarrollo. 
 
-		\item Dentro de las opciones disponibles PsychoPy resulta sumamente interesante. Cumple con ser open-source, es ampliamente utilizado por investigadores, presenta documentación detallada y clara para todas sus funciones y los foros se encuentran activos. Otro punto interesante es que entrega soporte para varias marcas de \textit{eye tracker}, entre los cuales se encentra el seleccionados.
+		\item Dentro de las opciones disponibles PsychoPy resulta sumamente interesante. Cumple con ser open-source, es ampliamente utilizado por investigadores, presenta documentación detallada y clara para todas sus funciones y los foros se encuentran activos. Otro punto interesante es que entrega soporte para varias marcas de \textit{eye tracker}, entre los cuales se encentra el seleccionado.
 
 	\end{enumerate}
 
@@ -60,9 +60,9 @@
 
 		En base a lo anterior, se propone como solución el uso de una base de datos local de tipo SQLite con la estructura presentada en la figura \ref{fig:03_database}. A continuación se comenta el contenido de cada tabla y su función:
 		\begin{enumerate}
-			\item \textbf{master:} Almacena la información asociada a un perfil de configuración del hardware a utilizar. Cada perfil es identificado con un nombre e indica qué pantalla será utilizada (screen), cual es la configuración de dicha pantalla (monitor, se define en un aplicativo de PsychoPy), que \textit{eye tracker} se utilizará (tracker) y en que directorio se almacenará el archivo resultante.
+			\item \textbf{master:} Almacena la información asociada a un perfil de configuración del hardware a utilizar. Cada perfil es identificado con un nombre e indica qué pantalla será utilizada (screen), cuál es la configuración de dicha pantalla (monitor, se define en un aplicativo de PsychoPy), qué \textit{eye tracker} se utilizará (tracker) y en qué directorio se almacenará el archivo resultante.
 
-			\item \textbf{experiment:} Almacena la información de identificación de un experimento. Cada experimento se identifica por un código único (code) y un par nombre/versión (name/version), que tiene como objetivo identificar a una aplicación específica de una familia de el mismo tipo, por ejemplo: ''antisaccade''/''v1.0\_gap''. Además, se incluye un campo para la descripción, instrucciones para el usuario (instructions) y comentarios para quien tome el experimento (comments). Se incluyen la fecha de creación y la última modificación para dejar de forma explícita una señal de cuidado: Las condiciones del experimento pueden no ser las mismas de la última ejecución.
+			\item \textbf{experiment:} Almacena la información de identificación de un experimento. Cada experimento se identifica por un código único (code) y un par nombre/versión (name/version), que tiene como objetivo identificar a una aplicación específica de una familia del mismo tipo, por ejemplo: ''antisaccade''/''v1.0\_gap''. Además, se incluye un campo para la descripción, instrucciones para el usuario (instructions) y comentarios para quien tome el experimento (comments). Se incluyen la fecha de creación y la última modificación para dejar de forma explícita una señal de cuidado: Las condiciones del experimento pueden no ser las mismas de la última ejecución.
 			
 			\item \textbf{exp\_configuration:} Esta tabla es complementaria al experimento y almacena la configuración general de ejecución. \textquestiondown Es necesario que el paciente presione la tecla espacio antes de cada tarea? (need\_space), \textquestiondown El orden de las tareas es aleatorio o secuencial? (is\_random), \textquestiondown Se incluyen en el experimento tiempos de descanso? (is\_rest), \textquestiondown Cada cuántas tareas? (rest\_period), \textquestiondown Con qué duración? (rest\_time).
 
@@ -72,7 +72,7 @@
 
 			\item \textbf{frame:} Esta tabla contiene, para cada tarea, el conjunto de cuadros que la conforman. Cada cuadro se identifica por un nombre (name) y permite la configuración de su comportamiento y características de forma general: color de fondo (color), si el cuadro corresponde a una tarea que requiere respuesta de teclado o es temporizada (is\_task), las teclas habilitadas (keys\_allowed), las teclas que se espera sean presionadas (keys\_selected) y el tiempo por el cual debe ser presentada (time).
 
-			\item \textbf{component:} Esta tabla contiene, para cada frame, el conjunto de componentes o elementos que la conforman. Cada componente se identifica por un nombre (name) y las configuraciones asociadas a las unidades de medida consideradas (units), su posición en la pantalla (pos\_x, pos\_y), su tamaño (size), si se encuentra rotada o no (orientation), si es una figura, su forma (shape) y color (color) o si es una imagen el binario correspondiente (image). 
+			\item \textbf{component:} Esta tabla contiene, para cada cuadro, el conjunto de componentes o elementos que la conforman. Cada componente se identifica por un nombre (name) y las configuraciones asociadas a las unidades de medida consideradas (units), su posición en la pantalla (pos\_x, pos\_y), su tamaño (size), si se encuentra rotada o no (orientation), si es una figura, su forma (shape) y color (color) o si es una imagen el binario correspondiente (image). 
 		\end{enumerate}
 
 		Este modelo se considera apropiado por los siguientes motivos:
@@ -98,7 +98,7 @@
 
 		Para esto, es necesario entregar tres insumos: la configuración de los dispositivos que serán monitorizados por ioHub, la configuración general del experimento (identificadores, descripción y los elementos que conforman las ventanas de diálogo) y la configuración de los elementos asociados a la presentación de estímulo (que se conforman por otras rutinas de PsychoPy).
 
-		En la figura \ref{fig:03_base_class_tree} se presenta la estructura de clases implementada en este trabajo de título. Las clases Master, Experiment, Test, Frame y Component representan el conjunto de funciones que permiten manejar la configuración almacenada en las respectivas tablas de la base de datos además de otorgar otras funcionalidades que se enfocan en la ejecución del experimento propiamente tal. Debido a que Experiment, Test y Frame implican el manejo de una lista de componentes, estas son creadas como clases que heredan las funcionalidades básicas para el manejo de listas como el agregar, copiar o eliminar elementos, cambiar suu posición en la lista, etc. La clase utils implementa métodos de formateo de datos, tales como la conversión de strings a formato unicode o el formateo de fechas. SaccadeDB otorga funcionalidades que permiten comunicarse con el archivo de base de datos. Finalmente, la clase ExperimentHandler es la encargada de generar crear las carpetas de almacenamiento, los archivos de respaldo, los logs de configuración y la inicialización de la ejecución del experimento, que es implementado en la clase ExperimentRuntime (que hereda de ioHub e inicia el servicio asociado). La clase Switch implementa una estructura similar a un switch-case con el fin de utilizar una máquina de estados que regule la carga de frames durante la ejecución.  
+		En la figura \ref{fig:03_base_class_tree} se presenta la estructura de clases implementada en este trabajo de título. Las clases Master, Experiment, Test, Frame y Component representan el conjunto de funciones que permiten manejar la configuración almacenada en las respectivas tablas de la base de datos además de otorgar otras funcionalidades que se enfocan en la ejecución del experimento propiamente tal. Debido a que Experiment, Test y Frame implican el manejo de una lista de componentes, estas son creadas como clases que heredan las funcionalidades básicas para el manejo de listas como el agregar, copiar o eliminar elementos, cambiar su posición en la lista, etc. La clase utils implementa métodos de formateo de datos, tales como la conversión de strings a formato unicode o el formateo de fechas. SaccadeDB otorga funcionalidades que permiten comunicarse con el archivo de base de datos. Finalmente, la clase ExperimentHandler es la encargada de generar crear las carpetas de almacenamiento, los archivos de respaldo, los logs de configuración y la inicialización de la ejecución del experimento, que es implementado en la clase ExperimentRuntime (que hereda de ioHub e inicia el servicio asociado). La clase Switch implementa una estructura similar a un switch-case con el fin de utilizar una máquina de estados que regule la carga de frames durante la ejecución.  
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=0.6\textwidth]{cap_03_base_class_tree}
@@ -198,7 +198,7 @@
 					% ===============================================
 					\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{connect}}}\\\multicolumn{3}{|c|}{}\\\hline
 					Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-					Método que inicia una conexión con el archivo de base de datos. Si el archivo de base de datos epecificado en el constructor no existe, crea uno nuevo utilizando las configuraciones especificadas en \ref{appendix_sql_script}.
+					Método que inicia una conexión con el archivo de base de datos. Si el archivo de base de datos epecificado en el constructor no existe, crea uno nuevo utilizando las configuraciones por defecto.
 					}\\\hline
 					Inputs 					& void. 	&  
 					\\\hline

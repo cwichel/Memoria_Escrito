@@ -10,14 +10,27 @@
 \begin{document}
 \chapter{Resultados}
 \label{cha:04_resultados}
-	Con el avance actual del proyecto de título es posible:
-	\begin{enumerate}\setlength\itemsep{-0.2em}
-		\item Configurar un perfil de hardware que permita la ejecución de un experimento. 
+	respecto del objetivo>:
+		1) Es posible configurar y almacenar [referencia a código de ejemplo de configuración y screenshot de los datos almacenados en la tabla]:
+			- Configuración del sistema en donde se ejecutará el experimento :
+				* Eye tracker a ser utilizado.
+				* Qué monitor será utilizado y cuál es su perfil de configuración.
+				* Directorio donde se almacenarán los resultados del experimento.
+			- Configuración de los experimentos:
+				* Configurar sus tareas, cuadros y componentes.
+				* Opciones de ejecución:
+					+ Tiempos de descanso.
+					+ Tipo de ejecución de las tareas: aleatoria o secuencial.
+					+ Si se requiere alguna acción del usuario para comenzar cada tarea o la ejecución será ininterrumpida.
+				* Opciones asociadas al diálogo previo a cada ejecución (sesión). Esto dice relación con la información que interesa rescatar del paciente que realizará el experimento.
 
-		\item Configurar un experimento genérico con características similares a las propuestas en \ref{sub:02_experimentos_de_estimulacion}. 
+		2) Es posible ejeutar el experimento de forma tal que se almacene tanto la información del estímulo presentado como de las respuestas producidas por el usuario [screenshot del árbol de capetas producido dado la configuración anterior junto a imágenes del archivo de resultados y el contenido de los diccionarios generados].
+			* Se almacena un respaldo de la configuración utilizada en cada sesión en un archivo de diccionario de formato yaml, lo que facilita su lectura por parte de los investigadores.
+			* Se almacena un registro de los eventos ocurridos duraante el laboratorio en un archivo de formato estándar (hdf5) para:
+				+ Eye tracker.
+				+ Acciones de teclado.  
+				+ Eventos en el monitor dependientes de los estímulos presentados.
 
-		\item Ejecutar un experimento, generar un registro de las configuraciones utilizadas y almacenar los resultados obtenidos en un archivo.  
-
-	\end{enumerate}
-
+	% ===============================================================
+	% ===============================================================
 \end{document}

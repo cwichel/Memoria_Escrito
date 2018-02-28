@@ -1,4 +1,4 @@
-\select@language {spanish}
+\babel@toc {spanish}{}
 \contentsline {chapter}{Glosario}{\es@scroman {i}}{section*.3}
 \contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Motivación}{1}{section.1.1}
@@ -6,9 +6,9 @@
 \contentsline {chapter}{\numberline {2}Estado del arte}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}Movimiento ocular}{3}{section.2.1}
 \contentsline {section}{\numberline {2.2}Métodos de captura de movimiento ocular}{5}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Un poco de historia}{5}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.1}Antecedentes históricos}{5}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Tecnologías actuales}{6}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Comparativa}{9}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.3}Comparacióen entre tecnologías}{9}{subsection.2.2.3}
 \contentsline {section}{\numberline {2.3}Métodos de estimulación visual}{10}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Hardware de estimulación}{10}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Software de estimulación}{12}{subsection.2.3.2}

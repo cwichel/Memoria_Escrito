@@ -1,58 +1,8 @@
-This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: main.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: Main.aux
 The style file: IEEEtran.bst
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: ./Referencias.bib
-Warning--I didn't find a database entry for "sub:02_experimentos_de_estimulacion"
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 25 entries,
-            4087 wiz_defined-function locations,
-            970 strings with 10742 characters,
-and the built_in function-call counts, 15730 in all, are:
-= -- 1358
-> -- 237
-< -- 128
-+ -- 149
-- -- 34
-* -- 686
-:= -- 2558
-add.period$ -- 51
-call.type$ -- 25
-change.case$ -- 27
-chr.to.int$ -- 285
-cite$ -- 25
-duplicate$ -- 1173
-empty$ -- 1245
-format.name$ -- 40
-if$ -- 3640
-int.to.chr$ -- 0
-int.to.str$ -- 25
-missing$ -- 181
-newline$ -- 110
-num.names$ -- 27
-pop$ -- 398
-preamble$ -- 1
-purify$ -- 0
-quote$ -- 2
-skip$ -- 1266
-stack$ -- 0
-substring$ -- 716
-swap$ -- 917
-text.length$ -- 33
-text.prefix$ -- 0
-top$ -- 5
-type$ -- 25
-warning$ -- 0
-while$ -- 67
-width$ -- 27
-write$ -- 269
-(There was 1 warning)

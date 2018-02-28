@@ -8,6 +8,7 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: ./Referencias.bib
+Warning--I didn't find a database entry for "sub:02_experimentos_de_estimulacion"
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
@@ -15,7 +16,7 @@ Database file #1: ./Referencias.bib
 Done.
 You've used 25 entries,
             4087 wiz_defined-function locations,
-            969 strings with 10707 characters,
+            970 strings with 10742 characters,
 and the built_in function-call counts, 15730 in all, are:
 = -- 1358
 > -- 237
@@ -54,3 +55,4 @@ warning$ -- 0
 while$ -- 67
 width$ -- 27
 write$ -- 269
+(There was 1 warning)

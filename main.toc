@@ -24,11 +24,9 @@
 \contentsline {subsection}{\numberline {3.2.2}Segunda parte: Implementación de las funciones principales}{22}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Tercera parte: Interfaz gráfica}{37}{subsection.3.2.3}
 \contentsline {chapter}{\numberline {4}Resultados}{38}{chapter.4}
-\contentsline {section}{\numberline {4.1}Configuración de test de prueba}{38}{section.4.1}
-\contentsline {section}{\numberline {4.2}Mediciones obtenidas}{38}{section.4.2}
 \contentsline {chapter}{\numberline {5}Conclusiones y trabajo futuro}{39}{chapter.5}
 \contentsline {section}{\numberline {5.1}Conclusiones}{39}{section.5.1}
 \contentsline {section}{\numberline {5.2}Trabajo futuro}{39}{section.5.2}
-\contentsline {chapter}{Referencias}{40}{section*.30}
-\contentsline {chapter}{\numberline {A}Configuración del entorno de programación}{42}{appendix.Alph1}
-\contentsline {chapter}{\numberline {B}Código fuente}{45}{appendix.Alph2}
+\contentsline {chapter}{Referencias}{41}{section*.30}
+\contentsline {chapter}{\numberline {A}Configuración del entorno de programación}{43}{appendix.Alph1}
+\contentsline {chapter}{\numberline {B}Código fuente}{46}{appendix.Alph2}

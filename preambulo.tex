@@ -52,6 +52,10 @@
 \definecolor{halfgray}{gray}{0.55}
 \definecolor{maroon}{cmyk}{0, 0.87, 0.68, 0.32}
 
+\definecolor{sql_orange}{RGB}{204, 120, 50}
+\definecolor{sql_green}{RGB}{42, 53, 35}
+\definecolor{sql_gray}{gray}{0.55}
+
 \definecolor{matlab_green}{RGB}{28,172,0}
 \definecolor{matlab_lilas}{RGB}{170,55,241}
 
@@ -82,10 +86,24 @@
 
 % Soporte de codigo =================================================
 \usepackage{listings}
-% ================================
+\renewcommand{\lstlistingname}{Algoritmo}
+\renewcommand{\lstlistlistingname}{Lista de \lstlistingname s}
 \lstset{
-    breaklines=true,
-    inputpath=\main/Archivos/,
+	inputpath=\main/Archivos/,			% where are located the files
+	backgroundcolor=\color{white},		% choose the background color    
+    breaklines=true,					% automatic line breaking only at whitespace
+    % =============
+    basicstyle=\scriptsize\ttfamily,	% font size
+    identifierstyle=\color{black}\ttfamily,
+    % =============
+    numbers=left,						% number position
+	numbersep=9pt,						% number separation to code
+    numberstyle=\tiny\color{halfgray},	% number size and color
+    % =============
+	showstringspaces=false,
+    showspaces=false,
+    keepspaces=true,
+    % =============
     extendedchars=true,
     literate=
     {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
@@ -101,22 +119,48 @@
     {€}{{\EUR}}1 {£}{{\pounds}}1 {+=}{{{+=}}}1 {-=}{{{-=}}}1 
     {*=}{{{$^\ast$=}}}1 {/=}{{{/=}}}1,
 }
+
+% ================================
+\newcommand\SQLStyle{
+	\lstset{
+	language=SQL,
+	tabsize=4,
+	% =============
+	morekeywords={
+		after, and, as, asc, begin, by, cascade, constraint, create, default, delete, desc, end, exists, foreign, from, full, if, index, inner, insert, into, join, key, left, not, null, of, on, or, order, outer, pragma, primary, references, right, set, select, table, trigger, unique, update, value, values, where},
+	keywordstyle={\color{sql_orange}\ttfamily\bfseries},
+	% =============
+	morekeywords=[2]{
+		int, integer, tinyint, smallint, mediumint, bigint, int2, int8, unsigned, big, character, varchar, varying, nchar, native, nvarchar, text, clob, blob, bone, real, double, precision, float, numeric, decimal, boolean, date, datetime, timestamp},
+	keywordstyle=[2]{\color{sql_orange}\ttfamily\bfseries},
+	% =============
+	stringstyle=\color{sql_green}\ttfamily,
+	commentstyle=\color{sql_gray}\ttfamily,
+	emphstyle=\color{blue}\ttfamily,
+	}
+}
+% Entorno
+\lstnewenvironment{SQL}[1][]{
+	\singlespacing{
+		\SQLStyle\lstset{#1}
+	}
+}{}
+% Cargar archivos externos
+\newcommand\SQLExternal[2][]{{
+	\singlespacing{
+		\SQLStyle\lstinputlisting[#1, captionpos=b]{#2}
+	}
+}}
+% Para escribir en linea
+\newcommand\SQLInline[1]{{
+	\SQLStyle\lstinline!#1!
+}}
+
 % ================================
 \newcommand\matlabStyle{
 	\lstset{
 	language=matlab,
 	tabsize=4,
-	% =============
-	numbers=left,
-	numbersep=9pt,
-    numberstyle=\tiny\color{halfgray},
-	% =============
-	basicstyle=\scriptsize\ttfamily,
-	identifierstyle=\color{black}\ttfamily,
-	% =============
-	showstringspaces=false,
-    showspaces=false,
-    keepspaces=true,
 	% =============
 	morekeywords={matlab2tiks},
 	keywordstyle=\color{blue}\ttfamily\bfseries,
@@ -140,7 +184,7 @@
 % Cargar archivos externos
 \newcommand\matlabExternal[2][]{{
 	\singlespacing{
-		\matlabStyle\lstinputlisting[#1]{#2}
+		\matlabStyle\lstinputlisting[#1, captionpos=b{#2}
 	}
 }}
 % Para escribir en linea
@@ -153,17 +197,6 @@
 	\lstset{
 	language=python,
 	tabsize=4,
-	% =============
-	numbers=left,
-	numbersep=9pt,
-    numberstyle=\tiny\color{halfgray},
-	% =============
-	basicstyle=\scriptsize\ttfamily,
-	identifierstyle=\color{black}\ttfamily,
-	% =============
-	showstringspaces=false,
-    showspaces=false,
-    keepspaces=true,
 	% =============
 	morekeywords={
 		access,and,break,class,continue,def,del,elif,else,except,exec,finally,for,from,global,if,import,in,is,lambda,not,or,pass,print,raise,return,try,while},
@@ -211,7 +244,7 @@
 % Cargar archivos externos
 \newcommand\pythonExternal[2][]{{
 	\singlespacing{
-		\pythonStyle\lstinputlisting[#1]{#2}
+		\pythonStyle\lstinputlisting[#1, captionpos=b]{#2}
 	}
 }}
 % Para escribir en linea

@@ -14,18 +14,13 @@
 	% ===============================================================
 	\section{Conclusiones}
 	\label{sec:05_conclusiones}
-		Se ha logrado establecer un sistema de emisión y captura para experimentos que permiten evaluar capacidades asociadas a tareas sicomotoras. Ese incluye funcionalidades que permiten plantear y configurar experimentos (ver anexo...), además de un sistema capaz de guardar la información de experimentos y respuesta (ver anexo...). Por el momento, la operación se remite a su uso mediante código. De esta forma, la implementación permite:
-
-		\begin{enumerate}[(i)]\setlength\itemsep{-0.2em}
-			\item Definir y programar un mecanismo de estimulación visual acorde con las características técnicas de los protocolos utilizados en la realización de tareas sicomotoras.
-
-			Este objetivo se considera satisfecho debido a que, mediante los métodos implementados, es posible construir experimentos que contengan tareas sicomotoras asociadas a movimientos prosacádicos y antisacádicos, ejercicios de memoria e interacción con el usuario (por entrada de teclado). 
-
-			Debido a la forma en que fue construída de la solución, resulta imposible no mencionar la relavancia de contar con herramientas enfocadas a la programación orientada a objetos. 
-
-			\item Implementar un sistema de sincronización entre el registro y la estimulación visual que permita la integración de un sistema de captura de movimiento ocular y que asegure el correcto registro de los datos.
-
-		\end{enumerate}
+		En base a los resultados presentados, es posible indicar que los objetivos propuestos han sido cumplidos. De esta forma, 
+		- Se ha logrado implementar en sistema que permite configurar, almacenar y ejecutar experimentos como los propuestos en el estado de arte, lo que implica el cumplimiento de los objetivos 1 y 2.
+		
+		- La implementación fue posible gracias a los niveles de abstraccion proporcionados por la programación orientada a objetos:
+			- ioHub y psychoPy fueron programados en base a este paradigma.
+			- La implementación de los distintos elementos como objetos que dependen/utilizan a otros permite plantear de forma más simple problemas de este tipo.
+		 
 
 	% ===============================================================
 	% ===============================================================
@@ -35,7 +30,9 @@
 
 		Como trabajo para futuros desarrollos se proponen las siguientes tareas, que escapan a los alcances de este trabajo de título:
 		\begin{enumerate}\setlength\itemsep{-0.2em}
-			\item Implementar una mayor variedad de opciones para la configuración de componentes de cuadro, ya sea añadiendo nuevos elementos gráficos como la posibilidad de incluir estímulos sonoros.
+			\item Añadir la opción de que un cuadro temporizado tenga tiempo variable dentro de un rango definido.
+
+			\item Implementar una mayor variedad de opciones para la configuración de componentes de cuadro, ya sea añadiendo nuevos elementos gráficos como la posibilidad de incluir estímulos sonoros.  
 
 			\item Agregar nuevos elementos al script para mejorar y complementar el sistema de registro de eventos en el archivo de salida. Algunas opciones son:
 				\begin{enumerate}\setlength\itemsep{-0.2em}

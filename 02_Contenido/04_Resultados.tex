@@ -10,7 +10,67 @@
 \begin{document}
 \chapter{Resultados}
 \label{cha:04_resultados}
-	respecto del objetivo>:
+	
+	
+
+
+	\begin{python}[caption=Crear la carpeta del experimento y la base de datos., captionpos=b, label=alg:04_new_db]
+	import os
+	from saccadeApp import SaccadeDB
+
+	# Se crean los directorios para almacenar las configuraciones y resultados de los experimentos
+	base_dir = u'C:\\Experiments'
+	data_dir = base_dir + u'\\Experiment_Data'
+	if not os.path.isdir(base_dir)
+		os.mkdir(base_dir)
+		os.mkdir(data_dir)
+	elif not os.path.isdir(data_dir)
+		os.mkdir(data_dir)
+
+	# Se abre (o si no existe, crea) la base de datos local
+	data = SaccadeDB(base_dir + u'\\test_database.sqlite3')
+
+	\end{python}
+
+
+	\begin{python}[caption=Crear un nuevo perfil de configuración., captionpos=b, label=alg:04_new_conf]
+	from saccadeApp import Master
+
+	# Se abre la instancia de configuración de monitores para verificar que el perfil a ser escogido existe 
+	Master.open_psychopy_monitor_center()
+
+	# Se crea una instancia de configuración
+	conf = Master()
+	conf.set_database(db=data)
+
+	# Se asigna nombre, se selecciona la pantalla secundaria con el perfil 'test_profile' para un eyetracker
+	# 'eyetribe'. Los resultados de los experimentos se almacenarán en el directorio de datos
+	conf.set_name(u'test_profile')
+	conf.set_screen(1)
+	conf.set_monitor(u'test_monitor')
+	conf.set_tracker(u'eyetribe')
+	conf.set_experiment_path(data_dir)
+
+	# Y finalmente se guarda la cconfiguración
+	conf.save()
+
+	\end{python}
+
+
+	\begin{python}[caption=Crear un nuevo experimento., captionpos=b, label=alg:04_new_exp]
+	from saccadeApp import Experiment, Test, Frame, Component
+
+	
+
+	
+
+	\end{python}
+
+	
+
+
+
+	respecto del objetivo:
 		1) Es posible configurar y almacenar [referencia a código de ejemplo de configuración y screenshot de los datos almacenados en la tabla]:
 			- Configuración del sistema en donde se ejecutará el experimento :
 				* Eye tracker a ser utilizado.

@@ -257,6 +257,15 @@
 						Return 					& void. 	& 
 						\\\hline 
 						% ===============================================
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{open\_psychopy\_monitor\_center}}}\\\multicolumn{3}{|c|}{}\\\hline
+						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
+						Método estático. Tal como su nombre lo indica abre la ventana de configuración de monitores de Psychopy.
+						}\\\hline
+						Inputs 					& void.		& 
+						\\\hline
+						Return 					& bool.		& Verdadero si se abre una nueva ventana, falso si ya existe una en ejecución.
+						\\\hline 
+						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{get\_list}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
 						Método estático. Entrega una lista con los nombres de los perfiles de configuración que se encuentran almacenados en la base de datos.
@@ -883,7 +892,7 @@
 						Return 					& bool. 	& Verdadero si esta habilitada la ejecución, falso en caso contrario. 
 						\\\hline 
 						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{save\_execution\_parameters}}}\\\multicolumn{3}{|c|}{}\\\hline
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{save\_parameters}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
 						Si el experimento se encuentra habilitado, este método verifica la existencia de las carpetas en donde se almacenarán los resultados y guarda en ellas respaldos de los archivos de configuración acompañados del timestamp en que fueron generados.
 						}\\\hline

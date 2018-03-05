@@ -18,13 +18,14 @@
 		\begin{table}[H]\begin{center}\footnotesize{
 			\singlespacing{
 			\begin{tabular}{| C{0.11\textwidth} | C{0.14\textwidth} | R{0.18\textwidth} L{0.5\textwidth} |} \hline
-				\multirow{7}{*}{Hardware} 	& \multirow{4}{*}{PC} 			& Procesador: 		& Intel Core i7-3770 \\
+				\multirow{8}{*}{Hardware} 	& \multirow{4}{*}{PC} 			& Procesador: 		& Intel Core i7-3770 \\
 										& 							& Memoria RAM:		& $16.0[GB]$, DDR3, $650[MHz]$ \\
 										& 							& Disco duro: 		& Samsung SSD, 840 Series, $120[GB]$ \\
 										& 							& Tarjeta gráfica: 	& NVIDIA GeForce GTX 660 Ti, $2[GB]$ \\ \cline{2-4}
 										& \multirow{2}{*}{Monitores}& Principal:		& Samsung SyncMaster, $1680\times1050[px]$, $60[Hz]$ \\ 
-										& 							& Secundario: 		& Samsung SyncMaster, $1680\times1050[px]$, $60[Hz]$ \\ \cline{2-4}
-										& Adquisición 				& \textit{Eye tracker}: 		& EyeTribe \\ \hline
+										& 							& Secundario: 		& Samsung SyncMaster, $1680\times1050[px]$, $60[Hz]$ \\ \cline{2-4} 
+										& Adquisición 				& \textit{Eye tracker}: 		& EyeTribe \\ \cline{2-4}
+										& Otro 						& Apoya-barbilla: 	& Diseñado y contruido en la universidad\footnotemark. \\ \hline
 				\multirow{4}{*}{Software} 	& \multirow{2}{*}{Entorno} 		& SO:				& Windows 10 Pro x64 \\ 
 										& 							& Base:				& Python 2.7 x86, Anaconda \\ \cline{2-4}
 										& \multirow{2}{*}{Módulos}		& Principal: 			& PsychoPy 1.84.2\cite{psychopy} \\
@@ -33,6 +34,7 @@
 			\caption{Hardware y software utilizado en el desarrollo.}
 			\label{tbl:03_hs_selection}
 		}\end{center}\end{table}
+		\footnotetext{Diseñado y construido por Christopher Rozas con colaboración del departamento de IPD.}
 
 		\newpage
 		La elección de software se encuentra infuenciada fuertemente por los siguientes puntos:
@@ -111,11 +113,11 @@
 				\label{fig:03_base_class_tree}
 			\end{figure} 
 
+			En las siguientes páginas se procede a describir con un mayor grado de detalle cada clase. Por simplicidad se obvian las funciones asociadas al get-set de los atributos (que corresponden a los datos almacenados en la base de datos).
+			
 			\newpage
-			A continuación se describe con un mayor grado de detalle cada clase. Por simplicidad se obvian las funciones asociadas al get-set de los atributos (que corresponden a los datos almacenados en la base de datos):
 			\begin{enumerate}
 				\item \textbf{Utils:} Clase utilizada para implementar funcionalidades de formateo de datos.
-				
 				\vspace{-8mm}			
 				\begin{center}\footnotesize{\singlespacing{
 					\begin{longtable}[H]{| C{0.15\textwidth} | R{0.13\textwidth} L{0.6\textwidth} |} \hline
@@ -170,7 +172,7 @@
 						Inputs 					& path: 	& Dirección a ser formateada. 
 						\\\hline
 						Return 					& unicode. 	& 
-						\\\hline \newpage
+						\\\hline
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{get\_time}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
@@ -185,9 +187,9 @@
 					\end{longtable}}}
 				\end{center}
 				
-				\vspace{-15mm}
+				\newpage
+
 				\item \textbf{SaccadeDB:} Clase utilizada para implementar la conexión con la base de datos SQLite.
-				
 				\vspace{-8mm}			 
 				\begin{center}\footnotesize{\singlespacing{
 					\begin{longtable}[H]{| C{0.15\textwidth} | R{0.13\textwidth} L{0.6\textwidth} |} \hline
@@ -242,8 +244,8 @@
 				\end{center}
 
 				\vspace{-15mm}
-				\item \textbf{Master:} Clase que permite manipular las configuraciones de hardware asociado a los experimentos y la ruta de los archivos de salida de los mismos. Para utilizar las funciones de carga/guardado es necesario configurar el objeto de base de datos mediante la función set\_database. 
 
+				\item \textbf{Master:} Clase que permite manipular las configuraciones de hardware asociado a los experimentos y la ruta de los archivos de salida de los mismos. Para utilizar las funciones de carga/guardado es necesario configurar el objeto de base de datos mediante la función set\_database. 
 				\vspace{-8mm}
 				\begin{center}\footnotesize{\singlespacing{
 					\begin{longtable}[H]{| C{0.15\textwidth} | R{0.13\textwidth} L{0.6\textwidth} |} \hline
@@ -255,11 +257,11 @@
 						Inputs 					& void. 	& 
 						\\\hline
 						Return 					& void. 	& 
-						\\\hline 
+						\\\hline \newpage
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{open\_psychopy\_monitor\_center}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Método estático. Tal como su nombre lo indica abre la ventana de configuración de monitores de Psychopy.
+						Método estático. Tal como su nombre lo indica abre la ventana de configuración de monitores de PsychoPy.
 						}\\\hline
 						Inputs 					& void.		& 
 						\\\hline
@@ -360,8 +362,8 @@
 				\end{center}
 
 				\vspace{-15mm}
-				\item \textbf{ItemList:} Clase utilizada para manejar listas de objetos. Su implementación no considera el uso directo por parte de los usuarios del programa.
 
+				\item \textbf{ItemList:} Clase utilizada para manejar listas de objetos. Su implementación no considera el uso directo por parte de los usuarios del programa.
 				\vspace{-8mm}
 				\begin{center}\footnotesize{\singlespacing{
 					\begin{longtable}[H]{| C{0.15\textwidth} | R{0.13\textwidth} L{0.6\textwidth} |} \hline
@@ -452,8 +454,8 @@
 				\end{center}
 
 				\newpage
+
 				\item \textbf{Component:} Clase utilizada para manejar la configuración de los elementos que conforman un cuadro. 
-				
 				\vspace{-8mm}
 				\begin{center}\footnotesize{\singlespacing{
 					\begin{longtable}[H]{| C{0.15\textwidth} | R{0.13\textwidth} L{0.6\textwidth} |} \hline
@@ -508,7 +510,7 @@
 												& com: 		& ID del componente. 
 						\\\hline
 						Return 					& bool. 	& Verdadero si el proceso se completó satisfactoriamente, falso en caso contrario. 
-						\\\hline 
+						\\\hline \newpage
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{save}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
@@ -555,8 +557,8 @@
 				\end{center}
 
 				\vspace{-15mm}
-				\item \textbf{Frame:} Clase utilizada para configurar el comportamiento de un cuadro específico de una tarea. Ya que los cuadros contienen y muestran componentes, esta clase se define como hija de ItemList inicializada para objetos de tipo Component.
 
+				\item \textbf{Frame:} Clase utilizada para configurar el comportamiento de un cuadro específico de una tarea. Ya que los cuadros contienen y muestran componentes, esta clase se define como hija de ItemList inicializada para objetos de tipo Component.
 				\vspace{-8mm}
 				\begin{center}\footnotesize{\singlespacing{
 					\begin{longtable}[H]{| C{0.15\textwidth} | R{0.13\textwidth} L{0.6\textwidth} |} \hline
@@ -568,7 +570,7 @@
 						Inputs 					& void.		& 
 						\\\hline
 						Return 					& void. 	& 
-						\\\hline 
+						\\\hline \newpage
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{get\_list}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
@@ -627,7 +629,7 @@
 												& fra: 		& ID del cuadro.
 						\\\hline
 						Return 					& void. 	& 
-						\\\hline 
+						\\\hline \newpage
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{copy}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
@@ -646,7 +648,6 @@
 						\\\hline
 						Return 					& dict. 	& 
 						\\\hline 
-						\newpage
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{get\_configuration}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
@@ -662,8 +663,8 @@
 				\end{center}
 
 				\vspace{-15mm}
-				\item \textbf{Test:} Clase utilizada para configurar una tarea específica en un experimento. Ya que las tareas se componen de cuadros, esta clase se define como hija de ItemList inicializada para objetos de tipo Frame.
 
+				\item \textbf{Test:} Clase utilizada para configurar una tarea específica en un experimento. Ya que las tareas se componen de cuadros, esta clase se define como hija de ItemList inicializada para objetos de tipo Frame.
 				\vspace{-8mm}
 				\begin{center}\footnotesize{\singlespacing{
 					\begin{longtable}[H]{| C{0.15\textwidth} | R{0.13\textwidth} L{0.6\textwidth} |} \hline
@@ -685,7 +686,7 @@
 												& exp:		& Código del experimento al cual pertenecen las tareas de interés.  
 						\\\hline
 						Return 					& objeto. 	& list si existen elementos en la base de datos, None en caso contrario.
-						\\\hline 
+						\\\hline \newpage
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{load}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
@@ -747,7 +748,7 @@
 						Inputs 					& win:		& Objeto de tipo Window perteneciente a PsychoPy que permite mostrar los estímulos por pantalla.
 						\\\hline
 						Return 					& dict. 	& 
-						\\\hline 
+						\\\hline \newpage
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{get\_configuration}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
@@ -763,8 +764,8 @@
 				\end{center}
 
 				\vspace{-15mm}
-				\item \textbf{Experiment:} Clase utilizada para configurar un experimento específico. Ya que los experimentos se componen de tareas, esta clase se define como hija de ItemList inicializada para objetos de tipo Test. Para utilizar las funciones de carga/guardado es necesario configurar el objeto de base de datos mediante la función set\_database.
 
+				\item \textbf{Experiment:} Clase utilizada para configurar un experimento específico. Ya que los experimentos se componen de tareas, esta clase se define como hija de ItemList inicializada para objetos de tipo Test. Para utilizar las funciones de carga/guardado es necesario configurar el objeto de base de datos mediante la función set\_database.
 				\vspace{-8mm}
 				\begin{center}\footnotesize{\singlespacing{
 					\begin{longtable}[H]{| C{0.15\textwidth} | R{0.13\textwidth} L{0.6\textwidth} |} \hline
@@ -812,7 +813,7 @@
 						Inputs					& void. 	&
 						\\\hline
 						Return 					& bool. 	& Verdadero si el proceso se completó satisfactoriamente, falso en caso contrario. 
-						\\\hline 
+						\\\hline \newpage
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{save\_tests}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
@@ -832,7 +833,6 @@
 						\\\hline
 						Return 					& objeto. 	& Objeto de tipo Experiment si ingresa correctamente el nuevo código y versión, None en caso contrario.
 						\\\hline 
-						\newpage
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{get\_iohub}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
@@ -879,15 +879,15 @@
 						Inputs 					& void.		& 
 						\\\hline
 						Return 					& void. 	& 
-						\\\hline 
+						\\\hline \newpage
 						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{load\_experiment}}}\\\multicolumn{3}{|c|}{}\\\hline
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{load\_configuration}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
 						Método que verifica la existencia del perfil de configuración (Master) y el experimento (Experiment) a ser utilizados. Si todo está correcto habilita la ejecución del experimento.
 						}\\\hline
 						\multirow{2}{*}{Inputs}	& db:		& Objeto de base de datos (SaccadeDB) mediante el cual se extraerá la información. \\
-												& mas: 		& Nombre dle perfil de configuración a utilizar. \\
-												& exp:		& Código del experimento a utilizar.
+												& master:	& Nombre del perfil de configuración a utilizar. \\
+												& experiment:	& Código del experimento a utilizar.
 						\\\hline
 						Return 					& bool. 	& Verdadero si esta habilitada la ejecución, falso en caso contrario. 
 						\\\hline 
@@ -896,7 +896,7 @@
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
 						Si el experimento se encuentra habilitado, este método verifica la existencia de las carpetas en donde se almacenarán los resultados y guarda en ellas respaldos de los archivos de configuración acompañados del timestamp en que fueron generados.
 						}\\\hline
-						Inputs					& void: 	& 
+						Inputs					& save\_frame: 		& bool. Permite escoger si se desea guardar los frames como imagen.  
 						\\\hline
 						Return 					& bool. 	& Verdadero si el experimento esta habilitado y se guardaron los archivos, falso en caso contrario. 
 						\\\hline 
@@ -925,7 +925,7 @@
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
 						Constructor. Inicializa los atributos de la clase y permite entregar la configuración del experimento a la rutina.
 						}\\\hline
-						Inputs 					& exp\_cfg\_dict.		&  Diccionario que almacena el experimento a ejecutar y la ubicación de los archivos de configuración necesarios para correr el servicio. 
+						Inputs 					& execution\_parameters:	&  dict. Almacena el experimento a ejecutar y la ubicación de los archivos de configuración necesarios para correr el servicio. 
 						\\\hline
 						Return 					& void. 	& 
 						\\\hline 

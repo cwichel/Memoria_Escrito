@@ -1,35 +1,36 @@
 \babel@toc {spanish}{}
-\contentsline {chapter}{Resumen}{\es@scroman {i}}{chapter*.3}
-\contentsline {chapter}{Glosario}{\es@scroman {i}}{section*.4}
-\contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n}{1}{chapter.1}
-\contentsline {section}{\numberline {1.1}Motivaci\IeC {\'o}n}{1}{section.1.1}
+\contentsline {chapter}{Agradecimientos}{\es@scroman {i}}{chapter*.3}
+\contentsline {chapter}{Resumen}{\es@scroman {ii}}{chapter*.4}
+\contentsline {chapter}{Glosario}{\es@scroman {ii}}{section*.5}
+\contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Motivación}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Objetivos}{2}{section.1.2}
 \contentsline {chapter}{\numberline {2}Estado del arte}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}Movimiento ocular}{3}{section.2.1}
-\contentsline {section}{\numberline {2.2}M\IeC {\'e}todos de captura de movimiento ocular}{5}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Antecedentes hist\IeC {\'o}ricos}{5}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Tecnolog\IeC {\'\i }as actuales}{6}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Comparaci\IeC {\'o}en entre tecnolog\IeC {\'\i }as}{9}{subsection.2.2.3}
-\contentsline {section}{\numberline {2.3}M\IeC {\'e}todos de estimulaci\IeC {\'o}n visual}{10}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Hardware de estimulaci\IeC {\'o}n}{10}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Software de estimulaci\IeC {\'o}n}{12}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Experimentos de estimulaci\IeC {\'o}n}{13}{subsection.2.3.3}
-\contentsline {subsubsection}{M\IeC {\'e}tricas de inter\IeC {\'e}s}{14}{section*.19}
-\contentsline {subsubsection}{Movimientos pro/anti sac\IeC {\'a}dicos}{14}{section*.20}
-\contentsline {subsubsection}{Movimientos guiados por memoria}{15}{section*.23}
-\contentsline {section}{\numberline {2.4}Sistemas de estimulaci\IeC {\'o}n y registro visual}{16}{section.2.4}
+\contentsline {section}{\numberline {2.2}Métodos de captura de movimiento ocular}{5}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Antecedentes históricos}{5}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Tecnologías actuales}{6}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Comparacióen entre tecnologías}{9}{subsection.2.2.3}
+\contentsline {section}{\numberline {2.3}Métodos de estimulación visual}{10}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Hardware de estimulación}{10}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Software de estimulación}{12}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Experimentos de estimulación}{13}{subsection.2.3.3}
+\contentsline {subsubsection}{Métricas de interés}{14}{section*.20}
+\contentsline {subsubsection}{Movimientos pro/anti sacádicos}{14}{section*.21}
+\contentsline {subsubsection}{Movimientos guiados por memoria}{16}{section*.24}
+\contentsline {section}{\numberline {2.4}Sistemas de estimulación y registro visual}{16}{section.2.4}
 \contentsline {chapter}{\numberline {3}Sistema propuesto}{18}{chapter.3}
 \contentsline {section}{\numberline {3.1}\textit {Setup} a utilizar}{18}{section.3.1}
-\contentsline {section}{\numberline {3.2}Dise\IeC {\~n}o del sistema}{19}{section.3.2}
+\contentsline {section}{\numberline {3.2}Diseño del sistema}{19}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Primera parte: Estructura de datos}{19}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Segunda parte: Implementaci\IeC {\'o}n de las funciones principales}{22}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Tercera parte: Interfaz gr\IeC {\'a}fica}{38}{subsection.3.2.3}
-\contentsline {chapter}{\numberline {4}Resultados}{39}{chapter.4}
-\contentsline {section}{\numberline {4.1}Configurar un experimento.}{39}{section.4.1}
-\contentsline {section}{\numberline {4.2}Ejecutar un experimento.}{42}{section.4.2}
-\contentsline {section}{\numberline {4.3}Comprobaci\IeC {\'o}n de funcionamiento.}{44}{section.4.3}
-\contentsline {chapter}{\numberline {5}Conclusiones y trabajo futuro}{45}{chapter.5}
-\contentsline {section}{\numberline {5.1}Conclusiones}{45}{section.5.1}
-\contentsline {section}{\numberline {5.2}Trabajo futuro}{45}{section.5.2}
-\contentsline {chapter}{Referencias}{47}{section*.33}
-\contentsline {chapter}{\numberline {A}Configuraci\IeC {\'o}n del entorno de programaci\IeC {\'o}n}{49}{appendix.Alph1}
+\contentsline {subsection}{\numberline {3.2.2}Segunda parte: Implementación de las funciones principales}{23}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Tercera parte: Interfaz gráfica}{41}{subsection.3.2.3}
+\contentsline {chapter}{\numberline {4}Resultados}{42}{chapter.4}
+\contentsline {section}{\numberline {4.1}Configurar un experimento.}{42}{section.4.1}
+\contentsline {section}{\numberline {4.2}Ejecutar un experimento.}{45}{section.4.2}
+\contentsline {section}{\numberline {4.3}Comprobación de funcionamiento.}{47}{section.4.3}
+\contentsline {chapter}{\numberline {5}Conclusiones y trabajo futuro}{48}{chapter.5}
+\contentsline {section}{\numberline {5.1}Conclusiones}{48}{section.5.1}
+\contentsline {section}{\numberline {5.2}Trabajo futuro}{48}{section.5.2}
+\contentsline {chapter}{Referencias}{50}{section*.35}
+\contentsline {chapter}{\numberline {A}Configuración del entorno de programación}{52}{appendix.Alph1}

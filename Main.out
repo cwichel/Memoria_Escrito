@@ -1,0 +1,32 @@
+\BOOKMARK [0][-]{chapter*.1}{Agradecimientos}{}% 1
+\BOOKMARK [0][-]{chapter*.2}{Resumen}{}% 2
+\BOOKMARK [0][-]{section*.3}{Glosario}{}% 3
+\BOOKMARK [0][-]{chapter.1}{Introducción}{}% 4
+\BOOKMARK [1][-]{section.1.1}{Motivación}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.2}{Objetivos}{chapter.1}% 6
+\BOOKMARK [0][-]{chapter.2}{Estado del arte}{}% 7
+\BOOKMARK [1][-]{section.2.1}{Movimiento ocular}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.2}{Métodos de captura de movimiento ocular}{chapter.2}% 9
+\BOOKMARK [2][-]{subsection.2.2.1}{Antecedentes históricos}{section.2.2}% 10
+\BOOKMARK [2][-]{subsection.2.2.2}{Tecnologías actuales}{section.2.2}% 11
+\BOOKMARK [2][-]{subsection.2.2.3}{Comparacióen entre tecnologías}{section.2.2}% 12
+\BOOKMARK [1][-]{section.2.3}{Métodos de estimulación visual}{chapter.2}% 13
+\BOOKMARK [2][-]{subsection.2.3.1}{Hardware de estimulación}{section.2.3}% 14
+\BOOKMARK [2][-]{subsection.2.3.2}{Software de estimulación}{section.2.3}% 15
+\BOOKMARK [2][-]{subsection.2.3.3}{Experimentos de estimulación}{section.2.3}% 16
+\BOOKMARK [1][-]{section.2.4}{Sistemas de estimulación y registro visual}{chapter.2}% 17
+\BOOKMARK [0][-]{chapter.3}{Sistema propuesto}{}% 18
+\BOOKMARK [1][-]{section.3.1}{Setup a utilizar}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.2}{Diseño del sistema}{chapter.3}% 20
+\BOOKMARK [2][-]{subsection.3.2.1}{Primera parte: Estructura de datos}{section.3.2}% 21
+\BOOKMARK [2][-]{subsection.3.2.2}{Segunda parte: Implementación de las funciones principales}{section.3.2}% 22
+\BOOKMARK [2][-]{subsection.3.2.3}{Tercera parte: Interfaz gráfica}{section.3.2}% 23
+\BOOKMARK [0][-]{chapter.4}{Resultados}{}% 24
+\BOOKMARK [1][-]{section.4.1}{Configurar un experimento.}{chapter.4}% 25
+\BOOKMARK [1][-]{section.4.2}{Ejecutar un experimento.}{chapter.4}% 26
+\BOOKMARK [1][-]{section.4.3}{Comprobación de funcionamiento.}{chapter.4}% 27
+\BOOKMARK [0][-]{chapter.5}{Conclusiones y trabajo futuro}{}% 28
+\BOOKMARK [1][-]{section.5.1}{Conclusiones}{chapter.5}% 29
+\BOOKMARK [1][-]{section.5.2}{Trabajo futuro}{chapter.5}% 30
+\BOOKMARK [0][-]{section*.10}{Referencias}{}% 31
+\BOOKMARK [0][-]{appendix.Alph1}{Configuración del entorno de programación}{}% 32

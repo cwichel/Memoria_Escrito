@@ -1,4 +1,4 @@
-This is makeindex, version 2.15 [MiKTeX 2.9.6600 64-bit] (kpathsea + Thai support).
+This is makeindex, version 2.15 [MiKTeX 2.9.6630 64-bit] (kpathsea + Thai support).
 Scanning style file ./Main.ist.............................done (29 attributes redefined, 0 ignored).
 Scanning input file Main.acn...
 !! Input index error (file = Main.acn, line = 1):

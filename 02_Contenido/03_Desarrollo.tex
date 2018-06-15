@@ -25,7 +25,7 @@
 										& \multirow{2}{*}{Monitores}& Principal:		& Samsung SyncMaster, $1680\times1050[px]$, $60[Hz]$ \\ 
 										& 							& Secundario: 		& Samsung SyncMaster, $1680\times1050[px]$, $60[Hz]$ \\ \cline{2-4} 
 										& Adquisición 				& \textit{Eye tracker}: 		& EyeTribe \\ \cline{2-4}
-										& Otro 						& Apoya-barbilla: 	& Diseñado y contruido en la universidad\footnotemark. \\ \hline
+										& Otro 						& Apoya-barbilla: 	& Hecho a medida\footnotemark. \\ \hline
 				\multirow{4}{*}{Software} 	& \multirow{2}{*}{Entorno} 		& SO:				& Windows 10 Pro x64 \\ 
 										& 							& Base:				& Python 2.7 x86, Anaconda \\ \cline{2-4}
 										& \multirow{2}{*}{Módulos}		& Principal: 			& PsychoPy 1.84.2\cite{psychopy} \\
@@ -51,7 +51,7 @@
 	% ===============================================================
 	\section{Diseño del sistema}
 	\label{sec:03_diseño_sistema}
-		El sistema a ser desarrollado en este trabajo de título tiene como función principal facilitar el proceso de configuración y puesta en marcha de experimentos asociados a movimiento ocular. Para esto, se considera oportuno subdividir el desarrollo en tres partes: La primera consiste en determinar la estructura de datos requerida para almacenar tanto las configuraciones del sistema como de las tareas a implementar. La segunda implica la implementación de los métodos de configuración y ejecución del experimento, asegurando su correcto funcionamiento. La tercera etapa corresponde a montar estas funciones en una GUI para facilitar el proceso a personas que no tengan conocimiento del lenguaje. Así, se presenta a continuación el trabajo realizado.
+		El sistema a ser desarrollado en este trabajo de título tiene como función principal facilitar el proceso de configuración y puesta en marcha de experimentos asociados a movimiento ocular. Para esto, se considera oportuno subdividir el desarrollo en tres partes: La primera consiste en determinar la estructura de datos requerida para almacenar tanto las configuraciones del sistema como de las tareas a implementar. La segunda implica la implementación de los métodos de configuración y ejecución del experimento, asegurando su correcto funcionamiento. La tercera etapa corresponde a montar estas funciones en una \textit{GUI} para facilitar el proceso a personas que no tengan conocimiento del lenguaje. Así, se presenta a continuación el trabajo realizado.
 
 		% ###########################################################
 		\subsection{Primera parte: Estructura de datos}
@@ -130,7 +130,7 @@
 			\begin{figure}[H]
 				\centering
 				\includegraphics[width=\textwidth]{cap_03_base_class_tree}
-				\caption{Diagrama de clases del sistema (no considera GUI).}
+				\caption{Diagrama de clases del sistema (no considera \textit{GUI}).}
 				\label{fig:03_base_class_tree}
 			\end{figure} 
 
@@ -146,170 +146,170 @@
 				
 				\vspace{-8mm}			
 				\begin{center}\footnotesize{\singlespacing{
-					\begin{longtable}[H]{| C{0.15\textwidth} | R{0.13\textwidth} L{0.6\textwidth} |} \hline
+					\begin{longtable}[H]{| C{0.12\textwidth} | R{0.16\textwidth} L{0.6\textwidth} |} \hline
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{format\_text}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
 						Convierte el dato de entrada a unicode. Si el dato ingresado no cumple con las condiciones de formato se levanta una excepción indicando el error asociado.
 						}\\\hline
-						\multirow{4}{*}{Inputs} & text: 		& Dato a ser convertido en unicode. \\
-						 						& lmin: 		& Largo mínimo (int). Por defecto: None (Sin condición). \\
-						 						& lmax: 		& Largo máximo (int). Por defecto: None (Sin condición)\\
-						 						& var\_name:	& Nombre de la variable para la cual se utilizará el dato formateado (string). Se agrega en el mensaje de excepción para hacer seguimiento del error. Por defecto: vacío (Sin nombre).
+						\multirow{4}{*}{Inputs}	& text: 			& Dato a ser convertido en \textref{unicode}. \\
+						 						& lmin: 			& Largo mínimo (\textref{int}). Por defecto: \textref{None} (Sin condición). \\
+						 						& lmax: 			& Largo máximo (\textref{int}). Por defecto: \textref{None} (Sin condición)\\
+						 						& var\_name:		& Nombre de la variable para la cual se utilizará el dato formateado (\textref{string}). Se agrega en el mensaje de excepción para hacer seguimiento del error. Por defecto: vacío (Sin nombre).
 						\\\hline
-						Return 					& unicode. 	& 
+						Return 					& \textref{unicode}.& 
 						\\\hline 
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{format\_int}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Convierte un valor en entero. Si el valor ingresado no cumple con las condiciones de formato se levanta una excepción indicando el error asociado.
+						Convierte un valor de entrada en entero. Si el valor ingresado no cumple con las condiciones de formato se levanta una excepción indicando el error asociado.
 						} \\ \hline
-						\multirow{4}{*}{Inputs} & value: 		& Valor a ser convertido en int. \\
-						 						& vmin: 		& Valor mínimo permitido (int). Por defecto: None (Sin condición)\\
-						 						& vmax: 		& Valor máximo permitido (int). Por defecto: None (Sin condición)\\
-						 						& var\_name:	& Nombre de la variable para la cual se utilizará el dato formateado (string). Se agrega en el mensaje de excepción para hacer seguimiento del error. Por defecto: vacío (Sin nombre). 
+						\multirow{4}{*}{Inputs} & value: 			& Valor a ser convertido en int. \\
+						 						& vmin: 			& Valor mínimo permitido (\textref{int}). Por defecto: \textref{None} (Sin condición)\\
+						 						& vmax: 			& Valor máximo permitido (\textref{int}). Por defecto: \textref{None} (Sin condición)\\
+						 						& var\_name:		& Nombre de la variable para la cual se utilizará el dato formateado (\textref{string}). Se agrega en el mensaje de excepción para hacer seguimiento del error. Por defecto: vacío (Sin nombre). 
 						\\\hline
-						Return 					& int. 	& 
+						Return 					& \textref{int}. 	& 
 						\\\hline
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{format\_float}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Convierte un valor en flotante. Si el valor ingresado no cumple con las condiciones de formato se levanta una excepción indicando el error asociado.
+						Convierte un valor de entrada en flotante. Si el valor ingresado no cumple con las condiciones de formato se levanta una excepción indicando el error asociado.
 						}\\\hline
-						\multirow{4}{*}{Inputs} & value: 		& Valor a ser convertido en float. \\
-						 						& vmin: 		& Valor mínimo permitido (float). Por defecto: None (Sin condición)\\
-						 						& vmax: 		& Valor máximo permitido (float). Por defecto: None (Sin condición)\\
-						 						& var\_name:	& Nombre de la variable para la cual se utilizará el dato formateado (string). Se agrega en el mensaje de excepción para hacer seguimiento del error. Por defecto: vacío (Sin nombre).
+						\multirow{4}{*}{Inputs} & value: 			& Valor a ser convertido en float. \\
+						 						& vmin: 			& Valor mínimo permitido (\textref{float}). Por defecto: \textref{None} (Sin condición)\\
+						 						& vmax: 			& Valor máximo permitido (\textref{float}). Por defecto: \textref{None} (Sin condición)\\
+						 						& var\_name:		& Nombre de la variable para la cual se utilizará el dato formateado (\textref{string}). Se agrega en el mensaje de excepción para hacer seguimiento del error. Por defecto: vacío (Sin nombre).
 						\\\hline
-						Return 					& float. 		& 
+						Return 					& \textref{float}. 	& 
 						\\\hline
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{format\_bool}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Convierte el valor entregado en un booleano. Si el dato ingresado no puede ser convertido se levanta una excepción indicando el error asociado.
+						Convierte el valor de entrada entregado en un booleano. Si el dato ingresado no puede ser convertido se levanta una excepción indicando el error asociado.
 						}\\\hline
-						\multirow{2}{*}{Inputs} & state: 		& Variable a convertir en bool. \\
-						 						& var\_name:	& Nombre de la variable para la cual se utilizará el dato formateado (string). Se agrega en el mensaje de excepción para hacer seguimiento del error. Por defecto: vacío (Sin nombre).
+						\multirow{2}{*}{Inputs} & state: 			& Variable a convertir en bool. \\
+						 						& var\_name:		& Nombre de la variable para la cual se utilizará el dato formateado (\textref{string}). Se agrega en el mensaje de excepción para hacer seguimiento del error. Por defecto: vacío (Sin nombre).
 						\\\hline
-						Return 					& bool. 		& 
+						Return 					& \textref{bool}. 	& 
 						\\ \hline
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{is\_in\_list}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
 						Indica si un elemento se encuentra o no en una lista.
 						}\\\hline
-						\multirow{2}{*}{Inputs} & item: 		& Elemento a encontrar. \\
-												& item\_list:	& Lista a revisar. 
+						\multirow{2}{*}{Inputs} & item: 			& Elemento a encontrar. \\
+												& item\_list:		& Lista a revisar (\textref{list}). 
 						\\\hline
-						Return 					& bool. 		&  Verdadero en caso de ser encontrado, Falso en caso contrario.
+						Return 					& \textref{bool}. 	&  \textref{True} en caso de ser encontrado, \textref{False} en caso contrario.
 						\\\hline \newpage
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{get\_time}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Permite convertir una fecha desde el formato de tiempo GTM a el horario de Chile continental.
+						Permite convertir una fecha desde el formato de tiempo GTM al horario de Chile continental.
 						}\\\hline
-						Inputs 					& date: 		& Fecha (string) en formato Y-m-d H:M:S. 
+						Inputs 					& date: 			& Fecha (\textref{string}) en formato ''\textref{Y-m-d H:M:S}''. 
 						\\\hline
-						Return 					& unicode. 		& 
+						Return 					& \textref{unicode}.& 
 						\\\hline
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{get\_main\_path}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Devuelve la ubicación en donde la aplicación se encuentra siendo ejecutada. 
+						Retorna la ubicación en donde la aplicación se encuentra siendo ejecutada. 
 						}\\\hline
-						Inputs 					& void. 		& 
+						Inputs 					& \textref{void}. 	& 
 						\\\hline
-						Return 					& unicode. 		& 
+						Return 					& \textref{unicode}.& 
 						\\\hline
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{get\_module\_path}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Devuelve la ubicación donde se encuentra almacenado el módulo de la aplicación (\textref{saccadeapp}).
+						Retorna la ubicación donde se encuentra almacenado el módulo de la aplicación (\textref{saccadeapp}).
 						}\\\hline
-						Inputs 					& void. 		&  
+						Inputs 					& \textref{void}. 	&  
 						\\\hline
-						Return 					& unicode. 		& 
+						Return 					& \textref{unicode}.& 
 						\\\hline
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{format\_path}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
 						Modifica la ubicación de entrada dependiendo del sistema operativo para asegurar compatibilidad. 
 						}\\\hline
-						Inputs 					& path: 		& Ubicación de un archivo o directorio (string). 
+						Inputs 					& path: 			& Ubicación de un archivo o directorio (\textref{string}). 
 						\\\hline
-						Return 					& unicode. 		& 
+						Return 					& \textref{bool}. 	& 
 						\\\hline
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{get\_available\_colors}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Devuelve una lista con los nombres de los colores disponibles en \textit{psychoPy}.
+						Retorna una lista con los nombres de los colores disponibles en \textit{psychoPy}.
 						}\\\hline
-						Inputs 					& void. 		& 
+						Inputs 					& \textref{void}. 	& 
 						\\\hline
-						Return 					& list. 		& Si no hay elementos: lista vacía.
+						Return 					& \textref{list}. 	& Si no hay elementos: lista vacía.
 						\\\hline
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{get\_available\_trackers}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Devuelve una lista con los nombres de los \textit{eye trackers} disponibles.
+						Retorna una lista con los nombres de los \textit{eye trackers} disponibles.
 						}\\\hline
-						Inputs 					& void. 		& 
+						Inputs 					& \textref{void}. 	& 
 						\\\hline
-						Return 					& list. 		& Si no hay elementos: lista vacía.
+						Return 					& \textref{list}. 	& Si no hay elementos: lista vacía.
 						\\\hline
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{get\_available\_screens}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Devuelve una lista con la información (id y resolución) de los monitores disponibles.
+						Retorna una lista con la información (id y resolución) de los monitores disponibles.
 						}\\\hline
-						Inputs 					& void. 		& 
+						Inputs 					& \textref{void}. 	& 
 						\\\hline
-						Return 					& list. 		& 
+						Return 					& \textref{list}. 	& Si no hay elementos: lista vacía.
 						\\\hline
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{get\_available\_monitors}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Devuelve una lista con los nombres de los perfiles de configuración de monitor disponibles en \textit{psychoPy} mediante el \textit{Monitor Center}.
+						Retorna una lista con los nombres de los perfiles de configuración de monitor disponibles en \textit{psychoPy} mediante el \textit{Monitor Center}.
 						}\\\hline
-						Inputs 					& void. 		& 
+						Inputs 					& \textref{void}. 	& 
 						\\\hline
-						Return 					& list. 		& Si no hay elementos: lista vacía. 
-						\\\hline \newpage
+						Return 					& \textref{list}. 	& Si no hay elementos: lista vacía. 
+						\\\hline 
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{get\_available\_units}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Devuelve una lista con los nombres de los tipos de unidad disponibles en \textit{psychoPy} para el dibujo de estímulos en pantalla.
+						Retorna una lista con los nombres de los tipos de unidad disponibles en \textit{psychoPy} para el dibujo de estímulos en pantalla.
 						}\\\hline
-						Inputs 					& void. 		& 
+						Inputs 					& \textref{void}. 	& 
 						\\\hline
-						Return 					& list. 		& Si no hay elementos: lista vacía. 
-						\\\hline
+						Return 					& \textref{list}. 	& Si no hay elementos: lista vacía. 
+						\\\hline \newpage
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{get\_available\_shapes}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Devuelve una lista con los nombres de las figuras disponibles para la construcción de estímulos.
+						Retorna una lista con los nombres de las figuras disponibles para la construcción de estímulos.
 						}\\\hline
-						Inputs 					& void. 		& 
+						Inputs 					& \textref{void}. 	& 
 						\\\hline
-						Return 					& list. 		& Si no hay elementos: lista vacía.
+						Return 					& \textref{list}. 	& Si no hay elementos: lista vacía.
 						\\\hline
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{open\_documentation}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
 						Abre una copia del documento de memoria como documentación.
 						}\\\hline
-						Inputs 					& void. 		& 
+						Inputs 					& \textref{void}. 	& 
 						\\\hline
-						Return 					& void. 		& 
+						Return 					& \textref{void}. 	& 
 						\\\hline
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{open\_psychopy\_monitor\_center}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
 						Abre una instancia de la aplicación de configuración de monitores de \textit{psychoPy}.
 						}\\\hline
-						Inputs 					& void. 		& 
+						Inputs 					& \textref{void}. 	& 
 						\\\hline
-						Return 					& bool. 		&  Verdadero si abre una nueva ventana, Falso si ya existe una en ejecución. 
+						Return 					& \textref{bool}. 	&  \textref{True} si abre una nueva ventana, \textref{False} si ya existe una en ejecución. 
 						\\\hline
 					\caption{Métodos implementados en \textref{utils}.}
 					\label{tbl:03_class_utils}
@@ -322,51 +322,51 @@
 				
 				\vspace{-8mm}			 
 				\begin{center}\footnotesize{\singlespacing{
-					\begin{longtable}[H]{| C{0.15\textwidth} | R{0.13\textwidth} L{0.6\textwidth} |} \hline
+					\begin{longtable}[H]{| C{0.12\textwidth} | R{0.16\textwidth} L{0.6\textwidth} |} \hline
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{SaccadeDB}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
 						Constructor. Inicializa los atributos del objeto.
 						}\\\hline
-						Inputs 					& filepath: 	& Ubicación del archivo de base de datos (string). Por defecto: vacío (Se crea en el directorio de ejecución).
+						Inputs 					& path: 			& Directorio en donde se encuentra el archivo de base de datos (\textref{string}). Por defecto: vacío (Se crea en el directorio de ejecución).
 						\\\hline
-						Return 					& void. 		& 
+						Return 					& \textref{void}. 	& 
 						\\\hline 
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{connect}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Método que inicia una conexión con el archivo de base de datos. Si el archivo de base de datos epecificado en el constructor no existe, crea uno nuevo.
+						Inicia una conexión con el archivo de base de datos. Si el archivo de base de datos epecificado en el constructor no existe, crea uno nuevo.
 						}\\\hline
-						Inputs 					& void. 		&  
+						Inputs 					& \textref{void}. 	&  
 						\\\hline
-						Return 					& void. 		& 
+						Return 					& \textref{void}. 	& 
 						\\\hline 
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{close}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Método que finaliza, de ser posible, la conexión con la base de datos.
+						Finaliza, de ser posible, la conexión con la base de datos.
 						}\\\hline
-						Inputs 					& void. 		&  
+						Inputs 					& \textref{void}. 	&  
 						\\\hline
-						Return 					& bool. 		& Verdadero si la acción se realizó correctamente, Falso en caso contrario.
+						Return 					& \textref{bool}. 	& \textref{True} si la acción se realizó correctamente, \textref{False} en caso contrario.
 						\\\hline
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{push\_query}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Método que permite realizar querys para modificar los contenidos de la base de datos (insert, update, delete, etc.).
+						Permite realizar querys para modificar los contenidos de la base de datos (\textref{insert, update, delete}).
 						}\\\hline
-						Inputs 					& query. 		& Instrucción SQL (string).
+						Inputs 					& query. 			& Instrucción SQL (\textref{string}).
 						\\\hline
-						Return 					& bool. 		& Verdadero si la acción se realizó correctamente, Falso en caso contrario.
-						\\\hline \newpage
+						Return 					& \textref{bool}. 	& \textref{True} si la acción se realizó correctamente, \textref{False} en caso contrario.
+						\\\hline 
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{pull\_query}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Método que permite realizar querys para obtener datos de la base de datos (select).
+						Permite realizar querys para obtener datos desde de la base de datos (\textref{select}).
 						}\\\hline
-						Inputs 					& query. 		& Instrucción SQL (string).
+						Inputs 					& query. 			& Instrucción SQL (\textref{string}).
 						\\\hline
-						Return 					& object. 		& Array (numpy) en caso de existir datos, None en caso contrario. 
+						Return 					& \textref{object}. & Array (\textref{numpy}) en caso de existir datos, \textref{None} en caso contrario. 
 						\\\hline 
 					\caption{Métodos implementados en la clase \textref{SaccadeDB}.}
 					\label{tbl:03_class_saccadedb}
@@ -375,82 +375,82 @@
 
 				\vspace{-15mm}
 
-				\item \textbf{\textref{Configuration}:} Clase que permite manipular las configuración del hardware a utilizar en la ejecución de un experimento y la ubicación de los archivos de salida de la misma. Para utilizar las funciones de carga/guardado es necesario asignar un objeto de base de datos. 
+				\item \textbf{\textref{Configuration}:} Clase que permite manipular las configuración del hardware a utilizar en la ejecución de un experimento y la ubicación de los archivos de salida de la misma. Para utilizar las funciones de carga/guardado es necesario asignar un objeto de base de datos  (\textref{SaccadeDB}). 
 				
 				\vspace{-8mm}
 				\begin{center}\footnotesize{\singlespacing{
-					\begin{longtable}[H]{| C{0.15\textwidth} | R{0.13\textwidth} L{0.6\textwidth} |} \hline
+					\begin{longtable}[H]{| C{0.12\textwidth} | R{0.16\textwidth} L{0.6\textwidth} |} \hline
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{Configuration}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Constructor. Inicializa los atributos del objeto. Si se le entrega una instancia de objeto de base de datos y un nombre (asociado a un porfil de configuración) carga inmediatamente los datos. 
+						Constructor. Inicializa los atributos del objeto. Si se le entrega una objeto de base de datos y un nombre (asociado a un perfil de configuración) carga inmediatamente los datos. 
 						}\\\hline
-						\multirow{2}{*}{Inputs} & db: 			& Instancia de base de datos (SaccadeDB). Por defecto: vacío. (Sin conexión). \\
-						 						& name: 		& Nombre de perfil de configuración (string). Por defecto: vacío (No buscar).
+						\multirow{2}{*}{Inputs} & db: 				& Instancia de clase (\textref{SaccadeDB}). Por defecto: vacío. (Sin conexión). \\
+						 						& name: 			& Nombre de perfil de configuración (\textref{string}). Por defecto: vacío (No buscar).
 						\\\hline
-						Return 					& void. 		& 
+						Return 					& \textref{void}. 	& 
 						\\\hline 
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{get\_list}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
 						Método estático. Entrega una lista con los nombres de los perfiles de configuración que se encuentran almacenados en la base de datos.
 						}\\\hline
-						Inputs 					& db: 			& Instancia de base de datos (SaccadeDB). Por defecto: vacío. (Sin conexión). 
+						Inputs 					& db: 				& Instancia de clase (\textref{SaccadeDB}). Por defecto: vacío. (Sin conexión). 
 						\\\hline
-						Return 					& list.			& Si no hay elementos: lista vacía.
+						Return 					& \textref{list}.	& Si no hay elementos: lista vacía.
 						\\\hline 
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{load}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Método que permite cargar en el objeto las configuraciones almacenadas en la base de datos.
+						Permite cargar en el objeto las configuraciones almacenadas en la base de datos.
 						}\\\hline
-						Inputs 					& name: 		& Nombre de perfil de configuración (string).
+						Inputs 					& name: 			& Nombre de perfil de configuración (\textref{string}).
 						\\\hline
-						Return 					& bool.			& Verdadero si la acción se realizó correctamente, Falso en caso contrario.
+						Return 					& \textref{bool}.	& \textref{True} si la acción se realizó correctamente, \textref{False} en caso contrario.
 						\\\hline 
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{save}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Método que permite guardar la configuración del objeto en la base de datos.
+						Permite guardar el perfil de configuración en la base de datos.
 						}\\\hline
-						Inputs 					& void. 		& 
+						Inputs 					& \textref{void}. 	& 
 						\\\hline
-						Return 					& bool.			& Verdadero si la acción se realizó correctamente, Falso en caso contrario.
+						Return 					& \textref{bool}.	& \textref{True} si la acción se realizó correctamente, \textref{False} en caso contrario.
 						\\\hline 
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{copy}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Método que permite realizar una copia de la configuración.
+						Permite realizar una copia del objeto siempre que el nombre asignado no exista en la base de datos.
 						}\\\hline
-						Inputs 					& name: 		& Nombre de perfil de configuración (string).
+						Inputs 					& name: 			& Nombre a ser asignado en la copya del perfil de configuración (\textref{string}).
 						\\\hline
-						Return 					& object.		& Devuelve una copia si se ingresa un nombre correctamente, None en caso contrario.
-						\\\hline \newpage
+						Return 					& \textref{object}.	& Devuelve una copia si se ingresa un nombre correctamente, \textref{None} en caso contrario.
+						\\\hline 
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{remove}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Método que permite eliminar una configuración de la base de datos.
+						Permite eliminar el perfil de configuración de la base de datos.
 						}\\\hline
-						Inputs 					& void. 		& 
+						Inputs 					& \textref{void}. 	& 
 						\\\hline
-						Return 					& bool.			& Verdadero si la acción se realizó correctamente, Falso en caso contrario.
-						\\\hline 
+						Return 					& \textref{bool}.	& \textref{True} si la acción se realizó correctamente, \textref{False} en caso contrario.
+						\\\hline \newpage
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{get\_iohub}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						En base a los atributos de la clase esta función genera y retorna un diccionario con las configuraciones de los dispositivos requeridos por \textit{ioHub}.
+						Retorna un diccionario con las configuraciones y formatos requeridos por \textit{ioHub} para definir los dispositivos de hardware a ser utilizados en la ejecución de un experimento.
 						}\\\hline
-						Inputs 					& void. 		& 
+						Inputs 					& \textref{void}. 	& 
 						\\\hline
-						Return 					& dict.			& Si no existe en la base de datos: None.
+						Return 					& \textref{dict}.	& Si no existe en la base de datos: \textref{None}.
 						\\\hline
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{get\_configuration}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Retorna un diccionario con los atributos contenidos en la clase.
+						Retorna un diccionario que contiene los atributos del objeto.
 						}\\\hline
-						Inputs 					& void. 		& 
+						Inputs 					& \textref{void}. 	& 
 						\\\hline
-						Return 					& dict.			& Si no existe en la base de datos: None.
+						Return 					& \textref{dict}.	& Si no existe en la base de datos: \textref{None}.
 						\\\hline
 					\caption{Métodos implementados en la clase \textref{Configuration}.}
 					\label{tbl:03_class_configuration}
@@ -463,108 +463,108 @@
 
 				\vspace{-8mm}
 				\begin{center}\footnotesize{\singlespacing{
-					\begin{longtable}[H]{| C{0.15\textwidth} | R{0.13\textwidth} L{0.6\textwidth} |} \hline
+					\begin{longtable}[H]{| C{0.12\textwidth} | R{0.16\textwidth} L{0.6\textwidth} |} \hline
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{ItemList}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
 						Constructor. Inicializa los atributos de la clase. Permite definir el tipo de objetos a manipular. 
 						}\\\hline
-						Inputs 					& item\_class:	& Tipo de objeto (Test, Frame, Component).
+						Inputs 					& item\_class:		& Tipo de objeto (\textref{Test}, \textref{Frame}, \textref{Component}).
 						\\\hline
-						Return 					& void. 		& 
+						Return 					& \textref{void}. 	& 
 						\\\hline 
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{item\_add}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
 						Permite agregar un objeto a la lista. 
 						}\\\hline
-						Inputs 					& object: 		& Objeto a añadir (item\_class).
+						Inputs 					& item: 			& Objeto a añadir (\textref{item\_class}).
 						\\\hline
-						Return 					& bool.			& Verdadero si el objeto fue añadido, Falso si el objeto no era del tipo previamente definido.
+						Return 					& \textref{bool}.	& \textref{True} si el objeto fue añadido, \textref{False} si el objeto es del tipo definido.
 						\\\hline 
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{item\_copy}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
 						Agrega una copia del objeto seleccionado en el último lugar de la lista.
 						}\\\hline
-						\multirow{2}{*}{Inputs}	& item\_id: 	& Posición en lista del objeto a copiar (int). \\
-												& name:			& Nombre del nuevo objeto (string). 
+						\multirow{2}{*}{Inputs}	& item\_id: 		& Posición en lista del objeto a copiar (\textref{int}). \\
+												& name:				& Nombre del nuevo objeto (\textref{string}). 
 						\\\hline
-						Return 					& bool.			& Verdadero si el índice existe y se realiza la copia, Falso en caso contrario.
+						Return 					& \textref{bool}.	& \textref{True} si el índice existe y se realiza la copia, \textref{False} en caso contrario.
 						\\\hline 
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{item\_remove}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
 						Elimina el objeto seleccionado.
 						}\\\hline
-						Inputs 					& item\_id: 	& Posición en lista del objeto a eliminar (int).
+						Inputs 					& item\_id: 		& Posición en lista del objeto a eliminar (\textref{int}).
 						\\\hline
-						Return 					& bool.			& Verdadero si el índice existe y es eliminado, Falso en caso contrario.
-						\\\hline \newpage
+						Return 					& \textref{bool}.	& \textref{True} si el índice existe y es eliminado, \textref{False} en caso contrario.
+						\\\hline 
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{item\_replace}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
 						Remplaza el objeto seleccionado por uno nuevo.
 						}\\\hline
-						\multirow{2}{*}{Inputs}	& item\_id: 	& Posición en lista del objeto a reemplazar (int). \\
-												& new\_item:	& Objeto reemplazante (item\_class). 
+						\multirow{2}{*}{Inputs}	& item\_id: 		& Posición en lista del objeto a reemplazar (\textref{int}). \\
+												& new\_item:		& Objeto reemplazante (\textref{item\_class}). 
 						\\\hline
-						Return 					& bool.			& Verdadero si el índice existe y el objeto es añadido, Falso en caso contrario.
-						\\\hline
+						Return 					& \textref{bool}.	& \textref{True} si el índice existe y el objeto es añadido, \textref{False} en caso contrario.
+						\\\hline \newpage
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{item\_swap}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
 						Permite hacer un enroque entre dos elementos de la lista.
 						}\\\hline
-						\multirow{2}{*}{Inputs}	& item1\_id: 	& Posición en lista del primer objeto (int). \\
-												& item2\_id:	& Posición en lista del segundo objeto (int). 
+						\multirow{2}{*}{Inputs}	& item1\_id: 		& Posición en lista del primer objeto (\textref{int}). \\
+												& item2\_id:		& Posición en lista del segundo objeto (\textref{int}). 
 						\\\hline
-						Return 					& bool.			& Verdadero si los índices existen y se realiza el enroque, Falso en caso contrario.
+						Return 					& \textref{bool}.	& \textref{True} si los índices existen y se realiza el enroque, \textref{False} en caso contrario.
 						\\\hline
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{get\_items}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
 						Retorna la lista de objetos.
 						}\\\hline
-						Inputs 					& void. 		& 
+						Inputs 					& \textref{void}. 	& 
 						\\\hline
-						Return 					& list.			& Si no hay elementos: lista vacía.
+						Return 					& \textref{list}.	& Si no hay elementos: lista vacía.
 						\\\hline
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{get\_item}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
 						Retorna un elemento de la lista en base a su índice. 
 						}\\\hline
-						Inputs 					& item\_id:		& Posición en lista del objeto a recuperar (int). 
+						Inputs 					& item\_id:			& Posición en lista del objeto a recuperar (\textref{int}). 
 						\\\hline
-						Return 					& object.		& Si el índice no existe: None. 
+						Return 					& \textref{object}.	& Si el índice no existe: \textref{None}. 
 						\\\hline
 						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{get\_item\_index}}}\\\multicolumn{3}{|c|}{}\\\hline
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{check\_item\_name}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Retorna el índice de un objeto de la lista. 
+						Retorna el índice del objeto que tenga el nombre ingresado.  
 						}\\\hline
-						Inputs 					& object. 		& Objeto a buscar (item\_class).  
+						Inputs 					& item\_name: 		& Nombre del objeto a buscar (\textref{string}).  
 						\\\hline
-						Return 					& int.			& Si el objeto no existe: -1. 
+						Return 					& \textref{int}.	& Si el nombre no existe: -1. 
 						\\\hline
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{get\_items\_str}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
 						Retorna una lista con los nombres de los objetos almacenados.  
 						}\\\hline
-						Inputs 					& void. 		& 
+						Inputs 					& \textref{void}. 	& 
 						\\\hline
-						Return 					& list.			& Si no hay elementos: lista vacía
+						Return 					& \textref{list}.	& Si no hay elementos: lista vacía
 						\\\hline
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{get\_items\_length}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
 						Devuelve el número de elementos de la lista. 
 						}\\\hline
-						Inputs 					& void. 		&  
+						Inputs 					& \textref{void}. 	&  
 						\\\hline
-						Return 					& int.			&
+						Return 					& \textref{int}.	&
 						\\\hline
 					\caption{Métodos implementados en la clase \textref{ItemList}.}
 					\label{tbl:03_class_itemlist}
@@ -579,585 +579,579 @@
 
 				\vspace{-8mm}
 				\begin{center}\footnotesize{\singlespacing{
-					\begin{longtable}[H]{| C{0.15\textwidth} | R{0.13\textwidth} L{0.6\textwidth} |} \hline
+					\begin{longtable}[H]{| C{0.12\textwidth} | R{0.16\textwidth} L{0.6\textwidth} |} \hline
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{ItemListSequence}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
 						Constructor. Inicializa los atributos de la clase. Permite definir el tipo de objetos a manipular. 
 						}\\\hline
-						Inputs 					& item\_class:	& Tipo de objeto (Test, Frame, Component).
+						Inputs 					& item\_class:		& Tipo de objeto (\textref{Test}, \textref{Frame}, \textref{Component}).
 						\\\hline
-						Return 					& void. 		& 
-						\\\hline 
+						Return 					& \textref{void}. 	& 
+						\\\hline \newpage
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{sequence\_add}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
 						Permite agregar un elemento a la secuencia. 
 						}\\\hline
-						\multirow{2}{*}{Inputs}	& item\_id: 	& Posición en lista del objeto a agregar (int). \\
-												& quantity:		& Cantidad de veces que será ejecutado (int).
+						\multirow{2}{*}{Inputs}	& item\_id: 		& Posición en lista del objeto a agregar (\textref{int}). \\
+												& quantity:			& Cantidad de veces que será ejecutado (\textref{int}).
 						\\\hline
-						Return 					& bool.			& Verdadero si el índice existe y la cantidad no es None, Falso en caso contrario.
+						Return 					& \textref{bool}.	& \textref{True} si el índice existe y la cantidad no es \textref{None}, \textref{False} en caso contrario.
 						\\\hline 
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{sequence\_edit}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
 						Permite editar un elemento de la secuencia.
 						}\\\hline
-						\multirow{3}{*}{Inputs}	& index:		& Posición del elemento de la secuencia a ser modificado (int). \\
-												& item\_id: 	& Posición en lista del objeto reemplazante (int). \\
-												& quantity:		& Cantidad de veces que será ejecutado (int).
+						\multirow{3}{*}{Inputs}	& index:			& Posición del elemento de la secuencia a ser modificado (\textref{int}). \\
+												& item\_id: 		& Posición en lista del objeto reemplazante (\textref{int}). \\
+												& quantity:			& Cantidad de veces que será ejecutado (\textref{int}).
 						\\\hline
-						Return 					& bool.			& Verdadero si los índices existen y la cantidad no es None, Falso en caso contrario.
+						Return 					& \textref{bool}.	& \textref{True} si los índices existen y la cantidad no es \textref{None}, \textref{False} en caso contrario.
 						\\\hline 
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{sequence\_remove}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
 						Elimina el elemento seleccionado.
 						}\\\hline
-						Inputs 					& index: 		& Posición del elemento de la secuencia a ser eliminado (int).
+						Inputs 					& index: 			& Posición del elemento de la secuencia a ser eliminado (\textref{int}).
 						\\\hline
-						Return 					& bool.			& Verdadero si el índice existe y es eliminado, Falso en caso contrario.
+						Return 					& \textref{bool}.	& \textref{True} si el índice existe y es eliminado, \textref{False} en caso contrario.
 						\\\hline 
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{sequence\_swap}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
 						Permite hacer un enroque entre dos elementos de la secuencia.
 						}\\\hline
-						\multirow{2}{*}{Inputs}	& index1: 		& Posición del primer elemento de la secuencia (int). \\
-												& index2:		& Posición del segundo elemento de la secuencia (int). 
+						\multirow{2}{*}{Inputs}	& index1: 			& Posición del primer elemento de la secuencia (\textref{int}). \\
+												& index2:			& Posición del segundo elemento de la secuencia (\textref{int}). 
 						\\\hline
-						Return 					& bool.			& Verdadero si los índices existen y se realiza el enroque, Falso en caso contrario.
+						Return 					& \textref{bool}.	& \textref{True} si los índices existen y se realiza el enroque, \textref{False} en caso contrario.
 						\\\hline
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{get\_sequence}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
 						Retorna la secuencia de ejecución.
 						}\\\hline
-						Inputs 					& void. 		& 
+						Inputs 					& \textref{void}. 	& 
 						\\\hline
-						Return 					& list.			& Si no hay elementos: lista vacía.
+						Return 					& \textref{list}.	& Si no hay elementos: lista vacía.
 						\\\hline
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{get\_sequence\_item}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
 						Retorna un elemento de la secuencia en base a su índice. 
 						}\\\hline
-						Inputs 					& index. 		& Posición del elemento de la secuencia (int).  
+						Inputs 					& index: 			& Posición del elemento de la secuencia (\textref{int}).  
 						\\\hline
-						Return 					& list.			& Si el objeto no existe: None. 
+						Return 					& \textref{list}.	& Si el objeto no existe: \textref{None}. 
 						\\\hline
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{get\_sequence\_str}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
 						Retorna una lista con los nombres de los objetos en la secuencia y el numero de veces a ser ejecutados.  
 						}\\\hline
-						Inputs 					& void. 		& 
+						Inputs 					& \textref{void}. 	& 
 						\\\hline
-						Return 					& list.			& Si no hay elementos: lista vacía
-						\\\hline \newpage
+						Return 					& \textref{list}.	& Si no hay elementos: lista vacía
+						\\\hline 
 						% ===============================================
 						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{get\_sequence\_length}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
 						Devuelve el número de elementos de la secuencia. 
 						}\\\hline
-						Inputs 					& void. 		&  
+						Inputs 					& \textref{void}. 	&  
 						\\\hline
-						Return 					& int.			&
+						Return 					& \textref{int}.	&
 						\\\hline
 					\caption{Métodos implementados en la clase \textref{ItemListSequence}.}
 					\label{tbl:03_class_itemlistsequence}
 					\end{longtable}}}
 				\end{center}
 
-				\vspace{-15mm}
-
-				\item \textbf{Component:} Clase utilizada para manejar la configuración de los elementos que conforman un cuadro. 
+				\newpage
+				\item \textbf{\textref{Component}:} Clase utilizada para manejar la configuración de los componentes que conforman un cuadro. 
 				
 				\vspace{-8mm}
 				\begin{center}\footnotesize{\singlespacing{
-					\begin{longtable}[H]{| C{0.15\textwidth} | R{0.13\textwidth} L{0.6\textwidth} |} \hline
+					\begin{longtable}[H]{| C{0.12\textwidth} | R{0.16\textwidth} L{0.6\textwidth} |} \hline
 						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{Component}}}\\\multicolumn{3}{|c|}{}\\\hline
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{Component}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
 						Constructor. Inicializa los atributos del objeto.
 						}\\\hline
-						Inputs 					& void.		& 
+						Inputs 					& \textref{void}.	& 
 						\\\hline
-						Return 					& void. 	& 
+						Return 					& \textref{void}. 	& 
 						\\\hline 
 						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{get\_list}}}\\\multicolumn{3}{|c|}{}\\\hline
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{get\_list}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Método estático. Retorna una lista con todos los componentes que forman parte de un cuadro específico.
+						Método estático. Retorna una lista con el nombre y tipo de figura de todos los componentes que forman parte de un cuadro específico.
 						}\\\hline
-						\multirow{4}{*}{Inputs}	& db:		& Objeto de base de datos (SaccadeDB) mediante el cual se extraerá la información. \\
-												& exp:		& Código del experimento al que pertenecen los componentes de interés. \\
-												& tes:		& ID de la tarea a la cual pertenecen los componentes de interés. \\
-												& fra: 		& ID del cuadro al cual pertenecen los componentes de interés.
+						\multirow{4}{*}{Inputs}	& db:				& Instancia de clase (\textref{SaccadeDB}). \\
+												& exp:				& Código del experimento al que pertenecen los componentes de interés (\textref{string}). \\
+												& tes:				& ID de la tarea a la cual pertenecen los componentes de interés (\textref{int}). \\
+												& fra: 				& ID del cuadro al cual pertenecen los componentes de interés (\textref{int}).
 						\\\hline
-						Return 					& objeto. 	& list si existen elementos en la base de datos, None en caso contrario.
+						Return 					& \textref{list}. 	& Si no hay elementos: lista vacía.
 						\\\hline 
 						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{encode\_image}}}\\\multicolumn{3}{|c|}{}\\\hline
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{encode\_image}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Método privado. En caso de que el componente corresponda a una imagen, esta función la codifica para almacenar los datos en la base de datos en un campo de tipo BLOB.
+						Método privado. Si el componente corresponde a una imagen esta función retorna su contenido codificado en \textref{''base64''}.
 						}\\\hline
-						Inputs 					& void.		&  	
+						Inputs 					& \textref{void}.	&  	
 						\\\hline
-						Return 					& objeto. 	& Unicode que contiene la imagen codificada en 'base64' en caso de existir imagen, None en caso contrario. 
+						Return 					& \textref{unicode}.& 
 						\\\hline 
 						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{decode\_image}}}\\\multicolumn{3}{|c|}{}\\\hline
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{decode\_image}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Método privado. Permite decodificar una imagen almacenada en 'base64'.
+						Método privado. Permite decodificar una imagen almacenada en \textref{''base64''}.
 						}\\\hline
-						Inputs 					& encimg:	& unicode que contiene la imagen codificada en 'base64'.
+						Inputs 					& enc\_img:			& Imagen codificada en \textref{''base64''} (\textref{string}).
 						\\\hline
-						Return 					& objeto. 	& Imagen PIL en caso de lograr decodificar, None en caso contrario.
+						Return 					& \textref{void}. 	& 
 						\\\hline 
 						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{load}}}\\\multicolumn{3}{|c|}{}\\\hline
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{load}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Método que permite cargar en el objeto las configuraciones almacenadas en la base de datos.
+						Permite cargar en el objeto las configuraciones almacenadas en la base de datos.
 						}\\\hline
-						\multirow{5}{*}{Inputs}	& db:		& Objeto de base de datos (SaccadeDB) mediante el cual se extraerá la información. \\
-												& exp:		& Código del experimento al que pertenece el componente. \\
-												& tes:		& ID de la tarea a la cual pertenece el componente. \\
-												& fra: 		& ID del cuadro al cual pertenece el componente. \\
-												& com: 		& ID del componente. 
+						\multirow{5}{*}{Inputs}	& db:				& Instancia de clase (\textref{SaccadeDB}). \\
+												& exp:				& Código del experimento al que pertenece el componente (\textref{string}). \\
+												& tes:				& ID de la tarea a la cual pertenece el componente (\textref{int}). \\
+												& fra: 				& ID del cuadro al cual pertenece el componente (\textref{int}). \\
+												& com: 				& ID asignado al componente (\textref{int}). 
 						\\\hline
-						Return 					& bool. 	& Verdadero si el proceso se completó satisfactoriamente, falso en caso contrario. 
+						Return 					& \textref{bool}. 	& \textref{True} si la acción se realizó correctamente, \textref{False} en caso contrario. 
+						\\\hline 
+						% ===============================================
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{save}}}\\\multicolumn{3}{|c|}{}\\\hline
+						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
+						Permite guardar la configuración del componente en la base de datos. 
+						}\\\hline
+						\multirow{5}{*}{Inputs}	& db:				& Instancia de clase (\textref{SaccadeDB}). \\
+												& exp:				& Código del experimento al que pertenecerá el componente (\textref{string}). \\
+												& tes:				& ID de la tarea a la cual pertenecerá el componente (\textref{int}). \\
+												& fra: 				& ID del cuadro al cual pertenecerá el componente (\textref{int}). \\
+												& com: 				& ID asignado al componente (\textref{int}).
+						\\\hline
+						Return 					& \textref{bool}. 	& \textref{True} si el proceso se completó satisfactoriamente, \textref{False} en caso contrario. 
 						\\\hline \newpage
 						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{save}}}\\\multicolumn{3}{|c|}{}\\\hline
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{copy}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Método que permite guardar los datos de un componente en la base de datos. 
+						Retorna una copia profunda del componete.
 						}\\\hline
-						\multirow{5}{*}{Inputs}	& db:		& Objeto de base de datos (SaccadeDB) mediante el cual se guardará la información.\\
-												& exp:		& Código del experimento al que pertenecerá el componente. \\
-												& tes:		& ID de la tarea a la cual pertenecerá el componente. \\
-												& fra: 		& ID del cuadro al cual pertenecerá el componente. \\
-												& com: 		& ID que se le otorgará al componente.
+						Inputs 					& \textref{void}.	& 
 						\\\hline
-						Return 					& bool. 	& Verdadero si el proceso se completó satisfactoriamente, falso en caso contrario. 
+						Return 					& \textref{object}.	&
 						\\\hline 
 						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{copy}}}\\\multicolumn{3}{|c|}{}\\\hline
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{get\_execution}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Método que entrega una copia profunda del objeto.
+						Retorna el componente de foma tal que pueda ser presentado en el monitor (mediante uso de \textit{psychoPy}).
 						}\\\hline
-						Inputs 					& void.		& 
+						Inputs 					& win:				& Instancia de clase \textref{Window}, perteneciente al módulo \textref{psychopy.visual}.
 						\\\hline
-						Return 					& objeto. 	& Objeto de tipo Component con los mismos atributos.
+						Return 					& \textref{object}. & Objeto de la familia \textref{psychopy.visual}. Actualmente se encuentran implementadas 5 figuras (cruz, cuadrado, círculo, gaussiana y flechas) además de la posibilidad de incluir imágenes. En caso de existir algun error, devuelve \textref{None}.
 						\\\hline 
 						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{get\_execution}}}\\\multicolumn{3}{|c|}{}\\\hline
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{get\_configuration}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Método a ser utilizado durante la ejecución de un experimento. Retorna un objeto que puede ser presentado en el monitor mediante una ventana de PsychoPy.
+						Retorna un diccionario que contiene los atributos del objeto.
 						}\\\hline
-						Inputs 					& win:		& Objeto de tipo Window perteneciente a PsychoPy que permite mostrar los estímulos por pantalla.
+						Inputs 					& \textref{void}	& 
 						\\\hline
-						Return 					& objeto. 	& Estímulo de la familia 'psychopy.visual'. Actualmente se encuentran implementadas 5 figuras (cruz, cuadrado, círculo, gaussiana y flechas) además de la posibilidad de incluir imágenes.
+						Return 					& \textref{dict} 	& 
 						\\\hline 
-						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{get\_configuration}}}\\\multicolumn{3}{|c|}{}\\\hline
-						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Retorna un diccionario con los atributos contenidos en la clase.
-						}\\\hline
-						Inputs 					& void:		& 
-						\\\hline
-						Return 					& dict. 	& 
-						\\\hline 
-					\caption{Métodos implementados en la clase Component.}
+					\caption{Métodos implementados en la clase \textref{Component}.}
 					\label{tbl:03_class_component}
 					\end{longtable}}}
 				\end{center}
 
 				\vspace{-15mm}
 
-				\item \textbf{Frame:} Clase utilizada para configurar el comportamiento de un cuadro específico de una tarea. Ya que los cuadros contienen y muestran componentes, esta clase se define como hija de ItemList inicializada para objetos de tipo Component.
+				\item \textbf{\textref{Frame}:} Clase utilizada para manejar la configuración de un cuadro. Ya que los cuadros contienen y muestran componentes, esta clase se define como hija de \textref{ItemList} y se inicializa para objetos de tipo \textref{Component}.
 
 				\vspace{-8mm}
 				\begin{center}\footnotesize{\singlespacing{
-					\begin{longtable}[H]{| C{0.15\textwidth} | R{0.13\textwidth} L{0.6\textwidth} |} \hline
+					\begin{longtable}[H]{| C{0.12\textwidth} | R{0.16\textwidth} L{0.6\textwidth} |} \hline
 						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{Frame}}}\\\multicolumn{3}{|c|}{}\\\hline
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{Frame}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
 						Constructor. Inicializa los atributos del objeto.
 						}\\\hline
-						Inputs 					& void.		& 
+						Inputs 					& \textref{void}.	& 
 						\\\hline
-						Return 					& void. 	& 
+						Return 					& \textref{void}.	& 
+						\\\hline 
+						% ===============================================
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{get\_list}}}\\\multicolumn{3}{|c|}{}\\\hline
+						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
+						Método estático. Retorna una lista con el nombre de todos los cuadros que forman parte de una tarea específica.
+						}\\\hline
+						\multirow{3}{*}{Inputs}	& db:				& Instancia de clase (\textref{SaccadeDB}). \\
+												& exp:				& Código del experimento al que pertenecen los cuadros de interés (\textref{string}). \\
+												& tes:				& ID de la tarea a la cual pertenecen los cuadros de interés (\textref{int}). 
+						\\\hline
+						Return 					& \textref{list}.	& Si no hay elementos: lista vacía.
+						\\\hline 
+						% ===============================================
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{load}}}\\\multicolumn{3}{|c|}{}\\\hline
+						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
+						Permite cargar la configuración del cuadro desde la base de datos. Para cargar los componentes se hace uso del método privado \textref{load\_components}.
+						}\\\hline
+						\multirow{4}{*}{Inputs}	& db:				& Instancia de clase (\textref{SaccadeDB}). \\
+												& exp:				& Código del experimento al que pertenece el cuadro (\textref{string}). \\
+												& tes:				& ID de la tarea a la cual pertenece el cuadro (\textref{int}). \\
+												& fra: 				& ID del cuadro (\textref{int}).
+						\\\hline
+						Return 					& \textref{bool}.	& \textref{True} si el proceso se completó satisfactoriamente, \textref{False} en caso contrario.   
 						\\\hline \newpage
 						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{get\_list}}}\\\multicolumn{3}{|c|}{}\\\hline
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{load\_components}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Método estático. Retorna una lista con todos los cuadros que forman parte de una tarea específica.
+						Método privado. Permite cargar desde la base de datos todos los componentes del cuadro. 
 						}\\\hline
-						\multirow{3}{*}{Inputs}	& db:		& Objeto de base de datos (SaccadeDB) mediante el cual se extraerá la información. \\
-												& exp:		& Código del experimento al que pertenecen los cuadros de interés. \\
-												& tes:		& ID de la tarea a la cual pertenecen los cuadros de interés. 
+						\multirow{4}{*}{Inputs}	& db:				& Instancia de clase (\textref{SaccadeDB}). \\
+												& exp:				& Código del experimento al que pertenece el cuadro (\textref{string}). \\
+												& tes:				& ID de la tarea a la cual pertenece el cuadro (\textref{int}). \\
+												& fra: 				& ID del cuadro (\textref{int}).
 						\\\hline
-						Return 					& objeto. 	& list si existen elementos en la base de datos, None en caso contrario.
+						Return 					& \textref{void}.	& 
 						\\\hline 
 						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{load}}}\\\multicolumn{3}{|c|}{}\\\hline
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{save}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Método que permite cargar el cuadro y sus componentes desde la base de datos. Para cargar los componentes se hace uso del método privado load\_components.
+						Permite guardar la configuración del cuadro en la base de datos. Para guardar los componentes se hace uso del método privado \textref{save\_components}.
 						}\\\hline
-						\multirow{4}{*}{Inputs}	& db:		& Objeto de base de datos (SaccadeDB) mediante el cual se extraerá la información. \\
-												& exp:		& Código del experimento al que pertenece el cuadro. \\
-												& tes:		& ID de la tarea a la cual pertenece el cuadro. \\
-												& fra: 		& ID del cuadro. 
+						\multirow{4}{*}{Inputs}	& db:				& Instancia de clase (\textref{SaccadeDB}). \\
+												& exp:				& Código del experimento al que pertenecerá el cuadro (\textref{string}). \\
+												& tes:				& ID de la tarea a la cual pertenecerá el cuadro (\textref{int}). \\
+												& fra: 				& ID asignado al cuadro (\textref{int}). 
 						\\\hline
-						Return 					& bool. 	& Verdadero si el proceso se completó satisfactoriamente, falso en caso contrario. 
+						Return 					& \textref{bool}.	& \textref{True} si el proceso se completó satisfactoriamente, \textref{False} en caso contrario.  
 						\\\hline 
 						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{load\_components}}}\\\multicolumn{3}{|c|}{}\\\hline
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{save\_components}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Método privado. Busca en la base de datos todos los componentes asociados al cuadro de interés, lo carga de forma iterativa y los agrega a la lista. 
+						Método privado. Permite guardar en la base de datos cada uno de los componentes del cuadro.
 						}\\\hline
-						\multirow{4}{*}{Inputs}	& db:		& Objeto de base de datos (SaccadeDB) mediante el cual se extraerá la información. \\
-												& exp:		& Código del experimento al que pertenece el cuadro. \\
-												& tes:		& ID de la tarea a la cual pertenece el cuadro. \\
-												& fra: 		& ID del cuadro. 
+						\multirow{4}{*}{Inputs}	& db:				& Instancia de clase (\textref{SaccadeDB}). \\
+												& exp:				& Código del experimento al que pertenece el cuadro (\textref{string}). \\
+												& tes:				& ID de la tarea a la cual pertenece el cuadro (\textref{int}). \\
+												& fra: 				& ID del cuadro (\textref{int}).
 						\\\hline
-						Return 					& void. 	& 
+						Return 					& \textref{void}.	& 
 						\\\hline 
 						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{save}}}\\\multicolumn{3}{|c|}{}\\\hline
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{copy}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Método que permite guardar los datos de un cuadro y sus componentes en la base de datos. Para guardar los componentes se hace uso del método privado save\_components.
+						Retorna una copia profunda del cuadro. 
 						}\\\hline
-						\multirow{4}{*}{Inputs}	& db:		& Objeto de base de datos (SaccadeDB) mediante el cual se guardará la información. \\
-												& exp:		& Código del experimento al que pertenecerá el cuadro. \\
-												& tes:		& ID de la tarea a la cual pertenecerá el cuadro. \\
-												& fra: 		& ID que se le otorgará al cuadro. 
+						Inputs 					& \textref{void}.	& 
 						\\\hline
-						Return 					& bool. 	& Verdadero si el proceso se completó satisfactoriamente, falso en caso contrario. 
+						Return 					& \textref{object}. & 
 						\\\hline 
 						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{save\_components}}}\\\multicolumn{3}{|c|}{}\\\hline
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{get\_execution}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Método privado. Guarda en la base de datos cada uno de los componentes de la lista.
+						Retorna un diccionario que contiene los elementos necesarios para la presentación del cuadro: Su nombre (para identifiación), las características asociadas a su presentación (si es temporizado o involucra respuesta de teclado) y un objeto que permita cambiar el color del fondo según sea requerido. Además, este diccionario contiene una lista de los componentes que conforman el cuadro (que se obtiene al llamar el método \textref{get\_execution} para cada uno).
 						}\\\hline
-						\multirow{4}{*}{Inputs}	& db:		& Objeto de base de datos (SaccadeDB) mediante el cual se guardará la información. \\
-												& exp:		& Código del experimento al que pertenece el cuadro. \\
-												& tes:		& ID de la tarea a la cual pertenece el cuadro. \\
-												& fra: 		& ID del cuadro.
+						Inputs 					& win:				& Instancia de clase \textref{Window}, perteneciente al módulo \textref{psychopy.visual}.
 						\\\hline
-						Return 					& void. 	& 
-						\\\hline \newpage
-						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{copy}}}\\\multicolumn{3}{|c|}{}\\\hline
-						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Método que entrega una copia profunda del objeto.
-						}\\\hline
-						Inputs 					& void.		& 
-						\\\hline
-						Return 					& objeto. 	& Objeto de tipo Frame con los mismos atributos.
+						Return 					& \textref{dict}. 	&  
 						\\\hline 
 						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{get\_execution}}}\\\multicolumn{3}{|c|}{}\\\hline
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{get\_configuration}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Método a ser utilizado durante la ejecución de un experimento. Retorna un diccionario que contiene las configuraciones del cuadro y una lista con sus componentes. Para esto se hace uso de forma iterativa de la función get\_execution de cada componente que forma parte del cuadro. 
+						Retorna un diccionario que contiene los atributos del objeto y una lista con la configuración de sus componentes (esta lista se obteniene al llamar el método \textref{get\_configuration} para cada uno). 
 						}\\\hline
-						Inputs 					& win:		& Objeto de tipo Window perteneciente a PsychoPy que permite mostrar los estímulos por pantalla.
+						Inputs 					& \textref{void}.	& 
 						\\\hline
-						Return 					& dict. 	& 
+						Return 					& \textref{dict}. 	& 
 						\\\hline 
-						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{get\_configuration}}}\\\multicolumn{3}{|c|}{}\\\hline
-						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Retorna un diccionario que contiene los atributos del cuadro y una lista con los atributos de sus componentes. Para esto se hace uso de forma iterativa de la función get\_configuration de cada componente que forma parte del cuadro.
-						}\\\hline
-						Inputs 					& void:		& 
-						\\\hline
-						Return 					& dict. 	& 
-						\\\hline 
-					\caption{Métodos implementados en la clase Frame.}
+					\caption{Métodos implementados en la clase \textref{Frame}.}
 					\label{tbl:03_class_frame}
 					\end{longtable}}}
 				\end{center}
 
 				\vspace{-15mm}
 
-				\item \textbf{Test:} Clase utilizada para configurar una tarea específica en un experimento. Ya que las tareas se componen de cuadros, esta clase se define como hija de ItemList inicializada para objetos de tipo Frame.
+				\item \textbf{Test:} Clase utilizada para manejar la configuración de una tarea. Ya que las tareas se componen de cuadros, esta clase se define como hija de \textref{ItemList} y se inicializa para objetos de tipo \textref{Frame}.
+				
 				\vspace{-8mm}
 				\begin{center}\footnotesize{\singlespacing{
-					\begin{longtable}[H]{| C{0.15\textwidth} | R{0.13\textwidth} L{0.6\textwidth} |} \hline
+					\begin{longtable}[H]{| C{0.12\textwidth} | R{0.16\textwidth} L{0.6\textwidth} |} \hline
 						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{Test}}}\\\multicolumn{3}{|c|}{}\\\hline
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{Test}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
 						Constructor. Inicializa los atributos del objeto.
 						}\\\hline
-						Inputs 					& void.		& 
+						Inputs 					& \textref{void}.	& 
 						\\\hline
-						Return 					& void. 	& 
+						Return 					& \textref{void}.	& 
 						\\\hline 
 						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{get\_list}}}\\\multicolumn{3}{|c|}{}\\\hline
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{get\_list}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Método estático. Retorna una lista con todas las tareas que forman parte de un experimento específico.
+						Método estático. Retorna una lista con el nombre de todas las tareas que forman parte de un experimento específico.
 						}\\\hline
-						\multirow{2}{*}{Inputs}	& db:		& Objeto de base de datos (SaccadeDB) mediante el cual se extraerá la información. \\
-												& exp:		& Código del experimento al cual pertenecen las tareas de interés.  
+						\multirow{2}{*}{Inputs}	& db:				& Instancia de clase (\textref{SaccadeDB}). \\
+												& exp:				& Código del experimento al cual pertenecen las tareas de interés (\textref{string}).  
 						\\\hline
-						Return 					& objeto. 	& list si existen elementos en la base de datos, None en caso contrario.
+						Return 					& \textref{list}. 	& Si no hay elementos: lista vacía.
+						\\\hline 
+						% ===============================================
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{load}}}\\\multicolumn{3}{|c|}{}\\\hline
+						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
+						Permite cargar la configuración de una tarea desde la base de datos. Para cargar los cuadros se hace uso del método privado \textref{load\_frames}.
+						}\\\hline
+						\multirow{3}{*}{Inputs}	& db:				& Instancia de clase (\textref{SaccadeDB}). \\
+												& exp:				& Código del experimento al que pertenece la tarea (\textref{string}). \\
+												& tes:				& ID de la tarea (\textref{int}). 
+						\\\hline
+						Return 					& \textref{bool}. 	& \textref{True} si el proceso se completó satisfactoriamente, \textref{False} en caso contrario.
+						\\\hline 
+						% ===============================================
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{load\_frames}}}\\\multicolumn{3}{|c|}{}\\\hline
+						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
+						Método privado. Permite cargar desde la base de datos todos los cuadros de la tarea.
+						}\\\hline
+						\multirow{3}{*}{Inputs}	& db:				& Instancia de clase (\textref{SaccadeDB}). \\
+												& exp:				& Código del experimento al que pertenece la tarea (\textref{string}). \\
+												& tes:				& ID de la tarea (\textref{int}). 
+						\\\hline
+						Return 					& \textref{void}. 	& 
+						\\\hline 
+						% ===============================================
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{save}}}\\\multicolumn{3}{|c|}{}\\\hline
+						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
+						Permite guardar la configuración de la tarea en la base de datos. Para guardar los cuadros se hace uso del método privado \textref{save\_frames}.
+						}\\\hline
+						\multirow{4}{*}{Inputs}	& db:				& Instancia de clase (\textref{SaccadeDB}). \\
+												& exp:				& Código del experimento al que pertenecerá la tarea (\textref{string}). \\
+												& tes:				& ID asignado a la tarea (\textref{int}). 
+						\\\hline
+						Return 					& \textref{bool}. 	& \textref{True} si el proceso se completó satisfactoriamente, \textref{False} en caso contrario. 
+						\\\hline 
+						% ===============================================
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{save\_frames}}}\\\multicolumn{3}{|c|}{}\\\hline
+						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
+						Método privado. Permite guardar en la base de datos cada uno de los cuadros de la tarea.
+						}\\\hline
+						\multirow{3}{*}{Inputs}	& db:				& Instancia de clase (\textref{SaccadeDB}). \\
+												& exp:				& Código del experimento al que pertenece la tarea (\textref{string}). \\
+												& tes:				& ID de la tarea (\textref{int}). 
+						\\\hline
+						Return 					& \textref{void}. 	& 
 						\\\hline \newpage
 						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{load}}}\\\multicolumn{3}{|c|}{}\\\hline
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{copy}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Método que permite cargar la tarea y sus cuadros desde la base de datos. Para cargar los cuadros se hace uso del método privado load\_frames.
+						Retorna una copia profunda del objeto.
 						}\\\hline
-						\multirow{3}{*}{Inputs}	& db:		& Objeto de base de datos (SaccadeDB) mediante el cual se extraerá la información. \\
-												& exp:		& Código del experimento al que pertenece la tarea de interés. \\
-												& tes:		& ID de la tarea. 
+						Inputs 					& \textref{void}.	& 
 						\\\hline
-						Return 					& bool. 	& Verdadero si el proceso se completó satisfactoriamente, falso en caso contrario. 
+						Return 					& \textref{object}. & 
 						\\\hline 
 						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{load\_frames}}}\\\multicolumn{3}{|c|}{}\\\hline
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{get\_execution}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Método privado. Busca en la base de datos todos los cuadros asociados a la tarea de interés, los carga de forma iterativa y los agrega a la lista. 
+						Retorna un diccionario que contiene los elementos necesarios para la ejecución de la tarea: Su nombre (para identificación) y una lista con los cuadros que la conforman (que se obtiene al llamar el método \textref{get\_execution} para cada uno).
 						}\\\hline
-						\multirow{3}{*}{Inputs}	& db:		& Objeto de base de datos (SaccadeDB) mediante el cual se extraerá la información. \\
-												& exp:		& Código del experimento al que pertenece la tarea de interés. \\
-												& tes:		& ID de la tarea. 
+						Inputs 					& win:				& Instancia de clase \textref{Window}, perteneciente al módulo \textref{psychopy.visual}.
 						\\\hline
-						Return 					& void. 	& 
+						Return 					& \textref{dict}. 	& 
 						\\\hline 
 						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{save}}}\\\multicolumn{3}{|c|}{}\\\hline
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{get\_configuration}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Método que permite guardar los datos de una tarea y sus cuadros en la base de datos. Para guardar los cuadros se hace uso del método privado save\_frames.
+						Retorna un diccionario que contiene los atributos del objeto y una lista con la configuración de los cuadros que lo componen (esta lista se obtiene al llamar el método \textref{get\_configuration} para cada uno).
 						}\\\hline
-						\multirow{4}{*}{Inputs}	& db:		& Objeto de base de datos (SaccadeDB) mediante el cual se guardará la información. \\
-												& exp:		& Código del experimento al que pertenecerá la tarea. \\
-												& tes:		& ID que se le otorgará a la tarea. 
+						Inputs 					& \textref{void}.	& 
 						\\\hline
-						Return 					& bool. 	& Verdadero si el proceso se completó satisfactoriamente, falso en caso contrario. 
+						Return 					& \textref{dict}. 	& 
 						\\\hline 
-						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{save\_frames}}}\\\multicolumn{3}{|c|}{}\\\hline
-						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Método privado. Guarda en la base de datos cada uno de los cuadros de la lista. 
-						}\\\hline
-						\multirow{4}{*}{Inputs}	& db:		& Objeto de base de datos (SaccadeDB) mediante el cual se guardará la información. \\
-												& exp:		& Código del experimento al que pertenece la tarea. \\
-												& tes:		& ID de la tarea a la cual pertenecerá el cuadro. 
-						\\\hline
-						Return 					& void. 	& 
-						\\\hline 
-						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{copy}}}\\\multicolumn{3}{|c|}{}\\\hline
-						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Método que entrega una copia profunda del objeto.
-						}\\\hline
-						Inputs 					& void.		& 
-						\\\hline
-						Return 					& objeto. 	& Objeto de tipo Test con los mismos atributos.
-						\\\hline 
-						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{get\_execution}}}\\\multicolumn{3}{|c|}{}\\\hline
-						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Método a ser utilizado durante la ejecución de un experimento. Retorna un diccionario que contiene las configuraciones de la tarea y una lista con sus cuadros. Para esto se hace uso de forma iterativa de la función get\_execution de cada cuadro que forma parte de la tarea. 
-						}\\\hline
-						Inputs 					& win:		& Objeto de tipo Window perteneciente a PsychoPy que permite mostrar los estímulos por pantalla.
-						\\\hline
-						Return 					& dict. 	& 
-						\\\hline \newpage
-						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{get\_configuration}}}\\\multicolumn{3}{|c|}{}\\\hline
-						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Retorna un diccionario que contiene los atributos de la tarea y una lista con los atributos de sus cuadros. Para esto se hace uso de forma iterativa de la función get\_configuration de cada cuadro que forma parte de la tarea.
-						}\\\hline
-						Inputs 					& void:		& 
-						\\\hline
-						Return 					& dict. 	& 
-						\\\hline 
-					\caption{Métodos implementados en la clase Test.}
+					\caption{Métodos implementados en la clase \textref{Test}.}
 					\label{tbl:03_class_test}
 					\end{longtable}}}
 				\end{center}
 
 				\vspace{-15mm}
 
-				\item \textbf{Experiment:} Clase utilizada para configurar un experimento específico. Ya que los experimentos se componen de tareas, esta clase se define como hija de ItemList inicializada para objetos de tipo Test. Para utilizar las funciones de carga/guardado es necesario configurar el objeto de base de datos mediante la función set\_database.
+				\item \textbf{\textref{Experiment}:} Clase utilizada para manejar la coniguración de un experimento. Ya que los experimentos se componen de tareas y estas pueden formar secuencias de ejecución esta clase se define como hija de \textref{ItemLisSequence} y se inicializa para objetos de tipo \textref{Test}.  Para utilizar las funciones de carga/guardado es necesario asignar un objeto de base de datos (\textref{SaccadeDB}). 
+
 				\vspace{-8mm}
 				\begin{center}\footnotesize{\singlespacing{
-					\begin{longtable}[H]{| C{0.15\textwidth} | R{0.13\textwidth} L{0.6\textwidth} |} \hline
+					\begin{longtable}[H]{| C{0.12\textwidth} | R{0.16\textwidth} L{0.6\textwidth} |} \hline
 						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{Experiment}}}\\\multicolumn{3}{|c|}{}\\\hline
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{Experiment}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Constructor. Inicializa los atributos del objeto.
+						Constructor. Inicializa los atributos del objeto. Si se le entrega un objeto de base de datos y un código (asociado a un experimento) carga inmediatamente los datos. 
 						}\\\hline
-						Inputs 					& void.		& 
+						\multirow{2}{*}{Inputs} & db: 				& Instancia de clase (\textref{SaccadeDB}). Por defecto: vacío. (Sin conexión). \\
+						 						& name: 			& Nombre de perfil de configuración (\textref{string}). Por defecto: vacío (No buscar).
 						\\\hline
-						Return 					& void. 	& 
+						Return 					& \textref{void}. 	& 
 						\\\hline 
 						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{get\_list}}}\\\multicolumn{3}{|c|}{}\\\hline
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{get\_list}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Método estático. Retorna una lista con todas las tareas que forman parte de un experimento específico.
+						Método estático. Retorna una lista con el código, nombre, versión y fechas de creación/modificación de todos los experimentos disponibles.
 						}\\\hline
-						Inputs					& db:		& Objeto de base de datos (SaccadeDB) mediante el cual se extraerá la información.
+						Inputs					& db:				& Instancia de clase (\textref{SaccadeDB}).
 						\\\hline
-						Return 					& objeto. 	& list si existen elementos en la base de datos, None en caso contrario.
-						\\\hline 
-						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{load}}}\\\multicolumn{3}{|c|}{}\\\hline
-						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Método que permite cargar el experimento y sus tareas desde la base de datos. Para cargar las tareas se hace uso del método privado load\_tests.
-						}\\\hline
-						Inputs					& code: 	& Código que identifica al experimento de interés.
-						\\\hline
-						Return 					& bool. 	& Verdadero si el proceso se completó satisfactoriamente, falso en caso contrario. 
-						\\\hline 
-						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{load\_tests}}}\\\multicolumn{3}{|c|}{}\\\hline
-						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Método privado. Busca en la base de datos todos las tareas asociados al experimento de interés, las carga de forma iterativa y los agrega a la lista.
-						}\\\hline
-						Inputs					& void. 	&
-						\\\hline
-						Return 					& void. 	& 
-						\\\hline 
-						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{save}}}\\\multicolumn{3}{|c|}{}\\\hline
-						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Método que permite guardar los datos de un experimento y sus tareas en la base de datos. Para guardar las tareas se hace uso del método privado save\_tests.
-						}\\\hline
-						Inputs					& void. 	&
-						\\\hline
-						Return 					& bool. 	& Verdadero si el proceso se completó satisfactoriamente, falso en caso contrario. 
+						Return 					& \textref{list}. 	& Si no hay elementos: lista vacía. 
 						\\\hline \newpage
 						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{save\_tests}}}\\\multicolumn{3}{|c|}{}\\\hline
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{load}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Método privado. Guarda en la base de datos cada una de las tareas de la lista. 
+						Permite cargar la configuración de un experimento desde la base de datos. Para cargar la configuración de las tareas se hace uso del método privado \textref{load\_tests}.
 						}\\\hline
-						Inputs					& void. 	&
+						Inputs					& code: 			& Código del experimento (\textref{string}).
 						\\\hline
-						Return 					& void. 	& 
+						Return 					& \textref{bool}. 	& \textref{True} si el proceso se completó satisfactoriamente, \textref{False} en caso contrario. 
 						\\\hline 
 						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{copy}}}\\\multicolumn{3}{|c|}{}\\\hline
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{load\_tests}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Método que permite realizar una copia de la configuración en otro objeto (copia profunda).
+						Método privado. Premite cargar desde la base de datos cada una de las tareas asociadas al experimento y su secuencia de ejecución.
 						}\\\hline
-						\multirow{2}{*}{Inputs} & code:		& Código del nuevo experimento. Debido a que este es un campo único, no puede ser igual a alguno ya almacenado en la base de datos.	\\ 
-												& version:	& Versión del nuevo experimento. no pueden existir dos experimentos con el mismo nombre y versión en la base de datos. 
+						Inputs					& \textref{void}. 	&
 						\\\hline
-						Return 					& objeto. 	& Objeto de tipo Experiment si ingresa correctamente el nuevo código y versión, None en caso contrario.
+						Return 					& \textref{void}. 	& 
 						\\\hline 
 						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{get\_iohub}}}\\\multicolumn{3}{|c|}{}\\\hline
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{save}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						En base a los atributos de la clase, correspondientes a las tablas de la base de datos experiment y exp\_dialog, esta función genera y retorna un diccionario con las configuraciones del experimento requeridas por ioHub.
+						Permite guardar la configuración del experimento en la base de datos. Para guardar la configuración de las tareas se hace uso del método privado \textref{save\_tests}.
 						}\\\hline
-						Inputs 					& void.		& 
+						Inputs					& \textref{void}. 	&
 						\\\hline
-						Return 					& dict. 	& 
+						Return 					& \textref{bool}. 	& \textref{True} si el proceso se completó satisfactoriamente, \textref{False} en caso contrario. 
+						\\\hline
+						% ===============================================
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{save\_tests}}}\\\multicolumn{3}{|c|}{}\\\hline
+						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
+						Método privado. Permite guardar en la base de datos cada una de las tareas asociadas al experimento y su secuencia de ejecución.
+						}\\\hline
+						Inputs					& \textref{void}. 	&
+						\\\hline
+						Return 					& \textref{void}. 	& 
 						\\\hline 
 						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{get\_execution}}}\\\multicolumn{3}{|c|}{}\\\hline
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{copy}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Método a ser utilizado durante la ejecución de un experimento. Retorna un diccionario que contiene las configuraciones asociadas a la ejecución del experimento y una lista con sus tareas. Para esto se hace uso de forma iterativa de la función get\_execution de cada tarea que forma parte del experimento. 
+						Permite realizar una copia del objeto siempre que el código y versión asignados no existan en la base de datos.
 						}\\\hline
-						Inputs 					& win:		& Objeto de tipo Window perteneciente a PsychoPy que permite mostrar los estímulos por pantalla.
+						\multirow{2}{*}{Inputs} & code:				& Código a ser asignado en la copia del experimento (\textref{string}).\\ 
+												& version:			& Versión a ser asignada en la copia del experimento (\textref{string}). 
 						\\\hline
-						Return 					& dict. 	& 
+						Return 					& \textref{object}. & Devuelve una copia si el código y versión se ingresan correctamente, \textref{None} en caso contrario.
 						\\\hline 
 						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{get\_configuration}}}\\\multicolumn{3}{|c|}{}\\\hline
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{get\_iohub}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Retorna un diccionario que contiene los atributos del experimento y una lista con los atributos de sus tareas. Para esto se hace uso de forma iterativa de la función get\_configuration de cada tarea que forma parte del experimento.
+						Retorna un diccionario con las configuraciones y formatos requeridos por \textit{ioHUb} para la configuración de un experimento a ser ejecutado. 
 						}\\\hline
-						Inputs 					& void:		& 
+						Inputs 					& \textref{void}.	& 
 						\\\hline
-						Return 					& dict. 	& 
+						Return 					& \textref{dict}. 	& 
 						\\\hline 
-					\caption{Métodos implementados en la clase Experiment.}
+						% ===============================================
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{get\_execution}}}\\\multicolumn{3}{|c|}{}\\\hline
+						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
+						Retorna un diccionario que contiene todos los elementos para la ejecución de un experimento: Instrucciones a presentar por pantalla para el paciente, definición de tiempos de descanso, secuencia de ejecución de tareas y una lista con las tareas que lo conforman (esta lista se obtiene al llamar el método \textref{get\_execution} para cada una).
+						}\\\hline
+						Inputs 					& win:				& Instancia de clase \textref{Window}, perteneciente al módulo \textref{psychopy.visual}.
+						\\\hline
+						Return 					& \textref{dict}. 	& 
+						\\\hline \newpage
+						% ===============================================
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{get\_configuration}}}\\\multicolumn{3}{|c|}{}\\\hline
+						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
+						Retorna un diccionario que contiene los atributos del experimento y una lista con la configuración de las tareas que lo conforman (esta lista se obtiene al llamar el método \textref{get\_configuration} para cada una).
+						}\\\hline
+						Inputs 					& \textref{void}.	& 
+						\\\hline
+						Return 					& \textref{dict}. 	& 
+						\\\hline 
+					\caption{Métodos implementados en la clase \textref{Experiment}.}
 					\label{tbl:03_class_experiment}
 					\end{longtable}}}
 				\end{center}
 
 				\vspace{-15mm}
-				\item \textbf{ExperimentHandler:} Clase utilizada para efectuar las configuraciones previas que permiten ejecutar un experimento.
+
+				\item \textbf{\textref{ExperimentHandler}:} Clase utilizada para generar los archivos y directorios necesarios para la ejecución además de dar partida a la misma.
 
 				\vspace{-8mm}
 				\begin{center}\footnotesize{\singlespacing{
-					\begin{longtable}[H]{| C{0.15\textwidth} | R{0.13\textwidth} L{0.6\textwidth} |} \hline
+					\begin{longtable}[H]{| C{0.12\textwidth} | R{0.16\textwidth} L{0.6\textwidth} |} \hline
 						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{ExperimentHandler}}}\\\multicolumn{3}{|c|}{}\\\hline
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{ExperimentHandler}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
 						Constructor. Inicializa los atributos del objeto.
 						}\\\hline
-						Inputs 					& void.		& 
+						Inputs 					& \textref{void}.	& 
 						\\\hline
-						Return 					& void. 	& 
-						\\\hline \newpage
-						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{load\_configuration}}}\\\multicolumn{3}{|c|}{}\\\hline
-						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Método que verifica la existencia del perfil de configuración (Master) y el experimento (Experiment) a ser utilizados. Si todo está correcto habilita la ejecución del experimento.
-						}\\\hline
-						\multirow{2}{*}{Inputs}	& db:		& Objeto de base de datos (SaccadeDB) mediante el cual se extraerá la información. \\
-												& master:	& Nombre del perfil de configuración a utilizar. \\
-												& experiment:	& Código del experimento a utilizar.
-						\\\hline
-						Return 					& bool. 	& Verdadero si esta habilitada la ejecución, falso en caso contrario. 
+						Return 					& \textref{void}. 	& 
 						\\\hline 
 						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{save\_parameters}}}\\\multicolumn{3}{|c|}{}\\\hline
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{prepare}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Si el experimento se encuentra habilitado, este método verifica la existencia de las carpetas en donde se almacenarán los resultados y guarda en ellas respaldos de los archivos de configuración acompañados del timestamp en que fueron generados.
+						Permite verificar que los datos del perfil de configuración y experimento se encuentren alamacenados en la base de datos y generar los archivos de configuración necesarios para realizar el experimento.
 						}\\\hline
-						Inputs					& save\_frame: 		& bool. Permite escoger si se desea guardar los frames como imagen.  
+						\multirow{3}{*}{Inputs}	& db\_path:			& Úbicación del archivo de base de datos (\textref{string}). \\
+												& conf\_name:		& Nombre del perfil de configuración (\textref{string}). \\
+												& exp\_code:		& Código del experimento a ser ejecutado (\textref{string}).
 						\\\hline
-						Return 					& bool. 	& Verdadero si el experimento esta habilitado y se guardaron los archivos, falso en caso contrario. 
+						Return 					& \textref{string}, \textref{bool}. & Mensaje de estado, estado. 
 						\\\hline 
 						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{execute\_experiment}}}\\\multicolumn{3}{|c|}{}\\\hline
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{execute}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Si el experimento se encuentra habilitado y los archivos de configuración están disponibles se ejecuta el experimento. Para esto, se inicializa una instancia de la clase ExperimentRuntime.
+						Si \textref{prepare} se ejecutó correctamente (archivos de configuración y directorios disponibles) este método ejecuta el experimento.
 						}\\\hline
-						Inputs					& void. 	&
+						Inputs					& save\_frame: 		& Permite escoger si se desea guardar los frames como imagen (\textref{bool}).  
 						\\\hline
-						Return 					& bool. 	& Verdadero si el experimento pudo ser ejecutado, falso en caso contrario. 
+						Return 					& \textref{string}, \textref{bool}. & Mensaje de estado, estado.
 						\\\hline 
-					\caption{Métodos implementados en la clase ExperimentHandler.}
+					\caption{Métodos implementados en la clase \textref{ExperimentHandler}.}
 					\label{tbl:03_class_experiment_handler}
 					\end{longtable}}}
 				\end{center}
 
 				\vspace{-15mm}
-				\item \textbf{ExperimentRuntime:} Clase que ejecuta el experimento. Hereda de ioHubExperimentRuntime, clase de ioHub encargada de iniciar el servicio por el cual se manejan todos los dispositivos de hardware.
+				\item \textbf{\textref{ExperimentRuntime}:} Esta clase es utilizada para ejecutar el experimento. Para ello, hereda de \textref{ioHubExperimentRuntime}, perteneciente a \textit{ioHub}, la capacidad de iniciar el servicio por el cual se manejan todos los dispositivos de hardware.
 
 				\vspace{-8mm}
 				\begin{center}\footnotesize{\singlespacing{
-					\begin{longtable}[H]{| C{0.15\textwidth} | R{0.13\textwidth} L{0.6\textwidth} |} \hline
+					\begin{longtable}[H]{| C{0.12\textwidth} | R{0.16\textwidth} L{0.6\textwidth} |} \hline
 						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{ExperimentRuntime}}}\\\multicolumn{3}{|c|}{}\\\hline
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{ExperimentRuntime}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
 						Constructor. Inicializa los atributos de la clase y permite entregar la configuración del experimento a la rutina.
 						}\\\hline
-						Inputs 					& execution\_parameters:	&  dict. Almacena el experimento a ejecutar y la ubicación de los archivos de configuración necesarios para correr el servicio. 
+						Inputs 					& parameters:		&  Parámetros del experimento generados por \textref{ExperimentHandler} (\textref{dict}). 
 						\\\hline
-						Return 					& void. 	& 
-						\\\hline 
+						Return 					& \textref{void}. 	& 
+						\\\hline \newpage
 						% ===============================================
-						\multicolumn{3}{|c|}{\multirow{2}{*}{\textbf{run}}}\\\multicolumn{3}{|c|}{}\\\hline
+						\multicolumn{3}{|c|}{\multirow{2}{*}{\textref{run}}}\\\multicolumn{3}{|c|}{}\\\hline
 						Descripción & \multicolumn{2}{L{0.75\textwidth}|}{
-						Método reimplementado de la clase padre y que tiene por función definir tanto la inicialización de los dispositivos como el script del experimento a ejecutar. Es importante destacar que este método NO se ejecuta directamente, para ello se utiliza la función específica ExperimentRuntime.start. 
+						Este método tiene por función definir tanto la inicialización de los dispositivos como el script del experimento a ejecutar. Es importante destacar que este método NO se ejecuta directamente, para ello se utiliza la función específica \textref{ExperimentRuntime.start()}. 
 						}\\\hline
-						Inputs					& *args:	& No utilizado.
+						Inputs					& *args:			& No utilizado.
 						\\\hline
-						Return 					& void. 	&  
+						Return 					& \textref{void}. 	&  
 						\\\hline 
-					\caption{Métodos implementados en la clase ExperimentRuntime.}
+					\caption{Métodos implementados en la clase \textref{ExperimentRuntime}.}
 					\label{tbl:03_class_experiment_runtime}
 					\end{longtable}}}
 				\end{center}

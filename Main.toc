@@ -24,13 +24,10 @@
 \contentsline {section}{\numberline {3.2}Diseño del sistema}{19}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Primera parte: Estructura de datos}{19}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Segunda parte: Implementación de las funciones principales}{23}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Tercera parte: Interfaz gráfica}{41}{subsection.3.2.3}
-\contentsline {chapter}{\numberline {4}Resultados}{42}{chapter.4}
-\contentsline {section}{\numberline {4.1}Configurar un experimento.}{42}{section.4.1}
-\contentsline {section}{\numberline {4.2}Ejecutar un experimento.}{45}{section.4.2}
-\contentsline {section}{\numberline {4.3}Comprobación de funcionamiento.}{47}{section.4.3}
-\contentsline {chapter}{\numberline {5}Conclusiones y trabajo futuro}{48}{chapter.5}
-\contentsline {section}{\numberline {5.1}Conclusiones}{48}{section.5.1}
-\contentsline {section}{\numberline {5.2}Trabajo futuro}{48}{section.5.2}
-\contentsline {chapter}{Referencias}{50}{section*.35}
-\contentsline {chapter}{\numberline {A}Configuración del entorno de programación}{52}{appendix.Alph1}
+\contentsline {subsection}{\numberline {3.2.3}Tercera parte: Interfaz gráfica}{40}{subsection.3.2.3}
+\contentsline {chapter}{\numberline {4}Resultados}{41}{chapter.4}
+\contentsline {section}{\numberline {4.1}Comprobación de funcionamiento.}{43}{section.4.1}
+\contentsline {chapter}{\numberline {5}Conclusiones y trabajo futuro}{44}{chapter.5}
+\contentsline {section}{\numberline {5.1}Conclusiones}{44}{section.5.1}
+\contentsline {section}{\numberline {5.2}Trabajo futuro}{45}{section.5.2}
+\contentsline {chapter}{Referencias}{46}{section*.35}

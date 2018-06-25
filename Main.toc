@@ -10,24 +10,33 @@
 \contentsline {section}{\numberline {2.2}Métodos de captura de movimiento ocular}{5}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Antecedentes históricos}{5}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Tecnologías actuales}{6}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Comparacióen entre tecnologías}{9}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.3}Comparación entre tecnologías}{8}{subsection.2.2.3}
 \contentsline {section}{\numberline {2.3}Métodos de estimulación visual}{10}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Hardware de estimulación}{10}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Software de estimulación}{12}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Experimentos de estimulación}{13}{subsection.2.3.3}
-\contentsline {subsubsection}{Métricas de interés}{14}{section*.20}
-\contentsline {subsubsection}{Movimientos pro/anti sacádicos}{14}{section*.21}
-\contentsline {subsubsection}{Movimientos guiados por memoria}{16}{section*.24}
-\contentsline {section}{\numberline {2.4}Sistemas de estimulación y registro visual}{16}{section.2.4}
-\contentsline {chapter}{\numberline {3}Sistema propuesto}{18}{chapter.3}
-\contentsline {section}{\numberline {3.1}\textit {Setup} a utilizar}{18}{section.3.1}
-\contentsline {section}{\numberline {3.2}Diseño del sistema}{19}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Primera parte: Estructura de datos}{19}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Segunda parte: Implementación de las funciones principales}{23}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Tercera parte: Interfaz gráfica}{40}{subsection.3.2.3}
-\contentsline {chapter}{\numberline {4}Resultados}{41}{chapter.4}
-\contentsline {section}{\numberline {4.1}Comprobación de funcionamiento.}{43}{section.4.1}
-\contentsline {chapter}{\numberline {5}Conclusiones y trabajo futuro}{44}{chapter.5}
-\contentsline {section}{\numberline {5.1}Conclusiones}{44}{section.5.1}
-\contentsline {section}{\numberline {5.2}Trabajo futuro}{45}{section.5.2}
-\contentsline {chapter}{Referencias}{46}{section*.35}
+\contentsline {subsection}{\numberline {2.3.2}Software de estimulación}{11}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Experimentos de estimulación}{12}{subsection.2.3.3}
+\contentsline {subsubsection}{Métricas de interés}{13}{section*.20}
+\contentsline {subsubsection}{Movimientos pro/anti sacádicos}{13}{section*.21}
+\contentsline {subsubsection}{Movimientos guiados por memoria}{14}{section*.24}
+\contentsline {section}{\numberline {2.4}Sistemas de estimulación y registro visual}{15}{section.2.4}
+\contentsline {chapter}{\numberline {3}Sistema propuesto}{17}{chapter.3}
+\contentsline {section}{\numberline {3.1}\textit {Setup} a utilizar}{17}{section.3.1}
+\contentsline {section}{\numberline {3.2}Diseño del sistema}{18}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Primera parte: Estructura de datos}{18}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Segunda parte: Implementación de las funciones principales}{21}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Tercera parte: Interfaz gráfica}{39}{subsection.3.2.3}
+\contentsline {chapter}{\numberline {4}Resultados}{48}{chapter.4}
+\contentsline {section}{\numberline {4.1}Modo de uso}{48}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Usando la \textit {API}}{49}{subsection.4.1.1}
+\contentsline {subsubsection}{Configurar}{49}{section*.44}
+\contentsline {subsubsection}{Ejecutar}{50}{section*.45}
+\contentsline {subsection}{\numberline {4.1.2}Usando la \textit {GUI}}{51}{subsection.4.1.2}
+\contentsline {subsubsection}{Configurar}{51}{section*.46}
+\contentsline {subsubsection}{Ejecutar}{57}{section*.60}
+\contentsline {section}{\numberline {4.2}Comprobación de funcionamiento.}{58}{section.4.2}
+\contentsline {chapter}{\numberline {5}Conclusiones y trabajo futuro}{59}{chapter.5}
+\contentsline {section}{\numberline {5.1}Conclusiones}{59}{section.5.1}
+\contentsline {section}{\numberline {5.2}Trabajo futuro}{60}{section.5.2}
+\contentsline {chapter}{Referencias}{61}{section*.63}
+\contentsline {chapter}{\numberline {A}Lógica del script de ejecución}{63}{appendix.Alph1}
+\contentsline {chapter}{\numberline {B}Configuración del entorno de programación}{64}{appendix.Alph2}

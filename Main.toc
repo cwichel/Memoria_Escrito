@@ -1,7 +1,8 @@
 \babel@toc {spanish}{}
 \contentsline {chapter}{Agradecimientos}{\es@scroman {i}}{chapter*.3}
 \contentsline {chapter}{Resumen}{\es@scroman {ii}}{chapter*.4}
-\contentsline {chapter}{Glosario}{\es@scroman {ii}}{section*.5}
+\contentsline {chapter}{Abstract}{\es@scroman {iii}}{chapter*.5}
+\contentsline {chapter}{Glosario}{\es@scroman {iii}}{section*.6}
 \contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Motivación}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Objetivos}{2}{section.1.2}
@@ -15,9 +16,9 @@
 \contentsline {subsection}{\numberline {2.3.1}Hardware de estimulación}{10}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Software de estimulación}{11}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}Experimentos de estimulación}{12}{subsection.2.3.3}
-\contentsline {subsubsection}{Métricas de interés}{13}{section*.20}
-\contentsline {subsubsection}{Movimientos pro/anti sacádicos}{13}{section*.21}
-\contentsline {subsubsection}{Movimientos guiados por memoria}{14}{section*.24}
+\contentsline {subsubsection}{Métricas de interés}{13}{section*.21}
+\contentsline {subsubsection}{Movimientos pro/anti sacádicos}{13}{section*.22}
+\contentsline {subsubsection}{Movimientos guiados por memoria}{14}{section*.25}
 \contentsline {section}{\numberline {2.4}Sistemas de estimulación y registro visual}{15}{section.2.4}
 \contentsline {chapter}{\numberline {3}Sistema propuesto}{17}{chapter.3}
 \contentsline {section}{\numberline {3.1}\textit {Setup} a utilizar}{17}{section.3.1}
@@ -28,15 +29,15 @@
 \contentsline {chapter}{\numberline {4}Resultados}{48}{chapter.4}
 \contentsline {section}{\numberline {4.1}Modo de uso}{48}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Usando la \textit {API}}{49}{subsection.4.1.1}
-\contentsline {subsubsection}{Configurar}{49}{section*.44}
-\contentsline {subsubsection}{Ejecutar}{50}{section*.45}
+\contentsline {subsubsection}{Configurar}{49}{section*.45}
+\contentsline {subsubsection}{Ejecutar}{50}{section*.46}
 \contentsline {subsection}{\numberline {4.1.2}Usando la \textit {GUI}}{51}{subsection.4.1.2}
-\contentsline {subsubsection}{Configurar}{51}{section*.46}
-\contentsline {subsubsection}{Ejecutar}{57}{section*.60}
+\contentsline {subsubsection}{Configurar}{51}{section*.47}
+\contentsline {subsubsection}{Ejecutar}{57}{section*.61}
 \contentsline {section}{\numberline {4.2}Comprobación de funcionamiento.}{58}{section.4.2}
 \contentsline {chapter}{\numberline {5}Conclusiones y trabajo futuro}{59}{chapter.5}
 \contentsline {section}{\numberline {5.1}Conclusiones}{59}{section.5.1}
 \contentsline {section}{\numberline {5.2}Trabajo futuro}{60}{section.5.2}
-\contentsline {chapter}{Referencias}{61}{section*.63}
+\contentsline {chapter}{Referencias}{61}{section*.64}
 \contentsline {chapter}{\numberline {A}Lógica del script de ejecución}{63}{appendix.Alph1}
 \contentsline {chapter}{\numberline {B}Configuración del entorno de programación}{64}{appendix.Alph2}

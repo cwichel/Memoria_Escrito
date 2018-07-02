@@ -2,7 +2,7 @@
 % CONFIGURACION DEL DOCUMENTO
 % =========================================================
 \providecommand{\main}{..}
-\documentclass[\main/main.tex]{subfiles}
+\documentclass[\main/Main.tex]{subfiles}
 
 % =========================================================
 % CONTENIDO
@@ -19,7 +19,7 @@
 		\vspace{-5mm}
 		\begin{table}[H]\begin{center}\footnotesize{
 			\singlespacing{
-			\begin{tabular}{| C{0.11\textwidth} | C{0.14\textwidth} | R{0.18\textwidth} L{0.5\textwidth} |} \hline
+			\begin{tabular}{| C{0.11\textwidth} | C{0.13\textwidth} | R{0.16\textwidth} L{0.45\textwidth} |} \hline
 				\multirow{8}{*}{Hardware} 	& \multirow{4}{*}{PC} 			& Procesador: 		& Intel Core i7-3770 \\
 										& 							& Memoria RAM:		& $16.0[GB]$, DDR3, $650[MHz]$ \\
 										& 							& Disco duro: 		& Samsung SSD, 840 Series, $120[GB]$ \\
@@ -1202,7 +1202,7 @@
 					\item Permite comenzar la ejecución de un experimento. 
 				\end{enumerate}
 
-				\item \textbf{\textref{ExperimentApp}:} Permite revisar y/o configurar un experimento, las tareas que lo componen y la secuencia de ejecución de las mismas. Se puede acceder a ella desde \textref{SaccadeApp} mediante los botones \textref{New} y \textref{Edit} ubicados en la pestaña \textref{Experiments}.
+				\item \textbf{\textref{ExperimentApp}:} Permite revisar y/o configurar un experimento, las tareas que lo componen y la secuencia de ejecución de las mismas. Se puede acceder a ella desde la ventana principal mediante los botones \textref{New} y \textref{Edit} ubicados en la pestaña \textref{Experiments}.
 				\begin{figure}[H]
 					\centering
 					\includegraphics[width=0.5\textwidth]{cap_03_gui_04}
@@ -1230,7 +1230,7 @@
 					\item Permite la manipulación de los elementos de la secuencia. 
 				\end{enumerate}
 
-				\item \textbf{\textref{CopyExperimentApp}:} Permite realizar una copia de un experimento existente, para lo cual se requiere obtener un nuevo código y versión. Se puede acceder a ella desde \textref{SaccadeApp} mediante el botón \textref{copy} ubicado en la pestaña \textref{Experiments}.
+				\item \textbf{\textref{CopyExperimentApp}:} Permite realizar una copia de un experimento existente, para lo cual se requiere obtener un nuevo código y versión. Se puede acceder a ella desde la ventana principal mediante el botón \textref{copy} ubicado en la pestaña \textref{Experiments}.
 				\begin{figure}[H]
 					\centering
 					\includegraphics[width=0.32\textwidth]{cap_03_gui_11}
@@ -1328,17 +1328,17 @@
 					\item Permite eliminar la imagen.
 				\end{enumerate}
 
-				\item \textbf{\textref{ConfigurationApp}:} Permite revisar/configurar las características de un perfil de configuración. Se puede acceder a esta ventana desde \textref{SaccadeApp} mediante los botones \textref{New} y \textref{Edit} ubicados en la pestaña \textref{Configuration}.
+				\item \textbf{\textref{ConfigurationApp}:} Permite revisar/configurar las características de un perfil de configuración. Se puede acceder a ella desde la ventana principal mediante los botones \textref{New} y \textref{Edit} ubicados en la pestaña \textref{Configuration}.
 				\begin{figure}[H]
 					\centering
 					\includegraphics[width=0.6\textwidth]{cap_03_gui_10}
 					\caption{Ventana para copia de elementos.}
-					\label{fig:03_gui_com}
+					\label{fig:03_gui_con}
 				\end{figure}
 
 				\vspace{-5mm}
 
-				En la figura \ref{fig:03_gui_com}:
+				En la figura \ref{fig:03_gui_con}:
 				\begin{enumerate}[(1)]\setlength\itemsep{-0.5em}
 					\item Campo obligatorio, identifica de forma única al perfil de configuración. Debe tener entre 3 y 50 caracteres.
 					\item Permite definir un directorio para almacenar los resultados obtenidos de la ejecución del experimento.

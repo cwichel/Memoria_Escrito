@@ -3,10 +3,11 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Comparativa de los sistemas de adquisición encontrados}}{9}{table.caption.18}
-\contentsline {table}{\numberline {2.2}{\ignorespaces Comparativa de software de estimulación}}{12}{table.caption.19}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Hardware y software utilizado en el desarrollo.\relax }}{17}{table.caption.28}
+\contentsline {table}{\numberline {2.1}{\ignorespaces Comparativa de los sistemas de adquisición encontrados}}{9}{table.caption.19}
+\contentsline {table}{\numberline {2.2}{\ignorespaces Comparativa de software de estimulación}}{12}{table.caption.20}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces Hardware y software utilizado en el desarrollo.\relax }}{17}{table.caption.29}
 \contentsline {table}{\numberline {3.2}{\ignorespaces Métodos implementados en {\relax \fontsize {10}{12}\selectfont \abovedisplayskip 10\p@ plus2\p@ minus5\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6\p@ plus3\p@ minus3\p@ \def \leftmargin \leftmargini \topsep 6\p@ plus2\p@ minus2\p@ \parsep 3\p@ plus2\p@ minus\p@ \itemsep \parsep {\leftmargin \leftmargini \topsep 6\p@ plus2\p@ minus2\p@ \parsep 3\p@ plus2\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip {\ttfamily {utils}}}.\relax }}{26}{table.3.2}
 \contentsline {table}{\numberline {3.3}{\ignorespaces Métodos implementados en la clase {\relax \fontsize {10}{12}\selectfont \abovedisplayskip 10\p@ plus2\p@ minus5\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6\p@ plus3\p@ minus3\p@ \def \leftmargin \leftmargini \topsep 6\p@ plus2\p@ minus2\p@ \parsep 3\p@ plus2\p@ minus\p@ \itemsep \parsep {\leftmargin \leftmargini \topsep 6\p@ plus2\p@ minus2\p@ \parsep 3\p@ plus2\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip {\ttfamily {SaccadeDB}}}.\relax }}{27}{table.3.3}
 \contentsline {table}{\numberline {3.4}{\ignorespaces Métodos implementados en la clase {\relax \fontsize {10}{12}\selectfont \abovedisplayskip 10\p@ plus2\p@ minus5\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6\p@ plus3\p@ minus3\p@ \def \leftmargin \leftmargini \topsep 6\p@ plus2\p@ minus2\p@ \parsep 3\p@ plus2\p@ minus\p@ \itemsep \parsep {\leftmargin \leftmargini \topsep 6\p@ plus2\p@ minus2\p@ \parsep 3\p@ plus2\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip {\ttfamily {Configuration}}}.\relax }}{28}{table.3.4}

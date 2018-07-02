@@ -3,67 +3,68 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Estructura del ojo}}{3}{figure.caption.13}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Ejemplo de uso de SSG}}{6}{figure.caption.14}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Ejemplo de posicionamiento de electrodos para EOG}}{7}{figure.caption.15}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Principio de detección VOG en base a reflexión de luz}}{8}{figure.caption.16}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Estructura del ojo}}{3}{figure.caption.14}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Ejemplo de uso de SSG}}{6}{figure.caption.15}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Ejemplo de posicionamiento de electrodos para EOG}}{7}{figure.caption.16}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Principio de detección VOG en base a reflexión de luz}}{8}{figure.caption.17}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Reflexiones de Purkinje-Sanson}}}{8}{subfigure.4.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Posición de la reflexión P1 relativa al centro de la pupila.}}}{8}{subfigure.4.2}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Muestra de \textit {eye trackers} disponibles en el mercado con tecnología VOG basados en reflexión de luz \acrshort {ir}}}{8}{figure.caption.17}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Muestra de \textit {eye trackers} disponibles en el mercado con tecnología VOG basados en reflexión de luz \acrshort {ir}}}{8}{figure.caption.18}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Tobii Pro Glasses 2}}}{8}{subfigure.5.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {MiraMetrix S2}}}{8}{subfigure.5.2}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Tarea pro/anti sacádica.\relax }}{13}{figure.caption.22}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Paradigmas de experimentación.\relax }}{14}{figure.caption.23}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Tarea guiada por memoria.\relax }}{15}{figure.caption.25}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces \textit {Setup} experimental típico}}{16}{figure.caption.26}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Diagrama general de la interfaz hombre-máquina}}{16}{figure.caption.27}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Tarea pro/anti sacádica.\relax }}{13}{figure.caption.23}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Paradigmas de experimentación.\relax }}{14}{figure.caption.24}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Tarea guiada por memoria.\relax }}{15}{figure.caption.26}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces \textit {Setup} experimental típico}}{16}{figure.caption.27}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Diagrama general de la interfaz hombre-máquina}}{16}{figure.caption.28}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagrama de base de datos a implementar.\relax }}{19}{figure.caption.29}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagrama de funcionamiento general.\relax }}{22}{figure.caption.30}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Estructura de directorios para resultados.\relax }}{22}{figure.caption.31}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Diagrama de clases del sistema (no considera \textit {GUI}).\relax }}{23}{figure.caption.32}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Diagrama de clases de la \textit {GUI}.\relax }}{39}{figure.caption.33}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Ventana principal.\relax }}{40}{figure.caption.34}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagrama de base de datos a implementar.\relax }}{19}{figure.caption.30}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagrama de funcionamiento general.\relax }}{22}{figure.caption.31}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Estructura de directorios para resultados.\relax }}{22}{figure.caption.32}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Diagrama de clases del sistema (no considera \textit {GUI}).\relax }}{23}{figure.caption.33}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Diagrama de clases de la \textit {GUI}.\relax }}{39}{figure.caption.34}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Ventana principal.\relax }}{40}{figure.caption.35}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Pestaña de experimentos.}}}{40}{subfigure.6.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Pestaña de configuración.}}}{40}{subfigure.6.2}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Pestaña de ejecución.}}}{40}{subfigure.6.3}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Ventana para configuración de experimentos.\relax }}{41}{figure.caption.35}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Ventana de copia para experimentos.\relax }}{42}{figure.caption.36}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Ventana de configuración para secuencia de ejecución del experimento.\relax }}{43}{figure.caption.37}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Ventana para configuración de tareas.\relax }}{43}{figure.caption.38}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Ventana para configuración de cuadros.\relax }}{44}{figure.caption.39}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Ventana de configuración de componente.\relax }}{45}{figure.caption.40}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Ventana para copia de elementos.\relax }}{46}{figure.caption.41}
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Ventana utilizada en el proceso de copia.\relax }}{47}{figure.caption.42}
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Ventana de información.\relax }}{47}{figure.caption.43}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Ventana para configuración de experimentos.\relax }}{41}{figure.caption.36}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Ventana de copia para experimentos.\relax }}{42}{figure.caption.37}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Ventana de configuración para secuencia de ejecución del experimento.\relax }}{43}{figure.caption.38}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Ventana para configuración de tareas.\relax }}{43}{figure.caption.39}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Ventana para configuración de cuadros.\relax }}{44}{figure.caption.40}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Ventana de configuración de componente.\relax }}{45}{figure.caption.41}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Ventana para copia de elementos.\relax }}{46}{figure.caption.42}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Ventana utilizada en el proceso de copia.\relax }}{47}{figure.caption.43}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Ventana de información.\relax }}{47}{figure.caption.44}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Pestaña de configuración.\relax }}{51}{figure.caption.47}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Perfil de configuración propuesto.\relax }}{51}{figure.caption.48}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Pestaña de experimentos.\relax }}{52}{figure.caption.49}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Experimento propuesto con la primera tarea configurada.\relax }}{52}{figure.caption.50}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Ventana de configuración de la primera tarea.\relax }}{53}{figure.caption.51}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Configuración de los cuadros pertenecientes a la primera tarea.\relax }}{53}{figure.caption.52}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Pestaña de configuración.\relax }}{51}{figure.caption.48}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Perfil de configuración propuesto.\relax }}{51}{figure.caption.49}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Pestaña de experimentos.\relax }}{52}{figure.caption.50}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Experimento propuesto con la primera tarea configurada.\relax }}{52}{figure.caption.51}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Ventana de configuración de la primera tarea.\relax }}{53}{figure.caption.52}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Configuración de los cuadros pertenecientes a la primera tarea.\relax }}{53}{figure.caption.53}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Primer cuadro.}}}{53}{subfigure.6.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Segundo cuadro.}}}{53}{subfigure.6.2}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Componentes utilizados en la configuración de la primera tarea.\relax }}{54}{figure.caption.53}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Componentes utilizados en la configuración de la primera tarea.\relax }}{54}{figure.caption.54}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Punto de fijación.}}}{54}{subfigure.7.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Punto objetivo.}}}{54}{subfigure.7.2}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Agregando la primera tarea a la secuencia de ejecución.\relax }}{54}{figure.caption.54}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Experimento propuesto con la primera tarea configurada y en la secuencia de ejecución.\relax }}{55}{figure.caption.55}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Ventana de configuración de la segunda tarea.\relax }}{55}{figure.caption.56}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Configuraciones de la segunda tarea.\relax }}{56}{figure.caption.57}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Agregando la primera tarea a la secuencia de ejecución.\relax }}{54}{figure.caption.55}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Experimento propuesto con la primera tarea configurada y en la secuencia de ejecución.\relax }}{55}{figure.caption.56}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Ventana de configuración de la segunda tarea.\relax }}{55}{figure.caption.57}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Configuraciones de la segunda tarea.\relax }}{56}{figure.caption.58}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Cuadro que contiene la imagen.}}}{56}{subfigure.11.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Imagen de la pareja.}}}{56}{subfigure.11.2}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Experimento propuesto con configuración completa.\relax }}{56}{figure.caption.58}
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Resultado obtenido.\relax }}{57}{figure.caption.59}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Experimento propuesto con configuración completa.\relax }}{56}{figure.caption.59}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Resultado obtenido.\relax }}{57}{figure.caption.60}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Pestaña de experimentos.}}}{57}{subfigure.13.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Pestaña de configuración.}}}{57}{subfigure.13.2}
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Aplicación lista para ejecutar \textit {script}.\relax }}{57}{figure.caption.61}
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Datos registrados.\relax }}{58}{figure.caption.62}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Aplicación lista para ejecutar \textit {script}.\relax }}{57}{figure.caption.62}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Datos registrados.\relax }}{58}{figure.caption.63}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Imagen original.}}}{58}{subfigure.15.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Movimiento ocular esperado.}}}{58}{subfigure.15.2}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Movimiento ocular registrado.}}}{58}{subfigure.15.3}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Funcionamiento general del \textit {script} de ejecución.\relax }}{63}{figure.caption.65}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Funcionamiento general del \textit {script} de ejecución.\relax }}{63}{figure.caption.66}
 \addvspace {10\p@ }

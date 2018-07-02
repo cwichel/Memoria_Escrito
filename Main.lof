@@ -62,9 +62,11 @@
 \contentsline {figure}{\numberline {4.14}{\ignorespaces Aplicación lista para ejecutar \textit {script}.\relax }}{57}{figure.caption.62}
 \contentsline {figure}{\numberline {4.15}{\ignorespaces Datos registrados.\relax }}{58}{figure.caption.63}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Imagen original.}}}{58}{subfigure.15.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Movimiento ocular esperado.}}}{58}{subfigure.15.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Movimiento ocular registrado.}}}{58}{subfigure.15.3}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Registro esperado a $2{[s]}$.}}}{58}{subfigure.15.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Registro obtenido a $2{[s]}$.}}}{58}{subfigure.15.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Registro esperado a $10{[s]}$.}}}{58}{subfigure.15.4}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Registro obtenido a $10{[s]}$.}}}{58}{subfigure.15.5}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Funcionamiento general del \textit {script} de ejecución.\relax }}{63}{figure.caption.66}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Funcionamiento general del \textit {script} de ejecución.\relax }}{64}{figure.caption.66}
 \addvspace {10\p@ }

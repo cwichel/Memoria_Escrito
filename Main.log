@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6630 64-bit) (preloaded format=xelatex 2018.6.2)  2 JUL 2018 01:26
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6630 64-bit) (preloaded format=xelatex 2018.6.2)  2 JUL 2018 03:46
 entering extended mode
 **./Main.tex
 (Main.tex
@@ -3531,11 +3531,39 @@ Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 282.
 File: ./Imagenes/cap_04_resultado_orig.png Graphic file (type bmp)
 <./Imagenes/cap_04_resultado_orig.png>
-File: ./Imagenes/cap_04_resultado_espe.png Graphic file (type bmp)
-<./Imagenes/cap_04_resultado_espe.png>
-File: ./Imagenes/cap_04_resultado_obte.png Graphic file (type bmp)
-<./Imagenes/cap_04_resultado_obte.png>
-) (02_Contenido/05_Conclusiones.tex
+File: ./Imagenes/cap_04_resultado_espe_2.png Graphic file (type bmp)
+<./Imagenes/cap_04_resultado_espe_2.png>
+File: ./Imagenes/cap_04_resultado_obte_2.png Graphic file (type bmp)
+<./Imagenes/cap_04_resultado_obte_2.png>
+File: ./Imagenes/cap_04_resultado_espe_10.png Graphic file (type bmp)
+<./Imagenes/cap_04_resultado_espe_10.png>
+File: ./Imagenes/cap_04_resultado_obte_10.png Graphic file (type bmp)
+<./Imagenes/cap_04_resultado_obte_10.png>
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 298.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 298.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 298.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 298.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 298.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 298.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 298.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 298.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 298.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 298.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 298.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 298.
+ [58]) (02_Contenido/05_Conclusiones.tex
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 11.
 Package babel Info: Redefining spanish shorthand >>
@@ -3560,7 +3588,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 11.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 11.
- [58]
+ [59]
 Capítulo 5.
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 11.
@@ -3610,7 +3638,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 29.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 29.
-[59
+[60
 
 ]
 Package babel Info: Redefining spanish shorthand <<
@@ -3650,7 +3678,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 57.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 57.
- [60]
+ [61]
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 62.
 Package babel Info: Redefining spanish shorthand >>
@@ -3692,7 +3720,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 85.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 85.
- [61
+ [62
 
 
 ]) (03_Postextual/Anexos.tex
@@ -3720,7 +3748,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 11.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 11.
- [62]
+ [63]
 Apéndice A.
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 11.
@@ -3760,7 +3788,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 21.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 21.
-[63
+[64
 
 ]
 Apéndice B.
@@ -3803,7 +3831,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 24.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 24.
- [64
+ [65
 
 ]
 Package babel Info: Redefining spanish shorthand <<
@@ -3830,7 +3858,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 91.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 91.
- [65]
+ [66]
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 159.
 Package babel Info: Redefining spanish shorthand >>
@@ -3855,7 +3883,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 159.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 159.
- [66]))
+ [67]))
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 78.
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 78.
@@ -3881,7 +3909,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 78.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 78.
- [67]
+ [68]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 78.
 
 (Main.aux
@@ -3893,12 +3921,12 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 78.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 78.
  ) 
 Here is how much of TeX's memory you used:
- 32509 strings out of 427836
- 536378 string characters out of 3153803
+ 32517 strings out of 427836
+ 536710 string characters out of 3153803
  803555 words of memory out of 3000000
- 35993 multiletter control sequences out of 15000+200000
+ 35999 multiletter control sequences out of 15000+200000
  589037 words of font info for 87 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  48i,17n,88p,2036b,2102s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Main.pdf (79 pages).
+Output written on Main.pdf (80 pages).

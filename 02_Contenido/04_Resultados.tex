@@ -281,18 +281,21 @@ handler.execute(frame_save=True)
     % =====================================================
     \section{Comprobación de funcionamiento.}
     \label{sec:04_funcionamiento}
-        Con el fin de comprobar el funcionamiento de la aplicación y asegurar el correcto registro de los datos se creó un experimento cuya única tarea consistía en realizar un ejercicio de inspección visual sobre la imagen presentada en la figura \ref{fig:04_frame_result} (a). 
+        Con el fin de comprobar el funcionamiento de la aplicación y asegurar el correcto registro de los datos se creó un experimento cuya única tarea consistía en realizar un ejercicio de inspección visual sobre la imagen presentada en la figura \ref{fig:04_frame_result} (a) durante $15[s]$. 
         \begin{figure}[H]
             \centering
             \subfloat[Imagen original.]{\includegraphics[width=0.45\textwidth]{cap_04_resultado_orig}}\\
-            \subfloat[Movimiento ocular esperado.]{\includegraphics[width=0.45\textwidth]{cap_04_resultado_espe}}\hspace{5mm}
-            \subfloat[Movimiento ocular registrado.]{\includegraphics[width=0.45\textwidth]{cap_04_resultado_obte}}
+            \subfloat[Registro esperado a $2{[s]}$.]{\includegraphics[width=0.45\textwidth]{cap_04_resultado_espe_2}}\hspace{5mm}
+            \subfloat[Registro obtenido a $2{[s]}$.]{\includegraphics[width=0.45\textwidth]{cap_04_resultado_obte_2}}\\
+            \subfloat[Registro esperado a $10{[s]}$.]{\includegraphics[width=0.45\textwidth]{cap_04_resultado_espe_10}}\hspace{5mm}
+            \subfloat[Registro obtenido a $10{[s]}$.]{\includegraphics[width=0.45\textwidth]{cap_04_resultado_obte_10}}\\
             \caption{Datos registrados.}
             \label{fig:04_frame_result}
         \end{figure}
 
-        Los datos registrados desde el \textit{eye tracker} en este experimento (\ref{fig:04_frame_result} (c)) muestran ser similares a los esperados (\ref{fig:04_frame_result} (b)), e indican que el movimiento ocular se realiza principalmente entre los rostros de la pareja y las proyecciones de hacia donde se encuentran dirigidas sus miradas. 
+        Los datos registrados desde el \textit{eye tracker} en este experimento (\ref{fig:04_frame_result} (c) y (e)) muestran ser similares a los esperados (\ref{fig:04_frame_result} (b) y (d)), e indican que el movimiento ocular se realiza principalmente entre los rostros de la pareja y las proyecciones de hacia donde se encuentran dirigidas sus miradas. 
 
-        Al consultar los registros de los puntos anómalos presentes principalmente en la esquina superior izquierda y que parecieran no corresponder al patrón de observación, se determina que se encuentran relacionados a los momentos en que el usuario cierra los ojos y no es posible realizar estimaciones de la posición ocular.    
+        \newpage
+        Al consultar los registros asociados a los puntos anómalos presentes en \ref{fig:04_frame_result} (e) se determina que se encuentran relacionados a los momentos en que el usuario cierra los ojos y por tanto no es posible determinar la posición ocular.    
 
 \end{document}
